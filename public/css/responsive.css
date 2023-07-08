@@ -1,0 +1,226 @@
+/*** Responsive part ***/
+
+@media (max-width: 575px) {
+	#header .header-top .header_logo {
+		width: 100%;
+		padding: 20px 0;
+	}
+	#header .header-top .header-cms-block {
+		display: none;
+	}
+	#header .cart_block {
+		width: 270px;
+	}
+	.products-sort-order .dropdown-menu {
+		width: 90%;
+	}
+	#contact-link .callus {
+		display: none;
+	}
+	.footer-container .links .h3,
+	.footer-container .links h3,
+	.footer-container .links h3 a {
+		
+	}
+}
+@media (max-width: 1399px) { 
+	#header .header-top:before { width: 22.5%; }
+}
+@media (max-width: 1199px) { 
+	#header .header-top:before { width: 27.5%; }
+}
+@media (max-width: 991px) {
+	.container {
+		max-width: 100%;
+	}
+	#header .header-nav .language-selector {
+    	padding: 14px 12px 13px 0px;
+	}
+	#header .header-nav .currency-selector {
+    	padding: 12px 0 13px 0px;
+	}
+	#header .header_logo {
+	    float: none;
+	    text-align: center;
+	}
+	#header .logo {
+		width: auto;
+		max-height: 40px;
+	}
+	#products .product-miniature,
+	.products .product-miniature {
+		margin: 0 auto;
+	}
+	.sub-menu {
+		left: 0;
+		min-width: 100%;
+	}
+	#blockcart-modal .product-image {
+		width: 100%;
+		display: block;
+		max-width: 250px;
+		margin: 0 auto 0.9375rem;
+	}
+	#blockcart-modal .cart-content {
+		padding-left: 0;
+	}
+	#blockcart-modal .product-name,
+	#product-availability {
+		margin-top: 0.625rem;
+	}
+	#search_filters .facet .facet-label {
+		text-align: left;
+	}
+	.block-category .category-cover {
+		position: relative;
+		text-align: center;
+	}
+	.block-category {
+		padding-bottom: 0;
+	}
+	#header .header-top {
+		padding-bottom: 0px;
+		min-height: 100%;
+	}
+	#header .blockcart {
+	    padding-top: 5px;
+	    padding-bottom: 0px;
+	    z-index: 9;
+	}
+	.header-top .search-widget {
+		padding-top: 6px;
+		padding-bottom: 0px;
+		z-index: 9;
+	}
+	#header .user-info {
+	    padding-top: 6px;
+	    padding-bottom: 0;
+	    z-index: 9;
+	}
+	#header .user-info .dropdown-menu {
+	    top: 44px;
+	}
+	#header .cart_block { top: 39px; }
+	#header .search-widget .search_toggle {
+	    top: 44px;
+    	right: 0px;
+	}
+	
+	.products-section-title {
+		font-size: 30px;
+	    margin-bottom: 10px;
+	}
+}
+@media (max-width: 767px) {
+	#wrapper {
+		box-shadow: none;
+		padding-top: 15px;
+	}
+	.breadcrumb { margin-top: -15px; }
+	#checkout-cart-summary {
+		float: none;
+		width: 100%;
+		margin-top: 1rem;
+	}
+	#header .header-nav .top-logo {
+		line-height: 45px;
+		vertical-align: middle;
+		margin: 0 auto;
+	}
+	#header .header-nav .top-logo a img {
+		max-height: 50px;
+		max-width: 100%;
+	}
+	#header .header-nav .user-info {
+		text-align: left;
+	}
+	#header .header-nav .blockcart {
+		margin-left: 0;
+		background: inherit;
+	}
+	#header .blockcart .blockcart-header>a.shopping-cart {
+	    padding: 0;
+	    height: 25px;
+	    width: 25px;
+	}
+	#header .blockcart .blockcart-header > a.shopping-cart .mobile_count {
+		display: block;
+	}
+	#header .header-nav .blockcart.inactive .cart-products-count {
+		display: none;
+	}
+	#header .header-top {
+		padding-bottom: 0;
+		padding-top: 0px;
+	}
+	section.checkout-step {
+		width: 100%;
+	}
+	.default-input {
+		min-width: 100%;
+	}
+	label {
+		clear: both;
+	}
+	.block-contact {
+		border: none;
+	}
+	.container {
+		max-width: 100%;
+	}
+	.pp-left-column,
+	.pp-right-column {
+		float: none;
+		width: 100%;
+	}
+	#header .header-nav .right-nav {
+		float: right;
+		margin-right: 5px;
+	}
+	#header .blockcart .material-icons.shopping-cart {
+		display: inline-block;
+	}
+}
+@media (max-width: 480px) {
+	#header .search-widget .search_toggle {
+		right: -50px;
+    	width: 230px;
+	}
+	#products .product-miniature,
+	.products .product-miniature {
+		margin: 0 auto;
+		max-width: 278px;
+	}
+	#left-column .products-block ul li .product-miniature, #right-column .products-block ul li .product-miniature {
+	    max-width: 100%;
+	}
+
+}
+.sitemap .tree {
+	padding-left: 20px;
+}
+.sitemap .tree li {
+	padding: 5px 0;
+}
+.sitemap .tree li a {
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+.sitemap .tree li a:hover {
+	margin-left: 5px;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+.sitemap .tree li a:before {
+	content: "\F105";
+	display: inline-block;
+	font-family: "FontAwesome";
+	padding-right: 13px;
+}
+.sitemap .tree li ul {
+	margin-left: 20px;
+}
