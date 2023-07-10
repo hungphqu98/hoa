@@ -1,0 +1,267 @@
+.post-entry-alt {
+  background-color: white;
+}
+.post-entry-alt h2,
+.post-entry-alt .h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.post-entry-alt h2 a,
+.post-entry-alt .h2 a {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.post-entry-alt .excerpt {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.post-entry-alt .img-link {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.post-entry-alt .img-link img {
+  margin-bottom: 0;
+}
+
+.latest_blog {
+  background-color: #F8EEEC;
+}
+
+#footer {
+    float: left;
+    width: 100%;
+    background-size: cover;
+    background-position: 0% 50%;
+    box-shadow: inset 0 0 0 2000px rgba(0,0,0,.2);
+    background-repeat: no-repeat;
+}
+
+.footer-container li {
+	margin-bottom: 0px;
+}
+.footer-container li span {
+	font-size: 13px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: .6px;
+    color: #fff;
+    float: left;
+}
+.footer-container li a {
+	color: #fff;
+    cursor: pointer;
+    font-size: 13px;
+    letter-spacing: 0.6px;
+    line-height: 30px;
+    font-weight: 400;
+    -webkit-transition: all 300ms ease 0s;
+    -moz-transition: all 300ms ease 0s;
+    -o-transition: all 300ms ease 0s;
+    transition: all 300ms ease 0s;
+}
+.footer-container .block-social li a:hover {
+    margin-left: 0;
+}
+.footer-container li a:hover {
+	color: #deb5b2;
+}
+
+.footer-container .links .h3, .footer-container .links h3, .footer-container .links h3 a, #footer .block_newsletter .title {
+	color: #ffffff;
+    font: 600 18px/20px 'Open Sans', sans-serif;
+    text-transform: capitalize !important;
+    margin: 0 0 15px 0;
+    cursor: pointer;
+    letter-spacing: .5px;
+    position: relative;
+}
+
+.footer-after .container {
+  position: relative;
+}
+.footer-after .container .footer-bottom-inner {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.footer-after p {
+color: #fff;
+  font-size: 13px;
+  letter-spacing: 0.6px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.footer-after .copyright {
+margin-top: 0px;
+  text-align: center;
+}
+
+.block-social {
+	text-align: center;
+}
+.block-social ul {
+	margin-bottom: 0px;
+}
+.block-social li {
+	text-align: center;
+	border-radius: 50%;
+	display: inline-block;
+    border: 2px solid #626262;
+	cursor: pointer;
+	margin-right: 4px;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+.block-social li:hover { border-color: #deb5b2; }
+.block-social li:hover a:before {
+	color: #deb5b2;
+}
+.block-social li a {
+	display: block;
+	height: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.block-social li a span {
+	display: none;
+}
+.block-social li a:before {
+    font-size: 13px;
+    font-family: "FontAwesome";
+    display: inline-block;
+    font-weight: normal;
+    height: 25px;
+    width: 25px;
+    padding-top: 0;
+    color: #626262;
+}
+.facebook a:before {
+	content: "\F09A";
+}
+.youtube a:before {
+	content: "\F16A";
+}
+.instagram a:before {
+	content: "\F16D";
+}
+
+.service {
+  background-color: #95384B;
+}
+.service-entry {
+  padding: 20px;
+  text-align: center;
+  
+}
+.service-entry img {
+  padding-bottom: 10px;
+  display: block;
+  margin: 0 auto;
+}
+.service-note h2 {
+  color: #fff;
+}
+
+#wrapper {
+  border-top: 1px solid #ededed;
+}
+
+.sub-menu-container {
+  overflow: hidden;
+  min-width: 840px;
+  
+}
+
+.sub-cat {
+  width: calc(33.3333% - 0px); /* Adjust width based on available space */
+  float: left;
+  position: initial;
+}
+
+.clear {
+  clear: both; /* Clear the float */
+}
+
+
+.top-menu .sub-menu ul[data-depth="1"] > li {
+  float: left;
+    margin: 0px 0px 20px 20px;
+    min-width: 165px;
+}
+
+#owl-banner img{
+  display: block;
+  width: 100%;
+  height: auto;
+  
+}
+
+
+
+#owl-banner {
+  height: 639px;
+  width: 100%;
+}
+
+.slick-prev {
+  left: 100px;
+}
+.slick-next {
+  right: 100px;
+}
+
+.slick-prev, .slick-next {
+  z-index: 1000;
+}
+
+#index #header {
+	border-bottom: 0px;
+}
+#header {
+	background: #FFFFFF;
+}
+#header .header_logo {
+    float: left;
+    display: flex;
+  align-items: center;
+  line-height: 100px;
+}
+#header .logo {
+	max-width: 100%;
+  max-height: 65px;
+}
+
+#header .header-top {
+	width: 100%;
+	text-align: center;
+	padding: 0px;
+	z-index: 9;
+}
+@media (min-width: 992px) {
+	#header .header-top:before {
+	    content: "";
+	    background: #ebdddd;
+	    width: 30.5%;
+	    height: 100px;
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    z-index: 0;
+	}	
+}
+
+#footer .footer-container .footer-logo {
+  margin-bottom: 10px;
+  max-width: 100%;
+  min-height: 70px;
+  margin-top: -15px;
+}

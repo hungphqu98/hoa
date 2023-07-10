@@ -17,11 +17,6 @@
 	#contact-link .callus {
 		display: none;
 	}
-	.footer-container .links .h3,
-	.footer-container .links h3,
-	.footer-container .links h3 a {
-		
-	}
 }
 @media (max-width: 1399px) { 
 	#header .header-top:before { width: 22.5%; }
