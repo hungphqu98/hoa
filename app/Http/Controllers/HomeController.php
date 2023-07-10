@@ -28,4 +28,11 @@ class HomeController extends Controller
 
         return view('home', compact('flower'));
     }
+
+    public function product()
+    {
+        $flower = Flower::with('flowerImages')->limit(4)->get();
+
+        return view('product.index', compact('flower'));
+    }
 }

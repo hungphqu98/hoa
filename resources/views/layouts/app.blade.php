@@ -403,11 +403,6 @@
           <div class="menu col-lg-12 js-top-menu position-static hidden-md-down" id="_desktop_top_menu">
 
             <ul class="top-menu container" id="top-menu" data-depth="0">
-              <li class="category" id="category-6">
-                <a class="dropdown-item" href="" data-depth="0">
-                  Trang chủ
-                </a>
-              </li>
               <li class="category" id="category-3">
                 <a class="dropdown-item" href="#" data-depth="0">
                   <span class="pull-xs-right hidden-lg-up">

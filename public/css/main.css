@@ -31,7 +31,7 @@
 }
 
 .latest_blog {
-  background-color: #F8EEEC;
+  background-color: #EDE1D1;
 }
 
 #footer {
@@ -39,7 +39,7 @@
     width: 100%;
     background-size: cover;
     background-position: 0% 50%;
-    box-shadow: inset 0 0 0 2000px rgba(0,0,0,.2);
+    box-shadow: inset 0 0 0 2000px rgba(0,0,0,.4);
     background-repeat: no-repeat;
 }
 
@@ -155,7 +155,7 @@ margin-top: 0px;
 }
 
 .service {
-  background-color: #95384B;
+  background-color: #96394C;
 }
 .service-entry {
   padding: 20px;
@@ -245,11 +245,12 @@ margin-top: 0px;
 	text-align: center;
 	padding: 0px;
 	z-index: 9;
+  background-color: #EDE1D1;
 }
 @media (min-width: 992px) {
 	#header .header-top:before {
 	    content: "";
-	    background: #ebdddd;
+	    background: white;
 	    width: 30.5%;
 	    height: 100px;
 	    position: absolute;
@@ -264,4 +265,18 @@ margin-top: 0px;
   max-width: 100%;
   min-height: 70px;
   margin-top: -15px;
+}
+
+.top-menu a[data-depth="0"] {
+  padding: 33px 25px;
+  font-family: 'Open Sans', sans-serif;
+  color: #000000;
+  display: block;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+  position: relative;
+  width: auto;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
 }
