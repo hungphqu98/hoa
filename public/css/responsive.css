@@ -42,6 +42,13 @@
 		width: auto;
 		max-height: 40px;
 	}
+	#owl-banner {
+    padding-top: 15px;
+    height: auto;
+  }
+	.slick-prev, .slick-next {
+		display: none;
+	}
 	#products .product-miniature,
 	.products .product-miniature {
 		margin: 0 auto;

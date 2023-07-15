@@ -42,7 +42,7 @@
                                                 <div class="products"> <!-- Define Number of product for SLIDER -->
                                                     <ul id="feature-grid" class="featured_grid product_list grid row gridcount">
                                                         @foreach($flower as $f)
-                                                        <li class="product_item col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                                        <li class="product_item col-xs-6 col-sm-6 col-md-4 col-lg-3">
                                                             <div class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope itemtype="http://schema.org/Product">
                                                                 <div class="thumbnail-container"> <a href="#" class="thumbnail product-thumbnail">
                                                                         @if ($f->flowerImages->isNotEmpty())
@@ -82,7 +82,7 @@
                                                 <div class="products"> <!-- Define Number of product for SLIDER -->
                                                     <ul id="newproduct-grid" class="newproduct_grid product_list grid row gridcount">
                                                         @foreach($flower as $f)
-                                                        <li class="product_item col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                                        <li class="product_item col-xs-6 col-sm-6 col-md-4 col-lg-3">
                                                             <div class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope itemtype="http://schema.org/Product">
                                                                 <div class="thumbnail-container"> <a href="#" class="thumbnail product-thumbnail">
                                                                         @if ($f->flowerImages->isNotEmpty())
@@ -122,7 +122,7 @@
                                                 <div class="products"> <!-- Define Number of product for SLIDER -->
                                                     <ul id="bestseller-carousel" class="ct-carousel product_list">
                                                         @foreach($flower as $f)
-                                                        <li class="product_item col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                                                        <li class="product_item col-xs-6 col-sm-6 col-md-4 col-lg-3">
                                                             <div class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope itemtype="http://schema.org/Product">
                                                                 <div class="thumbnail-container"> <a href="#" class="thumbnail product-thumbnail">
                                                                         @if ($f->flowerImages->isNotEmpty())
@@ -213,7 +213,13 @@
                                 </h2>
                                 <div class="homeblog-wrapper">
                                     <div class="homeblog-inner">
-                                        <div class="row">
+                                        <div class="slick-brands">
+                                            <div class="brands-wrapper"><img src="{{ asset('assets/Asset 3.png') }}" alt="sample-1" title="Sample 1" /></div>
+                                            <div class="brands-wrapper"><img src="{{ asset('assets/Asset 2.png') }}" alt="sample-2" title="Sample 2" /></div>
+                                            <div class="brands-wrapper"><img src="{{ asset('assets/Asset 4.png') }}" alt="sample-3" title="Sample 3" /></div>
+                                            <div class="brands-wrapper"><img src="{{ asset('assets/Asset 5.png') }}" alt="sample-4" title="Sample 4" />
+</div>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -222,7 +228,7 @@
                         <div class="service block ">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-lg-3 mb-4">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 mb-4">
                                         <div class="service-entry">
                                             <img src="{{ asset('assets/Asset1.png') }}" alt="Image" class="img-fluid">
                                             <div class="service-note">
@@ -230,7 +236,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 mb-4">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 mb-4">
                                         <div class="service-entry">
                                             <img src="{{ asset('assets/Asset2.png') }}" alt="Image" class="img-fluid">
                                             <div class="service-note">
@@ -238,7 +244,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 mb-4">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 mb-4">
                                         <div class="service-entry">
                                             <img src="{{ asset('assets/Asset3.png') }}" alt="Image" class="img-fluid">
                                             <div class="service-note">
@@ -246,7 +252,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 mb-4">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 mb-4">
                                         <div class="service-entry">
                                             <img src="{{ asset('assets/Asset4.png') }}" alt="Image" class="img-fluid">
                                             <div class="service-note">

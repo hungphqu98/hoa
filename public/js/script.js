@@ -4,8 +4,30 @@ $(document).ready(function(){
       slidesToShow: 1,
       arrows:true,
   });
+  $('.slick-brands').slick({
+    speed: 300,
+    slidesToShow: 4,
+    arrows:false,
+});
+$('.menu-icon').click(function() {
+  $('#mobile_top_menu_wrapper').toggleClass('slide');
+  $('.mobile-menu-inner').css('display', 'block');
+});
+$('.search_button').click(function() {
+  event.stopPropagation();
+  $(this).toggleClass('active');
+    if ($(this).hasClass('active')) {
+      $('.search_toggle').show();
+    } else {
+      $('.search_toggle').hide();
+    }
+});
 });
 
+$(document).click(function() {
+  $('.search_button').removeClass('active');
+  $('.search_toggle').hide();
+});
 
 // Get the menu icon element
 var menuIcon = document.getElementById('menu-icon');
