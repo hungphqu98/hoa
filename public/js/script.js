@@ -22,11 +22,24 @@ $('.search_button').click(function() {
       $('.search_toggle').hide();
     }
 });
+$('.user-info').click(function() {
+  event.stopPropagation();
+  $(this).toggleClass('active');
+    if ($(this).hasClass('active')) {
+      $('.dropdown-menu').show();
+    } else {
+      $('.dropdown-menu').hide();
+    }
 });
+});
+
+
 
 $(document).click(function() {
   $('.search_button').removeClass('active');
   $('.search_toggle').hide();
+  $('.user-info').removeClass('active');
+  $('.dropdown-menu').hide();
 });
 
 // Get the menu icon element

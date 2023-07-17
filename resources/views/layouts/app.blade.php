@@ -19,261 +19,7 @@
   <link rel="stylesheet" href={{ asset("css/style.css") }} />
   <link rel="stylesheet" href={{ asset("css/responsive.css") }} />
   <link rel="stylesheet" href={{ asset("css/main.css") }} />
-  <!-- <script type="text/javascript">
-    var prestashop = {
-      "cart": {
-        "products": [],
-        "totals": {
-          "total": {
-            "type": "total",
-            "label": "Total",
-            "amount": 0,
-            "value": "\u20ac0.00"
-          },
-          "total_including_tax": {
-            "type": "total",
-            "label": "Total (tax incl.)",
-            "amount": 0,
-            "value": "\u20ac0.00"
-          },
-          "total_excluding_tax": {
-            "type": "total",
-            "label": "Total (tax excl.)",
-            "amount": 0,
-            "value": "\u20ac0.00"
-          }
-        },
-        "subtotals": {
-          "products": {
-            "type": "products",
-            "label": "Subtotal",
-            "amount": 0,
-            "value": "\u20ac0.00"
-          },
-          "discounts": null,
-          "shipping": {
-            "type": "shipping",
-            "label": "Shipping",
-            "amount": 0,
-            "value": "Free"
-          },
-          "tax": null
-        },
-        "products_count": 0,
-        "summary_string": "0 items",
-        "vouchers": {
-          "allowed": 0,
-          "added": []
-        },
-        "discounts": [],
-        "minimalPurchase": 0,
-        "minimalPurchaseRequired": ""
-      },
-      "currency": {
-        "name": "Euro",
-        "iso_code": "EUR",
-        "iso_code_num": "978",
-        "sign": "\u20ac"
-      },
-      "customer": {
-        "lastname": null,
-        "firstname": null,
-        "email": null,
-        "birthday": null,
-        "newsletter": null,
-        "newsletter_date_add": null,
-        "optin": null,
-        "website": null,
-        "company": null,
-        "siret": null,
-        "ape": null,
-        "is_logged": false,
-        "gender": {
-          "type": null,
-          "name": null
-        },
-        "addresses": []
-      },
-      "language": {
-        "name": "English (English)",
-        "iso_code": "en",
-        "locale": "en-US",
-        "language_code": "en-us",
-        "is_rtl": "0",
-        "date_format_lite": "m\/d\/Y",
-        "date_format_full": "m\/d\/Y H:i:s",
-        "id": 1
-      },
-      "page": {
-        "title": "",
-        "canonical": null,
-        "meta": {
-          "title": "Daffodils - Flowers Store",
-          "description": "Shop powered by PrestaShop",
-          "keywords": "",
-          "robots": "index"
-        },
-        "page_name": "index",
-        "body_classes": {
-          "lang-en": true,
-          "lang-rtl": false,
-          "country-DE": true,
-          "currency-EUR": true,
-          "layout-full-width": true,
-          "page-index": true,
-          "tax-display-enabled": true
-        },
-        "admin_notifications": []
-      },
-      "shop": {
-        "name": "Daffodils - Flowers Store",
-        "logo": "\/prestashop\/PRS07\/PRS070170\/img\/prs070170-demo-store-logo-1557897912.jpg",
-        "stores_icon": "\/prestashop\/PRS07\/PRS070170\/img\/logo_stores.png",
-        "favicon": "\/prestashop\/PRS07\/PRS070170\/img\/favicon.ico"
-      },
-      "urls": {
-        "base_url": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/",
-        "current_url": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php",
-        "shop_domain_url": "https:\/\/capricathemes.com",
-        "img_ps_url": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/img\/",
-        "img_cat_url": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/img\/c\/",
-        "img_lang_url": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/img\/l\/",
-        "img_prod_url": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/img\/p\/",
-        "img_manu_url": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/img\/m\/",
-        "img_sup_url": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/img\/su\/",
-        "img_ship_url": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/img\/s\/",
-        "img_store_url": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/img\/st\/",
-        "img_col_url": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/img\/co\/",
-        "img_url": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/themes\/Daffodils\/assets\/img\/",
-        "css_url": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/themes\/Daffodils\/assets\/css\/",
-        "js_url": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/themes\/Daffodils\/assets\/js\/",
-        "pic_url": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/upload\/",
-        "pages": {
-          "address": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?controller=address",
-          "addresses": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?controller=addresses",
-          "authentication": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?controller=authentication",
-          "cart": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?controller=cart",
-          "category": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?controller=category",
-          "cms": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?controller=cms",
-          "contact": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?controller=contact",
-          "discount": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?controller=discount",
-          "guest_tracking": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?controller=guest-tracking",
-          "history": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?controller=history",
-          "identity": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?controller=identity",
-          "index": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php",
-          "my_account": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?controller=my-account",
-          "order_confirmation": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?controller=order-confirmation",
-          "order_detail": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?controller=order-detail",
-          "order_follow": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?controller=order-follow",
-          "order": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?controller=order",
-          "order_return": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?controller=order-return",
-          "order_slip": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?controller=order-slip",
-          "pagenotfound": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?controller=pagenotfound",
-          "password": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?controller=password",
-          "pdf_invoice": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?controller=pdf-invoice",
-          "pdf_order_return": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?controller=pdf-order-return",
-          "pdf_order_slip": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?controller=pdf-order-slip",
-          "prices_drop": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?controller=prices-drop",
-          "product": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?controller=product",
-          "search": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?controller=search",
-          "sitemap": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?controller=sitemap",
-          "stores": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?controller=stores",
-          "supplier": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?controller=supplier",
-          "register": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?controller=authentication&create_account=1",
-          "order_login": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?controller=order&login=1"
-        },
-        "alternative_langs": {
-          "en-us": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?id_lang=1",
-          "fr-fr": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?id_lang=2",
-          "es-es": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?id_lang=3",
-          "de-de": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?id_lang=4",
-          "it-it": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?id_lang=5",
-          "pl-pl": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?id_lang=6",
-          "nl-nl": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?id_lang=7",
-          "ru-ru": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?id_lang=8",
-          "ar-sa": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?id_lang=9"
-        },
-        "theme_assets": "\/prestashop\/PRS07\/PRS070170\/themes\/Daffodils\/assets\/",
-        "actions": {
-          "logout": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php?mylogout="
-        },
-        "no_picture_image": {
-          "bySize": {
-            "cart_default": {
-              "url": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/img\/p\/en-default-cart_default.jpg",
-              "width": 85,
-              "height": 92
-            },
-            "small_default": {
-              "url": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/img\/p\/en-default-small_default.jpg",
-              "width": 85,
-              "height": 92
-            },
-            "home_default": {
-              "url": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/img\/p\/en-default-home_default.jpg",
-              "width": 278,
-              "height": 300
-            },
-            "medium_default": {
-              "url": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/img\/p\/en-default-medium_default.jpg",
-              "width": 481,
-              "height": 519
-            },
-            "large_default": {
-              "url": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/img\/p\/en-default-large_default.jpg",
-              "width": 741,
-              "height": 800
-            }
-          },
-          "small": {
-            "url": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/img\/p\/en-default-cart_default.jpg",
-            "width": 85,
-            "height": 92
-          },
-          "medium": {
-            "url": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/img\/p\/en-default-home_default.jpg",
-            "width": 278,
-            "height": 300
-          },
-          "large": {
-            "url": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/img\/p\/en-default-large_default.jpg",
-            "width": 741,
-            "height": 800
-          },
-          "legend": ""
-        }
-      },
-      "configuration": {
-        "display_taxes_label": true,
-        "is_catalog": false,
-        "show_prices": true,
-        "opt_in": {
-          "partner": true
-        },
-        "quantity_discount": {
-          "type": "discount",
-          "label": "Discount"
-        },
-        "voucher_enabled": 0,
-        "return_enabled": 0
-      },
-      "field_required": [],
-      "breadcrumb": {
-        "links": [{
-          "title": "Home",
-          "url": "https:\/\/capricathemes.com\/prestashop\/PRS07\/PRS070170\/index.php"
-        }],
-        "count": 1
-      },
-      "link": {
-        "protocol_link": "https:\/\/",
-        "protocol_content": "https:\/\/"
-      },
-      "time": 1688669168,
-      "static_token": "b88261cab17a7775f54f10a3c0bb0f61",
-      "token": "2af54d5bad396e59fcecc55e559e26a0"
-    };
-  </script> -->
+
 </head>
 
 <body>
@@ -309,18 +55,23 @@
               Account</span></span>
           <ul class="dropdown-menu">
             <li>
-              <a class="dropdown-item" href="index6714.html?controller=my-account" title="Log in to your customer account" rel="nofollow">
-                <span>Sign in</span>
+              <a class="dropdown-item" href="" title="Log in to your customer account" rel="nofollow">
+                <span>Đăng nhập</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="" title="Register" rel="nofollow">
+                <span>Đăng ký</span>
               </a>
             </li>
           </ul>
         </div><!-- Block search module TOP -->
-        <div id="search_widget" class="col-lg-4 col-md-5 col-sm-12 search-widget" data-search-controller-url="//capricathemes.com/prestashop/PRS07/PRS070170/index.php?controller=search">
+        <div id="search_widget" class="col-lg-4 col-md-5 col-sm-12 search-widget" data-search-controller-url="">
           <span class="search_button"></span>
           <div class="search_toggle">
-            <form method="get" action="http://capricathemes.com/prestashop/PRS07/PRS070170/index.php?controller=search">
+            <form method="get" action="">
               <input type="hidden" name="controller" value="search">
-              <input type="text" name="s" value="" placeholder="Search our catalog">
+              <input type="text" name="s" value="" placeholder="Search">
               <button type="submit">
               </button>
             </form>
@@ -708,8 +459,8 @@
               <span class="h3">Store information</span>
               <span class="pull-xs-right">
                 <span class="navbar-toggler collapse-icons">
-                  <i class="fa-icon add"></i>
-                  <i class="fa-icon remove"></i>
+                  <i class="fa-solid fa-caret-down add"></i>
+                  <i class="fa-solid fa-caret-up remove"></i>
                 </span>
               </span>
             </div>
@@ -740,8 +491,8 @@
               <span class="">Sản phẩm</span>
               <span class="pull-xs-right">
                 <span class="navbar-toggler collapse-icons">
-                  <i class="fa-icon add"></i>
-                  <i class="fa-icon remove"></i>
+                <i class="fa-solid fa-caret-down add"></i>
+                  <i class="fa-solid fa-caret-up remove"></i>
                 </span>
               </span>
             </div>
@@ -779,8 +530,8 @@
               <span class="">Chính sách</span>
               <span class="pull-xs-right">
                 <span class="navbar-toggler collapse-icons">
-                  <i class="fa-icon add"></i>
-                  <i class="fa-icon remove"></i>
+                  <i class="fa-solid fa-caret-down add"></i>
+                  <i class="fa-solid fa-caret-up remove"></i>
                 </span>
               </span>
             </div>
