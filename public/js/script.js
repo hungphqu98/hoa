@@ -49,7 +49,7 @@ var menuIcon = document.getElementById('menu-icon');
 var mobileMenuWrapper = document.getElementById('mobile_top_menu_wrapper');
 
 // Add a click event listener to the menu icon
-menuIcon.addEventListener('click', function () {
+    menuIcon.addEventListener('click', function () {
     // Toggle the 'active' class on the mobile menu wrapper
     mobileMenuWrapper.classList.toggle('active');
 });

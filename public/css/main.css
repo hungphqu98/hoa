@@ -37,9 +37,9 @@
 #footer {
     float: left;
     width: 100%;
+    color: #95384B;
     background-size: cover;
-    background-position: 0% 50%;
-    box-shadow: inset 0 0 0 2000px rgba(0,0,0,.4);
+    background-color: #F4E8D8;
     background-repeat: no-repeat;
 }
 
@@ -47,18 +47,14 @@
 	margin-bottom: 0px;
 }
 .footer-container li span {
-	font-size: 13px;
     font-weight: 400;
     line-height: 30px;
-    letter-spacing: .6px;
-    color: #fff;
+    color: #95384B;
     float: left;
 }
 .footer-container li a {
-	color: #fff;
+	color: #95384B;
     cursor: pointer;
-    font-size: 13px;
-    letter-spacing: 0.6px;
     line-height: 30px;
     font-weight: 400;
     -webkit-transition: all 300ms ease 0s;
@@ -74,12 +70,11 @@
 }
 
 .footer-container .links .h3, .footer-container .links h3, .footer-container .links h3 a, #footer .block_newsletter .title {
-	color: #ffffff;
+	color: #95384B;
     font: 600 18px/20px 'Open Sans', sans-serif;
     text-transform: capitalize !important;
     margin: 0 0 15px 0;
     cursor: pointer;
-    letter-spacing: .5px;
     position: relative;
 }
 
@@ -91,7 +86,7 @@
   padding-bottom: 20px;
 }
 .footer-after p {
-color: #fff;
+  color: #95384B;
   font-size: 13px;
   letter-spacing: 0.6px;
   font-weight: 400;
@@ -142,7 +137,7 @@ margin-top: 0px;
     height: 25px;
     width: 25px;
     padding-top: 0;
-    color: white;
+    color: #95384B;
 }
 .facebook a:before {
 	content: "\F09A";
@@ -207,7 +202,9 @@ margin-top: 0px;
   
 }
 
-
+.top-menu .sub-menu a {
+	color: #45555F;
+}
 
 #owl-banner {
   width: 100%;
@@ -255,7 +252,7 @@ margin-top: 0px;
 	text-align: center;
 	padding: 0px;
 	z-index: 9;
-  background-color: #EDE1D1;
+  background-color: #fff;
 }
 @media (max-width: 991px) {
 	#header .header-top .header_logo {
@@ -263,9 +260,34 @@ margin-top: 0px;
   }
 }
 @media (min-width: 992px) {
-	#header .header-top:before {
+	.header-top .menu .sub-menu {
+    border: 2px solid #deb5b2;
+    margin-left: 0px;
+    z-index: 10000;
+    border-radius: 0;
+    display: none;
+    top: 90px !important;
+    width: auto;
+    left: auto;
+    right: auto;
+    background-color: #EDE1D1;
+    padding: 20px 10px 20px 0;
+    overflow: hidden;
+    -webkit-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    transform: scale(0, 0);
+    display: block !important;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    transform-origin: 20% 20% 0;
+    -webkit-transition: all 500ms ease 0s;
+    -moz-transition: all 500ms ease 0s;
+    -o-transition: all 500ms ease 0s;
+    transition: all 500ms ease 0s;
+}
+  #header .header-top:before {
 	    content: "";
-	    background: white;
+	    background: #EDE1D1;
 	    width: 30.5%;
 	    height: 100px;
 	    position: absolute;
@@ -273,9 +295,23 @@ margin-top: 0px;
 	    top: 0;
 	    z-index: 0;
 	}	
+
+  .top-menu .sub-menu li >  a {
+		position: relative;
+	}
+	.top-menu .sub-menu li > a.dropdown-submenu:before {
+		border-top: 1px solid #8E9190;
+		bottom: -7px;
+		content: "";
+		float: left;
+		height: 2px;
+		position: absolute;
+		width: 100%;
+	}
   #owl-banner {
     height: 639px;
   }
+
 
 }
 
@@ -298,6 +334,18 @@ margin-top: 0px;
   font-size: 14px;
   font-weight: 600;
   line-height: 24px;
+}
+
+.top-menu .sub-menu li > a.dropdown-submenu {
+  text-transform: capitalize;
+  color: #96394C;
+  font-size: 14px;
+  font-weight: 600;
+  padding-bottom: 5px;
+  margin-bottom: 17px;
+}
+.top-menu .sub-menu li > a.dropdown-submenu:hover {
+color: #deb5b2;
 }
 
 .slick-brands {
@@ -329,7 +377,6 @@ margin-top: 0px;
   color: black;
   position: relative;
   text-align: center;
-  font: 400 40px/48px 'Playball', cursive;
   text-transform: capitalize !important;
   letter-spacing: .3px;
   width: 100%;

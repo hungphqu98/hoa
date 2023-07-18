@@ -438,7 +438,7 @@
     {{ $slot }}
   </section>
   <!--================ start footer Area  =================-->
-  <footer id="footer" style="background-image: url({{ asset('assets/footer-banner.jpg') }})">
+  <footer id="footer">
 
     <div class="footer-before">
       <div class="container">
@@ -587,7 +587,6 @@
       </div>
     </div>
 
-    <a class="top_button" href="#" style="">&nbsp;</a>
 
   </footer>
   <!--================ End footer Area  =================-->
