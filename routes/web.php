@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\FlowerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +19,5 @@ Auth::routes();
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/product', [HomeController::class, 'product'])->name('product.index');
+Route::get('/product/view', [FlowerController::class, 'view'])->name('product.view');
 
