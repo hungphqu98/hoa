@@ -8,7 +8,7 @@ use App\Models\Flower;
 class FlowerController extends Controller
 {
     //
-    public function product()
+    public function view()
     {
         $flower = Flower::with('flowerImages')->first();
 
