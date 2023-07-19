@@ -143,7 +143,7 @@
                     <div class="product-miniature js-product-miniature" data-id-product="25" data-id-product-attribute="110" itemscope itemtype="http://schema.org/Product">
                       <div class="thumbnail-container"> <a href="#" class="thumbnail product-thumbnail"> <img src="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/360109832_676746754470546_4958957156693770642_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=2z5DMVNySyUAX8tsX8A&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDlBzop_mmpXR86mIJRI_9_EAIxzaUG9YwrMpEn2SV__Q&oe=64BBCB4C" alt="Commodi consequatur" data-full-size-image-url="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/360109832_676746754470546_4958957156693770642_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=2z5DMVNySyUAX8tsX8A&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDlBzop_mmpXR86mIJRI_9_EAIxzaUG9YwrMpEn2SV__Q&oe=64BBCB4C"> <img class="fliper_image img-responsive" src="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/360109832_676746754470546_4958957156693770642_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=2z5DMVNySyUAX8tsX8A&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDlBzop_mmpXR86mIJRI_9_EAIxzaUG9YwrMpEn2SV__Q&oe=64BBCB4C" data-full-size-image-url="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/360109832_676746754470546_4958957156693770642_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=2z5DMVNySyUAX8tsX8A&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDlBzop_mmpXR86mIJRI_9_EAIxzaUG9YwrMpEn2SV__Q&oe=64BBCB4C" alt="" /> </a>
                         <div class="outer-functional">
-                          <div class="functional-buttons"> <a href="#" class="quick-view" data-link-action="quickview"> <i class="material-icons search">&#xE417;</i> Szybki podgląd </a>
+                          <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal"> <i class="material-icons search">&#xE417;</i> Szybki podgląd </button>
                             <div class="product-actions"> <a href="" class="btn btn-primary add-to-cart view_page"> View Detail </a> </div>
                           </div>
                         </div>
@@ -152,19 +152,9 @@
                         </ul>
                       </div>
                       <div class="product-description">
-                        <div class="comments_note">
-                          <div class="star_content clearfix">
-                            <div class="star star_on"></div>
-                            <div class="star star_on"></div>
-                            <div class="star star_on"></div>
-                            <div class="star star_on"></div>
-                            <div class="star star_on"></div>
-                          </div>
-                        </div> <span class="h3 product-title" itemprop="name"><a href="index87b3.html?id_product=25&amp;id_product_attribute=110&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=6#/1-rozmiar-s/5-kolor-szary">Commodi consequatur</a></span>
+                        <span class="h3 product-title" itemprop="name"><a href="">Commodi consequatur</a></span>
                         <div class="product-price-and-shipping"> <span itemprop="price" class="price">85,00 USD</span> </div>
-                        <div class="highlighted-informations hidden-sm-down">
-                          <div class="variant-links"> <a href="index87b3.html?id_product=25&amp;id_product_attribute=110&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=6#/1-rozmiar-s/5-kolor-szary" class="color" title="Szary" style="background-color: #AAB2BD"><span class="sr-only">Szary</span></a> <a href="indexa8fc.html?id_product=25&amp;id_product_attribute=111&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=6#/1-rozmiar-s/8-kolor-bialy" class="color" title="Biały" style="background-color: #ffffff"><span class="sr-only">Biały</span></a> <a href="index26a7.html?id_product=25&amp;id_product_attribute=112&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=6#/1-rozmiar-s/15-kolor-zielony" class="color" title="Zielony" style="background-color: #A0D468"><span class="sr-only">Zielony</span></a> <span class="js-count count"></span> </div>
-                        </div>
+
                       </div>
                     </div>
                   </li>
@@ -172,8 +162,8 @@
                     <div class="product-miniature js-product-miniature" data-id-product="25" data-id-product-attribute="110" itemscope itemtype="http://schema.org/Product">
                       <div class="thumbnail-container"> <a href="#" class="thumbnail product-thumbnail"> <img src="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/360109832_676746754470546_4958957156693770642_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=2z5DMVNySyUAX8tsX8A&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDlBzop_mmpXR86mIJRI_9_EAIxzaUG9YwrMpEn2SV__Q&oe=64BBCB4C" alt="Commodi consequatur" data-full-size-image-url="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/360109832_676746754470546_4958957156693770642_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=2z5DMVNySyUAX8tsX8A&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDlBzop_mmpXR86mIJRI_9_EAIxzaUG9YwrMpEn2SV__Q&oe=64BBCB4C"> <img class="fliper_image img-responsive" src="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/360109832_676746754470546_4958957156693770642_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=2z5DMVNySyUAX8tsX8A&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDlBzop_mmpXR86mIJRI_9_EAIxzaUG9YwrMpEn2SV__Q&oe=64BBCB4C" data-full-size-image-url="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/360109832_676746754470546_4958957156693770642_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=2z5DMVNySyUAX8tsX8A&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDlBzop_mmpXR86mIJRI_9_EAIxzaUG9YwrMpEn2SV__Q&oe=64BBCB4C" alt="" /> </a>
                         <div class="outer-functional">
-                          <div class="functional-buttons"> <a href="#" class="quick-view" data-link-action="quickview"> <i class="material-icons search">&#xE417;</i> Szybki podgląd </a>
-                            <div class="product-actions"> <a href="index87b3.html?id_product=25&amp;id_product_attribute=110&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=6#/1-rozmiar-s/5-kolor-szary" class="btn btn-primary add-to-cart view_page"> View Detail </a> </div>
+                          <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal"> <i class="material-icons search">&#xE417;</i> Szybki podgląd </button>
+                            <div class="product-actions"> <a href="" class="btn btn-primary add-to-cart view_page"> View Detail </a> </div>
                           </div>
                         </div>
                         <ul class="product-flags">
@@ -181,19 +171,8 @@
                         </ul>
                       </div>
                       <div class="product-description">
-                        <div class="comments_note">
-                          <div class="star_content clearfix">
-                            <div class="star star_on"></div>
-                            <div class="star star_on"></div>
-                            <div class="star star_on"></div>
-                            <div class="star star_on"></div>
-                            <div class="star star_on"></div>
-                          </div>
-                        </div> <span class="h3 product-title" itemprop="name"><a href="index87b3.html?id_product=25&amp;id_product_attribute=110&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=6#/1-rozmiar-s/5-kolor-szary">Commodi consequatur</a></span>
+                        <span class="h3 product-title" itemprop="name"><a href="">Commodi consequatur</a></span>
                         <div class="product-price-and-shipping"> <span itemprop="price" class="price">85,00 USD</span> </div>
-                        <div class="highlighted-informations hidden-sm-down">
-                          <div class="variant-links"> <a href="index87b3.html?id_product=25&amp;id_product_attribute=110&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=6#/1-rozmiar-s/5-kolor-szary" class="color" title="Szary" style="background-color: #AAB2BD"><span class="sr-only">Szary</span></a> <a href="indexa8fc.html?id_product=25&amp;id_product_attribute=111&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=6#/1-rozmiar-s/8-kolor-bialy" class="color" title="Biały" style="background-color: #ffffff"><span class="sr-only">Biały</span></a> <a href="index26a7.html?id_product=25&amp;id_product_attribute=112&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=6#/1-rozmiar-s/15-kolor-zielony" class="color" title="Zielony" style="background-color: #A0D468"><span class="sr-only">Zielony</span></a> <span class="js-count count"></span> </div>
-                        </div>
                       </div>
                     </div>
                   </li>
@@ -201,8 +180,8 @@
                     <div class="product-miniature js-product-miniature" data-id-product="25" data-id-product-attribute="110" itemscope itemtype="http://schema.org/Product">
                       <div class="thumbnail-container"> <a href="#" class="thumbnail product-thumbnail"> <img src="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/360109832_676746754470546_4958957156693770642_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=2z5DMVNySyUAX8tsX8A&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDlBzop_mmpXR86mIJRI_9_EAIxzaUG9YwrMpEn2SV__Q&oe=64BBCB4C" alt="Commodi consequatur" data-full-size-image-url="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/360109832_676746754470546_4958957156693770642_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=2z5DMVNySyUAX8tsX8A&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDlBzop_mmpXR86mIJRI_9_EAIxzaUG9YwrMpEn2SV__Q&oe=64BBCB4C"> <img class="fliper_image img-responsive" src="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/360109832_676746754470546_4958957156693770642_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=2z5DMVNySyUAX8tsX8A&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDlBzop_mmpXR86mIJRI_9_EAIxzaUG9YwrMpEn2SV__Q&oe=64BBCB4C" data-full-size-image-url="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/360109832_676746754470546_4958957156693770642_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=2z5DMVNySyUAX8tsX8A&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDlBzop_mmpXR86mIJRI_9_EAIxzaUG9YwrMpEn2SV__Q&oe=64BBCB4C" alt="" /> </a>
                         <div class="outer-functional">
-                          <div class="functional-buttons"> <a href="#" class="quick-view" data-link-action="quickview"> <i class="material-icons search">&#xE417;</i> Szybki podgląd </a>
-                            <div class="product-actions"> <a href="index87b3.html?id_product=25&amp;id_product_attribute=110&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=6#/1-rozmiar-s/5-kolor-szary" class="btn btn-primary add-to-cart view_page"> View Detail </a> </div>
+                          <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal"> <i class="material-icons search">&#xE417;</i> Szybki podgląd </button>
+                            <div class="product-actions"> <a href="" class="btn btn-primary add-to-cart view_page"> View Detail </a> </div>
                           </div>
                         </div>
                         <ul class="product-flags">
@@ -210,19 +189,8 @@
                         </ul>
                       </div>
                       <div class="product-description">
-                        <div class="comments_note">
-                          <div class="star_content clearfix">
-                            <div class="star star_on"></div>
-                            <div class="star star_on"></div>
-                            <div class="star star_on"></div>
-                            <div class="star star_on"></div>
-                            <div class="star star_on"></div>
-                          </div>
-                        </div> <span class="h3 product-title" itemprop="name"><a href="index87b3.html?id_product=25&amp;id_product_attribute=110&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=6#/1-rozmiar-s/5-kolor-szary">Commodi consequatur</a></span>
+                        <span class="h3 product-title" itemprop="name"><a href="">Commodi consequatur</a></span>
                         <div class="product-price-and-shipping"> <span itemprop="price" class="price">85,00 USD</span> </div>
-                        <div class="highlighted-informations hidden-sm-down">
-                          <div class="variant-links"> <a href="index87b3.html?id_product=25&amp;id_product_attribute=110&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=6#/1-rozmiar-s/5-kolor-szary" class="color" title="Szary" style="background-color: #AAB2BD"><span class="sr-only">Szary</span></a> <a href="indexa8fc.html?id_product=25&amp;id_product_attribute=111&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=6#/1-rozmiar-s/8-kolor-bialy" class="color" title="Biały" style="background-color: #ffffff"><span class="sr-only">Biały</span></a> <a href="index26a7.html?id_product=25&amp;id_product_attribute=112&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=6#/1-rozmiar-s/15-kolor-zielony" class="color" title="Zielony" style="background-color: #A0D468"><span class="sr-only">Zielony</span></a> <span class="js-count count"></span> </div>
-                        </div>
                       </div>
                     </div>
                   </li>
@@ -230,8 +198,8 @@
                     <div class="product-miniature js-product-miniature" data-id-product="25" data-id-product-attribute="110" itemscope itemtype="http://schema.org/Product">
                       <div class="thumbnail-container"> <a href="#" class="thumbnail product-thumbnail"> <img src="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/360109832_676746754470546_4958957156693770642_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=2z5DMVNySyUAX8tsX8A&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDlBzop_mmpXR86mIJRI_9_EAIxzaUG9YwrMpEn2SV__Q&oe=64BBCB4C" alt="Commodi consequatur" data-full-size-image-url="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/360109832_676746754470546_4958957156693770642_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=2z5DMVNySyUAX8tsX8A&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDlBzop_mmpXR86mIJRI_9_EAIxzaUG9YwrMpEn2SV__Q&oe=64BBCB4C"> <img class="fliper_image img-responsive" src="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/360109832_676746754470546_4958957156693770642_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=2z5DMVNySyUAX8tsX8A&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDlBzop_mmpXR86mIJRI_9_EAIxzaUG9YwrMpEn2SV__Q&oe=64BBCB4C" data-full-size-image-url="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/360109832_676746754470546_4958957156693770642_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=2z5DMVNySyUAX8tsX8A&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDlBzop_mmpXR86mIJRI_9_EAIxzaUG9YwrMpEn2SV__Q&oe=64BBCB4C" alt="" /> </a>
                         <div class="outer-functional">
-                          <div class="functional-buttons"> <a href="#" class="quick-view" data-link-action="quickview"> <i class="material-icons search">&#xE417;</i> Szybki podgląd </a>
-                            <div class="product-actions"> <a href="index87b3.html?id_product=25&amp;id_product_attribute=110&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=6#/1-rozmiar-s/5-kolor-szary" class="btn btn-primary add-to-cart view_page"> View Detail </a> </div>
+                          <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal"> <i class="material-icons search">&#xE417;</i> Szybki podgląd </button>
+                            <div class="product-actions"> <a href="" class="btn btn-primary add-to-cart view_page"> View Detail </a> </div>
                           </div>
                         </div>
                         <ul class="product-flags">
@@ -239,19 +207,8 @@
                         </ul>
                       </div>
                       <div class="product-description">
-                        <div class="comments_note">
-                          <div class="star_content clearfix">
-                            <div class="star star_on"></div>
-                            <div class="star star_on"></div>
-                            <div class="star star_on"></div>
-                            <div class="star star_on"></div>
-                            <div class="star star_on"></div>
-                          </div>
-                        </div> <span class="h3 product-title" itemprop="name"><a href="index87b3.html?id_product=25&amp;id_product_attribute=110&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=6#/1-rozmiar-s/5-kolor-szary">Commodi consequatur</a></span>
+                        <span class="h3 product-title" itemprop="name"><a href="index87b3.html?id_product=25&amp;id_product_attribute=110&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=6#/1-rozmiar-s/5-kolor-szary">Commodi consequatur</a></span>
                         <div class="product-price-and-shipping"> <span itemprop="price" class="price">85,00 USD</span> </div>
-                        <div class="highlighted-informations hidden-sm-down">
-                          <div class="variant-links"> <a href="index87b3.html?id_product=25&amp;id_product_attribute=110&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=6#/1-rozmiar-s/5-kolor-szary" class="color" title="Szary" style="background-color: #AAB2BD"><span class="sr-only">Szary</span></a> <a href="indexa8fc.html?id_product=25&amp;id_product_attribute=111&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=6#/1-rozmiar-s/8-kolor-bialy" class="color" title="Biały" style="background-color: #ffffff"><span class="sr-only">Biały</span></a> <a href="index26a7.html?id_product=25&amp;id_product_attribute=112&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=6#/1-rozmiar-s/15-kolor-zielony" class="color" title="Zielony" style="background-color: #A0D468"><span class="sr-only">Zielony</span></a> <span class="js-count count"></span> </div>
-                        </div>
                       </div>
                     </div>
                   </li>
@@ -267,26 +224,100 @@
                 <ul id="productscategory-carousel" class="slick-product-view-list product_list">
                   <li class="item">
                     <div class="product-miniature js-product-miniature" data-id-product="22" data-id-product-attribute="70" itemscope itemtype="http://schema.org/Product">
-                      <div class="thumbnail-container"> <a href="" class="thumbnail product-thumbnail"> <img src="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=C2GS0ncFK1oAX_vwNne&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDjHRBEJNoxTkekkYDJ1I2fqgRdoF5Dhqc5EBdjm6K4Sw&oe=64BBC873" alt="Accusantium doloremque" data-full-size-image-url="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=C2GS0ncFK1oAX_vwNne&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDjHRBEJNoxTkekkYDJ1I2fqgRdoF5Dhqc5EBdjm6K4Sw&oe=64BBC873"> <img class="fliper_image img-responsive" src="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=C2GS0ncFK1oAX_vwNne&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDjHRBEJNoxTkekkYDJ1I2fqgRdoF5Dhqc5EBdjm6K4Sw&oe=64BBC873" data-full-size-image-url="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=C2GS0ncFK1oAX_vwNne&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDjHRBEJNoxTkekkYDJ1I2fqgRdoF5Dhqc5EBdjm6K4Sw&oe=64BBC873" alt="" /> </a>
+                      <div class="thumbnail-container">
+                        <a href="" class="thumbnail product-thumbnail">
+                          <img src="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=C2GS0ncFK1oAX_vwNne&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDjHRBEJNoxTkekkYDJ1I2fqgRdoF5Dhqc5EBdjm6K4Sw&oe=64BBC873" alt="Accusantium doloremque" data-full-size-image-url="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=C2GS0ncFK1oAX_vwNne&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDjHRBEJNoxTkekkYDJ1I2fqgRdoF5Dhqc5EBdjm6K4Sw&oe=64BBC873">
+                          <img class="fliper_image img-responsive" src="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=C2GS0ncFK1oAX_vwNne&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDjHRBEJNoxTkekkYDJ1I2fqgRdoF5Dhqc5EBdjm6K4Sw&oe=64BBC873" data-full-size-image-url="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=C2GS0ncFK1oAX_vwNne&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDjHRBEJNoxTkekkYDJ1I2fqgRdoF5Dhqc5EBdjm6K4Sw&oe=64BBC873" alt="" />
+                        </a>
                         <div class="outer-functional">
-                          <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal"> <i class="material-icons search">&#xE417;</i> Szybki podgląd </button>
-                            <div class="product-actions"> <a href="" class="btn btn-primary add-to-cart view_page"> View Detail </a> </div>
+                          <div class="functional-buttons">
+                            <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal"> <i class="material-icons search">&#xE417;</i> Szybki podgląd</button>
+                            <div class="product-actions">
+                              <a href="" class="btn btn-primary add-to-cart view_page"> View Detail </a>
                           </div>
                         </div>
-                        <ul class="product-flags">
-                          <li class="new">Mới</li>
-                        </ul>
                       </div>
-                      <div class="product-description">
-                      </div> <span class="h3 product-title" itemprop="name"><a href="">Accusantium doloremque</a></span>
-                      <div class="product-price-and-shipping"> <span itemprop="price" class="price">110,00 USD</span> </div>
-                      <div class="highlighted-informations hidden-sm-down">
-                        <div class="variant-links"> <a href="" class="color" title="Czerwony" style="background-color: #E84C3D"><span class="sr-only">Czerwony</span></a> <a href="" class="color" title="Pomarańczowy" style="background-color: #F39C11"><span class="sr-only">Pomarańczowy</span></a> <a href="" class="color" title="Zielony" style="background-color: #A0D468"><span class="sr-only">Zielony</span></a> <span class="js-count count"></span> </div>
-                      </div>
+                      <ul class="product-flags">
+                        <li class="new">Mới</li>
+                      </ul>
                     </div>
-              </div>
-              </li>
-
+                    <div class="product-description">
+                      <span class="h3 product-title" itemprop="name"><a href="">Accusantium doloremque</a></span>
+                      <div class="product-price-and-shipping"> <span itemprop="price" class="price">110,00 USD</span> </div>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div class="product-miniature js-product-miniature" data-id-product="22" data-id-product-attribute="70" itemscope itemtype="http://schema.org/Product">
+                      <div class="thumbnail-container">
+                        <a href="" class="thumbnail product-thumbnail">
+                          <img src="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=C2GS0ncFK1oAX_vwNne&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDjHRBEJNoxTkekkYDJ1I2fqgRdoF5Dhqc5EBdjm6K4Sw&oe=64BBC873" alt="Accusantium doloremque" data-full-size-image-url="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=C2GS0ncFK1oAX_vwNne&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDjHRBEJNoxTkekkYDJ1I2fqgRdoF5Dhqc5EBdjm6K4Sw&oe=64BBC873">
+                          <img class="fliper_image img-responsive" src="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=C2GS0ncFK1oAX_vwNne&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDjHRBEJNoxTkekkYDJ1I2fqgRdoF5Dhqc5EBdjm6K4Sw&oe=64BBC873" data-full-size-image-url="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=C2GS0ncFK1oAX_vwNne&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDjHRBEJNoxTkekkYDJ1I2fqgRdoF5Dhqc5EBdjm6K4Sw&oe=64BBC873" alt="" />
+                        </a>
+                        <div class="outer-functional">
+                          <div class="functional-buttons">
+                            <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal"> <i class="material-icons search">&#xE417;</i> Szybki podgląd</button>
+                            <div class="product-actions">
+                              <a href="" class="btn btn-primary add-to-cart view_page"> View Detail </a>
+                          </div>
+                        </div>
+                      </div>
+                      <ul class="product-flags">
+                        <li class="new">Mới</li>
+                      </ul>
+                    </div>
+                    <div class="product-description">
+                      <span class="h3 product-title" itemprop="name"><a href="">Accusantium doloremque</a></span>
+                      <div class="product-price-and-shipping"> <span itemprop="price" class="price">110,00 USD</span> </div>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div class="product-miniature js-product-miniature" data-id-product="22" data-id-product-attribute="70" itemscope itemtype="http://schema.org/Product">
+                      <div class="thumbnail-container">
+                        <a href="" class="thumbnail product-thumbnail">
+                          <img src="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=C2GS0ncFK1oAX_vwNne&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDjHRBEJNoxTkekkYDJ1I2fqgRdoF5Dhqc5EBdjm6K4Sw&oe=64BBC873" alt="Accusantium doloremque" data-full-size-image-url="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=C2GS0ncFK1oAX_vwNne&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDjHRBEJNoxTkekkYDJ1I2fqgRdoF5Dhqc5EBdjm6K4Sw&oe=64BBC873">
+                          <img class="fliper_image img-responsive" src="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=C2GS0ncFK1oAX_vwNne&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDjHRBEJNoxTkekkYDJ1I2fqgRdoF5Dhqc5EBdjm6K4Sw&oe=64BBC873" data-full-size-image-url="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=C2GS0ncFK1oAX_vwNne&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDjHRBEJNoxTkekkYDJ1I2fqgRdoF5Dhqc5EBdjm6K4Sw&oe=64BBC873" alt="" />
+                        </a>
+                        <div class="outer-functional">
+                          <div class="functional-buttons">
+                            <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal"> <i class="material-icons search">&#xE417;</i> Szybki podgląd</button>
+                            <div class="product-actions">
+                              <a href="" class="btn btn-primary add-to-cart view_page"> View Detail </a>
+                          </div>
+                        </div>
+                      </div>
+                      <ul class="product-flags">
+                        <li class="new">Mới</li>
+                      </ul>
+                    </div>
+                    <div class="product-description">
+                      <span class="h3 product-title" itemprop="name"><a href="">Accusantium doloremque</a></span>
+                      <div class="product-price-and-shipping"> <span itemprop="price" class="price">110,00 USD</span> </div>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div class="product-miniature js-product-miniature" data-id-product="22" data-id-product-attribute="70" itemscope itemtype="http://schema.org/Product">
+                      <div class="thumbnail-container">
+                        <a href="" class="thumbnail product-thumbnail">
+                          <img src="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=C2GS0ncFK1oAX_vwNne&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDjHRBEJNoxTkekkYDJ1I2fqgRdoF5Dhqc5EBdjm6K4Sw&oe=64BBC873" alt="Accusantium doloremque" data-full-size-image-url="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=C2GS0ncFK1oAX_vwNne&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDjHRBEJNoxTkekkYDJ1I2fqgRdoF5Dhqc5EBdjm6K4Sw&oe=64BBC873">
+                          <img class="fliper_image img-responsive" src="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=C2GS0ncFK1oAX_vwNne&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDjHRBEJNoxTkekkYDJ1I2fqgRdoF5Dhqc5EBdjm6K4Sw&oe=64BBC873" data-full-size-image-url="https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=C2GS0ncFK1oAX_vwNne&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDjHRBEJNoxTkekkYDJ1I2fqgRdoF5Dhqc5EBdjm6K4Sw&oe=64BBC873" alt="" />
+                        </a>
+                        <div class="outer-functional">
+                          <div class="functional-buttons">
+                            <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal"> <i class="material-icons search">&#xE417;</i> Szybki podgląd</button>
+                            <div class="product-actions">
+                              <a href="" class="btn btn-primary add-to-cart view_page"> View Detail </a>
+                          </div>
+                        </div>
+                      </div>
+                      <ul class="product-flags">
+                        <li class="new">Mới</li>
+                      </ul>
+                    </div>
+                    <div class="product-description">
+                      <span class="h3 product-title" itemprop="name"><a href="">Accusantium doloremque</a></span>
+                      <div class="product-price-and-shipping"> <span itemprop="price" class="price">110,00 USD</span> </div>
+                    </div>
+                  </li>
               </ul>
               <div class="customNavigation"> <a class="btn prev productscategory_prev">&nbsp;</a> <a class="btn next productscategory_next">&nbsp;</a> </div>
             </div>
@@ -299,35 +330,57 @@
             </div>
             <div class="modal-body">
               <div class="row">
-                <div class="col-md-6 col-sm-6 hidden-xs-down">
-                  <div class="images-container">
-                    <div class="product-cover"> <a href="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A"> <img class="js-qv-product-cover" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="" title="" style="max-width:400px;" itemprop="image"> </a>
-                    </div> <!-- Define Number of product for SLIDER -->
-                    <div class="slick-quick-view">
-                      <div class="thumb-container item">
-                        <img class="thumb js-thumb " data-image-medium-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" data-image-large-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="" title="" itemprop="image">
+                <div class="col-md-6 col-lg-6 col-sm-6 hidden-xs-down">
+                  <div class="product-slider-container">
+                    <div class="row">
+                      <div class="product-cover slider-main-qview">
+                        <a href="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A">
+                          <img class="js-qv-product-cover-qview" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="" title="" itemprop="image">
+                        </a>
+                        <a href="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A">
+                          <img class="js-qv-product-cover-qview" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="" title="" itemprop="image">
+                        </a>
+                        <a href="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A">
+                          <img class="js-qv-product-cover-qview" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="" title="" itemprop="image">
+                        </a>
+                        <a href="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A">
+                          <img class="js-qv-product-cover-qview" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="" title="" itemprop="image">
+                        </a>
+                        <a href="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A">
+                          <img class="js-qv-product-cover-qview" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="" title="" itemprop="image">
+                        </a>
                       </div>
-                      <div class="thumb-container item">
-                        <img class="thumb js-thumb " data-image-medium-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" data-image-large-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="" title="" itemprop="image">
-                      </div>
-                      <div class="thumb-container item">
-                        <img class="thumb js-thumb " data-image-medium-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" data-image-large-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="" title="" itemprop="image">
-                      </div>
-                      <div class="thumb-container item">
-                          <img class="thumb js-thumb " data-image-medium-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" data-image-large-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="" title="" itemprop="image"> 
+                    </div>
+                    <div class="row">
+                      <div class="slider-under-qview">
+                        <div class="thumb-container item">
+                          <img class="" data-image-medium-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" data-image-large-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="" title="" itemprop="image">
                         </div>
+                        <div class="thumb-container item">
+                          <img class="" data-image-medium-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" data-image-large-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="" title="" itemprop="image">
+                        </div>
+                        <div class="thumb-container item">
+                          <img class="" data-image-medium-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" data-image-large-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="">
+                        </div>
+                        <div class="thumb-container item">
+                          <img class="" data-image-medium-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" data-image-large-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="">
+                        </div>
+                        <div class="thumb-container item">
+                          <img class="" data-image-medium-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" data-image-large-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="">
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-6">
-                  <h1 class="h1">Exercitat Virginia</h1>
+                  <h1 class="h1">Lan Hồ Điệp</h1>
                   <div class="product-prices">
                     <div class="product-price h5 " itemprop="offers" itemscope="" itemtype="https://schema.org/Offer">
                       <link itemprop="availability" href="https://schema.org/InStock">
                       <meta itemprop="priceCurrency" content="EUR">
                       <div class="current-price"> <span itemprop="price" content="87">€87.00</span> </div>
                     </div>
-                    <div class="tax-shipping-delivery-label"> Tax included </div>
+                    <div class="tax-shipping-delivery-label"> bao gồm VAT </div>
                   </div>
                   <div id="product-description-short" itemprop="description">
                     <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.</p>
@@ -343,20 +396,15 @@
                           </div>
                           <div class="add"> <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Add to cart </button> </div>
                         </div>
-                        <div class="clearfix"></div> <span id="product-availability"> <span class="product-available"> <i class="material-icons"></i> In stock </span> </span>
+                        <div class="clearfix"></div>
                         <p class="product-minimal-quantity"> </p>
                       </div>
                     </form>
                   </div>
-                  <div class="modal-footer">
-                  </div>
                 </div>
               </div>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+
           </div>
         </div>
       </div>

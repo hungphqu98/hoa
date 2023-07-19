@@ -21,6 +21,24 @@ $(document).ready(function(){
     autoplay: false,
     slidesToShow: 4,
   });
+  $('.slider-main-qview').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.slider-under-qview'
+  });
+  $('.slider-under-qview').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    asNavFor: '.slider-main-qview',
+    arrows: true,
+    autoplay: false,
+  });
+  $('#product-modal').on('shown.bs.modal', function (e) {
+    // Refresh Slick Slider when the modal is shown
+    $('.slider-under-qview').slick('refresh');
+  });
 $('.menu-icon').click(function() {
   $('#mobile_top_menu_wrapper').toggleClass('slide');
   $('.mobile-menu-inner').css('display', 'block');

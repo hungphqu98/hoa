@@ -50,8 +50,10 @@
           <div class="blockcart cart-preview inactive">
             <div class="header blockcart-header dropdown js-dropdown">
 
-              <a class="shopping-cart" rel="nofollow" href="">
-              </a>
+            <a class="shopping-cart" rel="nofollow" href="">
+                <span class="mobile_count"></span>
+                <span class="cart-products-count hidden-sm-down">0<span class="value"> </span></span>
+            </a>
 
 
             </div>

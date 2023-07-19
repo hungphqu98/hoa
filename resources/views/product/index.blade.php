@@ -195,7 +195,7 @@
                       <div class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope itemtype="http://schema.org/Product">
                         <div class="thumbnail-container"> <a href="index8589.html?id_product=1&amp;id_product_attribute=1&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/1-size-s/8-color-white" class="thumbnail product-thumbnail"> <img src="{{ $f->flowerImages->first()->image_url }}" alt="Consectetur Hampden" data-full-size-image-url="{{ $f->flowerImages->first()->image_url }}"> <img class="fliper_image img-responsive" src="{{ $f->flowerImages->first()->image_url }}" data-full-size-image-url="{{ $f->flowerImages->first()->image_url }}" alt="" /> </a>
                           <div class="outer-functional">
-                            <div class="functional-buttons"> <a href="#" class="quick-view" data-link-action="quickview"> <i class="material-icons search">&#xE417;</i> Quick view </a>
+                            <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal"> <i class="material-icons search">&#xE417;</i> Szybki podgląd </button>
                               <div class="product-actions">
                                 <form action="#" method="post" class="add-to-cart-or-refresh"> <input type="hidden" name="token" value="b88261cab17a7775f54f10a3c0bb0f61"> <input type="hidden" name="id_product" value="1" class="product_page_product_id"> <input type="hidden" name="id_customization" value="0" class="product_customization_id"> <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Add to cart </button> </form>
                               </div>
@@ -232,7 +232,7 @@
                       <div class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope itemtype="http://schema.org/Product">
                         <div class="thumbnail-container"> <a href="{{ route('product.view') }}" class="thumbnail product-thumbnail"> <img src="https://scontent.fhan3-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=f26r_0ND93gAX-08vQI&_nc_ht=scontent.fhan3-1.fna&oh=00_AfD22dTikiciNj5kxHRGa7zYAnP1Dc784JxjvfhoqGDijQ&oe=64BBC873" alt="Consectetur Hampden" data-full-size-image-url="https://scontent.fhan3-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=f26r_0ND93gAX-08vQI&_nc_ht=scontent.fhan3-1.fna&oh=00_AfD22dTikiciNj5kxHRGa7zYAnP1Dc784JxjvfhoqGDijQ&oe=64BBC873"> <img class="fliper_image img-responsive" src="https://scontent.fhan3-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=f26r_0ND93gAX-08vQI&_nc_ht=scontent.fhan3-1.fna&oh=00_AfD22dTikiciNj5kxHRGa7zYAnP1Dc784JxjvfhoqGDijQ&oe=64BBC873" data-full-size-image-url="https://scontent.fhan3-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=f26r_0ND93gAX-08vQI&_nc_ht=scontent.fhan3-1.fna&oh=00_AfD22dTikiciNj5kxHRGa7zYAnP1Dc784JxjvfhoqGDijQ&oe=64BBC873" alt="" /> </a>
                           <div class="outer-functional">
-                            <div class="functional-buttons"> <a href="#" class="quick-view" data-link-action="quickview"> <i class="material-icons search">&#xE417;</i> Quick view </a>
+                            <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal"> <i class="material-icons search">&#xE417;</i> Szybki podgląd </button>
                               <div class="product-actions">
                                 <form action="#" method="post" class="add-to-cart-or-refresh"> <input type="hidden" name="token" value="b88261cab17a7775f54f10a3c0bb0f61"> <input type="hidden" name="id_product" value="1" class="product_page_product_id"> <input type="hidden" name="id_customization" value="0" class="product_customization_id"> <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Add to cart </button> </form>
                               </div>
@@ -256,7 +256,7 @@
                       <div class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope itemtype="http://schema.org/Product">
                         <div class="thumbnail-container"> <a href="{{ route('product.view') }}" class="thumbnail product-thumbnail"> <img src="https://scontent.fhan3-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=f26r_0ND93gAX-08vQI&_nc_ht=scontent.fhan3-1.fna&oh=00_AfD22dTikiciNj5kxHRGa7zYAnP1Dc784JxjvfhoqGDijQ&oe=64BBC873" alt="Consectetur Hampden" data-full-size-image-url="https://scontent.fhan3-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=f26r_0ND93gAX-08vQI&_nc_ht=scontent.fhan3-1.fna&oh=00_AfD22dTikiciNj5kxHRGa7zYAnP1Dc784JxjvfhoqGDijQ&oe=64BBC873"> <img class="fliper_image img-responsive" src="https://scontent.fhan3-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=f26r_0ND93gAX-08vQI&_nc_ht=scontent.fhan3-1.fna&oh=00_AfD22dTikiciNj5kxHRGa7zYAnP1Dc784JxjvfhoqGDijQ&oe=64BBC873" data-full-size-image-url="https://scontent.fhan3-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=f26r_0ND93gAX-08vQI&_nc_ht=scontent.fhan3-1.fna&oh=00_AfD22dTikiciNj5kxHRGa7zYAnP1Dc784JxjvfhoqGDijQ&oe=64BBC873" alt="" /> </a>
                           <div class="outer-functional">
-                            <div class="functional-buttons"> <a href="#" class="quick-view" data-link-action="quickview"> <i class="material-icons search">&#xE417;</i> Quick view </a>
+                            <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal"> <i class="material-icons search">&#xE417;</i> Szybki podgląd </button>
                               <div class="product-actions">
                                 <form action="#" method="post" class="add-to-cart-or-refresh"> <input type="hidden" name="token" value="b88261cab17a7775f54f10a3c0bb0f61"> <input type="hidden" name="id_product" value="1" class="product_page_product_id"> <input type="hidden" name="id_customization" value="0" class="product_customization_id"> <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Add to cart </button> </form>
                               </div>
@@ -280,7 +280,7 @@
                       <div class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope itemtype="http://schema.org/Product">
                         <div class="thumbnail-container"> <a href="{{ route('product.view') }}" class="thumbnail product-thumbnail"> <img src="https://scontent.fhan3-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=f26r_0ND93gAX-08vQI&_nc_ht=scontent.fhan3-1.fna&oh=00_AfD22dTikiciNj5kxHRGa7zYAnP1Dc784JxjvfhoqGDijQ&oe=64BBC873" alt="Consectetur Hampden" data-full-size-image-url="https://scontent.fhan3-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=f26r_0ND93gAX-08vQI&_nc_ht=scontent.fhan3-1.fna&oh=00_AfD22dTikiciNj5kxHRGa7zYAnP1Dc784JxjvfhoqGDijQ&oe=64BBC873"> <img class="fliper_image img-responsive" src="https://scontent.fhan3-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=f26r_0ND93gAX-08vQI&_nc_ht=scontent.fhan3-1.fna&oh=00_AfD22dTikiciNj5kxHRGa7zYAnP1Dc784JxjvfhoqGDijQ&oe=64BBC873" data-full-size-image-url="https://scontent.fhan3-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=f26r_0ND93gAX-08vQI&_nc_ht=scontent.fhan3-1.fna&oh=00_AfD22dTikiciNj5kxHRGa7zYAnP1Dc784JxjvfhoqGDijQ&oe=64BBC873" alt="" /> </a>
                           <div class="outer-functional">
-                            <div class="functional-buttons"> <a href="#" class="quick-view" data-link-action="quickview"> <i class="material-icons search">&#xE417;</i> Quick view </a>
+                            <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal"> <i class="material-icons search">&#xE417;</i> Szybki podgląd </button>
                               <div class="product-actions">
                                 <form action="#" method="post" class="add-to-cart-or-refresh"> <input type="hidden" name="token" value="b88261cab17a7775f54f10a3c0bb0f61"> <input type="hidden" name="id_product" value="1" class="product_page_product_id"> <input type="hidden" name="id_customization" value="0" class="product_customization_id"> <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Add to cart </button> </form>
                               </div>
@@ -304,7 +304,7 @@
                       <div class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope itemtype="http://schema.org/Product">
                         <div class="thumbnail-container"> <a href="{{ route('product.view') }}" class="thumbnail product-thumbnail"> <img src="https://scontent.fhan3-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=f26r_0ND93gAX-08vQI&_nc_ht=scontent.fhan3-1.fna&oh=00_AfD22dTikiciNj5kxHRGa7zYAnP1Dc784JxjvfhoqGDijQ&oe=64BBC873" alt="Consectetur Hampden" data-full-size-image-url="https://scontent.fhan3-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=f26r_0ND93gAX-08vQI&_nc_ht=scontent.fhan3-1.fna&oh=00_AfD22dTikiciNj5kxHRGa7zYAnP1Dc784JxjvfhoqGDijQ&oe=64BBC873"> <img class="fliper_image img-responsive" src="https://scontent.fhan3-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=f26r_0ND93gAX-08vQI&_nc_ht=scontent.fhan3-1.fna&oh=00_AfD22dTikiciNj5kxHRGa7zYAnP1Dc784JxjvfhoqGDijQ&oe=64BBC873" data-full-size-image-url="https://scontent.fhan3-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=f26r_0ND93gAX-08vQI&_nc_ht=scontent.fhan3-1.fna&oh=00_AfD22dTikiciNj5kxHRGa7zYAnP1Dc784JxjvfhoqGDijQ&oe=64BBC873" alt="" /> </a>
                           <div class="outer-functional">
-                            <div class="functional-buttons"> <a href="#" class="quick-view" data-link-action="quickview"> <i class="material-icons search">&#xE417;</i> Quick view </a>
+                            <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal"> <i class="material-icons search">&#xE417;</i> Szybki podgląd </button>
                               <div class="product-actions">
                                 <form action="#" method="post" class="add-to-cart-or-refresh"> <input type="hidden" name="token" value="b88261cab17a7775f54f10a3c0bb0f61"> <input type="hidden" name="id_product" value="1" class="product_page_product_id"> <input type="hidden" name="id_customization" value="0" class="product_customization_id"> <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Add to cart </button> </form>
                               </div>
@@ -343,6 +343,92 @@
               <div id="js-product-list-bottom"></div>
             </div>
           </section>
+          <div class="modal fade" id="product-modal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6 col-lg-6 col-sm-6 hidden-xs-down">
+                    <div class="product-slider-container">
+                      <div class="row">
+                        <div class="product-cover slider-main-qview">
+                          <a href="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A">
+                            <img class="js-qv-product-cover-qview" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="" title=""  itemprop="image">
+                          </a>
+                          <a href="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A">
+                            <img class="js-qv-product-cover-qview" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="" title=""  itemprop="image">
+                          </a>
+                          <a href="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A">
+                            <img class="js-qv-product-cover-qview" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="" title=""  itemprop="image">
+                          </a>
+                          <a href="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A">
+                            <img class="js-qv-product-cover-qview" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="" title=""  itemprop="image">
+                          </a>
+                          <a href="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A">
+                            <img class="js-qv-product-cover-qview" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="" title=""  itemprop="image">
+                          </a>
+                        </div>
+                      </div>
+                    <div class="row">
+                    <div class="slider-under-qview">
+                      <div class="thumb-container item">
+                        <img class="" data-image-medium-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" data-image-large-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="" title="" itemprop="image">
+                      </div>
+                      <div class="thumb-container item">
+                        <img class="" data-image-medium-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" data-image-large-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="" title="" itemprop="image">
+                      </div>
+                      <div class="thumb-container item">
+                        <img class="" data-image-medium-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" data-image-large-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="" >
+                      </div>
+                      <div class="thumb-container item">
+                        <img class="" data-image-medium-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" data-image-large-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="" >
+                      </div>
+                      <div class="thumb-container item">
+                          <img class="" data-image-medium-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" data-image-large-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="" > 
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                  <h1 class="h1">Lan Hồ Điệp</h1>
+                  <div class="product-prices">
+                    <div class="product-price h5 " itemprop="offers" itemscope="" itemtype="https://schema.org/Offer">
+                      <link itemprop="availability" href="https://schema.org/InStock">
+                      <meta itemprop="priceCurrency" content="EUR">
+                      <div class="current-price"> <span itemprop="price" content="87">€87.00</span> </div>
+                    </div>
+                    <div class="tax-shipping-delivery-label"> bao gồm VAT </div>
+                  </div>
+                  <div id="product-description-short" itemprop="description">
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.</p>
+                  </div>
+                  <div class="product-actions">
+                    <form action="" method="post" id="add-to-cart-or-refresh"> <input type="hidden" name="token" value="b88261cab17a7775f54f10a3c0bb0f61"> <input type="hidden" name="id_product" value="21" id="product_page_product_id"> <input type="hidden" name="id_customization" value="0" id="product_customization_id">
+                      <div class="product-variants">
+                      </div>
+                      <div class="product-add-to-cart"> <!-- <span class="control-label">Quantity</span>-->
+                        <div class="product-quantity">
+                          <div class="qty">
+                            <div class="input-group bootstrap-touchspin"><span class="input-group-addon bootstrap-touchspin-prefix" style="display: none;"></span><input type="text" name="qty" id="quantity_wanted" value="1" class="input-group form-control" min="1" aria-label="Quantity" style="display: block;"><span class="input-group-addon bootstrap-touchspin-postfix" style="display: none;"></span><span class="input-group-btn-vertical"><button class="btn btn-touchspin js-touchspin bootstrap-touchspin-up" type="button"><i class="material-icons touchspin-up"></i></button><button class="btn btn-touchspin js-touchspin bootstrap-touchspin-down" type="button"><i class="material-icons touchspin-down"></i></button></span></div>
+                          </div>
+                          <div class="add"> <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Add to cart </button> </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <p class="product-minimal-quantity"> </p>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
         </section>
       </div>
     </div>
