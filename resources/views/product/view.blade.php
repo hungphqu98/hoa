@@ -2,13 +2,13 @@
   <nav data-depth="3" class="breadcrumb">
     <div class="container">
       <ol itemscope itemtype="http://schema.org/BreadcrumbList">
-        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"> <a itemprop="item" href=""> <span itemprop="name">Sản phẩm</span> </a>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"> <a itemprop="item" href="{{ route('home') }}"> <span itemprop="name">Trang chủ</span> </a>
           <meta itemprop="position" content="1">
         </li>
-        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"> <a itemprop="item" href=""> <span itemprop="name">Lan Hồ Điệp</span> </a>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"> <a itemprop="item" href="{{ route('product.index') }}"> <span itemprop="name">Sản phẩm</span> </a>
           <meta itemprop="position" content="2">
         </li>
-        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"> <a itemprop="item" href=""> <span itemprop="name">Hoa</span> </a>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"> <a itemprop="item" href="{{ route('product.index') }}"> <span itemprop="name">Lan Hồ Điệp</span> </a>
           <meta itemprop="position" content="3">
         </li>
       </ol>
@@ -62,7 +62,7 @@
                         <meta itemprop="priceCurrency" content="USD">
                         <div class="current-price"> <span itemprop="price" content="83">83,00 USD</span> </div>
                       </div>
-                      <div class="tax-shipping-delivery-label"> Brutto </div>
+                      <div class="tax-shipping-delivery-label"> bao gồm VAT </div>
                     </div>
                     <div class="product-add-to-cart"> <!-- <span class="control-label">Ilość</span>-->
                       <div class="product-quantity">

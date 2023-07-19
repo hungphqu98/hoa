@@ -3,13 +3,13 @@
 				<div class="container">
 					<ol itemscope itemtype="http://schema.org/BreadcrumbList">
 						<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-							<a itemprop="item" href="index.html">
-								<span itemprop="name">Home</span>
+							<a itemprop="item" href="{{ route('home') }}">
+								<span itemprop="name">Trang chủ</span>
 							</a>
 							<meta itemprop="position" content="1">
 						</li>
 						<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-							<a itemprop="item" href="">
+							<a itemprop="item" href="{{ route('product.index') }}">
 								<span itemprop="name">Sản phẩm</span>
 							</a>
 							<meta itemprop="position" content="2">
@@ -23,42 +23,53 @@
     <div id="columns_inner">
       <div id="left-column" class="col-xs-12" style="width:24.4%">
         <div class="block-categories block">
-          <h4 class="block_title hidden-md-down"> <a href="indexfa90.html?id_category=3&amp;controller=category&amp;id_lang=1">Fashion</a> </h4>
-          <h4 class="block_title hidden-lg-up" data-target="#block_categories_toggle" data-toggle="collapse"> <a href="indexfa90.html?id_category=3&amp;controller=category&amp;id_lang=1">Fashion</a> <span class="pull-xs-right"> <span class="navbar-toggler collapse-icons"> <i class="fa-icon add"></i> <i class="fa-icon remove"></i> </span> </span> </h4>
+          <h4 class="block_title hidden-md-down"> <a href=""{{ route('product.index') }}>Sản phẩm</a> </h4>
+          <h4 class="block_title hidden-lg-up" data-target="#block_categories_toggle" data-toggle="collapse"> <a href="">Sản phẩm</a> <span class="pull-xs-right"> <span class="navbar-toggler collapse-icons"> <i class="fa-icon add"></i> <i class="fa-icon remove"></i> </span> </span> </h4>
           <div id="block_categories_toggle" class="block_content collapse">
             <ul class="category-top-menu">
               <li>
                 <ul class="category-sub-menu">
-                  <li data-depth="0"><a href="index0990.html?id_category=4&amp;controller=category&amp;id_lang=1">Clothing</a>
+                  <li data-depth="0"><a href="{{ route('product.index') }}">Lan Hồ Điệp</a>
                     <div class="navbar-toggler collapse-icons" data-toggle="collapse" data-target="#exCollapsingNavbar4"><span class="add"></span><span class="remove"></span></div>
                     <div class="collapse" id="exCollapsingNavbar4">
                       <ul class="category-sub-menu">
-                        <li data-depth="1"><a class="category-sub-link" href="index9c57.html?id_category=19&amp;controller=category&amp;id_lang=1">Ethnic Wear</a></li>
-                        <li data-depth="1"><a class="category-sub-link" href="index9378.html?id_category=20&amp;controller=category&amp;id_lang=1">Sports Wear</a></li>
-                        <li data-depth="1"><a class="category-sub-link" href="indexd081.html?id_category=21&amp;controller=category&amp;id_lang=1">Loungewear</a> </li>
-                        <li data-depth="1"><a class="category-sub-link" href="index96da.html?id_category=22&amp;controller=category&amp;id_lang=1">Trousers</a> </li>
+                        <li data-depth="1"><a class="category-sub-link" href="">Hoa sự kiện</a></li>
+                        <li data-depth="1"><a class="category-sub-link" href="">Bó hoa</a></li>
+                        <li data-depth="1"><a class="category-sub-link" href="">Hộp hoa</a> </li>
+                        <li data-depth="1"><a class="category-sub-link" href="">Hoa tết</a> </li>
                       </ul>
                     </div>
                   </li>
-                  <li data-depth="0"><a href="index3520.html?id_category=5&amp;controller=category&amp;id_lang=1">Accessories</a>
-                    <div class="navbar-toggler collapse-icons" data-toggle="collapse" data-target="#exCollapsingNavbar5"><span class="add"></span><span class="remove"></span></div>
-                    <div class="collapse" id="exCollapsingNavbar5">
+                  <li data-depth="0"><a href="{{ route('product.index') }}">Hoa sự kiện</a>
+                    <div class="navbar-toggler collapse-icons" data-toggle="collapse" data-target="#exCollapsingNavbar4"><span class="add"></span><span class="remove"></span></div>
+                    <div class="collapse" id="exCollapsingNavbar4">
                       <ul class="category-sub-menu">
-                        <li data-depth="1"><a class="category-sub-link" href="index8447.html?id_category=23&amp;controller=category&amp;id_lang=1">Luggage &amp; Travel </a></li>
-                        <li data-depth="1"><a class="category-sub-link" href="indexbe45.html?id_category=24&amp;controller=category&amp;id_lang=1">Wallets &amp; Belts</a></li>
-                        <li data-depth="1"><a class="category-sub-link" href="index82f7.html?id_category=25&amp;controller=category&amp;id_lang=1">Handbags</a> </li>
-                        <li data-depth="1"><a class="category-sub-link" href="index87e4.html?id_category=26&amp;controller=category&amp;id_lang=1">Backpacks</a> </li>
+                        <li data-depth="1"><a class="category-sub-link" href="">Hoa sự kiện</a></li>
+                        <li data-depth="1"><a class="category-sub-link" href="">Bó hoa</a></li>
+                        <li data-depth="1"><a class="category-sub-link" href="">Hộp hoa</a> </li>
+                        <li data-depth="1"><a class="category-sub-link" href="">Hoa tết</a> </li>
                       </ul>
                     </div>
                   </li>
-                  <li data-depth="0"><a href="indexf052.html?id_category=14&amp;controller=category&amp;id_lang=1">Footwear</a>
-                    <div class="navbar-toggler collapse-icons" data-toggle="collapse" data-target="#exCollapsingNavbar14"><span class="add"></span><span class="remove"></span> </div>
-                    <div class="collapse" id="exCollapsingNavbar14">
+                  <li data-depth="0"><a href="{{ route('product.index') }}">Bó hoa</a>
+                    <div class="navbar-toggler collapse-icons" data-toggle="collapse" data-target="#exCollapsingNavbar4"><span class="add"></span><span class="remove"></span></div>
+                    <div class="collapse" id="exCollapsingNavbar4">
                       <ul class="category-sub-menu">
-                        <li data-depth="1"><a class="category-sub-link" href="indexb34f.html?id_category=15&amp;controller=category&amp;id_lang=1">Formal Shoes</a></li>
-                        <li data-depth="1"><a class="category-sub-link" href="index63be.html?id_category=16&amp;controller=category&amp;id_lang=1">Flip-Flops</a> </li>
-                        <li data-depth="1"><a class="category-sub-link" href="indexcd48.html?id_category=17&amp;controller=category&amp;id_lang=1"> Sandles</a> </li>
-                        <li data-depth="1"><a class="category-sub-link" href="index6c57.html?id_category=18&amp;controller=category&amp;id_lang=1">Sports Shoes</a></li>
+                        <li data-depth="1"><a class="category-sub-link" href="">Hoa sự kiện</a></li>
+                        <li data-depth="1"><a class="category-sub-link" href="">Bó hoa</a></li>
+                        <li data-depth="1"><a class="category-sub-link" href="">Hộp hoa</a> </li>
+                        <li data-depth="1"><a class="category-sub-link" href="">Hoa tết</a> </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li data-depth="0"><a href="{{ route('product.index') }}">Hoa tết</a>
+                    <div class="navbar-toggler collapse-icons" data-toggle="collapse" data-target="#exCollapsingNavbar4"><span class="add"></span><span class="remove"></span></div>
+                    <div class="collapse" id="exCollapsingNavbar4">
+                      <ul class="category-sub-menu">
+                        <li data-depth="1"><a class="category-sub-link" href="">Hoa sự kiện</a></li>
+                        <li data-depth="1"><a class="category-sub-link" href="">Bó hoa</a></li>
+                        <li data-depth="1"><a class="category-sub-link" href="">Hộp hoa</a> </li>
+                        <li data-depth="1"><a class="category-sub-link" href="">Hoa tết</a> </li>
                       </ul>
                     </div>
                   </li>
@@ -70,47 +81,31 @@
         <div id="search_filters_wrapper" class="hidden-md-down block"> <!-- hidden-sm-down -->
           <div id="search_filter_controls" class="hidden-lg-up"> <!-- --> <span id="_mobile_search_filters_clear_all"></span> <button class="btn btn-secondary ok"> <i class="material-icons">&#xE876;</i> OK </button> </div>
           <div id="search_filters">
-            <h4 class="block_title">Filter By</h4>
+            <h4 class="block_title">Lọc theo</h4>
             <div class="block_content">
-              <div id="_desktop_search_filters_clear_all" class="hidden-md-down clear-all-wrapper"> <button data-search-url="https://capricathemes.com/prestashop/PRS07/PRS070170/index.php?controller=category&amp;id_category=3&amp;id_lang=1" class="btn btn-tertiary js-search-filters-clear-all"> <i class="material-icons">&#xE14C;</i> Clear all </button> </div>
+              <div id="_desktop_search_filters_clear_all" class="hidden-md-down clear-all-wrapper"> <button data-search-url="" class="btn btn-tertiary js-search-filters-clear-all"> <i class="material-icons">&#xE14C;</i> Xóa </button> </div>
               <section class="facet">
-                <h1 class="h6 facet-title hidden-md-down">Categories</h1>
+                <h1 class="h6 facet-title hidden-md-down">Sản phẩm</h1>
                 <div class="title hidden-lg-up" data-target="#facet_86716" data-toggle="collapse">
-                  <h1 class="h6 facet-title">Categories</h1> <span class="pull-xs-right"> <span class="navbar-toggler collapse-icons"> <i class="fa-icon add"></i> <i class="fa-icon remove"></i> </span> </span>
+                  <h1 class="h6 facet-title">Sản phẩm</h1> <span class="pull-xs-right"> <span class="navbar-toggler collapse-icons"> <i class="fa-icon add"></i> <i class="fa-icon remove"></i> </span> </span>
                 </div>
                 <ul id="facet_86716" class="collapse">
-                  <li> <label class="facet-label" for="facet_input_86716_0"> <span class="custom-checkbox"> <input id="facet_input_86716_0" data-search-url="index677c.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;q=Categories-Clothing" type="checkbox"> <span class="ps-shown-by-js"><i class="material-icons checkbox-checked">&#xE5CA;</i></span> </span> <a href="index677c.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;q=Categories-Clothing" class="_gray-darker search-link js-search-link" rel="nofollow"> Clothing <span class="magnitude">(13)</span> </a> </label> </li>
-                  <li> <label class="facet-label" for="facet_input_86716_1"> <span class="custom-checkbox"> <input id="facet_input_86716_1" data-search-url="indexc195.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;q=Categories-Accessories" type="checkbox"> <span class="ps-shown-by-js"><i class="material-icons checkbox-checked">&#xE5CA;</i></span> </span> <a href="indexc195.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;q=Categories-Accessories" class="_gray-darker search-link js-search-link" rel="nofollow"> Accessories <span class="magnitude">(14)</span> </a> </label> </li>
-                  <li> <label class="facet-label" for="facet_input_86716_2"> <span class="custom-checkbox"> <input id="facet_input_86716_2" data-search-url="index5ca6.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;q=Categories-Footwear" type="checkbox"> <span class="ps-shown-by-js"><i class="material-icons checkbox-checked">&#xE5CA;</i></span> </span> <a href="index5ca6.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;q=Categories-Footwear" class="_gray-darker search-link js-search-link" rel="nofollow"> Footwear <span class="magnitude">(14)</span> </a> </label> </li>
+                  <li> <label class="facet-label" for="facet_input_86716_0"> <span class="custom-checkbox"> <input id="facet_input_86716_0" data-search-url="" type="checkbox"> <span class="ps-shown-by-js"><i class="material-icons checkbox-checked">&#xE5CA;</i></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> Lan Hồ Điệp <span class="magnitude">(13)</span> </a> </label> </li>
+                  <li> <label class="facet-label" for="facet_input_86716_1"> <span class="custom-checkbox"> <input id="facet_input_86716_1" data-search-url="" type="checkbox"> <span class="ps-shown-by-js"><i class="material-icons checkbox-checked">&#xE5CA;</i></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> Bó hoa <span class="magnitude">(14)</span> </a> </label> </li>
+                  <li> <label class="facet-label" for="facet_input_86716_2"> <span class="custom-checkbox"> <input id="facet_input_86716_2" data-search-url="" type="checkbox"> <span class="ps-shown-by-js"><i class="material-icons checkbox-checked">&#xE5CA;</i></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> Hộp hoa <span class="magnitude">(14)</span> </a> </label> </li>
                 </ul>
               </section>
               <section class="facet">
-                <h1 class="h6 facet-title hidden-md-down">Price</h1>
+                <h1 class="h6 facet-title hidden-md-down">Giá</h1>
                 <div class="title hidden-lg-up" data-target="#facet_93109" data-toggle="collapse">
-                  <h1 class="h6 facet-title">Price</h1> <span class="pull-xs-right"> <span class="navbar-toggler collapse-icons"> <i class="fa-icon add"></i> <i class="fa-icon remove"></i> </span> </span>
+                  <h1 class="h6 facet-title">Giá</h1> <span class="pull-xs-right"> <span class="navbar-toggler collapse-icons"> <i class="fa-icon add"></i> <i class="fa-icon remove"></i> </span> </span>
                 </div>
                 <ul id="facet_93109" class="collapse">
-                  <li> <label class="facet-label" for="facet_input_93109_0"> <span class="custom-radio"> <input id="facet_input_93109_0" data-search-url="index2bed.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;q=Price-%24-74-76" type="radio" name="filter Price"> <span class="ps-shown-by-js"></span> </span> <a href="index2bed.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;q=Price-%24-74-76" class="_gray-darker search-link js-search-link" rel="nofollow"> $74.00 - $76.00 <span class="magnitude">(1)</span> </a> </label> </li>
-                  <li> <label class="facet-label" for="facet_input_93109_1"> <span class="custom-radio"> <input id="facet_input_93109_1" data-search-url="indexcd96.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;q=Price-%24-77-79" type="radio" name="filter Price"> <span class="ps-shown-by-js"></span> </span> <a href="indexcd96.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;q=Price-%24-77-79" class="_gray-darker search-link js-search-link" rel="nofollow"> $77.00 - $79.00 <span class="magnitude">(1)</span> </a> </label> </li>
-                  <li> <label class="facet-label" for="facet_input_93109_2"> <span class="custom-radio"> <input id="facet_input_93109_2" data-search-url="index67ad.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;q=Price-%24-82-88" type="radio" name="filter Price"> <span class="ps-shown-by-js"></span> </span> <a href="index67ad.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;q=Price-%24-82-88" class="_gray-darker search-link js-search-link" rel="nofollow"> $82.00 - $88.00 <span class="magnitude">(4)</span> </a> </label> </li>
-                  <li> <label class="facet-label" for="facet_input_93109_3"> <span class="custom-radio"> <input id="facet_input_93109_3" data-search-url="index297c.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;q=Price-%24-84-100" type="radio" name="filter Price"> <span class="ps-shown-by-js"></span> </span> <a href="index297c.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;q=Price-%24-84-100" class="_gray-darker search-link js-search-link" rel="nofollow"> $84.00 - $100.00 <span class="magnitude">(6)</span> </a> </label> </li>
-                  <li> <label class="facet-label" for="facet_input_93109_4"> <span class="custom-radio"> <input id="facet_input_93109_4" data-search-url="index6341.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;q=Price-%24-104-106" type="radio" name="filter Price"> <span class="ps-shown-by-js"></span> </span> <a href="index6341.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;q=Price-%24-104-106" class="_gray-darker search-link js-search-link" rel="nofollow"> $104.00 - $106.00 <span class="magnitude">(1)</span> </a> </label> </li>
-                  <li> <label class="facet-label" for="facet_input_93109_5"> <span class="custom-radio"> <input id="facet_input_93109_5" data-search-url="indexf0d9.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;q=Price-%24-109-113" type="radio" name="filter Price"> <span class="ps-shown-by-js"></span> </span> <a href="indexf0d9.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;q=Price-%24-109-113" class="_gray-darker search-link js-search-link" rel="nofollow"> $109.00 - $113.00 <span class="magnitude">(2)</span> </a> </label> </li>
-                </ul>
-              </section>
-              <section class="facet">
-                <h1 class="h6 facet-title hidden-md-down">Color</h1>
-                <div class="title hidden-lg-up" data-target="#facet_97623" data-toggle="collapse">
-                  <h1 class="h6 facet-title">Color</h1> <span class="pull-xs-right"> <span class="navbar-toggler collapse-icons"> <i class="fa-icon add"></i> <i class="fa-icon remove"></i> </span> </span>
-                </div>
-                <ul id="facet_97623" class="collapse">
-                  <li> <label class="facet-label" for="facet_input_97623_0"> <span class="custom-checkbox"> <input id="facet_input_97623_0" data-search-url="index9e3c.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;q=Color-Grey" type="checkbox"> <span class="color" style="background-color:#AAB2BD"></span> </span> <a href="index9e3c.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;q=Color-Grey" class="_gray-darker search-link js-search-link" rel="nofollow"> Grey <span class="magnitude">(7)</span> </a> </label> </li>
-                  <li> <label class="facet-label" for="facet_input_97623_1"> <span class="custom-checkbox"> <input id="facet_input_97623_1" data-search-url="index6794.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;q=Color-White" type="checkbox"> <span class="color" style="background-color:#ffffff"></span> </span> <a href="index6794.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;q=Color-White" class="_gray-darker search-link js-search-link" rel="nofollow"> White <span class="magnitude">(6)</span> </a> </label> </li>
-                  <li> <label class="facet-label" for="facet_input_97623_2"> <span class="custom-checkbox"> <input id="facet_input_97623_2" data-search-url="indexcf9b.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;q=Color-Red" type="checkbox"> <span class="color" style="background-color:#E84C3D"></span> </span> <a href="indexcf9b.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;q=Color-Red" class="_gray-darker search-link js-search-link" rel="nofollow"> Red <span class="magnitude">(8)</span> </a> </label> </li>
-                  <li> <label class="facet-label" for="facet_input_97623_3"> <span class="custom-checkbox"> <input id="facet_input_97623_3" data-search-url="index7788.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;q=Color-Black" type="checkbox"> <span class="color" style="background-color:#434A54"></span> </span> <a href="index7788.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;q=Color-Black" class="_gray-darker search-link js-search-link" rel="nofollow"> Black <span class="magnitude">(5)</span> </a> </label> </li>
-                  <li> <label class="facet-label" for="facet_input_97623_4"> <span class="custom-checkbox"> <input id="facet_input_97623_4" data-search-url="indexcbaf.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;q=Color-Orange" type="checkbox"> <span class="color" style="background-color:#F39C11"></span> </span> <a href="indexcbaf.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;q=Color-Orange" class="_gray-darker search-link js-search-link" rel="nofollow"> Orange <span class="magnitude">(6)</span> </a> </label> </li>
-                  <li> <label class="facet-label" for="facet_input_97623_5"> <span class="custom-checkbox"> <input id="facet_input_97623_5" data-search-url="indexd07d.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;q=Color-Blue" type="checkbox"> <span class="color" style="background-color:#5D9CEC"></span> </span> <a href="indexd07d.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;q=Color-Blue" class="_gray-darker search-link js-search-link" rel="nofollow"> Blue <span class="magnitude">(7)</span> </a> </label> </li>
-                  <li> <label class="facet-label" for="facet_input_97623_6"> <span class="custom-checkbox"> <input id="facet_input_97623_6" data-search-url="index584a.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;q=Color-Green" type="checkbox"> <span class="color" style="background-color:#A0D468"></span> </span> <a href="index584a.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;q=Color-Green" class="_gray-darker search-link js-search-link" rel="nofollow"> Green <span class="magnitude">(7)</span> </a> </label> </li>
+                  <li> <label class="facet-label" for="facet_input_93109_0"> <span class="custom-radio"> <input id="facet_input_93109_0" data-search-url="" type="radio" name="filter Price"> <span class="ps-shown-by-js"></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> $74.00 - $76.00 <span class="magnitude">(1)</span> </a> </label> </li>
+                  <li> <label class="facet-label" for="facet_input_93109_1"> <span class="custom-radio"> <input id="facet_input_93109_1" data-search-url="" type="radio" name="filter Price"> <span class="ps-shown-by-js"></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> $77.00 - $79.00 <span class="magnitude">(1)</span> </a> </label> </li>
+                  <li> <label class="facet-label" for="facet_input_93109_2"> <span class="custom-radio"> <input id="facet_input_93109_2" data-search-url="" type="radio" name="filter Price"> <span class="ps-shown-by-js"></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> $82.00 - $88.00 <span class="magnitude">(4)</span> </a> </label> </li>
+                  <li> <label class="facet-label" for="facet_input_93109_3"> <span class="custom-radio"> <input id="facet_input_93109_3" data-search-url="" type="radio" name="filter Price"> <span class="ps-shown-by-js"></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> $84.00 - $100.00 <span class="magnitude">(6)</span> </a> </label> </li>
+                  <li> <label class="facet-label" for="facet_input_93109_4"> <span class="custom-radio"> <input id="facet_input_93109_4" data-search-url="" type="radio" name="filter Price"> <span class="ps-shown-by-js"></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> $104.00 - $106.00 <span class="magnitude">(1)</span> </a> </label> </li>
                 </ul>
               </section>
             </div>
@@ -118,7 +113,7 @@
         </div>
         <div id="ctleftbanner">
           <ul>
-            <li class="slide ctleftbanner-container"> <a href="#" title="LeftBanner 1"> <img src="modules/ct_leftbanner/views/img/left-banner-1.jpg" alt="LeftBanner 1" title="LeftBanner 1" /> </a> </li>
+            <li class="slide ctleftbanner-container"> <a href="#" title="LeftBanner 1"> <img src="https://capricathemes.com/prestashop/PRS07/PRS070170/modules/ct_leftbanner/views/img/left-banner-1.jpg" alt="LeftBanner 1" title="LeftBanner 1" /> </a> </li>
           </ul>
         </div>
         <div id="newproduct_block" class="block products-block">
@@ -128,76 +123,35 @@
             <ul class="products">
               <li class="product_item">
                 <div class="product-miniature js-product-miniature" data-id-product="34" data-id-product-attribute="251" itemscope itemtype="http://schema.org/Product">
-                  <div class="product_thumbnail"> <a href="index4a2d.html?id_product=34&amp;id_product_attribute=251&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/1-size-s/11-color-black" class="thumbnail product-image"> <img src="img/p/8/5/85-small_default.jpg" alt="Accusantium Voluptatem"> </a> </div>
+                  <div class="product_thumbnail"> <a href="{{ route('product.view') }}" class="thumbnail product-image"> <img src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfB-kz86v1hOmdVDesAvGwmAnBI4UGwVHEiPtULclX6XYQ&oe=64BBC55A" alt="Lan Hồ Điệp"> </a> </div>
                   <div class="product-info">
-                    <h1 class="h3 product-title" itemprop="name"><a href="index4a2d.html?id_product=34&amp;id_product_attribute=251&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/1-size-s/11-color-black">Accusantium Voluptatem</a></h1>
+                    <h1 class="h3 product-title" itemprop="name"><a href="{{ route('product.view') }}">Lan Hồ Điệp</a></h1>
                     <div class="product-price-and-shipping"> <span itemprop="price" class="price">$94.16</span> </div>
-                    <div class="comments_note">
-                      <div class="star_content clearfix">
-                        <div class="star star_on"></div>
-                        <div class="star star_on"></div>
-                        <div class="star star_on"></div>
-                        <div class="star star_on"></div>
-                        <div class="star star_on"></div>
-                      </div> <span class="total-rating">1 Review(s)&nbsp</span>
-                    </div>
                   </div>
                 </div>
               </li>
               <li class="product_item">
-                <div class="product-miniature js-product-miniature" data-id-product="33" data-id-product-attribute="242" itemscope itemtype="http://schema.org/Product">
-                  <div class="product_thumbnail"> <a href="index78f4.html?id_product=33&amp;id_product_attribute=242&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/1-size-s/5-color-grey" class="thumbnail product-image"> <img src="img/p/8/0/80-small_default.jpg" alt="Occasion praesentium"> </a> </div>
+                <div class="product-miniature js-product-miniature" data-id-product="34" data-id-product-attribute="251" itemscope itemtype="http://schema.org/Product">
+                  <div class="product_thumbnail"> <a href="" class="thumbnail product-image"> <img src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfB-kz86v1hOmdVDesAvGwmAnBI4UGwVHEiPtULclX6XYQ&oe=64BBC55A" alt="Lan Hồ Điệp"> </a> </div>
                   <div class="product-info">
-                    <h1 class="h3 product-title" itemprop="name"><a href="index78f4.html?id_product=33&amp;id_product_attribute=242&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/1-size-s/5-color-grey">Occasion praesentium</a></h1>
-                    <div class="product-price-and-shipping"> <span itemprop="price" class="price">$99.00</span> </div>
-                    <div class="comments_note">
-                      <div class="star_content clearfix">
-                        <div class="star"></div>
-                        <div class="star"></div>
-                        <div class="star"></div>
-                        <div class="star"></div>
-                        <div class="star"></div>
-                      </div> <span class="total-rating">0 Review(s)&nbsp</span>
-                    </div>
+                    <h1 class="h3 product-title" itemprop="name"><a href="{{ route('product.view') }}">Lan Hồ Điệp</a></h1>
+                    <div class="product-price-and-shipping"> <span itemprop="price" class="price">$94.16</span> </div>
                   </div>
                 </div>
               </li>
               <li class="product_item">
-                <div class="product-miniature js-product-miniature" data-id-product="32" data-id-product-attribute="224" itemscope itemtype="http://schema.org/Product">
-                  <div class="product_thumbnail"> <a href="indexd779.html?id_product=32&amp;id_product_attribute=224&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/1-size-s/5-color-grey" class="thumbnail product-image"> <img src="img/p/7/4/74-small_default.jpg" alt="Laudant doloremque"> </a> </div>
+                <div class="product-miniature js-product-miniature" data-id-product="34" data-id-product-attribute="251" itemscope itemtype="http://schema.org/Product">
+                  <div class="product_thumbnail"> <a href="" class="thumbnail product-image"> <img src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfB-kz86v1hOmdVDesAvGwmAnBI4UGwVHEiPtULclX6XYQ&oe=64BBC55A" alt="Lan Hồ Điệp"> </a> </div>
                   <div class="product-info">
-                    <h1 class="h3 product-title" itemprop="name"><a href="indexd779.html?id_product=32&amp;id_product_attribute=224&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/1-size-s/5-color-grey">Laudant doloremque</a></h1>
-                    <div class="product-price-and-shipping"> <span itemprop="price" class="price">$91.00</span> </div>
-                    <div class="comments_note">
-                      <div class="star_content clearfix">
-                        <div class="star star_on"></div>
-                        <div class="star star_on"></div>
-                        <div class="star star_on"></div>
-                        <div class="star star_on"></div>
-                        <div class="star"></div>
-                      </div> <span class="total-rating">1 Review(s)&nbsp</span>
-                    </div>
+                    <h1 class="h3 product-title" itemprop="name"><a href="{{ route('product.view') }}">Lan Hồ Điệp</a></h1>
+                    <div class="product-price-and-shipping"> <span itemprop="price" class="price">$94.16</span> </div>
                   </div>
                 </div>
               </li>
             </ul>
-            <div class="view_more"> <a class="all-product-link btn btn-primary" href="index6237.html?controller=new-products"> All new products </a> </div>
+            <div class="view_more"> <a class="all-product-link btn btn-primary" href="{{ route('product.index') }}"> All new products </a> </div>
           </div>
-        </div> <!-- Block categories module -->
-        <div id="categories_blog_menu" class="block blog-menu">
-          <h4 class="block_title hidden-md-down"> Blog Categories </h4>
-          <h4 class="block_title hidden-lg-up" data-target="#categories_blog_toggle" data-toggle="collapse"> Blog Categories <span class="pull-xs-right"> <span class="navbar-toggler collapse-icons"> <i class="fa-icon add"></i> <i class="fa-icon remove"></i> </span> </span> </h4>
-          <div id="categories_blog_toggle" class="block_content collapse">
-            <ul class="level1 tree dhtml ">
-              <li id="list_3" class=" "><a href="index0f52.html?fc=module&amp;module=psblog&amp;id=3&amp;controller=category&amp;id_lang=1" title="Vestibulum consequat"><span>Vestibulum consequat</span></a>
-                <ul class="level2 ">
-                  <li id="list_4" class=" "><a href="indexff27.html?fc=module&amp;module=psblog&amp;id=4&amp;controller=category&amp;id_lang=1" title="Pellentesque condimentum"><span>Pellentesque condimentum</span></a> </li>
-                  <li id="list_5" class=" "><a href="index4fbb.html?fc=module&amp;module=psblog&amp;id=5&amp;controller=category&amp;id_lang=1" title="Suspendisse turpis"><span>Suspendisse turpis</span></a> </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div> <!-- /Block categories module -->
+        </div>
       </div>
       <div id="content-wrapper" class="left-column col-xs-12 col-sm-8 col-md-9" style="width:75.6%">
         <section id="main"> <input id="getCartLink" name="getCartLink" value="https://capricathemes.com/prestashop/PRS07/PRS070170/index.php?controller=cart" type="hidden"> <input id="getTokenId" name="getTokenId" value="b88261cab17a7775f54f10a3c0bb0f61" type="hidden">
@@ -235,7 +189,7 @@
             <div id="">
               <div id="js-product-list">
                 <div class="products row">
-                  <ul class="product_list grid gridcount"> <!-- removed product_grid-->
+                  <ul class="product_list grid gridcount"> 
                   @foreach($flower as $f)
                     <li class="product_item col-xs-12 col-sm-6 col-md-6 col-lg-4">
                       <div class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope itemtype="http://schema.org/Product">
@@ -274,16 +228,112 @@
                       </div>
                     </li>
                     @endforeach
+                    <li class="product_item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                      <div class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope itemtype="http://schema.org/Product">
+                        <div class="thumbnail-container"> <a href="{{ route('product.view') }}" class="thumbnail product-thumbnail"> <img src="https://scontent.fhan3-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=f26r_0ND93gAX-08vQI&_nc_ht=scontent.fhan3-1.fna&oh=00_AfD22dTikiciNj5kxHRGa7zYAnP1Dc784JxjvfhoqGDijQ&oe=64BBC873" alt="Consectetur Hampden" data-full-size-image-url="https://scontent.fhan3-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=f26r_0ND93gAX-08vQI&_nc_ht=scontent.fhan3-1.fna&oh=00_AfD22dTikiciNj5kxHRGa7zYAnP1Dc784JxjvfhoqGDijQ&oe=64BBC873"> <img class="fliper_image img-responsive" src="https://scontent.fhan3-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=f26r_0ND93gAX-08vQI&_nc_ht=scontent.fhan3-1.fna&oh=00_AfD22dTikiciNj5kxHRGa7zYAnP1Dc784JxjvfhoqGDijQ&oe=64BBC873" data-full-size-image-url="https://scontent.fhan3-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=f26r_0ND93gAX-08vQI&_nc_ht=scontent.fhan3-1.fna&oh=00_AfD22dTikiciNj5kxHRGa7zYAnP1Dc784JxjvfhoqGDijQ&oe=64BBC873" alt="" /> </a>
+                          <div class="outer-functional">
+                            <div class="functional-buttons"> <a href="#" class="quick-view" data-link-action="quickview"> <i class="material-icons search">&#xE417;</i> Quick view </a>
+                              <div class="product-actions">
+                                <form action="#" method="post" class="add-to-cart-or-refresh"> <input type="hidden" name="token" value="b88261cab17a7775f54f10a3c0bb0f61"> <input type="hidden" name="id_product" value="1" class="product_page_product_id"> <input type="hidden" name="id_customization" value="0" class="product_customization_id"> <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Add to cart </button> </form>
+                              </div>
+                            </div>
+                          </div>
+                          <ul class="product-flags">
+                            <li class="on-sale">On sale!</li>
+                            <li class="new">New</li>
+                          </ul>
+                        </div>
+                        <div class="product-description">
+                          <h3 class="h3 product-title" itemprop="name"><a href="{{ route('product.view') }}">Lan Hồ Điệp</a></h3>
+                          <div class="product-price-and-shipping"> <span itemprop="price" class="price">55.00</span> </div>
+                          <div class="product-detail" itemprop="description">
+                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="product_item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                      <div class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope itemtype="http://schema.org/Product">
+                        <div class="thumbnail-container"> <a href="{{ route('product.view') }}" class="thumbnail product-thumbnail"> <img src="https://scontent.fhan3-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=f26r_0ND93gAX-08vQI&_nc_ht=scontent.fhan3-1.fna&oh=00_AfD22dTikiciNj5kxHRGa7zYAnP1Dc784JxjvfhoqGDijQ&oe=64BBC873" alt="Consectetur Hampden" data-full-size-image-url="https://scontent.fhan3-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=f26r_0ND93gAX-08vQI&_nc_ht=scontent.fhan3-1.fna&oh=00_AfD22dTikiciNj5kxHRGa7zYAnP1Dc784JxjvfhoqGDijQ&oe=64BBC873"> <img class="fliper_image img-responsive" src="https://scontent.fhan3-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=f26r_0ND93gAX-08vQI&_nc_ht=scontent.fhan3-1.fna&oh=00_AfD22dTikiciNj5kxHRGa7zYAnP1Dc784JxjvfhoqGDijQ&oe=64BBC873" data-full-size-image-url="https://scontent.fhan3-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=f26r_0ND93gAX-08vQI&_nc_ht=scontent.fhan3-1.fna&oh=00_AfD22dTikiciNj5kxHRGa7zYAnP1Dc784JxjvfhoqGDijQ&oe=64BBC873" alt="" /> </a>
+                          <div class="outer-functional">
+                            <div class="functional-buttons"> <a href="#" class="quick-view" data-link-action="quickview"> <i class="material-icons search">&#xE417;</i> Quick view </a>
+                              <div class="product-actions">
+                                <form action="#" method="post" class="add-to-cart-or-refresh"> <input type="hidden" name="token" value="b88261cab17a7775f54f10a3c0bb0f61"> <input type="hidden" name="id_product" value="1" class="product_page_product_id"> <input type="hidden" name="id_customization" value="0" class="product_customization_id"> <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Add to cart </button> </form>
+                              </div>
+                            </div>
+                          </div>
+                          <ul class="product-flags">
+                            <li class="on-sale">On sale!</li>
+                            <li class="new">New</li>
+                          </ul>
+                        </div>
+                        <div class="product-description">
+                          <h3 class="h3 product-title" itemprop="name"><a href="{{ route('product.view') }}">Lan Hồ Điệp</a></h3>
+                          <div class="product-price-and-shipping"> <span itemprop="price" class="price">55.00</span> </div>
+                          <div class="product-detail" itemprop="description">
+                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="product_item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                      <div class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope itemtype="http://schema.org/Product">
+                        <div class="thumbnail-container"> <a href="{{ route('product.view') }}" class="thumbnail product-thumbnail"> <img src="https://scontent.fhan3-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=f26r_0ND93gAX-08vQI&_nc_ht=scontent.fhan3-1.fna&oh=00_AfD22dTikiciNj5kxHRGa7zYAnP1Dc784JxjvfhoqGDijQ&oe=64BBC873" alt="Consectetur Hampden" data-full-size-image-url="https://scontent.fhan3-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=f26r_0ND93gAX-08vQI&_nc_ht=scontent.fhan3-1.fna&oh=00_AfD22dTikiciNj5kxHRGa7zYAnP1Dc784JxjvfhoqGDijQ&oe=64BBC873"> <img class="fliper_image img-responsive" src="https://scontent.fhan3-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=f26r_0ND93gAX-08vQI&_nc_ht=scontent.fhan3-1.fna&oh=00_AfD22dTikiciNj5kxHRGa7zYAnP1Dc784JxjvfhoqGDijQ&oe=64BBC873" data-full-size-image-url="https://scontent.fhan3-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=f26r_0ND93gAX-08vQI&_nc_ht=scontent.fhan3-1.fna&oh=00_AfD22dTikiciNj5kxHRGa7zYAnP1Dc784JxjvfhoqGDijQ&oe=64BBC873" alt="" /> </a>
+                          <div class="outer-functional">
+                            <div class="functional-buttons"> <a href="#" class="quick-view" data-link-action="quickview"> <i class="material-icons search">&#xE417;</i> Quick view </a>
+                              <div class="product-actions">
+                                <form action="#" method="post" class="add-to-cart-or-refresh"> <input type="hidden" name="token" value="b88261cab17a7775f54f10a3c0bb0f61"> <input type="hidden" name="id_product" value="1" class="product_page_product_id"> <input type="hidden" name="id_customization" value="0" class="product_customization_id"> <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Add to cart </button> </form>
+                              </div>
+                            </div>
+                          </div>
+                          <ul class="product-flags">
+                            <li class="on-sale">On sale!</li>
+                            <li class="new">New</li>
+                          </ul>
+                        </div>
+                        <div class="product-description">
+                          <h3 class="h3 product-title" itemprop="name"><a href="{{ route('product.view') }}">Lan Hồ Điệp</a></h3>
+                          <div class="product-price-and-shipping"> <span itemprop="price" class="price">55.00</span> </div>
+                          <div class="product-detail" itemprop="description">
+                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="product_item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                      <div class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope itemtype="http://schema.org/Product">
+                        <div class="thumbnail-container"> <a href="{{ route('product.view') }}" class="thumbnail product-thumbnail"> <img src="https://scontent.fhan3-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=f26r_0ND93gAX-08vQI&_nc_ht=scontent.fhan3-1.fna&oh=00_AfD22dTikiciNj5kxHRGa7zYAnP1Dc784JxjvfhoqGDijQ&oe=64BBC873" alt="Consectetur Hampden" data-full-size-image-url="https://scontent.fhan3-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=f26r_0ND93gAX-08vQI&_nc_ht=scontent.fhan3-1.fna&oh=00_AfD22dTikiciNj5kxHRGa7zYAnP1Dc784JxjvfhoqGDijQ&oe=64BBC873"> <img class="fliper_image img-responsive" src="https://scontent.fhan3-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=f26r_0ND93gAX-08vQI&_nc_ht=scontent.fhan3-1.fna&oh=00_AfD22dTikiciNj5kxHRGa7zYAnP1Dc784JxjvfhoqGDijQ&oe=64BBC873" data-full-size-image-url="https://scontent.fhan3-1.fna.fbcdn.net/v/t39.30808-6/359805296_676746791137209_688968159103818599_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=f26r_0ND93gAX-08vQI&_nc_ht=scontent.fhan3-1.fna&oh=00_AfD22dTikiciNj5kxHRGa7zYAnP1Dc784JxjvfhoqGDijQ&oe=64BBC873" alt="" /> </a>
+                          <div class="outer-functional">
+                            <div class="functional-buttons"> <a href="#" class="quick-view" data-link-action="quickview"> <i class="material-icons search">&#xE417;</i> Quick view </a>
+                              <div class="product-actions">
+                                <form action="#" method="post" class="add-to-cart-or-refresh"> <input type="hidden" name="token" value="b88261cab17a7775f54f10a3c0bb0f61"> <input type="hidden" name="id_product" value="1" class="product_page_product_id"> <input type="hidden" name="id_customization" value="0" class="product_customization_id"> <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Add to cart </button> </form>
+                              </div>
+                            </div>
+                          </div>
+                          <ul class="product-flags">
+                            <li class="on-sale">On sale!</li>
+                            <li class="new">New</li>
+                          </ul>
+                        </div>
+                        <div class="product-description">
+                          <h3 class="h3 product-title" itemprop="name"><a href="{{ route('product.view') }}">Lan Hồ Điệp</a></h3>
+                          <div class="product-price-and-shipping"> <span itemprop="price" class="price">55.00</span> </div>
+                          <div class="product-detail" itemprop="description">
+                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
                   </ul>
                 </div>
                 <nav class="pagination">
                   <div class="col-md-4"> Showing 1-9 of 15 item(s) </div>
                   <div class="col-md-8">
                     <ul class="page-list clearfix text-xs-right">
-                      <li> <a rel="prev" href="index444a.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;page=1" class="previous disabled js-search-link"> <i class="fa fa-long-arrow-left"></i> </a> </li>
-                      <li class="current"> <a rel="nofollow" href="index444a.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;page=1" class="disabled js-search-link"> 1 </a> </li>
-                      <li> <a rel="nofollow" href="indexedfa.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;page=2" class="js-search-link"> 2 </a> </li>
-                      <li> <a rel="next" href="indexedfa.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;page=2" class="next js-search-link"> <i class="fa fa-long-arrow-right"></i> </a> </li>
+                      <li> <a rel="prev" href="" class="previous disabled js-search-link"> <i class="fa fa-long-arrow-left"></i> </a> </li>
+                      <li class="current"> <a rel="nofollow" href="" class="disabled js-search-link"> 1 </a> </li>
+                      <li> <a rel="nofollow" href="" class="js-search-link"> 2 </a> </li>
+                      <li> <a rel="next" href="" class="next js-search-link"> <i class="fa fa-long-arrow-right"></i> </a> </li>
                     </ul>
                   </div>
                 </nav>

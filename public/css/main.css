@@ -427,3 +427,65 @@ color: #deb5b2;
     background-color: #f2f2f2;
     text-align: center;
 }
+
+.product-flags {
+	margin: 0px;
+}
+ul.product-flags li {
+	display: block;
+	position: absolute;
+	padding: 0px;
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: capitalize;
+	color: #000;
+	z-index: 2;
+}
+ul.product-flags li.online-only {
+	top: 25rem;
+	right: 0;
+	font-size: 0.8125rem;
+}
+ul.product-flags li.discount {
+	display: none;
+}
+ul.product-flags li.on-sale {
+	text-align: center;
+	margin: 0;
+	right: 10px;
+	top: 10px;
+	color: #ff0000;
+}
+ul.product-flags li.new {
+	color: #000;
+}
+ul.product-flags li.on-sale.discount-percentage {
+	z-index: 2;
+	color: #000000;
+	vertical-align: top;
+	display: inline;
+	padding: 0px;
+	font-size: 14px;
+}
+ul.product-flags li.new {
+	right: 27px;
+	top: 10px;
+}
+
+.block-contact li {
+	overflow: hidden;
+	line-height: 26px;
+}
+.block-contact li i {
+	color: #deb5b2;
+	float: left;
+	font-size: 18px;
+	height: 25px;
+	margin-top: 5px;
+	width: 25px;
+  display: inline;
+}
+
+#left-column .products-block ul li .product_thumbnail img {
+  max-height: 80px;
+}
