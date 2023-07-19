@@ -73,7 +73,7 @@
                                                         @endforeach
                                                         <li class="product_item col-xs-6 col-sm-6 col-md-4 col-lg-3">
                                                             <div class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope itemtype="http://schema.org/Product">
-                                                                <div class="thumbnail-container"> <a href="#" class="thumbnail product-thumbnail">
+                                                                <div class="thumbnail-container"> <a href="{{ route('product.view') }}" class="thumbnail product-thumbnail">
                                                                         <img src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfB-kz86v1hOmdVDesAvGwmAnBI4UGwVHEiPtULclX6XYQ&oe=64BBC55A" alt="Consectetur Hampden" data-full-size-image-url="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfB-kz86v1hOmdVDesAvGwmAnBI4UGwVHEiPtULclX6XYQ&oe=64BBC55A"> <img class="fliper_image img-responsive" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfB-kz86v1hOmdVDesAvGwmAnBI4UGwVHEiPtULclX6XYQ&oe=64BBC55A" data-full-size-image-url="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfB-kz86v1hOmdVDesAvGwmAnBI4UGwVHEiPtULclX6XYQ&oe=64BBC55A" alt="" />
                                                                     </a>
                                                                     <div class="outer-functional">
@@ -89,14 +89,14 @@
                                                                     </ul>
                                                                 </div>
                                                                 <div class="product-description">
-                                                                    <span class="h3 product-title" itemprop="name"><a href="">Tên hoa</a></span>
+                                                                    <span class="h3 product-title" itemprop="name"><a href="{{ route('product.view') }}">Tên hoa</a></span>
                                                                     <div class="product-price-and-shipping"> <span itemprop="price" class="price">45.00</span> </div>
                                                                 </div>
                                                             </div>
                                                         </li>
                                                         <li class="product_item col-xs-6 col-sm-6 col-md-4 col-lg-3">
                                                             <div class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope itemtype="http://schema.org/Product">
-                                                                <div class="thumbnail-container"> <a href="#" class="thumbnail product-thumbnail">
+                                                                <div class="thumbnail-container"> <a href="{{ route('product.view') }}" class="thumbnail product-thumbnail">
                                                                         <img src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfB-kz86v1hOmdVDesAvGwmAnBI4UGwVHEiPtULclX6XYQ&oe=64BBC55A" alt="Consectetur Hampden" data-full-size-image-url="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfB-kz86v1hOmdVDesAvGwmAnBI4UGwVHEiPtULclX6XYQ&oe=64BBC55A"> <img class="fliper_image img-responsive" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfB-kz86v1hOmdVDesAvGwmAnBI4UGwVHEiPtULclX6XYQ&oe=64BBC55A" data-full-size-image-url="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfB-kz86v1hOmdVDesAvGwmAnBI4UGwVHEiPtULclX6XYQ&oe=64BBC55A" alt="" />
                                                                     </a>
                                                                     <div class="outer-functional">
@@ -112,14 +112,14 @@
                                                                     </ul>
                                                                 </div>
                                                                 <div class="product-description">
-                                                                    <span class="h3 product-title" itemprop="name"><a href="">Tên hoa</a></span>
+                                                                    <span class="h3 product-title" itemprop="name"><a href="{{ route('product.view') }}">Tên hoa</a></span>
                                                                     <div class="product-price-and-shipping"> <span itemprop="price" class="price">45.00</span> </div>
                                                                 </div>
                                                             </div>
                                                         </li>
                                                         <li class="product_item col-xs-6 col-sm-6 col-md-4 col-lg-3">
                                                             <div class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope itemtype="http://schema.org/Product">
-                                                                <div class="thumbnail-container"> <a href="#" class="thumbnail product-thumbnail">
+                                                                <div class="thumbnail-container"> <a href="{{ route('product.view') }}" class="thumbnail product-thumbnail">
                                                                         <img src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfB-kz86v1hOmdVDesAvGwmAnBI4UGwVHEiPtULclX6XYQ&oe=64BBC55A" alt="Consectetur Hampden" data-full-size-image-url="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfB-kz86v1hOmdVDesAvGwmAnBI4UGwVHEiPtULclX6XYQ&oe=64BBC55A"> <img class="fliper_image img-responsive" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfB-kz86v1hOmdVDesAvGwmAnBI4UGwVHEiPtULclX6XYQ&oe=64BBC55A" data-full-size-image-url="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfB-kz86v1hOmdVDesAvGwmAnBI4UGwVHEiPtULclX6XYQ&oe=64BBC55A" alt="" />
                                                                     </a>
                                                                     <div class="outer-functional">
@@ -135,14 +135,14 @@
                                                                     </ul>
                                                                 </div>
                                                                 <div class="product-description">
-                                                                    <span class="h3 product-title" itemprop="name"><a href="">Tên hoa</a></span>
+                                                                    <span class="h3 product-title" itemprop="name"><a href="{{ route('product.view') }}">Tên hoa</a></span>
                                                                     <div class="product-price-and-shipping"> <span itemprop="price" class="price">45.00</span> </div>
                                                                 </div>
                                                             </div>
                                                         </li>
                                                         <li class="product_item col-xs-6 col-sm-6 col-md-4 col-lg-3">
                                                             <div class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope itemtype="http://schema.org/Product">
-                                                                <div class="thumbnail-container"> <a href="#" class="thumbnail product-thumbnail">
+                                                                <div class="thumbnail-container"> <a href="{{ route('product.view') }}" class="thumbnail product-thumbnail">
                                                                         <img src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfB-kz86v1hOmdVDesAvGwmAnBI4UGwVHEiPtULclX6XYQ&oe=64BBC55A" alt="Consectetur Hampden" data-full-size-image-url="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfB-kz86v1hOmdVDesAvGwmAnBI4UGwVHEiPtULclX6XYQ&oe=64BBC55A"> <img class="fliper_image img-responsive" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfB-kz86v1hOmdVDesAvGwmAnBI4UGwVHEiPtULclX6XYQ&oe=64BBC55A" data-full-size-image-url="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfB-kz86v1hOmdVDesAvGwmAnBI4UGwVHEiPtULclX6XYQ&oe=64BBC55A" alt="" />
                                                                     </a>
                                                                     <div class="outer-functional">
@@ -158,7 +158,7 @@
                                                                     </ul>
                                                                 </div>
                                                                 <div class="product-description">
-                                                                    <span class="h3 product-title" itemprop="name"><a href="">Tên hoa</a></span>
+                                                                    <span class="h3 product-title" itemprop="name"><a href="{{ route('product.view') }}">Tên hoa</a></span>
                                                                     <div class="product-price-and-shipping"> <span itemprop="price" class="price">45.00</span> </div>
                                                                 </div>
                                                             </div>
