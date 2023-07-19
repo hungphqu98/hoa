@@ -1,18 +1,15 @@
 <x-app-layout>
-  <nav data-depth="4" class="breadcrumb">
+  <nav data-depth="3" class="breadcrumb">
     <div class="container">
       <ol itemscope itemtype="http://schema.org/BreadcrumbList">
-        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"> <a itemprop="item" href="index.html"> <span itemprop="name">Strona główna</span> </a>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"> <a itemprop="item" href=""> <span itemprop="name">Sản phẩm</span> </a>
           <meta itemprop="position" content="1">
         </li>
-        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"> <a itemprop="item" href="index05f4.html?id_category=3&amp;controller=category&amp;id_lang=6"> <span itemprop="name">Fashion</span> </a>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"> <a itemprop="item" href=""> <span itemprop="name">Lan Hồ Điệp</span> </a>
           <meta itemprop="position" content="2">
         </li>
-        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"> <a itemprop="item" href="index2d43.html?id_category=14&amp;controller=category&amp;id_lang=6"> <span itemprop="name">Footwear</span> </a>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"> <a itemprop="item" href=""> <span itemprop="name">Hoa</span> </a>
           <meta itemprop="position" content="3">
-        </li>
-        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"> <a itemprop="item" href="index758c.html?id_product=29&amp;id_product_attribute=174&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=6#/rozmiar-s/kolor-pomaranczowy"> <span itemprop="name">Necessitatibus</span> </a>
-          <meta itemprop="position" content="4">
         </li>
       </ol>
     </div>
