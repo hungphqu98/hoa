@@ -3057,13 +3057,13 @@ input[type="reset"].btn-block,
 input[type="button"].btn-block {
 	width: 100%;
 }
-.fade {
+/* .fade {
 	opacity: 0;
 	transition: opacity .15s linear;
 }
 .fade.in {
 	opacity: 1;
-}
+} */
 .collapse {
 	display: none;
 }
@@ -10712,49 +10712,7 @@ body#checkout #gift_message {
 	width: 20px;
 	height: 20px;
 }
-.product-flags {
-	margin: 0px;
-}
-ul.product-flags li {
-	display: block;
-	position: absolute;
-	padding: 0px;
-	font-size: 14px;
-	font-weight: 600;
-	text-transform: capitalize;
-	color: #000;
-	z-index: 2;
-}
-ul.product-flags li.online-only {
-	top: 25rem;
-	right: 0;
-	font-size: 0.8125rem;
-}
-ul.product-flags li.discount {
-	display: none;
-}
-ul.product-flags li.on-sale {
-	text-align: center;
-	margin: 0;
-	right: 10px;
-	top: 10px;
-	color: #ff0000;
-}
-ul.product-flags li.new {
-	color: #000;
-}
-ul.product-flags li.on-sale.discount-percentage {
-	z-index: 2;
-	color: #000000;
-	vertical-align: top;
-	display: inline;
-	padding: 0px;
-	font-size: 14px;
-}
-ul.product-flags li.new {
-	right: 10px;
-	top: 10px;
-}
+
 #product #content .product-leftside ul.product-flags li.new {
     left: 10px;
     right: auto;
@@ -11610,19 +11568,7 @@ ul.product-flags li.new {
 .block_newsletter form .newsletter-message {
 	display: none;
 }
-.block-contact li {
-	overflow: hidden;
-	line-height: 26px;
-}
-.block-contact li i {
-	color: #deb5b2;
-	float: left;
-	font-size: 18px;
-	height: 25px;
-	margin-top: 5px;
-	width: 25px;
-	display: none;
-}
+
 .block-contact li i.fa-envelope-o {
 	font-size: 16px;
 }
@@ -12385,13 +12331,7 @@ ul.product-flags li.new {
 #index .breadcrumb {
     display: none;
 }
-.breadcrumb {
-	margin: -30px 0 30px;
-    width: 100%;
-    padding: 30px 0 30px;
-    background-color: #f2f2f2;
-    text-align: center;
-}
+
 .breadcrumb {
     background: url(../img/capricathemes/breadcumb.jpg) no-repeat scroll top center #f2eeeb;
 }

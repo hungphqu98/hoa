@@ -17,6 +17,10 @@ $(document).ready(function(){
     autoplay: false,
     slidesToShow: 4,
   });
+  $('.slick-quick-view').slick({
+    autoplay: false,
+    slidesToShow: 4,
+  });
 $('.menu-icon').click(function() {
   $('#mobile_top_menu_wrapper').toggleClass('slide');
   $('.mobile-menu-inner').css('display', 'block');

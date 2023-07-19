@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R1BSBZW85Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-R1BSBZW85Z');
+</script>
   <!-- Required meta tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -42,8 +51,6 @@
             <div class="header blockcart-header dropdown js-dropdown">
 
               <a class="shopping-cart" rel="nofollow" href="">
-                <span class="mobile_count">0</span>
-                <span class="cart-products-count hidden-sm-down">0<span class="value"> / €0.00</span></span>
               </a>
 
 
