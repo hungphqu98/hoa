@@ -302,7 +302,6 @@
                 <div class="col-md-6 col-sm-6 hidden-xs-down">
                   <div class="images-container">
                     <div class="product-cover"> <a href="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A"> <img class="js-qv-product-cover" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="" title="" style="max-width:400px;" itemprop="image"> </a>
-                      <div class="layer hidden-sm-down" data-toggle="modal" data-target="#product-modal"> <i class="fa fa-arrows-alt zoom-in"></i> </div>
                     </div> <!-- Define Number of product for SLIDER -->
                     <div class="slick-quick-view">
                       <div class="thumb-container item">

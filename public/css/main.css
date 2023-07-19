@@ -489,3 +489,6 @@ ul.product-flags li.new {
 #left-column .products-block ul li .product_thumbnail img {
   max-height: 80px;
 }
+.slick-quick-view img {
+  max-height: 100px;
+}
