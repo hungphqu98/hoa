@@ -248,7 +248,7 @@
                 </div>
               </li>
               <li class="category" id="category-6">
-                <a class="dropdown-item" href="#" data-depth="0">
+                <a class="dropdown-item" href="{{ route('about') }}" data-depth="0">
                   Giới thiệu
                 </a>
               </li>
@@ -419,7 +419,7 @@
                 </div>
               </li>
               <li class="category" id="category-6">
-                <a class="dropdown-item" href="#" data-depth="0">
+                <a class="dropdown-item" href="{{ route('about') }}" data-depth="0">
                   Giới thiệu
                 </a>
               </li>

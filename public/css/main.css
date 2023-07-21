@@ -522,3 +522,8 @@ ul.product-flags li.new {
 .slick-track { 
   margin-left: 0; 
 }
+
+.about-main {
+  color: black;
+  padding: 50px 0;
+}

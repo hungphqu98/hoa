@@ -17,7 +17,7 @@
       </ol>
     </div>
   </nav>
-  <div class="container">
+  <div class="container about-main">
       <h3>Giới thiệu</h3>
       <p><b>Gia Flowers</b> là địa chỉ đáng tin cậy chuyên cung cấp <b>lan hồ điệp Đà Lạt</b> và <b>hoa tươi sỉ lẻ</b> . Với kinh nghiệm từ năm 2019 đến nay, chúng tôi đặt sự tận tâm và chất lượng phục vụ lên hàng đầu. Khách hàng luôn là trung tâm của mọi hoạt động của chúng tôi, và chúng tôi cam kết mang đến cho quý khách hàng những trải nghiệm mua sắm tuyệt vời. Đội ngũ nhân viên của chúng tôi luôn sẵn sàng lẵng nghe và đáp ứng nhu cầu đặc biệt của từng khách hàng, đảm bảo mỗi sản phẩm đêu mang phong cách và ý nghĩa riêng.</p>
       <p>Chất lượng hoa là một yếu tố quan trọng mà chúng tôi luôn chú trọng. Chúng tôi chọn lựa những nguồn hoa uy tín và đáng tin cậy từ các nhà cung cấp uy tín. Tất cả các loại hoa lan hồ điệp Đà lạt và hoa tươi mà chúng tôi cung cấp đều được chọn lọc cẩn thận để đảm bảo rằng khách hàng của chúng tôi nhận được những sản phẩm chất lượng nhất.</p>

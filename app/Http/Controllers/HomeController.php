@@ -40,4 +40,14 @@ class HomeController extends Controller
     {
         return view('about');
     }
+
+    public function delivery()
+    {
+        return view('policy.delivery');
+    }
+
+    public function warranty()
+    {
+        return view('policy.warranty');
+    }
 }
