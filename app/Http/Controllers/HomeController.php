@@ -35,4 +35,9 @@ class HomeController extends Controller
 
         return view('product.index', compact('flower'));
     }
+
+    public function about()
+    {
+        return view('about');
+    }
 }

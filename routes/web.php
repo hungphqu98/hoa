@@ -18,6 +18,7 @@ use App\Http\Controllers\FlowerController;
 Auth::routes();
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/product', [HomeController::class, 'product'])->name('product.index');
 Route::get('/product/view', [FlowerController::class, 'view'])->name('product.view');
 
