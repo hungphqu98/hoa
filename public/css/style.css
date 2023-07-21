@@ -5138,10 +5138,7 @@ button.close {
 	overflow: hidden;
 	outline: 0;
 }
-.modal.fade .modal-dialog {
-	transition: transform .3s ease-out;
-	transform: translate(0, -25%);
-}
+
 .modal.in .modal-dialog {
 	transform: translate(0, 0);
 }
@@ -10386,17 +10383,7 @@ body#checkout #gift_message {
 	background: #ffffff;
 	border-radius: 0px;
 }
-#product-modal .modal-content .modal-body {
-	display: -webkit-box;
-	display: -moz-box;
-	display: box;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flexbox;
-	-js-display: flex;
-	display: flex;
-	margin-left: 0;
-}
+
 #product-modal .modal-content .modal-body .product-cover-modal {
 	background: #FFFFFF;
 	width: 100%;
