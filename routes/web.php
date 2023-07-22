@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/policy/delivery', [HomeController::class, 'delivery'])->name('policy.delivery');
 Route::get('/policy/warranty', [HomeController::class, 'warranty'])->name('policy.warranty');
 Route::get('/product', [HomeController::class, 'product'])->name('product.index');

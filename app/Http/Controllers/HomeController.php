@@ -41,6 +41,11 @@ class HomeController extends Controller
         return view('about');
     }
 
+    public function contact()
+    {
+        return view('contact');
+    }
+
     public function delivery()
     {
         return view('policy.delivery');
@@ -50,4 +55,5 @@ class HomeController extends Controller
     {
         return view('policy.warranty');
     }
+
 }

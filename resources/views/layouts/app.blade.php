@@ -258,7 +258,7 @@
                 </a>
               </li>
               <li class="link" id="lnk-blog">
-                <a class="dropdown-item" href="#" data-depth="0">
+                <a class="dropdown-item" href="{{ route('contact') }}" data-depth="0">
                   Liên hệ
                 </a>
               </li>
@@ -429,7 +429,7 @@
                 </a>
               </li>
               <li class="link" id="lnk-blog">
-                <a class="dropdown-item" href="#" data-depth="0">
+                <a class="dropdown-item" href="{{ route('contact') }}" data-depth="0">
                   Liên hệ
                 </a>
               </li>

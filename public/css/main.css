@@ -527,3 +527,7 @@ ul.product-flags li.new {
   color: black;
   padding: 50px 0;
 }
+
+input[type="submit"] {
+  background-color: #96394C;
+}
