@@ -117,8 +117,8 @@
           </ul>
         </div>
         <div id="newproduct_block" class="block products-block">
-          <h4 class="block_title hidden-md-down"> New products </h4>
-          <h4 class="block_title hidden-lg-up" data-target="#newproduct_block_toggle" data-toggle="collapse"> New products <span class="pull-xs-right"> <span class="navbar-toggler collapse-icons"> <i class="fa-icon add"></i> <i class="fa-icon remove"></i> </span> </span> </h4>
+          <h4 class="block_title hidden-md-down"> Sản phẩm mới </h4>
+          <h4 class="block_title hidden-lg-up" data-target="#newproduct_block_toggle" data-toggle="collapse"> Sản phẩm mới <span class="pull-xs-right"> <span class="navbar-toggler collapse-icons"> <i class="fa-icon add"></i> <i class="fa-icon remove"></i> </span> </span> </h4>
           <div id="newproduct_block_toggle" class="block_content collapse">
             <ul class="products">
               <li class="product_item">
@@ -149,7 +149,7 @@
                 </div>
               </li>
             </ul>
-            <div class="view_more"> <a class="all-product-link btn btn-primary" href="{{ route('product.index') }}"> All new products </a> </div>
+            <div class="view_more"> <a class="all-product-link btn btn-primary" href="{{ route('product.index') }}"> Xem thêm </a> </div>
           </div>
         </div>
       </div>

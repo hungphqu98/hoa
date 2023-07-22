@@ -6,7 +6,7 @@
                     <section id="content" class="page-home">
                         <div id="owl-banner">
                             <div class="slick-banner">
-                                <img src="{{ asset('assets/banner.png')}}" alt="sample-1" title="Sample 1" />
+                                <img src="{{ asset('assets/banner.png')}}" alt="gia-flowers" title="Gia Flowers" />
                             </div>
                         </div>
                         <div id="ctaboutcmsblock" class="about-cms-block" style="background-image: url('{{ asset('assets/background-under.png')}}')">
@@ -15,12 +15,12 @@
                                     <div class="about-store-inner">
                                         <div class="one-half aboutcms1">
                                             <div class="about-image">
-                                                <div class="about-banner aboutcms-image1"><a href="#" class="banner-anchor"><img src="https://capricathemes.com/prestashop/PRS07/PRS070170/img/cms/aboutcms1.jpg" alt="about-store1" title="about-store1" /></a></div>
+                                                <div class="about-banner aboutcms-image1"><a href="{{ route('about') }}" class="banner-anchor"><img src="https://capricathemes.com/prestashop/PRS07/PRS070170/img/cms/aboutcms1.jpg" alt="about-store1" title="about-store1" /></a></div>
                                                 <div class="about-text">Gia Flowers là địa chỉ đáng tin cậy chuyên cung cấp lan hồ điệp Đà Lạt và hoa tươi sỉ lẻ. Với kinh nghiệm từ năm 2019 đến nay, chúng tôi đặt sự tận tâm và chất lượng phục vụ lên hàng đầu.</div>
                                             </div>
                                         </div>
                                         <div class="one-half aboutcms2">
-                                            <div class="about-banner aboutcms-image2"><a href="#" class="banner-anchor"><img src="https://capricathemes.com/prestashop/PRS07/PRS070170/img/cms/aboutcms2.jpg" alt="about-store2" title="about-store2" /></a></div>
+                                            <div class="about-banner aboutcms-image2"><a href="{{ route('about') }}" class="banner-anchor"><img src="https://capricathemes.com/prestashop/PRS07/PRS070170/img/cms/aboutcms2.jpg" alt="about-store2" title="about-store2" /></a></div>
                                         </div>
                                     </div>
                                 </div>
