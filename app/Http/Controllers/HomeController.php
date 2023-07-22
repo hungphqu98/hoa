@@ -56,4 +56,9 @@ class HomeController extends Controller
         return view('policy.warranty');
     }
 
+    public function corpo()
+    {
+        return view('policy.corporation');
+    }
+
 }

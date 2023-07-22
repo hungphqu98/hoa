@@ -10178,17 +10178,7 @@ body#checkout #gift_message {
 	margin-bottom: 0.5rem;
 	margin-left: 10px;
 }
-.product-quantity .add .add-to-cart {
-	padding: 10px 40px;
-	color: #fff;
-	background-color: #deb5b2;
-	border-color: #deb5b2;
-}
-.product-quantity .add .add-to-cart:hover {
-	color: #fff;
-	background-color: #000000;
-	border-color: #000000;
-}
+
 .product-quantity #quantity_wanted {
 	color: #262626;
 	background-color: #FFFFFF;
@@ -10538,16 +10528,7 @@ body#checkout #gift_message {
 	display: inline;
 	margin-right: 10px;
 }
-.images-container .js-qv-mask {
-	margin: 0 30px;
-	white-space: nowrap;
-	position: relative;
-}
-.images-container .js-qv-mask .thumb-container .thumb {
-	border: 1px solid #f7f7f7;
-	margin: 0 0 10px;
-	width: 95px;
-}
+
 .images-container .js-qv-mask .thumb-container .thumb.selected,
 .images-container .js-qv-mask .thumb-container .thumb:hover {
 	border: 1px solid #deb5b2;

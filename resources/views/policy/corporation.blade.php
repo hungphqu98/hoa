@@ -17,7 +17,8 @@
       </ol>
     </div>
   </nav>
-  <div class="container about-main">
+  <div class="about-main" style="background-image: url('{{ asset('assets/back.png')}}')">
+  <div class="container">
       <h3>Chính sách khách hàng doanh nghiệp</h3>
       <ul>
         <li>Chiết khấu lên đến 10% đối với khách hàng doanh nghiệp thường xuyên</li>
@@ -27,5 +28,6 @@
         <li>Hỗ trợ thiết kế biển, thiệp chúc mừng kèm logo thương hiệu</li>
         <li>Miễn phí ship 6 quận nội thành Hà Nội: Ba Đình, Hoàn Kiếm, Đống Đa, Hai Bà Trưng, Cầu Giấy, Thanh Xuân</li>
       </ul>
+  </div>
   </div>
 </x-app-layout>

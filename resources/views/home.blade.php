@@ -5,8 +5,8 @@
                 <section id="main">
                     <section id="content" class="page-home">
                         <div id="owl-banner">
-                            <div class="slick-banner"><img src="https://capricathemes.com/prestashop/PRS07/PRS070170/modules/ct_imageslider/views/img/sample-1.jpg" alt="sample-1" title="Sample 1" />
-                                <img src="https://capricathemes.com/prestashop/PRS07/PRS070170/modules/ct_imageslider/views/img/sample-2.jpg" alt="sample-2" title="Sample 2" />
+                            <div class="slick-banner">
+                                <img src="{{ asset('assets/banner.png')}}" alt="sample-1" title="Sample 1" />
                             </div>
                         </div>
                         <div id="ctaboutcmsblock" class="about-cms-block">
@@ -597,37 +597,6 @@
                         <a href="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A">
                           <img class="js-qv-product-cover-qview" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="" title="" itemprop="image">
                         </a>
-                        <a href="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A">
-                          <img class="js-qv-product-cover-qview" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="" title="" itemprop="image">
-                        </a>
-                        <a href="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A">
-                          <img class="js-qv-product-cover-qview" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="" title="" itemprop="image">
-                        </a>
-                        <a href="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A">
-                          <img class="js-qv-product-cover-qview" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="" title="" itemprop="image">
-                        </a>
-                        <a href="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A">
-                          <img class="js-qv-product-cover-qview" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="" title="" itemprop="image">
-                        </a>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="slider-under-qview">
-                        <div class="thumb-container item">
-                          <img class="" data-image-medium-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" data-image-large-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="" title="" itemprop="image">
-                        </div>
-                        <div class="thumb-container item">
-                          <img class="" data-image-medium-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" data-image-large-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="" title="" itemprop="image">
-                        </div>
-                        <div class="thumb-container item">
-                          <img class="" data-image-medium-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" data-image-large-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="">
-                        </div>
-                        <div class="thumb-container item">
-                          <img class="" data-image-medium-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" data-image-large-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="">
-                        </div>
-                        <div class="thumb-container item">
-                          <img class="" data-image-medium-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" data-image-large-src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" src="https://scontent.fhan4-1.fna.fbcdn.net/v/t39.30808-6/361105351_676746841137204_6481912247789158094_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=V9JmopaQU4IAX90nKZq&_nc_ht=scontent.fhan4-1.fna&oh=00_AfC3-gi8ToSvEyVbCoagafXaOP9c0gWn8htxOZTNAtMDdw&oe=64BDBF9A" alt="">
-                        </div>
                       </div>
                     </div>
                   </div>

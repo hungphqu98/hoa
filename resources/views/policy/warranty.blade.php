@@ -17,7 +17,8 @@
       </ol>
     </div>
   </nav>
-  <div class="container about-main">
+  <div class="about-main" style="background-image: url('{{ asset('assets/back.png')}}')">
+  <div class="container">
       <h3>Chính sách bảo hành, đổi trả</h3>
       <ul>
         <li>Quý khách có thể thực hiện đổi trả hàng trong thời hạn 24 giờ kể từ khi nhận hàng đối với Lan Hồ Điệp và 05 giờ kể từ khi nhận hàng đối với sản phẩm Hoa tươi. Quy trình đổi trả hàng được chuyển về đia chỉ cửa hàng của Gia Flowers.</li>
@@ -35,5 +36,6 @@
         <li>Đầy đủ các bộ phận, phụ kiện, chi tiết khác, hóa đơn… phải còn đầy đủ và nguyên vẹn</li>
         <li>Không bị dơ bẩn, trầy xước, bể vỡ, hư hỏng, có mùi lạ</li>
       </ul>
+  </div>
   </div>
 </x-app-layout>

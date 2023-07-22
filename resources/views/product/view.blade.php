@@ -29,20 +29,6 @@
                     <div class="product-cover"> <a href='https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg'> <img class="js-qv-product-cover" src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" alt="" title="" style="width:100%;" itemprop="image"> </a>
                       <div class="layer hidden-sm-down" data-toggle="modal" data-target="#product-modal"> <i class="fa fa-arrows-alt zoom-in"></i> </div>
                     </div> <!-- Define Number of product for SLIDER -->
-                    <div class="js-qv-mask mask additional_slider">
-                      <ul class="product_list slick-product-view additional-carousel">
-                        <li class="thumb-container item"> <img class="thumb js-thumb " data-image-medium-src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" data-image-large-src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" alt="" title="" width="95" itemprop="image">
-                        </li>
-                        <li class="thumb-container item"> <img class="thumb js-thumb " data-image-medium-src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" data-image-large-src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" alt="" title="" width="95" itemprop="image">
-                        </li>
-                        <li class="thumb-container item"> <img class="thumb js-thumb " data-image-medium-src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" data-image-large-src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" alt="" title="" width="95" itemprop="image">
-                        </li>
-                        <li class="thumb-container item"> <img class="thumb js-thumb " data-image-medium-src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" data-image-large-src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" alt="" title="" width="95" itemprop="image">
-                        </li>
-                        <li class="thumb-container item"> <img class="thumb js-thumb " data-image-medium-src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" data-image-large-src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" alt="" title="" width="95" itemprop="image">
-                        </li>
-                      </ul>
-                    </div>
                   </div>
                 </div>
               </section>
@@ -337,37 +323,6 @@
                         <a href="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg">
                           <img class="js-qv-product-cover-qview" src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" alt="" title="" itemprop="image">
                         </a>
-                        <a href="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg">
-                          <img class="js-qv-product-cover-qview" src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" alt="" title="" itemprop="image">
-                        </a>
-                        <a href="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg">
-                          <img class="js-qv-product-cover-qview" src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" alt="" title="" itemprop="image">
-                        </a>
-                        <a href="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg">
-                          <img class="js-qv-product-cover-qview" src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" alt="" title="" itemprop="image">
-                        </a>
-                        <a href="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg">
-                          <img class="js-qv-product-cover-qview" src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" alt="" title="" itemprop="image">
-                        </a>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="slider-under-qview">
-                        <div class="thumb-container item">
-                          <img class="" data-image-medium-src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" data-image-large-src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" alt="" title="" itemprop="image">
-                        </div>
-                        <div class="thumb-container item">
-                          <img class="" data-image-medium-src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" data-image-large-src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" alt="" title="" itemprop="image">
-                        </div>
-                        <div class="thumb-container item">
-                          <img class="" data-image-medium-src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" data-image-large-src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" alt="">
-                        </div>
-                        <div class="thumb-container item">
-                          <img class="" data-image-medium-src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" data-image-large-src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" alt="">
-                        </div>
-                        <div class="thumb-container item">
-                          <img class="" data-image-medium-src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" data-image-large-src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" alt="">
-                        </div>
                       </div>
                     </div>
                   </div>

@@ -17,7 +17,8 @@
       </ol>
     </div>
   </nav>
-  <div class="container about-main">
+  <div class="about-main" style="background-image: url('{{ asset('assets/back.png')}}')">
+  <div class="container">
       <h3>Chính sách giao hàng</h3>
       <ul>
         <li>Miễn phí giao hàng đối với đơn hoa tươi > 500k trong bán kính 3km</li>
@@ -25,5 +26,6 @@
         <li>Các đơn hàng trên 3km sẽ được áp dụng phí ship theo app giao hàng</li>
         <li>Có dịch vụ ship ngoại tỉnh đối với các đơn hoa tươi > 20.000k, phí ship sẽ được thông báo khi khách báo vị trí giao hàng</li>
       </ul>
+  </div>
   </div>
 </x-app-layout>

@@ -545,27 +545,17 @@
             <ul id="footer_sub_menu_49772" class="collapse block_content">
               <li>
                 <a id="link-cms-page-1-2" class="cms-page-link" href="" title="Our terms and conditions of delivery">
-                  Chính sách giao hàng
+                  Chính sách khách hàng doanh nghiệp
                 </a>
               </li>
               <li>
                 <a id="link-cms-page-2-2" class="cms-page-link" href="" title="Legal notice">
-                  Chính sách thanh toán
+                  Chính sách giao hàng
                 </a>
               </li>
               <li>
                 <a id="link-cms-page-3-2" class="cms-page-link" href="" title="Our terms and conditions of use">
-                  Chính sách đổi trả
-                </a>
-              </li>
-              <li>
-                <a id="link-cms-page-4-2" class="cms-page-link" href="" title="Learn more about us">
-                  Chính sách kiểm hàng
-                </a>
-              </li>
-              <li>
-                <a id="link-cms-page-5-2" class="cms-page-link" href="" title="Our secure payment method">
-                  Chính sách bảo mật
+                  Chính sách bảo hành, đổi trả
                 </a>
               </li>
             </ul>
