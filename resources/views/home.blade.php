@@ -9,14 +9,14 @@
                                 <img src="{{ asset('assets/banner.png')}}" alt="sample-1" title="Sample 1" />
                             </div>
                         </div>
-                        <div id="ctaboutcmsblock" class="about-cms-block">
+                        <div id="ctaboutcmsblock" class="about-cms-block" style="background-image: url('{{ asset('assets/background-under.png')}}')">
                             <div class="container aboutus-container">
                                 <div class="about-store">
                                     <div class="about-store-inner">
                                         <div class="one-half aboutcms1">
                                             <div class="about-image">
                                                 <div class="about-banner aboutcms-image1"><a href="#" class="banner-anchor"><img src="https://capricathemes.com/prestashop/PRS07/PRS070170/img/cms/aboutcms1.jpg" alt="about-store1" title="about-store1" /></a></div>
-                                                <div class="about-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard since the 1500s, when an unknown printer took a galley of type and scrambled</div>
+                                                <div class="about-text">Gia Flowers là địa chỉ đáng tin cậy chuyên cung cấp lan hồ điệp Đà Lạt và hoa tươi sỉ lẻ. Với kinh nghiệm từ năm 2019 đến nay, chúng tôi đặt sự tận tâm và chất lượng phục vụ lên hàng đầu.</div>
                                             </div>
                                         </div>
                                         <div class="one-half aboutcms2">
