@@ -19,7 +19,7 @@
 					</ol>
 				</div>
 			</nav>
-  <div class="container">
+  <div class="container product-index-container">
     <div id="columns_inner">
       <div id="left-column" class="col-xs-12" style="width:24.4%">
         <div class="block-categories block">

@@ -320,7 +320,18 @@ margin-top: 0px;
 		width: 100%;
 	}
 
+}
 
+.pagination a {
+	height: 35px;
+	margin: 0;
+	padding: 4px 13px;
+	width: 35px;
+	color: #fff;
+	background: #96394C;
+	display: block;
+	font-weight: 600;
+	border: 1px solid #96394C;
 }
 
 #footer .footer-container .footer-logo {
@@ -754,7 +765,6 @@ background: rgba(255, 255, 255, 0.6);
 
 .block-category {
 	margin-bottom: 25px;
-  margin-top: 20px;
 	background: none;
 	box-shadow: none;
 	border: none;
@@ -800,4 +810,8 @@ input[type="submit"], button[type="submit"]  {
 
 .slider-under-qview .slick-next {
   right: 10px;
+}
+
+.view-container, .product-index-container {
+  margin-top: 30px;
 }

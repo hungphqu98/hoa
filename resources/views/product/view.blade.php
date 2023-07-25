@@ -14,7 +14,7 @@
       </ol>
     </div>
   </nav>
-  <div class="container">
+  <div class="container view-container">
     <div id="columns_inner">
       <div id="content-wrapper">
         <section id="main" itemscope itemtype="https://schema.org/Product">

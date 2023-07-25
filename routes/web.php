@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FlowerController;
+use App\Http\Controllers\LoginController;
+use Laravel\Socialite\Facades\Socialite;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,4 +27,7 @@ Route::get('/policy/warranty', [HomeController::class, 'warranty'])->name('polic
 Route::get('/policy/corporation', [HomeController::class, 'corpo'])->name('policy.corpo');
 Route::get('/product', [HomeController::class, 'product'])->name('product.index');
 Route::get('/product/view', [FlowerController::class, 'view'])->name('product.view');
+
+Route::get('/redirect', [LoginController::class, 'redirectFacebook'])->name('login.facebook');
+Route::get('/callback', [LoginController::class, 'facebookCallback']);
 

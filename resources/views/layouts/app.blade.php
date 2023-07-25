@@ -64,7 +64,7 @@
               Account</span></span>
           <ul class="dropdown-menu">
             <li>
-              <a class="dropdown-item" href="" title="Log in to your customer account" rel="nofollow">
+              <a class="dropdown-item" href="{{ route('login.facebook') }}" title="Log in to your customer account" rel="nofollow">
                 <span>Đăng nhập</span>
               </a>
             </li>
