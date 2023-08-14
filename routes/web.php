@@ -47,8 +47,6 @@ Route::group(['prefix' => 'admin'], function() {
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth:admin']], function() {
   Route::get('/dashboard',[AdminController::class, 'index'])->name('admin.dashboard');
-  Route::get('/register',[AdminController::class, 'register'])->name('admin.register');
-  Route::post('/register',[AdminController::class, 'postRegister'])->name('admin.register');
   Route::get('/logout',[AdminController::class, 'logout'])->name('admin.logout');
   Route::prefix('category')->group(function () {
     Route::get('/', [CategoryController::class, 'index'])->name('admin.category.index');
