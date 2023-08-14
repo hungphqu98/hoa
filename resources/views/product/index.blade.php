@@ -24,7 +24,6 @@
       <div id="left-column" class="col-xs-12" style="width:24.4%">
         <div class="block-categories block">
           <h4 class="block_title hidden-md-down"> <a href=""{{ route('product.index') }}>Sản phẩm</a> </h4>
-          <h4 class="block_title hidden-lg-up" data-target="#block_categories_toggle" data-toggle="collapse"> <a href="">Sản phẩm</a> <span class="pull-xs-right"> <span class="navbar-toggler collapse-icons"> <i class="fa-icon add"></i> <i class="fa-icon remove"></i> </span> </span> </h4>
           <div id="block_categories_toggle" class="block_content collapse">
             <ul class="category-top-menu">
               <li>
@@ -118,7 +117,6 @@
         </div>
         <div id="newproduct_block" class="block products-block">
           <h4 class="block_title hidden-md-down"> Sản phẩm mới </h4>
-          <h4 class="block_title hidden-lg-up" data-target="#newproduct_block_toggle" data-toggle="collapse"> Sản phẩm mới <span class="pull-xs-right"> <span class="navbar-toggler collapse-icons"> <i class="fa-icon add"></i> <i class="fa-icon remove"></i> </span> </span> </h4>
           <div id="newproduct_block_toggle" class="block_content collapse">
             <ul class="products">
               <li class="product_item">

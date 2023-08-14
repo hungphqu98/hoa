@@ -107,6 +107,8 @@ $('.search_button').click(function() {
   $(this).toggleClass('active');
     if ($(this).hasClass('active')) {
       $('.search_toggle').show();
+      $('.user-info').removeClass('active');
+      $('.dropdown-menu').hide();
     } else {
       $('.search_toggle').hide();
     }
@@ -116,12 +118,21 @@ $('.user-info').click(function() {
   $(this).toggleClass('active');
     if ($(this).hasClass('active')) {
       $('.dropdown-menu').show();
+      $('.search_button').removeClass('active');
+      $('.search_toggle').hide();
     } else {
       $('.dropdown-menu').hide();
     }
 });
 });
 
+$('.dropdown-menu').click(function(event) {
+  event.stopPropagation();
+});
+
+$('.search_toggle').click(function(event) {
+  event.stopPropagation();
+});
 
 
 $(document).click(function() {

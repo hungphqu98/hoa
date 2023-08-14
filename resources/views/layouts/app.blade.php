@@ -3,14 +3,17 @@
 
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-R1BSBZW85Z"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R1BSBZW85Z"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-R1BSBZW85Z');
-</script>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-R1BSBZW85Z');
+  </script>
   <!-- Required meta tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -23,6 +26,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap" rel="stylesheet">
 
   <!-- main css -->
   <link rel="stylesheet" href={{ asset("css/style.css") }} />
@@ -32,13 +38,12 @@
 </head>
 
 <body>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0&appId=251373497665940&autoLogAppEvents=1" nonce="wcqh5eRv"></script>
   <!--================Header Menu Area =================-->
   <header id="header">
     <div class="header-banner">
     </div>
-
-
-
     <div class="header-top">
       <div class="container">
         <div class="header_logo">
@@ -50,10 +55,10 @@
           <div class="blockcart cart-preview inactive">
             <div class="header blockcart-header dropdown js-dropdown">
 
-            <a class="shopping-cart" rel="nofollow" href="">
+              <a class="shopping-cart" rel="nofollow" href="">
                 <span class="mobile_count"></span>
                 <span class="cart-products-count hidden-sm-down">0<span class="value"> </span></span>
-            </a>
+              </a>
 
 
             </div>
@@ -63,16 +68,52 @@
           <span class="user-info-title expand-more _gray-darker" data-toggle="dropdown"><span class="account_text">My
               Account</span></span>
           <ul class="dropdown-menu">
+            @auth
+            <p>Xin chào, {{ Auth::user()->name }}!</p>
             <li>
-              <a class="dropdown-item" href="{{ route('login.facebook') }}" title="Log in to your customer account" rel="nofollow">
-                <span>Đăng nhập</span>
+              <a class="dropdown-item" href="{{ route('user.account') }}" title="Account" rel="nofollow">
+                <span>Tài khoản của tôi</span>
               </a>
             </li>
             <li>
-              <a class="dropdown-item" href="" title="Register" rel="nofollow">
-                <span>Đăng ký</span>
+              <a class="dropdown-item" href="{{ route('register') }}" title="Register" rel="nofollow">
+                <span>Lịch sử mua hàng</span>
               </a>
             </li>
+            <li class="right-aligned logout">
+              <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit">Đăng xuất</button>
+              </form>
+            </li>
+            @else
+            <li>
+              <!-- Login Form -->
+              <form action="{{ route('login') }}" method="POST" class="dropdown-item">
+                @csrf
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" name="email" id="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" name="password" id="password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Đăng nhập</button>
+              </form>
+              <!-- End of Login Form -->
+            </li>
+            <li>
+              <a class="dropdown-item" href="{{ route('login.google') }}" title="Log in to your customer account" rel="nofollow">
+                <button class="btn btn-primary"><i class="fa-brands fa-google"></i>Đăng nhập bằng Google</button>
+              </a>
+            </li>
+            <li class="right-aligned">
+              <a class="dropdown-item" href="{{ route('register') }}" title="Register" rel="nofollow">
+                <span>Chưa có tài khoản? Đăng ký</span>
+              </a>
+            </li>
+            @endauth
           </ul>
         </div><!-- Block search module TOP -->
         <div id="search_widget" class="col-lg-4 col-md-5 col-sm-12 search-widget" data-search-controller-url="">
@@ -100,18 +141,18 @@
                   <div class="cat-title">Menu</div>
                 </div>
                 <div class="js-top-menu mobile" id="_mobile_top_menu">
-                <ul class="top-menu container" id="top-menu" data-depth="0">
-              <li class="category" id="category-3">
-                <a class="dropdown-item" href="{{ route('product.index') }}" data-depth="0">
-                  <span class="pull-xs-right hidden-lg-up">
-                    <span data-target="#top_sub_menu_1" data-toggle="collapse" type="button" class="navbar-toggler collapse-icons" aria-controls="top_sub_menu_1">
-                    <i class="fa-icon add">&nbsp;</i>
-                                  <i class="fa-icon remove">&nbsp;</i>
-                    </span>
-                  </span>
-                  Sản phẩm
-                </a>
-                <div class="popover sub-menu js-sub-menu collapse sub-menu-container" id="top_sub_menu_1">
+                  <ul class="top-menu container" id="top-menu" data-depth="0">
+                    <li class="category" id="category-3">
+                      <a class="dropdown-item" href="{{ route('product.index') }}" data-depth="0">
+                        <span class="pull-xs-right hidden-lg-up">
+                          <span data-target="#top_sub_menu_1" data-toggle="collapse" type="button" class="navbar-toggler collapse-icons" aria-controls="top_sub_menu_1">
+                            <i class="fa-icon add">&nbsp;</i>
+                            <i class="fa-icon remove">&nbsp;</i>
+                          </span>
+                        </span>
+                        Sản phẩm
+                      </a>
+                      <div class="popover sub-menu js-sub-menu collapse sub-menu-container" id="top_sub_menu_1">
                         <ul class="sub-cat-mobile" data-depth="1">
                           <li class="category" id="category-4">
                             <a class="dropdown-item dropdown-submenu" href="{{ route('product.index') }}" data-depth="1">
@@ -238,31 +279,31 @@
                             </a>
                           </li>
                         </ul>
-                        
 
-                  <!-- <div class="menu-banners">
+
+                        <!-- <div class="menu-banners">
                     <div class="menu-banner">
                       <img src="img/c/3-0_thumb.jpg" alt="" />
                     </div>
                   </div> -->
-                </div>
-              </li>
-              <li class="category" id="category-6">
-                <a class="dropdown-item" href="{{ route('about') }}" data-depth="0">
-                  Giới thiệu
-                </a>
-              </li>
-              <li class="category" id="category-11">
-                <a class="dropdown-item" href="#" data-depth="0">
-                  Câu chuyện về hoa
-                </a>
-              </li>
-              <li class="link" id="lnk-blog">
-                <a class="dropdown-item" href="{{ route('contact') }}" data-depth="0">
-                  Liên hệ
-                </a>
-              </li>
-            </ul>
+                      </div>
+                    </li>
+                    <li class="category" id="category-6">
+                      <a class="dropdown-item" href="{{ route('about') }}" data-depth="0">
+                        Giới thiệu
+                      </a>
+                    </li>
+                    <li class="category" id="category-11">
+                      <a class="dropdown-item" href="#" data-depth="0">
+                        Câu chuyện về hoa
+                      </a>
+                    </li>
+                    <li class="link" id="lnk-blog">
+                      <a class="dropdown-item" href="{{ route('contact') }}" data-depth="0">
+                        Liên hệ
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -283,133 +324,133 @@
                   Sản phẩm
                 </a>
                 <div class="popover sub-menu js-sub-menu collapse sub-menu-container" id="top_sub_menu_22709">
-                        <ul class="sub-cat" data-depth="1">
-                          <li class="category" id="category-4">
-                            <a class="dropdown-item dropdown-submenu" href="{{ route('product.index') }}" data-depth="1">
-                              <span class="pull-xs-right hidden-lg-up">
-                                <span data-target="#top_sub_menu_52970" data-toggle="collapse" class="navbar-toggler collapse-icons">
-                                  <i class="fa-icon add">&nbsp;</i>
-                                  <i class="fa-icon remove">&nbsp;</i>
-                                </span>
-                              </span>
-                              Lan Hồ Điệp 100% Đà Lạt
+                  <ul class="sub-cat" data-depth="1">
+                    <li class="category" id="category-4">
+                      <a class="dropdown-item dropdown-submenu" href="{{ route('product.index') }}" data-depth="1">
+                        <span class="pull-xs-right hidden-lg-up">
+                          <span data-target="#top_sub_menu_52970" data-toggle="collapse" class="navbar-toggler collapse-icons">
+                            <i class="fa-icon add">&nbsp;</i>
+                            <i class="fa-icon remove">&nbsp;</i>
+                          </span>
+                        </span>
+                        Lan Hồ Điệp 100% Đà Lạt
+                      </a>
+                      <div class="collapse" id="top_sub_menu_52970">
+                        <ul class="top-menu  " data-depth="2">
+                          <li class="category" id="category-20">
+                            <a class="dropdown-item" href="{{ route('product.index') }}" data-depth="2">
+                              Lan Hồ Điệp thiết kế cùng lũa
                             </a>
-                            <div class="collapse" id="top_sub_menu_52970">
-                              <ul class="top-menu  " data-depth="2">
-                                <li class="category" id="category-20">
-                                  <a class="dropdown-item" href="{{ route('product.index') }}" data-depth="2">
-                                    Lan Hồ Điệp thiết kế cùng lũa
-                                  </a>
-                                </li>
-                                <li class="category" id="category-21">
-                                  <a class="dropdown-item" href="{{ route('product.index') }}" data-depth="2">
-                                    Lan Hồ Điệp thiết kế Bonsai
-                                  </a>
-                                </li>
-                                <li class="category" id="category-22">
-                                  <a class="dropdown-item" href="{{ route('product.index') }}" data-depth="2">
-                                    Lan Hồ Điệp thiết kế nâng cao
-                                  </a>
-                                </li>
-                                <li class="category" id="category-22">
-                                  <a class="dropdown-item" href="{{ route('product.index') }}" data-depth="2">
-                                    Lan Hồ Điệp thiết kế cơ bản
-                                  </a>
-                                </li>
-                              </ul>
+                          </li>
+                          <li class="category" id="category-21">
+                            <a class="dropdown-item" href="{{ route('product.index') }}" data-depth="2">
+                              Lan Hồ Điệp thiết kế Bonsai
+                            </a>
+                          </li>
+                          <li class="category" id="category-22">
+                            <a class="dropdown-item" href="{{ route('product.index') }}" data-depth="2">
+                              Lan Hồ Điệp thiết kế nâng cao
+                            </a>
+                          </li>
+                          <li class="category" id="category-22">
+                            <a class="dropdown-item" href="{{ route('product.index') }}" data-depth="2">
+                              Lan Hồ Điệp thiết kế cơ bản
+                            </a>
+                          </li>
+                        </ul>
 
-                            </div>
-                          </li>
-                        </ul>
-                        <ul class="sub-cat" data-depth="1">
-                          <li class="category" id="category-5">
-                            <a class="dropdown-item dropdown-submenu" href="{{ route('product.index') }}" data-depth="1">
-                              <span class="pull-xs-right hidden-lg-up">
-                                <span data-target="#top_sub_menu_54766" data-toggle="collapse" class="navbar-toggler collapse-icons">
-                                  <i class="fa-icon add">&nbsp;</i>
-                                  <i class="fa-icon remove">&nbsp;</i>
-                                </span>
-                              </span>
-                              Hoa tươi thành phẩm
-                            </a>
-                            <div class="collapse" id="top_sub_menu_54766">
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="sub-cat" data-depth="1">
+                    <li class="category" id="category-5">
+                      <a class="dropdown-item dropdown-submenu" href="{{ route('product.index') }}" data-depth="1">
+                        <span class="pull-xs-right hidden-lg-up">
+                          <span data-target="#top_sub_menu_54766" data-toggle="collapse" class="navbar-toggler collapse-icons">
+                            <i class="fa-icon add">&nbsp;</i>
+                            <i class="fa-icon remove">&nbsp;</i>
+                          </span>
+                        </span>
+                        Hoa tươi thành phẩm
+                      </a>
+                      <div class="collapse" id="top_sub_menu_54766">
 
-                              <ul class="top-menu  " data-depth="2">
-                                <li class="category" id="category-23">
-                                  <a class="dropdown-item" href="{{ route('product.index') }}" data-depth="2">
-                                    Bó hoa
-                                  </a>
-                                </li>
-                                <li class="category" id="category-24">
-                                  <a class="dropdown-item" href="{{ route('product.index') }}" data-depth="2">
-                                    Lẵng/ Giỏ/ Hộp hoa
-                                  </a>
-                                </li>
-                                <li class="category" id="category-25">
-                                  <a class="dropdown-item" href="{{ route('product.index') }}" data-depth="2">
-                                    Bình hoa
-                                  </a>
-                                </li>
-                                <li class="category" id="category-26">
-                                  <a class="dropdown-item" href="{{ route('product.index') }}" data-depth="2">
-                                    Hoa Valentine
-                                  </a>
-                                </li>
-                                <li class="category" id="category-26">
-                                  <a class="dropdown-item" href="{{ route('product.index') }}" data-depth="2">
-                                    Hoa tết
-                                  </a>
-                                </li>
-                                <li class="category" id="category-26">
-                                  <a class="dropdown-item" href="{{ route('product.index') }}" data-depth="2">
-                                    Kệ hoa Chúc mừng
-                                  </a>
-                                </li>
-                                <li class="category" id="category-26">
-                                  <a class="dropdown-item" href="{{ route('product.index') }}" data-depth="2">
-                                    Kệ hoa Chia buồn
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </li>
-                        </ul>
-                        <ul class="sub-cat column-3" data-depth="1">
-                          <li class="category" id="category-14">
-                            <a class="dropdown-item dropdown-submenu" href="{{ route('product.index') }}" data-depth="1">
-                              <span class="pull-xs-right hidden-lg-up">
-                                <span data-target="#top_sub_menu_23465" data-toggle="collapse" class="navbar-toggler collapse-icons">
-                                  <i class="fa-icon add">&nbsp;</i>
-                                  <i class="fa-icon remove">&nbsp;</i>
-                                </span>
-                              </span>
-                              Hoa tươi cắt cành
+                        <ul class="top-menu  " data-depth="2">
+                          <li class="category" id="category-23">
+                            <a class="dropdown-item" href="{{ route('product.index') }}" data-depth="2">
+                              Bó hoa
                             </a>
                           </li>
-                          <li class="category" id="category-14">
-                            <a class="dropdown-item dropdown-submenu" href="{{ route('product.index') }}" data-depth="1">
-                              <span class="pull-xs-right hidden-lg-up">
-                                <span data-target="#top_sub_menu_23465" data-toggle="collapse" class="navbar-toggler collapse-icons">
-                                  <i class="fa-icon add">&nbsp;</i>
-                                  <i class="fa-icon remove">&nbsp;</i>
-                                </span>
-                              </span>
-                              Chậu cây/ Hoa tiểu cành
+                          <li class="category" id="category-24">
+                            <a class="dropdown-item" href="{{ route('product.index') }}" data-depth="2">
+                              Lẵng/ Giỏ/ Hộp hoa
                             </a>
                           </li>
-                          <li class="category" id="category-14">
-                            <a class="dropdown-item dropdown-submenu" href="{{ route('product.index') }}" data-depth="1">
-                              <span class="pull-xs-right hidden-lg-up">
-                                <span data-target="#top_sub_menu_23465" data-toggle="collapse" class="navbar-toggler collapse-icons">
-                                  <i class="fa-icon add">&nbsp;</i>
-                                  <i class="fa-icon remove">&nbsp;</i>
-                                </span>
-                              </span>
-                              Hoa tươi sự kiện/ tiệc cưới
+                          <li class="category" id="category-25">
+                            <a class="dropdown-item" href="{{ route('product.index') }}" data-depth="2">
+                              Bình hoa
+                            </a>
+                          </li>
+                          <li class="category" id="category-26">
+                            <a class="dropdown-item" href="{{ route('product.index') }}" data-depth="2">
+                              Hoa Valentine
+                            </a>
+                          </li>
+                          <li class="category" id="category-26">
+                            <a class="dropdown-item" href="{{ route('product.index') }}" data-depth="2">
+                              Hoa tết
+                            </a>
+                          </li>
+                          <li class="category" id="category-26">
+                            <a class="dropdown-item" href="{{ route('product.index') }}" data-depth="2">
+                              Kệ hoa Chúc mừng
+                            </a>
+                          </li>
+                          <li class="category" id="category-26">
+                            <a class="dropdown-item" href="{{ route('product.index') }}" data-depth="2">
+                              Kệ hoa Chia buồn
                             </a>
                           </li>
                         </ul>
-                        
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="sub-cat column-3" data-depth="1">
+                    <li class="category" id="category-14">
+                      <a class="dropdown-item dropdown-submenu" href="{{ route('product.index') }}" data-depth="1">
+                        <span class="pull-xs-right hidden-lg-up">
+                          <span data-target="#top_sub_menu_23465" data-toggle="collapse" class="navbar-toggler collapse-icons">
+                            <i class="fa-icon add">&nbsp;</i>
+                            <i class="fa-icon remove">&nbsp;</i>
+                          </span>
+                        </span>
+                        Hoa tươi cắt cành
+                      </a>
+                    </li>
+                    <li class="category" id="category-14">
+                      <a class="dropdown-item dropdown-submenu" href="{{ route('product.index') }}" data-depth="1">
+                        <span class="pull-xs-right hidden-lg-up">
+                          <span data-target="#top_sub_menu_23465" data-toggle="collapse" class="navbar-toggler collapse-icons">
+                            <i class="fa-icon add">&nbsp;</i>
+                            <i class="fa-icon remove">&nbsp;</i>
+                          </span>
+                        </span>
+                        Chậu cây/ Hoa tiểu cành
+                      </a>
+                    </li>
+                    <li class="category" id="category-14">
+                      <a class="dropdown-item dropdown-submenu" href="{{ route('product.index') }}" data-depth="1">
+                        <span class="pull-xs-right hidden-lg-up">
+                          <span data-target="#top_sub_menu_23465" data-toggle="collapse" class="navbar-toggler collapse-icons">
+                            <i class="fa-icon add">&nbsp;</i>
+                            <i class="fa-icon remove">&nbsp;</i>
+                          </span>
+                        </span>
+                        Hoa tươi sự kiện/ tiệc cưới
+                      </a>
+                    </li>
+                  </ul>
+
 
                   <!-- <div class="menu-banners">
                     <div class="menu-banner">
@@ -460,7 +501,7 @@
       <div class="container">
         <div class="row footer">
 
-          <div class="block-contact col-md-4 links wrapper">
+          <div class="block-contact col-md-3 links wrapper">
 
             <h3 class="text-uppercase block-contact-title hidden-sm-down"><a href="#">Store information</a></h3>
 
@@ -477,9 +518,7 @@
             <ul id="block-contact_list" class="collapse">
               <li>
                 <i class="fa-solid fa-location-dot"></i>
-                <span>97 Nguyễn Khuyến, Phường Quốc Tử Giám</span>
-                <br>
-                <span>Đống Đa, Hà Nội</span>
+                <span>97 Nguyễn Khuyến, Phường Quốc Tử Giám, Đống Đa, Hà Nội</span>
               </li>
               <li>
                 <i class="fa-solid fa-phone"></i>
@@ -492,13 +531,13 @@
             </ul>
 
           </div>
-          <div class="col-md-4 links block">
+          <div class="col-md-3 links block">
             <h3 class="h3 hidden-md-down">Sản phẩm</h3>
             <div class="title h3 block_title hidden-lg-up" data-target="#footer_sub_menu_41269" data-toggle="collapse">
               <span class="">Sản phẩm</span>
               <span class="pull-xs-right">
                 <span class="navbar-toggler collapse-icons">
-                <i class="fa-solid fa-caret-down add"></i>
+                  <i class="fa-solid fa-caret-down add"></i>
                   <i class="fa-solid fa-caret-up remove"></i>
                 </span>
               </span>
@@ -531,7 +570,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-md-4 links block">
+          <div class="col-md-3 links block">
             <h3 class="h3 hidden-md-down">Chính sách</h3>
             <div class="title h3 block_title hidden-lg-up" data-target="#footer_sub_menu_49772" data-toggle="collapse">
               <span class="">Chính sách</span>
@@ -559,6 +598,23 @@
                 </a>
               </li>
             </ul>
+            <!-- <h3 class="h3 hidden-md-down">Fanpage</h3>
+            <div class="fb-page" data-href="https://www.facebook.com/profile.php?id=100064056821362" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/profile.php?id=100064056821362" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/profile.php?id=100064056821362">Gia Flowers</a></blockquote></div> -->
+          </div>
+          <div class="col-md-3 links block">
+            <h3 class="h3 hidden-md-down">Fanpage</h3>
+            <div class="title h3 block_title hidden-lg-up" data-target="#footer_sub_menu_49772" data-toggle="collapse">
+              <span class="">Fanpage</span>
+              <span class="pull-xs-right">
+                <span class="navbar-toggler collapse-icons">
+                  <i class="fa-solid fa-caret-down add"></i>
+                  <i class="fa-solid fa-caret-up remove"></i>
+                </span>
+              </span>
+            </div>
+            <div class="fb-page" data-href="https://www.facebook.com/profile.php?id=100064056821362" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+              <blockquote cite="https://www.facebook.com/profile.php?id=100064056821362" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/profile.php?id=100064056821362">Gia Flowers</a></blockquote>
+            </div>
           </div>
         </div>
       </div>
