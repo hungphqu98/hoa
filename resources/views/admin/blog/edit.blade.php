@@ -45,52 +45,32 @@
   @endpush
   <div class="container">
     <div class="page-title">
-      <h3>Sản phẩm</h3>
+      <h3>Blog</h3>
     </div>
     <div class="row">
       <div class="col-lg-12">
         <div class="card">
-          <div class="card-header">Sửa sản phẩm</div>
+          <div class="card-header">Sửa bài viết</div>
           <div class="card-body">
-            @foreach($product as $p)
-            <form  action="{{ route('admin.product.update' ,['id' => $p->id]) }}" method="post" enctype="multipart/form-data">
+            @foreach($blog as $b)
+            <form  action="{{ route('admin.blog.update' ,['id' => $b->id]) }}" method="post" enctype="multipart/form-data">
               @csrf
               <div class="mb-3">
-                <label for="name" class="form-label">Tên sản phẩm</label>
-                <input type="text" name="name" class="form-control" value="{{ $p->name }}" required>
+                <label for="title" class="form-label">Tiêu đề</label>
+                <input type="text" name="title" class="form-control" value="{{ $b->title }}" required>
               </div>
               <div class="mb-3">
                 <label for="slug" class="form-label">Slug</label>
-                <input type="text" name="slug" class="form-control" value="{{ $p->slug }}" required>
+                <input type="text" name="slug" class="form-control" value="{{ $b->slug }}" required>
               </div>
               <div class="mb-3">
-                <label for="image">Ảnh</label>
-                <input name="image" type="file"></input>
-                <img src="{{ asset('assets/product/' . $p->image) }}">
+                <label for="thumbnail">Ảnh</label>
+                <input name="thumbnail" type="file"></input>
+                <img src="{{ asset('assets/blog/' . $b->thumbnail) }}">
               </div>
               <div class="mb-3">
-                <label for="description" class="form-label"> Mô tả chung </label>
-                <textarea name="description" class="form-control" required>{!! $p->description !!}</textarea>
-              </div>
-              <div class="mb-3">
-                <label for="details" class="form-label">Thông tin chi tiết</label>
-                <textarea name="details" class="tinymce_editor" id="tinymce_editor">{!! $p->details !!}</textarea>
-              </div>
-              <div class="mb-3">
-                <label for="price" class="form-label">Giá</label>
-                <input type="text" name="price" class="form-control" value="{{ $p->price }}" required>
-              </div>
-              <div class="mb-3">
-                <label for="sale_price" class="form-label">Giá giảm</label>
-                <input type="text" name="sale_price" class="form-control" value="{{ $p->sale_price }}" >
-              </div>
-              <div class="mb-3">
-                <label for="category_ids[]" class="form-label">Tag</label>
-                <select class="form-select" name="category_ids[]" id="multiple-select-field" data-placeholder="Choose anything" multiple>
-                @foreach($cat as $c)  
-                <option value="{{ $c->id }}" @if($p->productCategory->contains($c)) selected @endif>{{ $c->name }}</option>
-                @endforeach
-                </select>
+                <label for="details" class="form-label">Nội dung</label>
+                <textarea name="details" class="tinymce_editor" id="tinymce_editor">{!! $b->details !!}</textarea>
               </div>
               <div class="form-check">
                 <label class="form-check-label">

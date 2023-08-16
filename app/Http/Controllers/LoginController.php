@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class LoginController extends Controller
 {
@@ -35,7 +36,7 @@ class LoginController extends Controller
                 'facebook_id' => $facebookUser->id,
                 'name' => $facebookUser->name,
                 'email' => $facebookUser->email,
-                'password' => Hash::make(str_random(20)), // Generate a random password for the user
+                'password' => Hash::make(Str::random(20)), // Generate a random password for the user
             ]);
         }
         Auth::guard('web')->login($user);

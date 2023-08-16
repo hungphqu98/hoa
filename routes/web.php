@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\LoginController;
 use Laravel\Socialite\Facades\Socialite;
 
@@ -46,7 +47,11 @@ Route::group(['prefix' => 'admin'], function() {
 });
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth:admin']], function() {
+  Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web','auth']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+  });
   Route::get('/dashboard',[AdminController::class, 'index'])->name('admin.dashboard');
+  Route::get('/',[AdminController::class, 'index'])->name('admin.dashboard');
   Route::get('/logout',[AdminController::class, 'logout'])->name('admin.logout');
   Route::prefix('category')->group(function () {
     Route::get('/', [CategoryController::class, 'index'])->name('admin.category.index');
@@ -65,8 +70,18 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:admin']], function() {
     Route::post('/edit/{id}', [ProductController::class, 'update'])->name('admin.product.update');
     Route::get('/delete/{id}', [ProductController::class, 'destroy'])->name('admin.product.delete');
   });
+  Route::prefix('blog')->group(function () {
+    Route::get('/', [BlogController::class, 'index'])->name('admin.blog.index');
+    Route::get('/create', [BlogController::class, 'create'])->name('admin.blog.create');
+    Route::post('/create', [BlogController::class, 'store'])->name('admin.blog.store');
+    Route::get('/edit/{id}', [BlogController::class, 'edit'])->name('admin.blog.edit');
+    Route::post('/edit/{id}', [BlogController::class, 'update'])->name('admin.blog.update');
+    Route::get('/delete/{id}', [BlogController::class, 'destroy'])->name('admin.blog.delete');
+  });
+  
 });
 
 Route::get('/google/redirect', [LoginController::class, 'redirectGoogle'])->name('login.google');
 Route::get('/google/callback', [LoginController::class, 'googleCallback']);
+
 
