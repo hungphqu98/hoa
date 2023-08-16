@@ -35,7 +35,7 @@
                 </li>
                 <li>
                     <a href="{{ route('admin.blog.index') }}"><i class="fas fa-chart-bar"></i>Blog</a>
-                </li>
+                <!-- </li>
                 <li>
                     <a href="icons.html"><i class="fas fa-icons"></i> Icons</a>
                 </li>
@@ -95,7 +95,7 @@
                 </li>
                 <li>
                     <a href="settings.html"><i class="fas fa-cog"></i>Settings</a>
-                </li>
+                </li> -->
             </ul>
         </nav>
         <div id="body" class="active">
