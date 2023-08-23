@@ -68,7 +68,7 @@
 
               <a class="shopping-cart" rel="nofollow" href="">
                 <span class="mobile_count"></span>
-                <span class="cart-products-count hidden-sm-down">0<span class="value"> </span></span>
+                <span class="cart-products-count hidden-sm-down">{{$cart->total_quantity}}<span class="value"> </span></span>
               </a>
 
 

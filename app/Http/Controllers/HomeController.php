@@ -40,7 +40,9 @@ class HomeController extends Controller
     public function view($slug)
     {
         $product = Product::where(['slug' => $slug])->get();
-        return view('product.view', compact('product'));
+        $bestSeller = Product::where(['status' => 'AVAILABLE'])->orderBy('id','DESC')->limit(4)->get();
+        $products = Product::where(['status' => 'AVAILABLE'])->get();
+        return view('product.view', compact('product','bestSeller','products'));
     }
 
     public function about()
@@ -51,13 +53,6 @@ class HomeController extends Controller
     public function contact()
     {
         return view('contact');
-    }
-
-    public function cart()
-    {
-        // dd(session('cart'));
-        dd(session()->all());
-        return view('cart');
     }
 
     public function delivery()
