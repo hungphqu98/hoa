@@ -1035,3 +1035,7 @@ transition: all 500ms ease 0s;
 	left: 5px;
 	font-size: 9px;
 }
+
+.cart-update {
+  height: 2.5rem;
+}

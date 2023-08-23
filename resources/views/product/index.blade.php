@@ -1,29 +1,29 @@
 <x-app-layout>
-<nav data-depth="2" class="breadcrumb">
-				<div class="container">
-					<ol itemscope itemtype="http://schema.org/BreadcrumbList">
-						<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-							<a itemprop="item" href="{{ route('home') }}">
-								<span itemprop="name">Trang chủ</span>
-							</a>
-							<meta itemprop="position" content="1">
-						</li>
-						<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-							<a itemprop="item" href="{{ route('product.index') }}">
-								<span itemprop="name">Sản phẩm</span>
-							</a>
-							<meta itemprop="position" content="2">
-						</li>
+  <nav data-depth="2" class="breadcrumb">
+    <div class="container">
+      <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a itemprop="item" href="{{ route('home') }}">
+            <span itemprop="name">Trang chủ</span>
+          </a>
+          <meta itemprop="position" content="1">
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a itemprop="item" href="{{ route('product.index') }}">
+            <span itemprop="name">Sản phẩm</span>
+          </a>
+          <meta itemprop="position" content="2">
+        </li>
 
 
-					</ol>
-				</div>
-			</nav>
+      </ol>
+    </div>
+  </nav>
   <div class="container product-index-container">
     <div id="columns_inner">
       <div id="left-column" class="col-xs-12" style="width:24.4%">
         <div class="block-categories block">
-          <h4 class="block_title hidden-md-down"> <a href=""{{ route('product.index') }}>Sản phẩm</a> </h4>
+          <h4 class="block_title hidden-md-down"> <a href="" {{ route('product.index') }}>Sản phẩm</a> </h4>
           <div id="block_categories_toggle" class="block_content collapse">
             <ul class="category-top-menu">
               <li>
@@ -119,40 +119,24 @@
           <h4 class="block_title hidden-md-down"> Sản phẩm mới </h4>
           <div id="newproduct_block_toggle" class="block_content collapse">
             <ul class="products">
+              @foreach($newProduct as $n)
               <li class="product_item">
-                <div class="product-miniature js-product-miniature" data-id-product="34" data-id-product-attribute="251" itemscope itemtype="http://schema.org/Product">
-                  <div class="product_thumbnail"> <a href="{{ route('product.view') }}" class="thumbnail product-image"> <img src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" alt="Lan Hồ Điệp"> </a> </div>
+                <div class="product-miniature js-product-miniature" itemscope itemtype="http://schema.org/Product">
+                  <div class="product_thumbnail"> <a href="{{ route('product.view',['slug'=> $n->slug]) }}" class="thumbnail product-image"> <img src="{{ asset('assets/product/' . $n->image) }}" alt="Lan Hồ Điệp"> </a> </div>
                   <div class="product-info">
-                    <h1 class="h3 product-title" itemprop="name"><a href="{{ route('product.view') }}">Lan Hồ Điệp</a></h1>
-                    <div class="product-price-and-shipping"> <span itemprop="price" class="price">$94.16</span> </div>
+                    <h1 class="h3 product-title" itemprop="name"><a href="{{ route('product.view',['slug'=> $n->slug]) }}">{{ $n->name }}</a></h1>
+                    <div class="product-price-and-shipping"> <span itemprop="price" class="price">{{ number_format($n->price, 0, ',', '.') }} đ</span> </div>
                   </div>
                 </div>
               </li>
-              <li class="product_item">
-                <div class="product-miniature js-product-miniature" data-id-product="34" data-id-product-attribute="251" itemscope itemtype="http://schema.org/Product">
-                  <div class="product_thumbnail"> <a href="" class="thumbnail product-image"> <img src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" alt="Lan Hồ Điệp"> </a> </div>
-                  <div class="product-info">
-                    <h1 class="h3 product-title" itemprop="name"><a href="{{ route('product.view') }}">Lan Hồ Điệp</a></h1>
-                    <div class="product-price-and-shipping"> <span itemprop="price" class="price">$94.16</span> </div>
-                  </div>
-                </div>
-              </li>
-              <li class="product_item">
-                <div class="product-miniature js-product-miniature" data-id-product="34" data-id-product-attribute="251" itemscope itemtype="http://schema.org/Product">
-                  <div class="product_thumbnail"> <a href="" class="thumbnail product-image"> <img src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" alt="Lan Hồ Điệp"> </a> </div>
-                  <div class="product-info">
-                    <h1 class="h3 product-title" itemprop="name"><a href="{{ route('product.view') }}">Lan Hồ Điệp</a></h1>
-                    <div class="product-price-and-shipping"> <span itemprop="price" class="price">$94.16</span> </div>
-                  </div>
-                </div>
-              </li>
+              @endforeach
             </ul>
             <div class="view_more"> <a class="all-product-link btn btn-primary" href="{{ route('product.index') }}"> Xem thêm </a> </div>
           </div>
         </div>
       </div>
       <div id="content-wrapper" class="left-column col-xs-12 col-sm-8 col-md-9" style="width:75.6%">
-        <section id="main"> <input id="getCartLink" name="getCartLink" value="https://capricathemes.com/prestashop/PRS07/PRS070170/index.php?controller=cart" type="hidden"> <input id="getTokenId" name="getTokenId" value="b88261cab17a7775f54f10a3c0bb0f61" type="hidden">
+        <section id="main">
           <div class="block-category card card-block ">
             <h1 class="h1">Sản phẩm</h1>
             <div id="category-description">
@@ -164,10 +148,6 @@
             <div id="">
               <div id="js-product-list-top" class="products-selection">
                 <div class="col-md-6 hidden-md-down total-products">
-                  <ul class="display hidden-xs grid_list">
-                    <li id="grid"><a href="#" title="Grid">Grid</a></li>
-                    <li id="list"><a href="#" title="List">List</a></li>
-                  </ul>
                   <p>There are 15 products.</p>
                 </div>
                 <div class="col-md-6">
@@ -187,15 +167,18 @@
             <div id="">
               <div id="js-product-list">
                 <div class="products row">
-                  <ul class="product_list grid gridcount"> 
-                  @foreach($flower as $f)
+                  <ul class="product_list grid gridcount">
+                    @foreach($product as $p)
                     <li class="product_item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                      <div class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope itemtype="http://schema.org/Product">
-                        <div class="thumbnail-container"> <a href="index8589.html?id_product=1&amp;id_product_attribute=1&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/1-size-s/8-color-white" class="thumbnail product-thumbnail"> <img src="{{ $f->flowerImages->first()->image_url }}" alt="Consectetur Hampden" data-full-size-image-url="{{ $f->flowerImages->first()->image_url }}"> <img class="fliper_image img-responsive" src="{{ $f->flowerImages->first()->image_url }}" data-full-size-image-url="{{ $f->flowerImages->first()->image_url }}" alt="" /> </a>
+                      <div class="product-miniature js-product-miniature" itemscope itemtype="http://schema.org/Product">
+                        <div class="thumbnail-container"> <a href="{{ route('product.view',['slug'=> $p->slug]) }}" class="thumbnail product-thumbnail"> <img src="{{ asset('assets/product/' . $p->image) }}" alt="Hoa" data-full-size-image-url="{{ asset('assets/product/' . $p->image) }}"> <img class="fliper_image img-responsive" src="{{ asset('assets/product/' . $p->image) }}" data-full-size-image-url="{{ asset('assets/product/' . $p->image) }}" alt="" /> </a>
                           <div class="outer-functional">
-                            <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal"> <i class="material-icons search">&#xE417;</i> Szybki podgląd </button>
+                            <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal{{$p->id}}"> <i class="material-icons search">&#xE417;</i> Quick View </button>
                               <div class="product-actions">
-                                <form action="#" method="post" class="add-to-cart-or-refresh"> <input type="hidden" name="token" value="b88261cab17a7775f54f10a3c0bb0f61"> <input type="hidden" name="id_product" value="1" class="product_page_product_id"> <input type="hidden" name="id_customization" value="0" class="product_customization_id"> <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Add to cart </button> </form>
+                                <form action="{{ route('cart.add',['id'=>$p->id]) }}" class="add-to-cart-or-refresh">
+                                  @csrf
+                                <input value="1" name="quantity" type="hidden">
+                                <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Thêm vào giỏ hàng </button> </form>
                               </div>
                             </div>
                           </div>
@@ -205,19 +188,10 @@
                           </ul>
                         </div>
                         <div class="product-description">
-                          <div class="comments_note">
-                            <div class="star_content clearfix">
-                              <div class="star star_on"></div>
-                              <div class="star star_on"></div>
-                              <div class="star star_on"></div>
-                              <div class="star star_on"></div>
-                              <div class="star star_on"></div>
-                            </div> <span class="total-rating">1 Review(s)&nbsp</span>
-                          </div>
-                          <h3 class="h3 product-title" itemprop="name"><a href="index8589.html?id_product=1&amp;id_product_attribute=1&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/1-size-s/8-color-white">{{ $f->name }}</a></h3>
-                          <div class="product-price-and-shipping"> <span itemprop="price" class="price">{{ $f->price }}</span> </div>
+                          <h3 class="h3 product-title" itemprop="name"><a href="{{ route('product.view',['slug'=> $p->slug]) }}">{{ $p->name }}</a></h3>
+                          <div class="product-price-and-shipping"> <span itemprop="price" class="price">{{ number_format($p->price, 0, ',', '.') }} đ</span> </div>
                           <div class="product-detail" itemprop="description">
-                            <p>{{ $f->description }}</p>
+                            <p>{{ $p->description }}</p>
                           </div>
                           <div class="highlighted-informations hidden-sm-down">
                             <div class="variant-links"> <a href="index8589.html?id_product=1&amp;id_product_attribute=1&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/1-size-s/8-color-white" class="color" title="White" style="background-color: #ffffff"><span class="sr-only">White</span></a> <a href="index5f9a.html?id_product=1&amp;id_product_attribute=40&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/2-size-m/10-color-red" class="color" title="Red" style="background-color: #E84C3D"><span class="sr-only">Red</span></a> <a href="index5b4b.html?id_product=1&amp;id_product_attribute=2&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/1-size-s/11-color-black" class="color" title="Black" style="background-color: #434A54"><span class="sr-only">Black</span></a> <span class="js-count count"></span> </div> <span class="product-availability"> <span class="product-available"> <i class="material-icons">&#xE5CA;</i> In stock </span> </span>
@@ -226,102 +200,6 @@
                       </div>
                     </li>
                     @endforeach
-                    <li class="product_item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                      <div class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope itemtype="http://schema.org/Product">
-                        <div class="thumbnail-container"> <a href="{{ route('product.view') }}" class="thumbnail product-thumbnail"> <img src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" alt="Consectetur Hampden" data-full-size-image-url="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg"> <img class="fliper_image img-responsive" src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" data-full-size-image-url="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" alt="" /> </a>
-                          <div class="outer-functional">
-                            <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal"> <i class="material-icons search">&#xE417;</i> Szybki podgląd </button>
-                              <div class="product-actions">
-                                <form action="#" method="post" class="add-to-cart-or-refresh"> <input type="hidden" name="token" value="b88261cab17a7775f54f10a3c0bb0f61"> <input type="hidden" name="id_product" value="1" class="product_page_product_id"> <input type="hidden" name="id_customization" value="0" class="product_customization_id"> <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Add to cart </button> </form>
-                              </div>
-                            </div>
-                          </div>
-                          <ul class="product-flags">
-                            <li class="on-sale">On sale!</li>
-                            <li class="new">New</li>
-                          </ul>
-                        </div>
-                        <div class="product-description">
-                          <h3 class="h3 product-title" itemprop="name"><a href="{{ route('product.view') }}">Lan Hồ Điệp</a></h3>
-                          <div class="product-price-and-shipping"> <span itemprop="price" class="price">55.00</span> </div>
-                          <div class="product-detail" itemprop="description">
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.</p>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="product_item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                      <div class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope itemtype="http://schema.org/Product">
-                        <div class="thumbnail-container"> <a href="{{ route('product.view') }}" class="thumbnail product-thumbnail"> <img src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" alt="Consectetur Hampden" data-full-size-image-url="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg"> <img class="fliper_image img-responsive" src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" data-full-size-image-url="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" alt="" /> </a>
-                          <div class="outer-functional">
-                            <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal"> <i class="material-icons search">&#xE417;</i> Szybki podgląd </button>
-                              <div class="product-actions">
-                                <form action="#" method="post" class="add-to-cart-or-refresh"> <input type="hidden" name="token" value="b88261cab17a7775f54f10a3c0bb0f61"> <input type="hidden" name="id_product" value="1" class="product_page_product_id"> <input type="hidden" name="id_customization" value="0" class="product_customization_id"> <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Add to cart </button> </form>
-                              </div>
-                            </div>
-                          </div>
-                          <ul class="product-flags">
-                            <li class="on-sale">On sale!</li>
-                            <li class="new">New</li>
-                          </ul>
-                        </div>
-                        <div class="product-description">
-                          <h3 class="h3 product-title" itemprop="name"><a href="{{ route('product.view') }}">Lan Hồ Điệp</a></h3>
-                          <div class="product-price-and-shipping"> <span itemprop="price" class="price">55.00</span> </div>
-                          <div class="product-detail" itemprop="description">
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.</p>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="product_item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                      <div class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope itemtype="http://schema.org/Product">
-                        <div class="thumbnail-container"> <a href="{{ route('product.view') }}" class="thumbnail product-thumbnail"> <img src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" alt="Consectetur Hampden" data-full-size-image-url="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg"> <img class="fliper_image img-responsive" src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" data-full-size-image-url="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" alt="" /> </a>
-                          <div class="outer-functional">
-                            <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal"> <i class="material-icons search">&#xE417;</i> Szybki podgląd </button>
-                              <div class="product-actions">
-                                <form action="#" method="post" class="add-to-cart-or-refresh"> <input type="hidden" name="token" value="b88261cab17a7775f54f10a3c0bb0f61"> <input type="hidden" name="id_product" value="1" class="product_page_product_id"> <input type="hidden" name="id_customization" value="0" class="product_customization_id"> <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Add to cart </button> </form>
-                              </div>
-                            </div>
-                          </div>
-                          <ul class="product-flags">
-                            <li class="on-sale">On sale!</li>
-                            <li class="new">New</li>
-                          </ul>
-                        </div>
-                        <div class="product-description">
-                          <h3 class="h3 product-title" itemprop="name"><a href="{{ route('product.view') }}">Lan Hồ Điệp</a></h3>
-                          <div class="product-price-and-shipping"> <span itemprop="price" class="price">55.00</span> </div>
-                          <div class="product-detail" itemprop="description">
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.</p>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="product_item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                      <div class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope itemtype="http://schema.org/Product">
-                        <div class="thumbnail-container"> <a href="{{ route('product.view') }}" class="thumbnail product-thumbnail"> <img src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" alt="Consectetur Hampden" data-full-size-image-url="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg"> <img class="fliper_image img-responsive" src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" data-full-size-image-url="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" alt="" /> </a>
-                          <div class="outer-functional">
-                            <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal"> <i class="material-icons search">&#xE417;</i> Szybki podgląd </button>
-                              <div class="product-actions">
-                                <form action="#" method="post" class="add-to-cart-or-refresh"> <input type="hidden" name="token" value="b88261cab17a7775f54f10a3c0bb0f61"> <input type="hidden" name="id_product" value="1" class="product_page_product_id"> <input type="hidden" name="id_customization" value="0" class="product_customization_id"> <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Add to cart </button> </form>
-                              </div>
-                            </div>
-                          </div>
-                          <ul class="product-flags">
-                            <li class="on-sale">On sale!</li>
-                            <li class="new">New</li>
-                          </ul>
-                        </div>
-                        <div class="product-description">
-                          <h3 class="h3 product-title" itemprop="name"><a href="{{ route('product.view') }}">Lan Hồ Điệp</a></h3>
-                          <div class="product-price-and-shipping"> <span itemprop="price" class="price">55.00</span> </div>
-                          <div class="product-detail" itemprop="description">
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.</p>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
                   </ul>
                 </div>
                 <nav class="pagination">
@@ -341,73 +219,58 @@
               <div id="js-product-list-bottom"></div>
             </div>
           </section>
-          <div class="modal fade" id="product-modal">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-                <div class="col-md-6 col-lg-6 col-sm-6 hidden-xs-down">
-                    <div class="product-slider-container">
-                      <div class="row">
-                        <div class="product-cover slider-main-qview">
-                          <a href="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg">
-                            <img class="js-qv-product-cover-qview" src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" alt="" title=""  itemprop="image">
-                          </a>
-                          <a href="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg">
-                            <img class="js-qv-product-cover-qview" src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" alt="" title=""  itemprop="image">
-                          </a>
-                          <a href="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg">
-                            <img class="js-qv-product-cover-qview" src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" alt="" title=""  itemprop="image">
-                          </a>
-                          <a href="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg">
-                            <img class="js-qv-product-cover-qview" src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" alt="" title=""  itemprop="image">
-                          </a>
-                          <a href="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg">
-                            <img class="js-qv-product-cover-qview" src="https://cayvahoa.net/wp-content/uploads/2016/04/lan-ho-diep-vang1-600x600.jpg" alt="" title=""  itemprop="image">
-                          </a>
-                        </div>
-                      </div>
-                    </div>
+          @foreach($product as $p)
+          <div class="modal fade" id="product-modal{{$p->id}}">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="col-md-6 col-sm-6">
-                  <h1 class="h1">Lan Hồ Điệp</h1>
-                  <div class="product-prices">
-                    <div class="product-price h5 " itemprop="offers" itemscope="" itemtype="https://schema.org/Offer">
-                      <link itemprop="availability" href="https://schema.org/InStock">
-                      <meta itemprop="priceCurrency" content="EUR">
-                      <div class="current-price"> <span itemprop="price" content="87">€87.00</span> </div>
-                    </div>
-                    <div class="tax-shipping-delivery-label"> bao gồm VAT </div>
-                  </div>
-                  <div id="product-description-short" itemprop="description">
-                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.</p>
-                  </div>
-                  <div class="product-actions">
-                    <form action="" method="post" id="add-to-cart-or-refresh"> <input type="hidden" name="token" value="b88261cab17a7775f54f10a3c0bb0f61"> <input type="hidden" name="id_product" value="21" id="product_page_product_id"> <input type="hidden" name="id_customization" value="0" id="product_customization_id">
-                      <div class="product-variants">
-                      </div>
-                      <div class="product-add-to-cart"> <!-- <span class="control-label">Quantity</span>-->
-                        <div class="product-quantity">
-                          <div class="qty">
-                            <div class="input-group bootstrap-touchspin"><span class="input-group-addon bootstrap-touchspin-prefix" style="display: none;"></span><input type="text" name="qty" id="quantity_wanted" value="1" class="input-group form-control" min="1" aria-label="Quantity" style="display: block;"><span class="input-group-addon bootstrap-touchspin-postfix" style="display: none;"></span><span class="input-group-btn-vertical"><button class="btn btn-touchspin js-touchspin bootstrap-touchspin-up" type="button"><i class="material-icons touchspin-up"></i></button><button class="btn btn-touchspin js-touchspin bootstrap-touchspin-down" type="button"><i class="material-icons touchspin-down"></i></button></span></div>
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-md-6 col-lg-6 col-sm-6 hidden-xs-down">
+                      <div class="product-slider-container">
+                        <div class="row">
+                          <div class="product-cover slider-main-qview">
+                            <a href="{{ route('product.view',['slug'=> $p->slug]) }}">
+                              <img class="js-qv-product-cover-qview" src="{{ asset('assets/product/' . $p->image) }}" alt="" title="" itemprop="image">
+                            </a>
                           </div>
-                          <div class="add"> <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Add to cart </button> </div>
                         </div>
-                        <div class="clearfix"></div>
-                        <p class="product-minimal-quantity"> </p>
                       </div>
-                    </form>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                      <h1 class="h1">{{ $p->name }}</h1>
+                      <div class="product-prices">
+                        <div class="product-price h5 " itemprop="offers" itemscope="" itemtype="https://schema.org/Offer">
+                          <link itemprop="availability" href="https://schema.org/InStock">
+                          <meta itemprop="priceCurrency" content="EUR">
+                          <div class="current-price"> <span itemprop="price">{{ number_format($p->price, 0, ',', '.') }} đ</span> </div>
+                        </div>
+                        <div class="tax-shipping-delivery-label"> bao gồm VAT </div>
+                      </div>
+                      <div id="product-description-short" itemprop="description">
+                        <p>{{ $p->description }}</p>
+                      </div>
+                      <div class="product-actions">
+                        <form action="{{ route('cart.add',['id'=>$p->id]) }}" id="add-to-cart-or-refresh"> <input value="1" type="hidden">
+                          <div class="product-add-to-cart">
+                            <div class="product-quantity">
+                              <div class="add"> <a href=""><button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Thêm vào giỏ hàng </button></a> </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <p class="product-minimal-quantity"> </p>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
                   </div>
                 </div>
+
               </div>
             </div>
-
           </div>
-        </div>
-      </div>
+          @endforeach
         </section>
       </div>
     </div>

@@ -92,6 +92,6 @@ class BlogController extends Controller
     public function destroy($id)
     {
         Blog::destroy($id);
-        return redirect()->route('admin.blog')->with('success', 'Xóa thành công');
+        return redirect()->route('admin.blog.index')->with('success', 'Xóa thành công');
     }
 }

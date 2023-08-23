@@ -35,13 +35,11 @@
                                             <section class="featured-products clearfix">
                                                 <div class="products"> <!-- Define Number of product for SLIDER -->
                                                     <ul id="feature-grid" class="featured_grid product_list grid row gridcount">
-                                                        @foreach($flower as $f)
+                                                        @foreach($product as $p)
                                                         <li class="product_item col-xs-6 col-sm-6 col-md-4 col-lg-3">
                                                             <div class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope itemtype="http://schema.org/Product">
                                                                 <div class="thumbnail-container"> <a href="#" class="thumbnail product-thumbnail">
-                                                                        @if ($f->flowerImages->isNotEmpty())
-                                                                        <img src="{{ $f->flowerImages->first()->image_url }}" alt="Consectetur Hampden" data-full-size-image-url="{{ $f->flowerImages->first()->image_url }}"> <img class="fliper_image img-responsive" src="{{ $f->flowerImages->first()->image_url }}" data-full-size-image-url="{{ $f->flowerImages->first()->image_url }}" alt="" />
-                                                                        @endif
+                                                                        <img src="{{ asset('assets/product/' . $p->image) }}" alt="Consectetur Hampden" data-full-size-image-url="{{ asset('assets/product/' . $p->image) }}"> <img class="fliper_image img-responsive" src="{{ asset('assets/product/' . $p->image) }}" data-full-size-image-url="{{ asset('assets/product/' . $p->image) }}" alt="" />
                                                                     </a>
                                                                     <div class="outer-functional">
                                                                         <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal"> <i class="material-icons search">&#xE417;</i> Szybki podgląd </button>
@@ -56,8 +54,8 @@
                                                                     </ul>
                                                                 </div>
                                                                 <div class="product-description">
-                                                                    <span class="h3 product-title" itemprop="name"><a href="index8589.html?id_product=1&amp;id_product_attribute=1&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/1-size-s/8-color-white">{{ $f->name }}</a></span>
-                                                                    <div class="product-price-and-shipping"> <span itemprop="price" class="price">{{ $f->price }}</span> </div>
+                                                                    <span class="h3 product-title" itemprop="name"><a href="index8589.html?id_product=1&amp;id_product_attribute=1&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/1-size-s/8-color-white">{{ $p->name }}</a></span>
+                                                                    <div class="product-price-and-shipping"> <span itemprop="price" class="price">{{ $p->price }}</span> </div>
                                                                     <div class="highlighted-informations hidden-sm-down">
                                                                         <div class="variant-links"> <a href="index8589.html?id_product=1&amp;id_product_attribute=1&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/1-size-s/8-color-white" class="color" title="White" style="background-color: #ffffff"><span class="sr-only">White</span></a> <a href="index5f9a.html?id_product=1&amp;id_product_attribute=40&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/2-size-m/10-color-red" class="color" title="Red" style="background-color: #E84C3D"><span class="sr-only">Red</span></a> <a href="index5b4b.html?id_product=1&amp;id_product_attribute=2&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/1-size-s/11-color-black" class="color" title="Black" style="background-color: #434A54"><span class="sr-only">Black</span></a> <span class="js-count count"></span> </div>
                                                                     </div>

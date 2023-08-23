@@ -7,6 +7,7 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\LoginController;
 use Laravel\Socialite\Facades\Socialite;
 
@@ -26,12 +27,20 @@ Auth::routes();
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
-Route::get('/cart', [HomeController::class, 'cart'])->name('cart');
+Route::get('/carttest', [HomeController::class, 'cart'])->name('cart');
 Route::get('/policy/delivery', [HomeController::class, 'delivery'])->name('policy.delivery');
 Route::get('/policy/warranty', [HomeController::class, 'warranty'])->name('policy.warranty');
 Route::get('/policy/corporation', [HomeController::class, 'corpo'])->name('policy.corpo');
 Route::get('/product', [HomeController::class, 'product'])->name('product.index');
-Route::get('/product/view', [FlowerController::class, 'view'])->name('product.view');
+Route::get('/product/{slug}', [HomeController::class, 'view'])->name('product.view');
+
+Route::group(['prefix' => 'cart'], function () {
+	Route::get('/', [CartController::class, 'index'])->name('cart');
+	Route::get('add/{id}/{quantity?}', [CartController::class, 'add'])->name('cart.add');
+	Route::get('update/{id}/{quantity?}',[CartController::class, 'update'])->name('cart.update');
+	Route::get('delete/{id}',[CartController::class, 'delete'])->name('cart.delete');
+	Route::get('clear', [CartController::class, 'clear'])->name('cart.clear');
+});
 
 
 Route::group(['prefix' => 'user'], function() {
