@@ -11,7 +11,7 @@ class OrderItem extends Model
     use HasFactory;
     use Searchable;
     
-    protected $fillable = ['order_id', 'flower_id', 'quantity', 'item_price'];
+    protected $fillable = ['order_id', 'product_id', 'quantity', 'item_price'];
     
     // Define the relationship with order
     public function order()
@@ -20,8 +20,8 @@ class OrderItem extends Model
     }
     
     // Define the relationship with flower
-    public function flower()
+    public function product()
     {
-        return $this->belongsTo(Flower::class);
+        return $this->belongsTo(Product::class);
     }
 }

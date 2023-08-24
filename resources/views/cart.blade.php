@@ -66,7 +66,7 @@
               <div class="card cart-summary">
                 <div class="cart-detailed-totals">
                   <div class="card-block">
-                    <div class="cart-summary-line" id="cart-subtotal-products"> <span class="label js-subtotal"> {{$cart->total_quantity}} items </span> <span class="value">{{number_format($cart->total_price, 0, ',', '.')}}</span> </div>
+                    <div class="cart-summary-line" id="cart-subtotal-products"> <span class="label js-subtotal"> {{$cart->total_quantity}} sản phẩm </span> <span class="value">{{number_format($cart->total_price, 0, ',', '.')}}</span> </div>
                     <div class="cart-summary-line" id="cart-subtotal-shipping"> <span class="label"> Shipping </span> <span class="value">Free</span>
                       <div><small class="value"></small></div>
                     </div>
@@ -78,7 +78,7 @@
                   </div>
                   <hr class="separator">
                 </div>
-                <div class="checkout text-sm-center card-block"> <button type="button" class="btn btn-primary">Thanh toán</button> </div>
+                <div class="checkout text-sm-center card-block"> <a href="{{ route('checkout') }}"><button type="button" class="btn btn-primary">Đặt hàng</button></a> </div>
               </div>
               <div id="block-reassurance">
                 <ul>

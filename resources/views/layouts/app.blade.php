@@ -66,7 +66,7 @@
           <div class="blockcart cart-preview inactive">
             <div class="header blockcart-header dropdown js-dropdown">
 
-              <a class="shopping-cart" rel="nofollow" href="">
+              <a class="shopping-cart" rel="nofollow" href="{{ route('cart') }}">
                 <span class="mobile_count"></span>
                 <span class="cart-products-count hidden-sm-down">{{$cart->total_quantity}}<span class="value"> </span></span>
               </a>

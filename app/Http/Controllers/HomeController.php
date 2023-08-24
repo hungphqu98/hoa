@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Blog;
 
 class HomeController extends Controller
 {
@@ -25,8 +26,9 @@ class HomeController extends Controller
     public function index()
     {
         $product = Product::where(['status' => 'AVAILABLE'])->limit(4)->get();
+        $blog = Blog::where(['status' => 'SHOW'])->limit(4)->get();
 
-        return view('home', compact('product'));
+        return view('home', compact('product','blog'));
     }
 
     public function product()
@@ -48,6 +50,12 @@ class HomeController extends Controller
     public function about()
     {
         return view('about');
+    }
+
+    public function blogView($slug)
+    {
+        $blog = Blog::where(['slug' => $slug])->get();
+        return view('blog.view', compact('blog'));
     }
 
     public function contact()

@@ -11,7 +11,7 @@ class Order extends Model
     use HasFactory;
     use Searchable;
     
-    protected $fillable = ['customer_id', 'order_date', 'delivery_date','delivery_address', 'total_amount', 'status'];
+    protected $fillable = ['phone', 'name','email','note','delivery_address', 'total_amount', 'status'];
     
     // Define the relationship with customer
     public function customer()
@@ -28,7 +28,7 @@ class Order extends Model
     public function toSearchableArray()
     {
         return [
-            'customer_id' => $this->customer_id,
+            'email' => $this->email,
             'delivery_address' => $this->delivery_address,
             'status' => $this->status
         ];

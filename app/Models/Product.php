@@ -20,6 +20,7 @@ class Product extends Model
         return $this->hasMany(OrderItem::class);
     }
 
+
     public function productCategory()
     {
         return $this->belongsToMany(Category::class, ProductCategory::class, 'product_id', 'category_id');

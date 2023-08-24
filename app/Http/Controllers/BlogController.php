@@ -29,7 +29,7 @@ class BlogController extends Controller
             'title' => 'required|string|max:255',
             'slug' => 'required|string|max:255|unique:blogs',
             'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif',
-            'details' => 'required|longtext',
+            'details' => 'required',
             'status' => 'required|in:SHOW,HIDDEN',
         ]);
 
@@ -66,7 +66,7 @@ class BlogController extends Controller
             'title' => 'required|string|max:255',
             'slug' => 'required|string|max:255|unique:blogs,slug,' . $id,
             'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif',
-            'details' => 'required|longtext',
+            'details' => 'required',
             'status' => 'required|in:SHOW,HIDDEN',
         ]);
 

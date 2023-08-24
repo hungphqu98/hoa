@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CartController;
@@ -27,12 +28,15 @@ Auth::routes();
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
-Route::get('/carttest', [HomeController::class, 'cart'])->name('cart');
 Route::get('/policy/delivery', [HomeController::class, 'delivery'])->name('policy.delivery');
 Route::get('/policy/warranty', [HomeController::class, 'warranty'])->name('policy.warranty');
 Route::get('/policy/corporation', [HomeController::class, 'corpo'])->name('policy.corpo');
 Route::get('/product', [HomeController::class, 'product'])->name('product.index');
 Route::get('/product/{slug}', [HomeController::class, 'view'])->name('product.view');
+Route::get('/blog', [HomeController::class, 'blog'])->name('blog.index');
+Route::get('/blog/{slug}', [HomeController::class, 'blogView'])->name('blog.view');
+
+
 
 Route::group(['prefix' => 'cart'], function () {
 	Route::get('/', [CartController::class, 'index'])->name('cart');
@@ -40,6 +44,12 @@ Route::group(['prefix' => 'cart'], function () {
 	Route::get('update/{id}/{quantity?}',[CartController::class, 'update'])->name('cart.update');
 	Route::get('delete/{id}',[CartController::class, 'delete'])->name('cart.delete');
 	Route::get('clear', [CartController::class, 'clear'])->name('cart.clear');
+});
+
+Route::group(['prefix' => 'checkout'], function () {
+	Route::get('/', [CheckoutController::class, 'index'])->name('checkout');
+	Route::post('/', [CheckoutController::class, 'submit'])->name('checkout');
+	Route::get('/checkout-success', [CheckoutController::class, 'success'])->name('checkout.success');
 });
 
 

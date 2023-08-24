@@ -1039,3 +1039,18 @@ transition: all 500ms ease 0s;
 .cart-update {
   height: 2.5rem;
 }
+
+.blog-content {
+  max-width: 100%;
+}
+
+.blog-content img {
+  max-width: 100%;
+}
+
+.badge-success {
+  font-size: 120px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  color:brown;
+}

@@ -42,15 +42,16 @@
                                                                         <img src="{{ asset('assets/product/' . $p->image) }}" alt="Consectetur Hampden" data-full-size-image-url="{{ asset('assets/product/' . $p->image) }}"> <img class="fliper_image img-responsive" src="{{ asset('assets/product/' . $p->image) }}" data-full-size-image-url="{{ asset('assets/product/' . $p->image) }}" alt="" />
                                                                     </a>
                                                                     <div class="outer-functional">
-                            <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal{{$p->id}}"> <i class="material-icons search">&#xE417;</i> Quick View </button>
-                              <div class="product-actions">
-                                <form action="{{ route('cart.add',['id'=>$p->id]) }}" class="add-to-cart-or-refresh">
-                                  @csrf
-                                <input value="1" name="quantity" type="hidden">
-                                <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Thêm vào giỏ hàng </button> </form>
-                              </div>
-                            </div>
-                          </div>
+                                                                        <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal{{$p->id}}"> <i class="material-icons search">&#xE417;</i> Quick View </button>
+                                                                            <div class="product-actions">
+                                                                                <form action="{{ route('cart.add',['id'=>$p->id]) }}" class="add-to-cart-or-refresh">
+                                                                                    @csrf
+                                                                                    <input value="1" name="quantity" type="hidden">
+                                                                                    <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Thêm vào giỏ hàng </button>
+                                                                                </form>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                     <ul class="product-flags">
                                                                         <!-- <li class="on-sale">On sale!</li> -->
                                                                         <li class="new">New</li>
@@ -88,15 +89,16 @@
                                                                         <img src="{{ asset('assets/product/' . $p->image) }}" alt="Consectetur Hampden" data-full-size-image-url="{{ asset('assets/product/' . $p->image) }}"> <img class="fliper_image img-responsive" src="{{ asset('assets/product/' . $p->image) }}" data-full-size-image-url="{{ asset('assets/product/' . $p->image) }}" alt="" />
                                                                     </a>
                                                                     <div class="outer-functional">
-                            <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal{{$p->id}}"> <i class="material-icons search">&#xE417;</i> Quick View </button>
-                              <div class="product-actions">
-                                <form action="{{ route('cart.add',['id'=>$p->id]) }}" class="add-to-cart-or-refresh">
-                                  @csrf
-                                <input value="1" name="quantity" type="hidden">
-                                <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Thêm vào giỏ hàng </button> </form>
-                              </div>
-                            </div>
-                          </div>
+                                                                        <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal{{$p->id}}"> <i class="material-icons search">&#xE417;</i> Quick View </button>
+                                                                            <div class="product-actions">
+                                                                                <form action="{{ route('cart.add',['id'=>$p->id]) }}" class="add-to-cart-or-refresh">
+                                                                                    @csrf
+                                                                                    <input value="1" name="quantity" type="hidden">
+                                                                                    <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Thêm vào giỏ hàng </button>
+                                                                                </form>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                     <ul class="product-flags">
                                                                         <!-- <li class="on-sale">On sale!</li> -->
                                                                         <li class="new">New</li>
@@ -134,15 +136,16 @@
                                                                         <img src="{{ asset('assets/product/' . $p->image) }}" alt="Consectetur Hampden" data-full-size-image-url="{{ asset('assets/product/' . $p->image) }}"> <img class="fliper_image img-responsive" src="{{ asset('assets/product/' . $p->image) }}" data-full-size-image-url="{{ asset('assets/product/' . $p->image) }}" alt="" />
                                                                     </a>
                                                                     <div class="outer-functional">
-                            <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal{{$p->id}}"> <i class="material-icons search">&#xE417;</i> Quick View </button>
-                              <div class="product-actions">
-                                <form action="{{ route('cart.add',['id'=>$p->id]) }}" class="add-to-cart-or-refresh">
-                                  @csrf
-                                <input value="1" name="quantity" type="hidden">
-                                <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Thêm vào giỏ hàng </button> </form>
-                              </div>
-                            </div>
-                          </div>
+                                                                        <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal{{$p->id}}"> <i class="material-icons search">&#xE417;</i> Quick View </button>
+                                                                            <div class="product-actions">
+                                                                                <form action="{{ route('cart.add',['id'=>$p->id]) }}" class="add-to-cart-or-refresh">
+                                                                                    @csrf
+                                                                                    <input value="1" name="quantity" type="hidden">
+                                                                                    <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Thêm vào giỏ hàng </button>
+                                                                                </form>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                     <ul class="product-flags">
                                                                         <!-- <li class="on-sale">On sale!</li> -->
                                                                         <li class="new">New</li>
@@ -167,43 +170,21 @@
                         <div class="latest_blog block homeblog-latest">
                             <div class="container">
                                 <h2 class="h1 products-section-title text-uppercase">
-                                    <span class="main-title">Blog</span>
+                                    <span class="main-title">Câu chuyện về hoa</span>
                                 </h2>
                                 <div class="homeblog-wrapper">
                                     <div class="homeblog-inner">
                                         <div class="row">
+                                            @foreach($blog as $b)
                                             <div class="col-lg-6 mb-4">
                                                 <div class="post-entry-alt">
-                                                    <a href="#" class="img-link"><img src="https://themewagon.github.io/blogy/images/img_3_horizontal.jpg" alt="Image" class="img-fluid"></a>
+                                                    <a href="{{ route('blog.view',['slug'=> $b->slug]) }}" class="img-link"><img src="{{ asset('assets/blog/' . $b->thumbnail) }}" alt="Image" class="img-fluid"></a>
                                                     <div class="excerpt">
-                                                        <h2><a href="#">Các giống hoa lan hồ điệp cực hot được ưa chuộng hiện nay</a></h2>
+                                                        <h2><a href="#">{{ $b->title }}</a></h2>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-6 mb-4">
-                                                <div class="post-entry-alt">
-                                                    <a href="#" class="img-link"><img src="https://themewagon.github.io/blogy/images/img_3_horizontal.jpg" alt="Image" class="img-fluid"></a>
-                                                    <div class="excerpt">
-                                                        <h2><a href="#">Các giống hoa lan hồ điệp cực hot được ưa chuộng hiện nay</a></h2>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 mb-4">
-                                                <div class="post-entry-alt">
-                                                    <a href="#" class="img-link"><img src="https://themewagon.github.io/blogy/images/img_3_horizontal.jpg" alt="Image" class="img-fluid"></a>
-                                                    <div class="excerpt">
-                                                        <h2><a href="#">Các giống hoa lan hồ điệp cực hot được ưa chuộng hiện nay</a></h2>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 mb-4">
-                                                <div class="post-entry-alt">
-                                                    <a href="#" class="img-link"><img src="https://themewagon.github.io/blogy/images/img_3_horizontal.jpg" alt="Image" class="img-fluid"></a>
-                                                    <div class="excerpt">
-                                                        <h2><a href="#">Các giống hoa lan hồ điệp cực hot được ưa chuộng hiện nay</a></h2>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            @endforeach
                                         </div>
                                     </div>
                                 </div>
