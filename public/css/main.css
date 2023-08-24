@@ -1054,3 +1054,14 @@ transition: all 500ms ease 0s;
   border-radius: 50%;
   color:brown;
 }
+
+.products .product-thumbnail img {
+	width: 100%;
+  height: 350px;
+	margin: 0 auto;
+	position: relative;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}

@@ -39,7 +39,7 @@
                                                         <li class="product_item col-xs-6 col-sm-6 col-md-4 col-lg-3">
                                                             <div class="product-miniature js-product-miniature" itemscope itemtype="http://schema.org/Product">
                                                                 <div class="thumbnail-container"> <a href="{{ route('product.view',['slug'=> $p->slug]) }}" class="thumbnail product-thumbnail">
-                                                                        <img src="{{ asset('assets/product/' . $p->image) }}" alt="Consectetur Hampden" data-full-size-image-url="{{ asset('assets/product/' . $p->image) }}"> <img class="fliper_image img-responsive" src="{{ asset('assets/product/' . $p->image) }}" data-full-size-image-url="{{ asset('assets/product/' . $p->image) }}" alt="" />
+                                                                        <img src="{{ asset('assets/product/' . $p->image) }}" alt="Consectetur Hampden" data-full-size-image-url="{{ asset('assets/product/' . $p->image) }}">
                                                                     </a>
                                                                     <div class="outer-functional">
                                                                         <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal{{$p->id}}"> <i class="material-icons search">&#xE417;</i> Quick View </button>
@@ -59,7 +59,7 @@
                                                                 </div>
                                                                 <div class="product-description">
                                                                     <span class="h3 product-title" itemprop="name"><a href="">{{ $p->name }}</a></span>
-                                                                    <div class="product-price-and-shipping"> <span itemprop="price" class="price">{{ $p->price }}</span> </div>
+                                                                    <div class="product-price-and-shipping"> <span itemprop="price" class="price">{{ number_format($p->price, 0, ',', '.') }}đ</span> </div>
                                                                 </div>
                                                             </div>
                                                         </li>
@@ -86,7 +86,7 @@
                                                         <li class="product_item ">
                                                             <div class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope itemtype="http://schema.org/Product">
                                                                 <div class="thumbnail-container"> <a href="{{ route('product.view',['slug'=> $p->slug]) }}" class="thumbnail product-thumbnail">
-                                                                        <img src="{{ asset('assets/product/' . $p->image) }}" alt="Consectetur Hampden" data-full-size-image-url="{{ asset('assets/product/' . $p->image) }}"> <img class="fliper_image img-responsive" src="{{ asset('assets/product/' . $p->image) }}" data-full-size-image-url="{{ asset('assets/product/' . $p->image) }}" alt="" />
+                                                                        <img src="{{ asset('assets/product/' . $p->image) }}" alt="Consectetur Hampden" data-full-size-image-url="{{ asset('assets/product/' . $p->image) }}">
                                                                     </a>
                                                                     <div class="outer-functional">
                                                                         <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal{{$p->id}}"> <i class="material-icons search">&#xE417;</i> Quick View </button>
@@ -106,7 +106,7 @@
                                                                 </div>
                                                                 <div class="product-description">
                                                                     <span class="h3 product-title" itemprop="name"><a href="{{ route('product.view',['slug'=> $p->slug]) }}">{{ $p->name }}</a></span>
-                                                                    <div class="product-price-and-shipping"> <span itemprop="price" class="price">{{ $p->price}}</span> </div>
+                                                                    <div class="product-price-and-shipping"> <span itemprop="price" class="price">{{ number_format($p->price, 0, ',', '.') }}đ</span> </div>
                                                                 </div>
                                                             </div>
                                                         </li>
@@ -133,7 +133,7 @@
                                                         <li class="product_item ">
                                                             <div class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope itemtype="http://schema.org/Product">
                                                                 <div class="thumbnail-container"> <a href="{{ route('product.view',['slug'=> $p->slug]) }}" class="thumbnail product-thumbnail">
-                                                                        <img src="{{ asset('assets/product/' . $p->image) }}" alt="Consectetur Hampden" data-full-size-image-url="{{ asset('assets/product/' . $p->image) }}"> <img class="fliper_image img-responsive" src="{{ asset('assets/product/' . $p->image) }}" data-full-size-image-url="{{ asset('assets/product/' . $p->image) }}" alt="" />
+                                                                        <img src="{{ asset('assets/product/' . $p->image) }}" alt="Consectetur Hampden" data-full-size-image-url="{{ asset('assets/product/' . $p->image) }}">
                                                                     </a>
                                                                     <div class="outer-functional">
                                                                         <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal{{$p->id}}"> <i class="material-icons search">&#xE417;</i> Quick View </button>
@@ -153,7 +153,7 @@
                                                                 </div>
                                                                 <div class="product-description">
                                                                     <span class="h3 product-title" itemprop="name"><a href="{{ route('product.view',['slug'=> $p->slug]) }}">{{ $p->name }}</a></span>
-                                                                    <div class="product-price-and-shipping"> <span itemprop="price" class="price">{{ $p->price}}</span> </div>
+                                                                    <div class="product-price-and-shipping"> <span itemprop="price" class="price">{{ number_format($p->price, 0, ',', '.') }}đ</span> </div>
                                                                 </div>
                                                             </div>
                                                         </li>

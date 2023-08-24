@@ -114,7 +114,6 @@
                       <div class="thumbnail-container">
                         <a href="" class="thumbnail product-thumbnail">
                           <img src="{{ asset('assets/product/' . $seller->image) }}" alt="Accusantium doloremque" data-full-size-image-url="{{ asset('assets/product/' . $seller->image) }}">
-                          <img class="fliper_image img-responsive" src="{{ asset('assets/product/' . $seller->image) }}" data-full-size-image-url="{{ asset('assets/product/' . $seller->image) }}" alt="" />
                         </a>
                         <div class="outer-functional">
                             <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal{{$seller->id}}"> <i class="material-icons search">&#xE417;</i> Quick View </button>
@@ -152,7 +151,6 @@
                       <div class="thumbnail-container">
                         <a href="" class="thumbnail product-thumbnail">
                           <img src="{{ asset('assets/product/' . $seller->image) }}" alt="Accusantium doloremque" data-full-size-image-url="{{ asset('assets/product/' . $seller->image) }}">
-                          <img class="fliper_image img-responsive" src="{{ asset('assets/product/' . $seller->image) }}" data-full-size-image-url="{{ asset('assets/product/' . $seller->image) }}" alt="" />
                         </a>
                         <div class="outer-functional">
                             <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal{{$seller->id}}"> <i class="material-icons search">&#xE417;</i> Quick View </button>
