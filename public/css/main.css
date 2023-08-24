@@ -578,7 +578,8 @@ ul.product-flags li.new {
 }
 
 .js-qv-product-cover-qview {
-  max-width: 350px;
+  max-height: 350px;
+  width:100%;
 }
 
 .product-slider-container {

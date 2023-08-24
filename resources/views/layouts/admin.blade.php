@@ -35,11 +35,11 @@
                 </li>
                 <li>
                     <a href="{{ route('admin.blog.index') }}"><i class="fas fa-chart-bar"></i>Blog</a>
-                <!-- </li>
-                <li>
-                    <a href="icons.html"><i class="fas fa-icons"></i> Icons</a>
                 </li>
                 <li>
+                    <a href="{{ route('admin.order.index') }}"><i class="fas fa-icons"></i> Đơn hàng</a>
+                </li>
+                <!-- <li>
                     <a href="#uielementsmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-layer-group"></i> UI Elements</a>
                     <ul class="collapse list-unstyled" id="uielementsmenu">
                         <li>

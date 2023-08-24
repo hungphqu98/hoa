@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CartController;
@@ -96,6 +97,11 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:admin']], function() {
     Route::get('/edit/{id}', [BlogController::class, 'edit'])->name('admin.blog.edit');
     Route::post('/edit/{id}', [BlogController::class, 'update'])->name('admin.blog.update');
     Route::get('/delete/{id}', [BlogController::class, 'destroy'])->name('admin.blog.delete');
+  });
+  Route::prefix('order')->group(function () {
+    Route::get('/', [OrderController::class, 'index'])->name('admin.order.index');
+    Route::get('/edit/{id}', [OrderController::class, 'edit'])->name('admin.order.edit');
+    Route::post('/edit/{id}', [OrderController::class, 'update'])->name('admin.order.update');
   });
   
 });
