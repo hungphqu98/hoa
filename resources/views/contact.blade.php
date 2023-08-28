@@ -45,7 +45,8 @@
         <section id="main">
           <section id="content" class="page-content card card-block">
             <section class="contact-form">
-              <form action="" method="post" enctype="multipart/form-data">
+              <form action="{{ route('contact.store') }}" method="post" enctype="multipart/form-data">
+                @csrf
                 <section class="form-fields">
                   <div class="form-group row">
                     <div class="col-md-9 col-md-offset-3">
@@ -53,16 +54,16 @@
                     </div>
                   </div>
                   <div class="form-group row"> <label class="col-md-3 form-control-label">Họ tên</label>
-                    <div class="col-md-6"> <input class="form-control" name="from" type="text" value="" placeholder=""> </div>
+                    <div class="col-md-6"> <input class="form-control" name="name" type="text" value="" placeholder="" required> </div>
                   </div>
                   <div class="form-group row"> <label class="col-md-3 form-control-label">Số điện thoại</label>
-                    <div class="col-md-6"> <input class="form-control" name="from" type="text" value=""> </div>
+                    <div class="col-md-6"> <input class="form-control" name="phone" type="text" value="" required> </div>
                   </div>
                   <div class="form-group row"> <label class="col-md-3 form-control-label">Địa chỉ email</label>
-                    <div class="col-md-6"> <input class="form-control" name="from" type="email" value="" placeholder="your@email.com"> </div>
+                    <div class="col-md-6"> <input class="form-control" name="mail" type="email" value="" placeholder="your@email.com" required> </div>
                   </div>
-                  <div class="form-group row"> <label class="col-md-3 form-control-label">Message</label>
-                    <div class="col-md-9"> <textarea class="form-control" name="message" placeholder="Chúng tôi có thể giúp được gì?" rows="3"></textarea> </div>
+                  <div class="form-group row"> <label class="col-md-3 form-control-label">Nội dung</label>
+                    <div class="col-md-9"> <textarea class="form-control" name="details" placeholder="Chúng tôi có thể giúp được gì?" rows="3" required></textarea> </div>
                   </div>
                   <div class="form-group row">
                     <div class="offset-md-3"> </div>

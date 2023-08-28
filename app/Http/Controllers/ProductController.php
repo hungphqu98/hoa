@@ -16,7 +16,7 @@ class ProductController extends Controller
         if ($request->filled('search')) {
             $product = Product::search($request->search)->paginate(11);
         } else {
-            $product = Product::paginate(11);
+            $product = Product::orderBy('id', 'DESC')->paginate(11);
         }
         return view('admin.product.index', compact('product'));
     }

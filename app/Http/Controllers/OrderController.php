@@ -14,7 +14,7 @@ class OrderController extends Controller
         if ($request->filled('search')) {
             $order = Order::search($request->search)->paginate(11);
         } else {
-            $order = Order::paginate(11);
+            $order = Order::orderBy('id', 'DESC')->paginate(11);
         }
         return view('admin.order.index', compact('order'));
     }
@@ -31,26 +31,6 @@ class OrderController extends Controller
 
         $order = Order::findOrFail($id);
 
-        $request->validate([
-            'title' => 'required|string|max:255',
-            'slug' => 'required|string|max:255|unique:orders,slug,' . $id,
-            'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif',
-            'details' => 'required',
-            'status' => 'required|in:SHOW,HIDDEN',
-        ]);
-
-        if ($request->hasFile('thumbnail')) {
-            $image = $request->file('thumbnail');
-            $getimage = $image->getClientOriginalName();
-            $destinationPath = public_path('assets/order');
-            $image->move($destinationPath, $getimage);
-            $order->image = $getimage;
-        }
-
-        $order->title = $request->title;
-        $order->slug = $request->slug;
-        $order->thumbnail = $getimage;
-        $order->details = $request->details;
         $order->status = $request->status;
         $order->save();
 

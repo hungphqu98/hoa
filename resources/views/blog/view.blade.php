@@ -5,7 +5,7 @@
         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"> <a itemprop="item" href="{{ route('home') }}"> <span itemprop="name">Trang chủ</span> </a>
           <meta itemprop="position" content="1">
         </li>
-        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"> <a itemprop="item" href="{{ route('product.index') }}"> <span itemprop="name">Câu chuyện về hoa</span> </a>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"> <a itemprop="item" href="{{ route('blog.index') }}"> <span itemprop="name">Câu chuyện về hoa</span> </a>
           <meta itemprop="position" content="2">
         </li>
       </ol>

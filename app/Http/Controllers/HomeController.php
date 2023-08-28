@@ -52,6 +52,12 @@ class HomeController extends Controller
         return view('about');
     }
 
+    public function blog() 
+    {
+        $blogs = Blog::orderBy('id', 'DESC')->paginate(10);
+        return view('blog.index', compact('blogs'));
+    }
+
     public function blogView($slug)
     {
         $blog = Blog::where(['slug' => $slug])->get();

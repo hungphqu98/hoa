@@ -1066,3 +1066,62 @@ transition: all 500ms ease 0s;
 	-o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
 }
+
+@media only screen and (max-width: 600px) {
+  .products .product-thumbnail img {
+    height: 300px;
+  }
+}
+
+.blog-heading {
+  color: #000000;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-size: 22px;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.blog-post .blog-item:hover .blog-meta,
+.secondary-blog .blog-item:hover .blog-meta {
+	opacity: 1;
+    filter: alpha(opacity=100);
+     -webkit-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+
+.blog-item .blog-image {
+    overflow: hidden;
+	  padding: 0;
+    margin-bottom: 15px;
+  	position: relative;
+}
+.blog-item .blog-image .blog-created ,
+.blog-item .blog-image-meta .blog-created {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #deb5b2;
+    color: #ffffff;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.6px;
+}
+.blog-item .blog-image-meta .blog-created .fa ,
+.blog-item .blog-image .blog-created .fa {
+    display: none;
+}
+
+.blog-item .title {
+    font-weight: 600;
+    text-transform: capitalize;
+    line-height: 25px;
+    font-size: 16px;
+    margin-bottom: 5px;
+    letter-spacing: 0.6px;
+}
+
+.secondary-blog .blog-item {
+  margin-bottom: 20px;
+}

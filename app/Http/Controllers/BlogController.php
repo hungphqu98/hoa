@@ -13,7 +13,7 @@ class BlogController extends Controller
         if ($request->filled('search')) {
             $blog = Blog::search($request->search)->paginate(11);
         } else {
-            $blog = Blog::paginate(11);
+            $blog = Blog::orderBy('id', 'DESC')->paginate(11);
         }
         return view('admin.blog.index', compact('blog'));
     }

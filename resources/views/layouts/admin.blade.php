@@ -28,41 +28,21 @@
                     <a href="{{ route('admin.dashboard') }}"><i class="fas fa-home"></i> Dashboard</a>
                 </li>
                 <li>
-                    <a href="{{ route('admin.product.index') }}"><i class="fas fa-file-alt"></i> Sản phẩm</a>
+                    <a href="{{ route('admin.product.index') }}"><i class="fas fa-store"></i> Sản phẩm</a>
                 </li>
                 <li>
                     <a href="{{ route('admin.category.index') }}"><i class="fas fa-table"></i> Danh mục</a>
                 </li>
                 <li>
-                    <a href="{{ route('admin.blog.index') }}"><i class="fas fa-chart-bar"></i>Blog</a>
+                    <a href="{{ route('admin.blog.index') }}"><i class="fas fa-newspaper"></i> Blog</a>
                 </li>
                 <li>
-                    <a href="{{ route('admin.order.index') }}"><i class="fas fa-icons"></i> Đơn hàng</a>
+                    <a href="{{ route('admin.order.index') }}"><i class="fas fa-gift"></i> Đơn hàng</a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.contact.index') }}"><i class="fas fa-comment"></i> Liên hệ</a>
                 </li>
                 <!-- <li>
-                    <a href="#uielementsmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-layer-group"></i> UI Elements</a>
-                    <ul class="collapse list-unstyled" id="uielementsmenu">
-                        <li>
-                            <a href="ui-buttons.html"><i class="fas fa-angle-right"></i> Buttons</a>
-                        </li>
-                        <li>
-                            <a href="ui-badges.html"><i class="fas fa-angle-right"></i> Badges</a>
-                        </li>
-                        <li>
-                            <a href="ui-cards.html"><i class="fas fa-angle-right"></i> Cards</a>
-                        </li>
-                        <li>
-                            <a href="ui-alerts.html"><i class="fas fa-angle-right"></i> Alerts</a>
-                        </li>
-                        <li>
-                            <a href="ui-tabs.html"><i class="fas fa-angle-right"></i> Tabs</a>
-                        </li>
-                        <li>
-                            <a href="ui-date-time-picker.html"><i class="fas fa-angle-right"></i> Date & Time Picker</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
                     <a href="#authmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-user-shield"></i> Authentication</a>
                     <ul class="collapse list-unstyled" id="authmenu">
                         <li>

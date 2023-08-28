@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BlogController;
@@ -29,6 +30,7 @@ Auth::routes();
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 Route::get('/policy/delivery', [HomeController::class, 'delivery'])->name('policy.delivery');
 Route::get('/policy/warranty', [HomeController::class, 'warranty'])->name('policy.warranty');
 Route::get('/policy/corporation', [HomeController::class, 'corpo'])->name('policy.corpo');
@@ -102,6 +104,12 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:admin']], function() {
     Route::get('/', [OrderController::class, 'index'])->name('admin.order.index');
     Route::get('/edit/{id}', [OrderController::class, 'edit'])->name('admin.order.edit');
     Route::post('/edit/{id}', [OrderController::class, 'update'])->name('admin.order.update');
+  });
+  Route::prefix('contact')->group(function () {
+    Route::get('/', [ContactController::class, 'index'])->name('admin.contact.index');
+    Route::get('/edit/{id}', [ContactController::class, 'edit'])->name('admin.contact.edit');
+    Route::post('/edit/{id}', [ContactController::class, 'update'])->name('admin.contact.update');
+    Route::get('/delete/{id}', [ContactController::class, 'destroy'])->name('admin.contact.delete');
   });
   
 });

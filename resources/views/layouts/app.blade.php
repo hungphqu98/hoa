@@ -305,7 +305,7 @@
                       </a>
                     </li>
                     <li class="category" id="category-11">
-                      <a class="dropdown-item" href="#" data-depth="0">
+                      <a class="dropdown-item" href="{{ route('blog.index') }}" data-depth="0">
                         Câu chuyện về hoa
                       </a>
                     </li>
@@ -476,7 +476,7 @@
                 </a>
               </li>
               <li class="category" id="category-11">
-                <a class="dropdown-item" href="#" data-depth="0">
+                <a class="dropdown-item" href="{{ route('blog.index') }}" data-depth="0">
                   Câu chuyện về hoa
                 </a>
               </li>
@@ -512,11 +512,9 @@
       <div class="container">
         <div class="row footer">
 
-          <div class="block-contact col-md-3 links wrapper">
-
+          <div class="block-contact col-md-3 links wrapper dropdown">
             <h3 class="text-uppercase block-contact-title hidden-sm-down"><a href="#">Store information</a></h3>
-
-            <div class="title clearfix hidden-md-up" data-target="#block-contact_list" data-toggle="collapse">
+            <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><div class="title clearfix hidden-md-up" >
               <span class="h3">Store information</span>
               <span class="pull-xs-right">
                 <span class="navbar-toggler collapse-icons">
@@ -525,8 +523,9 @@
                 </span>
               </span>
             </div>
+            </a>
             <div class="footer-logo" style="background: url({{ asset('assets/logo1x.png') }}) no-repeat scroll 0 0 transparent;"></div>
-            <ul id="block-contact_list" class="collapse">
+            <ul class="collapse" id="collapseExample">
               <li>
                 <i class="fa-solid fa-location-dot"></i>
                 <span>97 Nguyễn Khuyến, Phường Quốc Tử Giám, Đống Đa, Hà Nội</span>
@@ -540,11 +539,10 @@
                 <span>sales@yourcompany.com</span>
               </li>
             </ul>
-
           </div>
           <div class="col-md-3 links block">
             <h3 class="h3 hidden-md-down">Sản phẩm</h3>
-            <div class="title h3 block_title hidden-lg-up" data-target="#footer_sub_menu_41269" data-toggle="collapse">
+            <div class="title h3 block_title hidden-lg-up" data-bs-target="#footer_sub_menu_41269" data-bs-toggle="collapse">
               <span class="">Sản phẩm</span>
               <span class="pull-xs-right">
                 <span class="navbar-toggler collapse-icons">
@@ -553,6 +551,7 @@
                 </span>
               </span>
             </div>
+            <div>
             <ul id="footer_sub_menu_41269" class="collapse block_content">
               <li>
                 <a id="link-product-page-prices-drop-1" class="cms-page-link" href="{{ route('product.index') }}" title="Our special products">
@@ -580,10 +579,11 @@
                 </a>
               </li>
             </ul>
+            </div>
           </div>
           <div class="col-md-3 links block">
             <h3 class="h3 hidden-md-down">Chính sách</h3>
-            <div class="title h3 block_title hidden-lg-up" data-target="#footer_sub_menu_49772" data-toggle="collapse">
+            <div class="title h3 block_title hidden-lg-up" data-bs-target="#footer_sub_menu_49772" data-bs-toggle="collapse">
               <span class="">Chính sách</span>
               <span class="pull-xs-right">
                 <span class="navbar-toggler collapse-icons">
@@ -614,14 +614,8 @@
           </div>
           <div class="col-md-3 links block">
             <h3 class="h3 hidden-md-down">Fanpage</h3>
-            <div class="title h3 block_title hidden-lg-up" data-target="#footer_sub_menu_49772" data-toggle="collapse">
+            <div class="title h3 block_title hidden-lg-up" data-bs-target="#footer_sub_menu_49772" data-bs-toggle="collapse">
               <span class="">Fanpage</span>
-              <span class="pull-xs-right">
-                <span class="navbar-toggler collapse-icons">
-                  <i class="fa-solid fa-caret-down add"></i>
-                  <i class="fa-solid fa-caret-up remove"></i>
-                </span>
-              </span>
             </div>
             <div class="fb-page" data-href="https://www.facebook.com/profile.php?id=100064056821362" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
               <blockquote cite="https://www.facebook.com/profile.php?id=100064056821362" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/profile.php?id=100064056821362">Gia Flowers</a></blockquote>
