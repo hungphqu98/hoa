@@ -76,7 +76,7 @@
           </div>
         </div>
         <div class="user-info dropdown js-dropdown">
-          <span class="user-info-title expand-more _gray-darker" data-toggle="dropdown"><span class="account_text">My
+          <span class="user-info-title expand-more _gray-darker" data-bs-toggle="dropdown"><span class="account_text">My
               Account</span></span>
           <ul class="dropdown-menu">
             @auth
@@ -154,28 +154,28 @@
                 <div class="js-top-menu mobile" id="_mobile_top_menu">
                   <ul class="top-menu container" id="top-menu" data-depth="0">
                     <li class="category" id="category-3">
-                      <a class="dropdown-item" href="{{ route('product.index') }}" data-depth="0">
+                      <a data-bs-toggle="collapse" href="#top_sub_menu_1" data-depth="0" aria-expanded="true">
                         <span class="pull-xs-right hidden-lg-up">
-                          <span data-target="#top_sub_menu_1" data-toggle="collapse" type="button" class="navbar-toggler collapse-icons" aria-controls="top_sub_menu_1">
+                          <span lass="navbar-toggler collapse-icons" aria-controls="top_sub_menu_1">
                             <i class="fa-icon add">&nbsp;</i>
                             <i class="fa-icon remove">&nbsp;</i>
                           </span>
                         </span>
                         Sản phẩm
                       </a>
-                      <div class="popover sub-menu js-sub-menu collapse sub-menu-container" id="top_sub_menu_1">
+                      <div class="popover sub-menu collapse sub-menu-container" id="top_sub_menu_1">
                         <ul class="sub-cat-mobile" data-depth="1">
                           <li class="category" id="category-4">
                             <a class="dropdown-item dropdown-submenu" href="{{ route('product.index') }}" data-depth="1">
                               <span class="pull-xs-right hidden-lg-up">
-                                <span data-target="#top_sub_menu_11" data-toggle="collapse" class="navbar-toggler collapse-icons">
+                                <span class="navbar-toggler collapse-icons">
                                   <i class="fa-icon add">&nbsp;</i>
                                   <i class="fa-icon remove">&nbsp;</i>
                                 </span>
                               </span>
                               Lan Hồ Điệp 100% Đà Lạt
                             </a>
-                            <div class="collapse" id="top_sub_menu_11">
+                            <div id="top_sub_menu_11">
                               <ul class="top-menu  " data-depth="2">
                                 <li class="category" id="category-20">
                                   <a class="dropdown-item" href="{{ route('product.index') }}" data-depth="2">
@@ -206,15 +206,14 @@
                           <li class="category" id="category-5">
                             <a class="dropdown-item dropdown-submenu" href="{{ route('product.index') }}" data-depth="1">
                               <span class="pull-xs-right hidden-lg-up">
-                                <span data-target="#top_sub_menu_54766" data-toggle="collapse" class="navbar-toggler collapse-icons">
+                                <span class="navbar-toggler collapse-icons">
                                   <i class="fa-icon add">&nbsp;</i>
                                   <i class="fa-icon remove">&nbsp;</i>
                                 </span>
                               </span>
                               Hoa tươi thành phẩm
                             </a>
-                            <div class="collapse" id="top_sub_menu_54766">
-
+                            <div id="top_sub_menu_54766">
                               <ul class="top-menu  " data-depth="2">
                                 <li class="category" id="category-23">
                                   <a class="dropdown-item" href="{{ route('product.index') }}" data-depth="2">
@@ -259,7 +258,7 @@
                           <li class="category" id="category-14">
                             <a class="dropdown-item dropdown-submenu" href="{{ route('product.index') }}" data-depth="1">
                               <span class="pull-xs-right hidden-lg-up">
-                                <span data-target="#top_sub_menu_23465" data-toggle="collapse" class="navbar-toggler collapse-icons">
+                                <span  class="navbar-toggler collapse-icons">
                                   <i class="fa-icon add">&nbsp;</i>
                                   <i class="fa-icon remove">&nbsp;</i>
                                 </span>
@@ -270,7 +269,7 @@
                           <li class="category" id="category-14">
                             <a class="dropdown-item dropdown-submenu" href="{{ route('product.index') }}" data-depth="1">
                               <span class="pull-xs-right hidden-lg-up">
-                                <span data-target="#top_sub_menu_23465" data-toggle="collapse" class="navbar-toggler collapse-icons">
+                                <span  class="navbar-toggler collapse-icons">
                                   <i class="fa-icon add">&nbsp;</i>
                                   <i class="fa-icon remove">&nbsp;</i>
                                 </span>
@@ -281,7 +280,7 @@
                           <li class="category" id="category-14">
                             <a class="dropdown-item dropdown-submenu" href="{{ route('product.index') }}" data-depth="1">
                               <span class="pull-xs-right hidden-lg-up">
-                                <span data-target="#top_sub_menu_23465" data-toggle="collapse" class="navbar-toggler collapse-icons">
+                                <span class="navbar-toggler collapse-icons">
                                   <i class="fa-icon add">&nbsp;</i>
                                   <i class="fa-icon remove">&nbsp;</i>
                                 </span>
@@ -327,7 +326,7 @@
               <li class="category" id="category-3">
                 <a class="dropdown-item" href="{{ route('product.index') }}" data-depth="0">
                   <span class="pull-xs-right hidden-lg-up">
-                    <span data-target="#top_sub_menu_22709" data-toggle="collapse" class="navbar-toggler collapse-icons">
+                    <span  class="navbar-toggler collapse-icons">
                       <i class="fa-icon add">&nbsp;</i>
                       <i class="fa-icon remove">&nbsp;</i>
                     </span>
@@ -339,7 +338,7 @@
                     <li class="category" id="category-4">
                       <a class="dropdown-item dropdown-submenu" href="{{ route('product.index') }}" data-depth="1">
                         <span class="pull-xs-right hidden-lg-up">
-                          <span data-target="#top_sub_menu_52970" data-toggle="collapse" class="navbar-toggler collapse-icons">
+                          <span class="navbar-toggler collapse-icons">
                             <i class="fa-icon add">&nbsp;</i>
                             <i class="fa-icon remove">&nbsp;</i>
                           </span>
@@ -377,7 +376,7 @@
                     <li class="category" id="category-5">
                       <a class="dropdown-item dropdown-submenu" href="{{ route('product.index') }}" data-depth="1">
                         <span class="pull-xs-right hidden-lg-up">
-                          <span data-target="#top_sub_menu_54766" data-toggle="collapse" class="navbar-toggler collapse-icons">
+                          <span class="navbar-toggler collapse-icons">
                             <i class="fa-icon add">&nbsp;</i>
                             <i class="fa-icon remove">&nbsp;</i>
                           </span>
@@ -385,7 +384,6 @@
                         Hoa tươi thành phẩm
                       </a>
                       <div class="collapse" id="top_sub_menu_54766">
-
                         <ul class="top-menu  " data-depth="2">
                           <li class="category" id="category-23">
                             <a class="dropdown-item" href="{{ route('product.index') }}" data-depth="2">
@@ -430,7 +428,7 @@
                     <li class="category" id="category-14">
                       <a class="dropdown-item dropdown-submenu" href="{{ route('product.index') }}" data-depth="1">
                         <span class="pull-xs-right hidden-lg-up">
-                          <span data-target="#top_sub_menu_23465" data-toggle="collapse" class="navbar-toggler collapse-icons">
+                          <span class="navbar-toggler collapse-icons">
                             <i class="fa-icon add">&nbsp;</i>
                             <i class="fa-icon remove">&nbsp;</i>
                           </span>
@@ -441,7 +439,7 @@
                     <li class="category" id="category-14">
                       <a class="dropdown-item dropdown-submenu" href="{{ route('product.index') }}" data-depth="1">
                         <span class="pull-xs-right hidden-lg-up">
-                          <span data-target="#top_sub_menu_23465" data-toggle="collapse" class="navbar-toggler collapse-icons">
+                          <span class="navbar-toggler collapse-icons">
                             <i class="fa-icon add">&nbsp;</i>
                             <i class="fa-icon remove">&nbsp;</i>
                           </span>
@@ -452,7 +450,7 @@
                     <li class="category" id="category-14">
                       <a class="dropdown-item dropdown-submenu" href="{{ route('product.index') }}" data-depth="1">
                         <span class="pull-xs-right hidden-lg-up">
-                          <span data-target="#top_sub_menu_23465" data-toggle="collapse" class="navbar-toggler collapse-icons">
+                          <span class="navbar-toggler collapse-icons">
                             <i class="fa-icon add">&nbsp;</i>
                             <i class="fa-icon remove">&nbsp;</i>
                           </span>
@@ -514,7 +512,7 @@
 
           <div class="block-contact col-md-3 links wrapper dropdown">
             <h3 class="text-uppercase block-contact-title hidden-sm-down"><a href="#">Store information</a></h3>
-            <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><div class="title clearfix hidden-md-up" >
+            <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-controls="collapseExample"><div class="title clearfix hidden-md-up" >
               <span class="h3">Store information</span>
               <span class="pull-xs-right">
                 <span class="navbar-toggler collapse-icons">
@@ -542,7 +540,7 @@
           </div>
           <div class="col-md-3 links block">
             <h3 class="h3 hidden-md-down">Sản phẩm</h3>
-            <div class="title h3 block_title hidden-lg-up" data-bs-target="#footer_sub_menu_41269" data-bs-toggle="collapse">
+            <div class="title h3 block_title hidden-lg-up" href="#footer_sub_menu_41269" data-bs-toggle="collapse">
               <span class="">Sản phẩm</span>
               <span class="pull-xs-right">
                 <span class="navbar-toggler collapse-icons">
@@ -583,7 +581,7 @@
           </div>
           <div class="col-md-3 links block">
             <h3 class="h3 hidden-md-down">Chính sách</h3>
-            <div class="title h3 block_title hidden-lg-up" data-bs-target="#footer_sub_menu_49772" data-bs-toggle="collapse">
+            <div class="title h3 block_title hidden-lg-up" href="#footer_sub_menu_49772" data-bs-toggle="collapse">
               <span class="">Chính sách</span>
               <span class="pull-xs-right">
                 <span class="navbar-toggler collapse-icons">
