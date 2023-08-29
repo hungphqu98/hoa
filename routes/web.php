@@ -10,6 +10,8 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\TestimonialController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\LoginController;
 use Laravel\Socialite\Facades\Socialite;
@@ -105,11 +107,23 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:admin']], function() {
     Route::get('/edit/{id}', [OrderController::class, 'edit'])->name('admin.order.edit');
     Route::post('/edit/{id}', [OrderController::class, 'update'])->name('admin.order.update');
   });
+  Route::prefix('user')->group(function () {
+    Route::get('/', [UserController::class, 'index'])->name('admin.user.index');
+    Route::get('/view/{id}', [UserController::class, 'view'])->name('admin.user.view');
+  });
   Route::prefix('contact')->group(function () {
     Route::get('/', [ContactController::class, 'index'])->name('admin.contact.index');
     Route::get('/edit/{id}', [ContactController::class, 'edit'])->name('admin.contact.edit');
     Route::post('/edit/{id}', [ContactController::class, 'update'])->name('admin.contact.update');
     Route::get('/delete/{id}', [ContactController::class, 'destroy'])->name('admin.contact.delete');
+  });
+  Route::prefix('testimonial')->group(function () {
+    Route::get('/', [TestimonialController::class, 'index'])->name('admin.testimonial.index');
+    Route::get('/create', [TestimonialController::class, 'create'])->name('admin.testimonial.create');
+    Route::post('/create', [TestimonialController::class, 'store'])->name('admin.testimonial.store');
+    Route::get('/edit/{id}', [TestimonialController::class, 'edit'])->name('admin.testimonial.edit');
+    Route::post('/edit/{id}', [TestimonialController::class, 'update'])->name('admin.testimonial.update');
+    Route::get('/delete/{id}', [TestimonialController::class, 'destroy'])->name('admin.testimonial.delete');
   });
   
 });

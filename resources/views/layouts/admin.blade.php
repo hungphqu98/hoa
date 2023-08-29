@@ -42,6 +42,12 @@
                 <li>
                     <a href="{{ route('admin.contact.index') }}"><i class="fas fa-comment"></i> Liên hệ</a>
                 </li>
+                <li>
+                    <a href="{{ route('admin.testimonial.index') }}"><i class="fas fa-globe"></i> Khách hàng tiêu biểu</a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.user.index') }}"><i class="fas fa-user"></i>Khách hàng</a>
+                </li>
                 <!-- <li>
                     <a href="#authmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-user-shield"></i> Authentication</a>
                     <ul class="collapse list-unstyled" id="authmenu">
@@ -69,10 +75,7 @@
                             <a href="500.html"><i class="fas fa-info-circle"></i> 500 Error page</a>
                         </li>
                     </ul>
-                </li>
-                <li>
-                    <a href="users.html"><i class="fas fa-user-friends"></i>Users</a>
-                </li>
+                </li>              
                 <li>
                     <a href="settings.html"><i class="fas fa-cog"></i>Settings</a>
                 </li> -->
