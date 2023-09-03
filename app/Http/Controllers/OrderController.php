@@ -34,6 +34,6 @@ class OrderController extends Controller
         $order->status = $request->status;
         $order->save();
 
-        return redirect()->route('admin.order.index')->with('success', 'Order updated successfully!');
+        return redirect()->route('admin.order.index')->with('success', 'Cập nhật thành công');
     }
 }

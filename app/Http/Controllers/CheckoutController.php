@@ -54,9 +54,9 @@ class CheckoutController extends Controller
                 }
 
                 session(['cart' => '']);
-				return redirect()->route('checkout.success')->with('success', 'Checkout successfully');
+				return redirect()->route('checkout.success')->with('success', 'Tạo đơn hàng thành công');
         } else {
-            return redirect()->back()->withErrors('Your cart is empty');
+            return redirect()->back()->with('error', 'Giỏ hàng trống');
         }
     }
 }

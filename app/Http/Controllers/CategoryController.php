@@ -38,7 +38,7 @@ class CategoryController extends Controller
         $category->status = $request->status;
         $category->save();
 
-        return redirect()->route('admin.category.index')->with('success', 'Category created successfully!');
+        return redirect()->route('admin.category.index')->with('success', 'Tạo thành công');
     }
 
     public function edit($id)
@@ -63,7 +63,7 @@ class CategoryController extends Controller
     $category->status = $request->status;
     $category->save();
 
-    return redirect()->route('admin.category.index')->with('success', 'Category updated successfully!');
+    return redirect()->route('admin.category.index')->with('success', 'Cập nhật thành công');
     }
 
     public function destroy($id)

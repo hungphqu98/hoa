@@ -17,6 +17,16 @@
       </ol>
     </div>
   </nav>
+  @if(Session::has('success'))
+    <div class="alert alert-success">
+      {{Session::get('success')}}
+    </div>
+  @endif
+  @if(Session::has('error'))
+    <div class="alert alert-success">
+      {{Session::get('error')}}
+    </div>
+  @endif
   <div class="container">
     <div id="columns_inner">
       <div id="left-column" class="col-xs-12 col-sm-3" style="width:24.4%">

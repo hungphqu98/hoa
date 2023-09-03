@@ -42,7 +42,7 @@ class TestimonialController extends Controller
         $testimonial->status = $request->status;
         $testimonial->save();
 
-        return redirect()->route('admin.testimonial.index')->with('success', 'Testimonial created successfully!');
+        return redirect()->route('admin.testimonial.index')->with('success', 'Tạo thành công');
     }
 
 
@@ -76,7 +76,7 @@ class TestimonialController extends Controller
         $testimonial->status = $request->status;
         $testimonial->save();
 
-        return redirect()->route('admin.testimonial.index')->with('success', 'Testimonial updated successfully!');
+        return redirect()->route('admin.testimonial.index')->with('success', 'Cập nhật thành công');
     }
 
 

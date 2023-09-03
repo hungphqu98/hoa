@@ -28,6 +28,7 @@ class HomeController extends Controller
         $product = Product::where(['status' => 'AVAILABLE'])->limit(4)->get();
         $blog = Blog::where(['status' => 'SHOW'])->limit(4)->get();
 
+
         return view('home', compact('product','blog'));
     }
 

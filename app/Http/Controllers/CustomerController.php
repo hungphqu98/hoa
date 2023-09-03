@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use App\Models\Order;
+use App\Models\OrderItem;
 use Illuminate\Validation\Rule;
 
 class CustomerController extends Controller
@@ -14,6 +16,14 @@ class CustomerController extends Controller
     {
         $user = Auth::user();
         return view('user.account', compact('user'));
+    }
+
+    public function order()
+    {
+        $user = Auth::user();
+        $orders = Order::orderBy('id', 'DESC')->where('email', $user->email)->get();
+        $detail = OrderItem::whereIn('order_id', $orders->pluck('id'))->join('products','order_items.product_id','products.id')->get();
+        return view('user.order', compact('user','orders','detail'));
     }
 
     public function update(Request $request)

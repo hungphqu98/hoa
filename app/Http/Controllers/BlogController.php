@@ -46,7 +46,7 @@ class BlogController extends Controller
         $blog->status = $request->status;
         $blog->save();
 
-        return redirect()->route('admin.blog.index')->with('success', 'Blog created successfully!');
+        return redirect()->route('admin.blog.index')->with('success', 'Tạo thành công');
     }
 
 
@@ -85,7 +85,7 @@ class BlogController extends Controller
         $blog->status = $request->status;
         $blog->save();
 
-        return redirect()->route('admin.blog.index')->with('success', 'Blog updated successfully!');
+        return redirect()->route('admin.blog.index')->with('success', 'Cập nhật thành công');
     }
 
 

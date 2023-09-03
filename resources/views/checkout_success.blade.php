@@ -8,6 +8,16 @@
       </ol>
     </div>
   </nav>
+  @if(Session::has('success'))
+    <div class="alert alert-success">
+      {{Session::get('success')}}
+    </div>
+  @endif
+  @if(Session::has('error'))
+    <div class="alert alert-success">
+      {{Session::get('error')}}
+    </div>
+  @endif
   <div class="container">
     <div class="col-12">
       <div class="text-center">
@@ -15,7 +25,7 @@
           <h2>Đơn hàng đã được tạo thành công</h2>
           <p></p>
           <a href="{{ route('home') }}">Quay về trang chủ</a>
-          </div>
+      </div>
       </div>
   </div>
 </x-app-layout>

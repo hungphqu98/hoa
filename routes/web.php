@@ -58,8 +58,9 @@ Route::group(['prefix' => 'checkout'], function () {
 });
 
 
-Route::group(['prefix' => 'user'], function() {
+Route::group(['prefix' => 'user', 'middleware' => ['auth:web']], function() {
   Route::get('',[CustomerController::class, 'index'])->name('user.account');
+  Route::get('orders',[CustomerController::class, 'order'])->name('user.order');
   Route::put('',[CustomerController::class, 'update'])->name('user.update');
 });
 

@@ -19,6 +19,16 @@
       </ol>
     </div>
   </nav>
+  @if(Session::has('success'))
+    <div class="alert alert-success">
+      {{Session::get('success')}}
+    </div>
+  @endif
+  @if(Session::has('error'))
+    <div class="alert alert-success">
+      {{Session::get('error')}}
+    </div>
+  @endif
   <div class="container product-index-container">
     <div id="columns_inner">
       <div id="left-column" class="col-xs-12" style="width:24.4%">
@@ -171,7 +181,7 @@
                     @foreach($product as $p)
                     <li class="product_item col-xs-12 col-sm-6 col-md-6 col-lg-4">
                       <div class="product-miniature js-product-miniature" itemscope itemtype="http://schema.org/Product">
-                        <div class="thumbnail-container"> <a href="{{ route('product.view',['slug'=> $p->slug]) }}" class="thumbnail product-thumbnail"> <img src="{{ asset('assets/product/' . $p->image) }}" alt="Hoa" data-full-size-image-url="{{ asset('assets/product/' . $p->image) }}"> <img class="fliper_image img-responsive" src="{{ asset('assets/product/' . $p->image) }}" data-full-size-image-url="{{ asset('assets/product/' . $p->image) }}" alt="" /> </a>
+                        <div class="thumbnail-container"> <a href="{{ route('product.view',['slug'=> $p->slug]) }}" class="thumbnail product-thumbnail"> <img src="{{ asset('assets/product/' . $p->image) }}" alt="Hoa" data-full-size-image-url="{{ asset('assets/product/' . $p->image) }}"> </a>
                           <div class="outer-functional">
                             <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal{{$p->id}}"> <i class="material-icons search">&#xE417;</i> Quick View </button>
                               <div class="product-actions">
@@ -189,7 +199,7 @@
                         </div>
                         <div class="product-description">
                           <h3 class="h3 product-title" itemprop="name"><a href="{{ route('product.view',['slug'=> $p->slug]) }}">{{ $p->name }}</a></h3>
-                          <div class="product-price-and-shipping"> <span itemprop="price" class="price">{{ number_format($p->price, 0, ',', '.') }} đ</span> </div>
+                          <div class="product-price-and-shipping"> <span itemprop="price" class="price">{{ number_format($p->price, 0, ',', '.') }}đ</span> </div>
                           <div class="product-detail" itemprop="description">
                             <p>{{ $p->description }}</p>
                           </div>
@@ -250,7 +260,7 @@
                         <p>{{ $p->description }}</p>
                       </div>
                       <div class="product-actions">
-                        <form action="{{ route('cart.add',['id'=>$p->id]) }}" id="add-to-cart-or-refresh"> <input value="1" type="hidden">
+                        <form action="{{ route('cart.add',['id'=>$p->id]) }}" class="add-to-cart-or-refresh"> <input value="1" type="hidden">
                           <div class="product-add-to-cart">
                             <div class="product-quantity">
                               <div class="add"> <a href=""><button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Thêm vào giỏ hàng </button></a> </div>

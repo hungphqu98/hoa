@@ -40,16 +40,7 @@
 <body>
   <div id="fb-root"></div>
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0&appId=251373497665940&autoLogAppEvents=1" nonce="wcqh5eRv"></script>
-  <!-- @if(Session::has('success'))
-    <div class="alert alert-success">
-      {{Session::get('success')}}
-    </div>
-  @endif
-  @if(Session::has('error'))
-    <div class="alert alert-success">
-      {{Session::get('error')}}
-    </div>
-  @endif -->
+
   
   <!--================Header Menu Area =================-->
   <header id="header">
@@ -87,7 +78,7 @@
               </a>
             </li>
             <li>
-              <a class="dropdown-item" href="{{ route('register') }}" title="Register" rel="nofollow">
+              <a class="dropdown-item" href="{{ route('user.order') }}" title="Register" rel="nofollow">
                 <span>Lịch sử mua hàng</span>
               </a>
             </li>

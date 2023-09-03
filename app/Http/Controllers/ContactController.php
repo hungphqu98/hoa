@@ -34,7 +34,7 @@ class ContactController extends Controller
         $contact->details = $request->details;
         $contact->save();
 
-        return redirect()->route('contact')->with('success', 'Contact created successfully!');
+        return redirect()->route('contact')->with('success', 'Liên hệ thành công');
     }
 
 
@@ -53,7 +53,7 @@ class ContactController extends Controller
         $contact->status = $request->status;
         $contact->save();
 
-        return redirect()->route('admin.contact.index')->with('success', 'Contact updated successfully!');
+        return redirect()->route('admin.contact.index')->with('success', 'Cập nhật thành công');
     }
 
 

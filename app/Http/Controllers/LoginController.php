@@ -65,7 +65,7 @@ class LoginController extends Controller
                 'google_id' => $googleUser->id,
                 'name' => $googleUser->name,
                 'email' => $googleUser->email,
-                'password' => Hash::make(str_random(20)), // Generate a random password for the user
+                'password' => Hash::make(Str::random(20)), // Generate a random password for the user
             ]);
         }
         Auth::guard('web')->login($user);

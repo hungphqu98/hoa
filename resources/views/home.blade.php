@@ -1,5 +1,16 @@
 <x-app-layout>
+
     <div class="home-container">
+    @if(Session::has('success'))
+    <div class="alert alert-success">
+      {{Session::get('success')}}
+    </div>
+  @endif
+  @if(Session::has('error'))
+    <div class="alert alert-success">
+      {{Session::get('error')}}
+    </div>
+  @endif
         <div id="columns_inner">
             <div id="content-wrapper">
                 <section id="main">

@@ -73,7 +73,7 @@ class ProductController extends Controller
             ]);
         }
 
-        return redirect()->route('admin.product.index')->with('success', 'Product created successfully!');
+        return redirect()->route('admin.product.index')->with('success', 'Thêm sản phẩm thành công');
     }
 
 
@@ -124,7 +124,7 @@ class ProductController extends Controller
         // Sync the selected category IDs with the existing product-category associations
         $product->productCategory()->sync($selectedCategoryIds);
 
-        return redirect()->route('admin.product.index')->with('success', 'Product updated successfully!');
+        return redirect()->route('admin.product.index')->with('success', 'Cập nhật thành công');
     }
 
 

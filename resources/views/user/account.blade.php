@@ -1,4 +1,22 @@
 <x-app-layout>
+<nav data-depth="2" class="breadcrumb">
+    <div class="container">
+      <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a itemprop="item" href="{{ route('home') }}">
+            <span itemprop="name">Trang chủ</span>
+          </a>
+          <meta itemprop="position" content="1">
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a itemprop="item" href="{{ route('user.account') }}">
+            <span itemprop="name">Thông tin khách hàng</span>
+          </a>
+          <meta itemprop="position" content="2">
+        </li>
+      </ol>
+    </div>
+  </nav>
   <div class="container space">
     <div class="row justify-content-center">
       <div class="col-md-8">
