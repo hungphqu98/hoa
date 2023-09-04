@@ -41,7 +41,7 @@
   <div id="fb-root"></div>
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0&appId=251373497665940&autoLogAppEvents=1" nonce="wcqh5eRv"></script>
 
-  
+
   <!--================Header Menu Area =================-->
   <header id="header">
     <div class="header-banner">
@@ -59,7 +59,11 @@
 
               <a class="shopping-cart" rel="nofollow" href="{{ route('cart') }}">
                 <span class="mobile_count"></span>
-                <span class="cart-products-count hidden-sm-down">{{$cart->total_quantity}}<span class="value"> </span></span>
+                <span class="cart-products-count hidden-sm-down">{{$cart->total_quantity}}</span>
+                <!-- <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                {{$cart->total_quantity}}
+                  <span class="visually-hidden">unread messages</span>
+                </span> -->
               </a>
 
 
@@ -145,9 +149,9 @@
                 <div class="js-top-menu mobile" id="_mobile_top_menu">
                   <ul class="top-menu container" id="top-menu" data-depth="0">
                     <li class="category" id="category-3">
-                      <a data-bs-toggle="collapse" href="#top_sub_menu_1" data-depth="0" aria-expanded="true">
+                      <a data-bs-toggle="collapse" href="#top_sub_menu_1" data-depth="0" aria-expanded="false">
                         <span class="pull-xs-right hidden-lg-up">
-                          <span lass="navbar-toggler collapse-icons" aria-controls="top_sub_menu_1">
+                          <span class="navbar-toggler collapse-icons">
                             <i class="fa-icon add">&nbsp;</i>
                             <i class="fa-icon remove">&nbsp;</i>
                           </span>
@@ -249,7 +253,7 @@
                           <li class="category" id="category-14">
                             <a class="dropdown-item dropdown-submenu" href="{{ route('product.index') }}" data-depth="1">
                               <span class="pull-xs-right hidden-lg-up">
-                                <span  class="navbar-toggler collapse-icons">
+                                <span class="navbar-toggler collapse-icons">
                                   <i class="fa-icon add">&nbsp;</i>
                                   <i class="fa-icon remove">&nbsp;</i>
                                 </span>
@@ -260,7 +264,7 @@
                           <li class="category" id="category-14">
                             <a class="dropdown-item dropdown-submenu" href="{{ route('product.index') }}" data-depth="1">
                               <span class="pull-xs-right hidden-lg-up">
-                                <span  class="navbar-toggler collapse-icons">
+                                <span class="navbar-toggler collapse-icons">
                                   <i class="fa-icon add">&nbsp;</i>
                                   <i class="fa-icon remove">&nbsp;</i>
                                 </span>
@@ -317,7 +321,7 @@
               <li class="category" id="category-3">
                 <a class="dropdown-item" href="{{ route('product.index') }}" data-depth="0">
                   <span class="pull-xs-right hidden-lg-up">
-                    <span  class="navbar-toggler collapse-icons">
+                    <span class="navbar-toggler collapse-icons">
                       <i class="fa-icon add">&nbsp;</i>
                       <i class="fa-icon remove">&nbsp;</i>
                     </span>
@@ -503,18 +507,19 @@
 
           <div class="block-contact col-md-3 links wrapper dropdown">
             <h3 class="text-uppercase block-contact-title hidden-sm-down"><a href="#">Store information</a></h3>
-            <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-controls="collapseExample"><div class="title clearfix hidden-md-up" >
-              <span class="h3">Store information</span>
-              <span class="pull-xs-right">
-                <span class="navbar-toggler collapse-icons">
-                  <i class="fa-solid fa-caret-down add"></i>
-                  <i class="fa-solid fa-caret-up remove"></i>
+            <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-controls="collapseExample">
+              <div class="title clearfix hidden-md-up">
+                <span class="h3">Store information</span>
+                <span class="pull-xs-right">
+                  <span class="navbar-toggler collapse-icons">
+                    <i class="fa-solid fa-caret-down add"></i>
+                    <i class="fa-solid fa-caret-up remove"></i>
+                  </span>
                 </span>
-              </span>
-            </div>
+              </div>
             </a>
             <div class="footer-logo" style="background: url({{ asset('assets/logo1x.png') }}) no-repeat scroll 0 0 transparent;"></div>
-            <ul class="collapse" id="collapseExample">
+            <ul class="collapse collapse-footer" id="collapseExample">
               <li>
                 <i class="fa-solid fa-location-dot"></i>
                 <span>97 Nguyễn Khuyến, Phường Quốc Tử Giám, Đống Đa, Hà Nội</span>
@@ -541,33 +546,33 @@
               </span>
             </div>
             <div>
-            <ul id="footer_sub_menu_41269" class="collapse block_content">
-              <li>
-                <a id="link-product-page-prices-drop-1" class="cms-page-link" href="{{ route('product.index') }}" title="Our special products">
-                  Lan hồ điệp 100% Đà Lạt
-                </a>
-              </li>
-              <li>
-                <a id="link-product-page-new-products-1" class="cms-page-link" href="{{ route('product.index') }}" title="Our new products">
-                  Hoa tươi thành phẩm
-                </a>
-              </li>
-              <li>
-                <a id="link-product-page-best-sales-1" class="cms-page-link" href="{{ route('product.index') }}" title="Our best sales">
-                  Hoa tươi cắt cành
-                </a>
-              </li>
-              <li>
-                <a id="link-static-page-contact-1" class="cms-page-link" href="{{ route('product.index') }}" title="Use our form to contact us">
-                  Chậu cây/ Hoa tiểu cảnh
-                </a>
-              </li>
-              <li>
-                <a id="link-static-page-sitemap-1" class="cms-page-link" href="{{ route('product.index') }}" title="Lost ? Find what your are looking for">
-                  Hoa tươi sự kiện/ tiệc cưới
-                </a>
-              </li>
-            </ul>
+              <ul id="footer_sub_menu_41269" class="collapse block_content collapse-footer">
+                <li>
+                  <a id="link-product-page-prices-drop-1" class="cms-page-link" href="{{ route('product.index') }}" title="Our special products">
+                    Lan hồ điệp 100% Đà Lạt
+                  </a>
+                </li>
+                <li>
+                  <a id="link-product-page-new-products-1" class="cms-page-link" href="{{ route('product.index') }}" title="Our new products">
+                    Hoa tươi thành phẩm
+                  </a>
+                </li>
+                <li>
+                  <a id="link-product-page-best-sales-1" class="cms-page-link" href="{{ route('product.index') }}" title="Our best sales">
+                    Hoa tươi cắt cành
+                  </a>
+                </li>
+                <li>
+                  <a id="link-static-page-contact-1" class="cms-page-link" href="{{ route('product.index') }}" title="Use our form to contact us">
+                    Chậu cây/ Hoa tiểu cảnh
+                  </a>
+                </li>
+                <li>
+                  <a id="link-static-page-sitemap-1" class="cms-page-link" href="{{ route('product.index') }}" title="Lost ? Find what your are looking for">
+                    Hoa tươi sự kiện/ tiệc cưới
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
           <div class="col-md-3 links block">
@@ -581,7 +586,7 @@
                 </span>
               </span>
             </div>
-            <ul id="footer_sub_menu_49772" class="collapse block_content">
+            <ul id="footer_sub_menu_49772" class="collapse block_content collapse-footer">
               <li>
                 <a id="link-cms-page-1-2" class="cms-page-link" href="" title="Our terms and conditions of delivery">
                   Chính sách khách hàng doanh nghiệp
@@ -641,7 +646,7 @@
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js" integrity="sha512-3dZ9wIrMMij8rOH7X3kLfXAzwtcHpuYpEgQg1OA4QAob1e81H8ntUQmQm3pBudqIoySO5j0tHN4ENzA6+n2r4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 

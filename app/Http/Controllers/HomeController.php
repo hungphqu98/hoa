@@ -34,7 +34,7 @@ class HomeController extends Controller
 
     public function product()
     {
-        $product = Product::where(['status' => 'AVAILABLE'])->paginate();
+        $product = Product::where(['status' => 'AVAILABLE'])->paginate(9);
         $newProduct = Product::where(['status' => 'AVAILABLE'])->orderBy('id','DESC')->limit(3)->get();
 
         return view('product.index', compact('product','newProduct'));

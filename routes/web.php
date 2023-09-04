@@ -72,7 +72,7 @@ Route::group(['prefix' => 'admin'], function() {
 });
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth:admin']], function() {
-  Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web','auth']], function () {
+  Route::group(['prefix' => 'laravel-filemanager'], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
   });
   Route::get('/dashboard',[AdminController::class, 'index'])->name('admin.dashboard');

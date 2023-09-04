@@ -210,15 +210,7 @@
                   </ul>
                 </div>
                 <nav class="pagination">
-                  <div class="col-md-4"> Showing 1-9 of 15 item(s) </div>
-                  <div class="col-md-8">
-                    <ul class="page-list clearfix text-xs-right">
-                      <li> <a rel="prev" href="" class="previous disabled js-search-link"> <i class="fa fa-long-arrow-left"></i> </a> </li>
-                      <li class="current"> <a rel="nofollow" href="" class="disabled js-search-link"> 1 </a> </li>
-                      <li> <a rel="nofollow" href="" class="js-search-link"> 2 </a> </li>
-                      <li> <a rel="next" href="" class="next js-search-link"> <i class="fa fa-long-arrow-right"></i> </a> </li>
-                    </ul>
-                  </div>
+                {{ $product->links() }}
                 </nav>
               </div>
             </div>

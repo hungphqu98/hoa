@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  console.log("Document is ready. Starting script...");
     $('.slick-banner').slick({
         speed: 300,
         slidesToShow: 1,
@@ -79,7 +78,6 @@ $(document).ready(function () {
         autoplay: false,
         slidesToShow: 4,
     });
-    console.log("Slick banner initialized.");
     $('.menu-icon').click(function () {
         $('#mobile_top_menu_wrapper').toggleClass('slide');
         $('.mobile-menu-inner').css('display', 'block');
@@ -130,9 +128,9 @@ document.addEventListener('DOMContentLoaded', function () {
         return new bootstrap.Tab(tabTrigger)
     });
     var collapseElementList = [].slice.call(document.querySelectorAll('.collapse'))
-    console.log("Found " + collapseElementList.length + " collapse elements.");
     var collapseList = collapseElementList.map(function (collapseEl) {
-      console.log("Initializing collapse element: ", collapseEl);
-        return new bootstrap.Collapse(collapseEl)
+        return new bootstrap.Collapse(collapseEl, {
+            toggle: false
+          })
     })
 });

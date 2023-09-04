@@ -370,6 +370,25 @@
   border: 1px solid #96394C;
 }
 
+.page-item span {
+  height: 35px;
+  margin: 0;
+  padding: 4px 13px;
+  width: 35px;
+  color: #fff;
+  background: #96394C;
+  display: block;
+  font-weight: 600;
+  border: 1px solid #96394C;
+}
+
+.page-item.disabled .page-link,
+.page-item.disabled .page-link:focus,
+.page-item.disabled .page-link:hover {
+	pointer-events: none;
+	cursor: not-allowed;
+}
+
 #footer .footer-container .footer-logo {
   margin-bottom: 10px;
   max-width: 100%;
@@ -1126,6 +1145,24 @@ transition: all 500ms ease 0s;
   margin-bottom: 20px;
 }
 
-.collapse:not(.show) {
+@media (min-width: 991px) {
+  .collapse-footer {
+    display: block !important;
+  }
+  }
+
+.sub-menu-container.collapse:not(.show) {
   display: none !important; 
+}
+
+.status-badge {
+  margin-left: 10px;
+}
+
+.pagination {
+	display: inline-block;
+	padding-left: 0;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	border-radius: 0;
 }

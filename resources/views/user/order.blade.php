@@ -17,30 +17,28 @@
       </ol>
     </div>
   </nav>
+  @if(Session::has('success'))
+  <div class="alert alert-success">
+    {{Session::get('success')}}
+  </div>
+  @endif
+  @if(Session::has('error'))
+  <div class="alert alert-success">
+    {{Session::get('error')}}
+  </div>
+  @endif
   <div class="container space">
     <div class="row justify-content-center">
       <div class="col-md-8">
         <div class="card">
           <div class="card-header">Lịch sử mua hàng</div>
-
-          <div class="card-body">
-            <div class="table-responsive">
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th scope="col">Ngày</th>
-                    <th scope="col">Tổng giá trị</th>
-                    <th scope="col">Trạng thái</th>
-                    <th scope="col"></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  @foreach($orders as $o)
-                  <tr>
-                    <th scope="row">{{ $o->created_at->format('d/m/Y') }}</th>
-                    <td>{{number_format($o->total_amount, 0, ',', '.')}}</td>
-                    <td>
-                      @switch($o->status)
+          @foreach($orders as $o)
+          <div class="accordion accordion-flush" id="accordionExample">
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="heading{{$o->id}}">
+                <div class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{$o->id}}" aria-expanded="true" aria-controls="collapse{{$o->id}}">
+                  <span>{{ $o->created_at->format('d/m/Y') }}</span>
+                  <span class="status-badge badge bg-primary">@switch($o->status)
                       @case('DRAFT')
                       Chờ xử lý
                       @break
@@ -55,17 +53,40 @@
                       @break
                       @default
                       {{ $o->status }}
-                      @endswitch
-                    </td>
-                    <td>
-                    </td>
+                      @endswitch</span>
+                </div>
+              </h3>
+              <div id="collapse{{$o->id}}" class="accordion-collapse collapse" aria-labelledby="heading{{$o->id}}">
+                <div class="accordion-body">
+                <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">Sản phẩm</th>
+                    <th scope="col">Số lượng</th>
+                    <th scope="col">Đơn giá</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @foreach($detail->where('order_id', $o->id) as $d)
+                  <tr data-bs-toggle="collapse" data-bs-target="#collapse{{$o->id}}" aria-expanded="false" aria-controls="collapse{{$o->id}}">
+                    <th scope="row">{{$d->name}}</th>
+                    <td>{{$d->quantity}}</td>
+                    <td>{{(number_format($d->item_price, 0, ',', '.'))}}</td>
                   </tr>
                   @endforeach
                 </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="2">Tổng cộng</td>
+                    <td>{{number_format($o->total_amount, 0, ',', '.')}}</td></tr>
+                </tfoot>
               </table>
+                </div>
+              </div>
             </div>
 
           </div>
+          @endforeach
         </div>
 
       </div>

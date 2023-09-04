@@ -38,9 +38,9 @@ class AdminController extends Controller
         $remember = $request->filled('remember');
 
         if (Auth::guard('admin')->attempt($credentials, $remember)) {
-            return redirect()->route('admin.dashboard'); // Change to your admin dashboard route
+            return redirect()->route('admin.dashboard');
         } else {
-            return redirect()->route('admin.login')->withErrors(['email' => 'Invalid credentials']);
+            return redirect()->route('admin.login')->with('error', 'Sai thông tin đăng nhập');
         }
     }
 

@@ -31,7 +31,7 @@ class CustomerController extends Controller
         $user = Auth::user();
 
         if (!$user instanceof User) {
-            return redirect()->back()->with('error', 'User not found.');
+            return redirect()->back()->with('error', 'Không tìm thấy khách hàng.');
         }
 
         $request->validate([
@@ -51,6 +51,6 @@ class CustomerController extends Controller
         $user->update($request->only(['name', 'email', 'phone', 'address']));
         // Add other fields to update if needed
 
-        return redirect()->back()->with('success', 'User details updated successfully!');
+        return redirect()->back()->with('success', 'Thông tin khách hàng cập nhật thành công!');
     }
 }

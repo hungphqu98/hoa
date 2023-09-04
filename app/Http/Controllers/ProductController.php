@@ -14,9 +14,9 @@ class ProductController extends Controller
     public function index(Request $request)
     {
         if ($request->filled('search')) {
-            $product = Product::search($request->search)->paginate(11);
+            $product = Product::search($request->search)->paginate(10);
         } else {
-            $product = Product::orderBy('id', 'DESC')->paginate(11);
+            $product = Product::orderBy('id', 'DESC')->paginate(10);
         }
         return view('admin.product.index', compact('product'));
     }
