@@ -1,16 +1,16 @@
 <x-app-layout>
 
     <div class="home-container">
-    @if(Session::has('success'))
-    <div class="alert alert-success">
-      {{Session::get('success')}}
-    </div>
-  @endif
-  @if(Session::has('error'))
-    <div class="alert alert-success">
-      {{Session::get('error')}}
-    </div>
-  @endif
+        @if(Session::has('success'))
+        <div class="alert alert-success">
+            {{Session::get('success')}}
+        </div>
+        @endif
+        @if(Session::has('error'))
+        <div class="alert alert-success">
+            {{Session::get('error')}}
+        </div>
+        @endif
         <div id="columns_inner">
             <div id="content-wrapper">
                 <section id="main">
@@ -65,12 +65,17 @@
                                                                     </div>
                                                                     <ul class="product-flags">
                                                                         <!-- <li class="on-sale">On sale!</li> -->
-                                                                        <li class="new">New</li>
+                                                                        <!-- <li class="new">New</li> -->
                                                                     </ul>
                                                                 </div>
                                                                 <div class="product-description">
                                                                     <span class="h3 product-title" itemprop="name"><a href="">{{ $p->name }}</a></span>
-                                                                    <div class="product-price-and-shipping"> <span itemprop="price" class="price">{{ number_format($p->price, 0, ',', '.') }}đ</span> </div>
+                                                                    <div class="product-price-and-shipping"> @if($p->sale_price > 0)
+                                                                        <span itemprop="price" class="price">{{ number_format($p->sale_price, 0, ',', '.') }}đ</span> <s class="price text-muted">{{ number_format($p->price, 0, ',', '.') }}đ</s>
+                                                                        @else
+                                                                        <span itemprop="price" class="price">{{ number_format($p->price, 0, ',', '.') }}đ</span>
+                                                                        @endif
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </li>
@@ -112,12 +117,17 @@
                                                                     </div>
                                                                     <ul class="product-flags">
                                                                         <!-- <li class="on-sale">On sale!</li> -->
-                                                                        <li class="new">New</li>
+                                                                        <!-- <li class="new">New</li> -->
                                                                     </ul>
                                                                 </div>
                                                                 <div class="product-description">
                                                                     <span class="h3 product-title" itemprop="name"><a href="">{{ $p->name }}</a></span>
-                                                                    <div class="product-price-and-shipping"> <span itemprop="price" class="price">{{ number_format($p->price, 0, ',', '.') }}đ</span> </div>
+                                                                    <div class="product-price-and-shipping"> @if($p->sale_price > 0)
+                                                                        <span itemprop="price" class="price">{{ number_format($p->sale_price, 0, ',', '.') }}đ</span> <s class="price text-muted">{{ number_format($p->price, 0, ',', '.') }}đ</s>
+                                                                        @else
+                                                                        <span itemprop="price" class="price">{{ number_format($p->price, 0, ',', '.') }}đ</span>
+                                                                        @endif
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </li>
@@ -159,12 +169,17 @@
                                                                     </div>
                                                                     <ul class="product-flags">
                                                                         <!-- <li class="on-sale">On sale!</li> -->
-                                                                        <li class="new">New</li>
+                                                                        <!-- <li class="new">New</li> -->
                                                                     </ul>
                                                                 </div>
                                                                 <div class="product-description">
                                                                     <span class="h3 product-title" itemprop="name"><a href="">{{ $p->name }}</a></span>
-                                                                    <div class="product-price-and-shipping"> <span itemprop="price" class="price">{{ number_format($p->price, 0, ',', '.') }}đ</span> </div>
+                                                                    <div class="product-price-and-shipping">@if($p->sale_price > 0)
+                                                                        <span itemprop="price" class="price">{{ number_format($p->sale_price, 0, ',', '.') }}đ</span> <s class="price text-muted">{{ number_format($p->price, 0, ',', '.') }}đ</s>
+                                                                        @else
+                                                                        <span itemprop="price" class="price">{{ number_format($p->price, 0, ',', '.') }}đ</span>
+                                                                        @endif
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </li>
@@ -286,7 +301,12 @@
                                                 <div class="product-price h5 " itemprop="offers" itemscope="" itemtype="https://schema.org/Offer">
                                                     <link itemprop="availability" href="https://schema.org/InStock">
                                                     <meta itemprop="priceCurrency" content="EUR">
-                                                    <div class="current-price"> <span itemprop="price">{{ number_format($p->price, 0, ',', '.') }} đ</span> </div>
+                                                    <div class="current-price"> @if($p->sale_price > 0)
+                                                        <span itemprop="price" class="price">{{ number_format($p->sale_price, 0, ',', '.') }}đ</span> <s class="price text-muted">{{ number_format($p->price, 0, ',', '.') }}đ</s>
+                                                        @else
+                                                        <span itemprop="price" class="price">{{ number_format($p->price, 0, ',', '.') }}đ</span>
+                                                        @endif
+                                                    </div>
                                                 </div>
                                                 <div class="tax-shipping-delivery-label"> bao gồm VAT </div>
                                             </div>

@@ -36,6 +36,8 @@ Route::post('/contact', [ContactController::class, 'store'])->name('contact.stor
 Route::get('/policy/delivery', [HomeController::class, 'delivery'])->name('policy.delivery');
 Route::get('/policy/warranty', [HomeController::class, 'warranty'])->name('policy.warranty');
 Route::get('/policy/corporation', [HomeController::class, 'corpo'])->name('policy.corpo');
+Route::get('/error', [HomeController::class, 'error'])->name('error');
+Route::get('/product', [HomeController::class, 'product'])->name('product.index');
 Route::get('/product', [HomeController::class, 'product'])->name('product.index');
 Route::get('/product/{slug}', [HomeController::class, 'view'])->name('product.view');
 Route::get('/blog', [HomeController::class, 'blog'])->name('blog.index');

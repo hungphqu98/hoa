@@ -14,32 +14,30 @@
           </a>
           <meta itemprop="position" content="2">
         </li>
-
-
       </ol>
     </div>
   </nav>
   @if(Session::has('success'))
-    <div class="alert alert-success">
-      {{Session::get('success')}}
-    </div>
+  <div class="alert alert-success">
+    {{Session::get('success')}}
+  </div>
   @endif
   @if(Session::has('error'))
-    <div class="alert alert-success">
-      {{Session::get('error')}}
-    </div>
+  <div class="alert alert-success">
+    {{Session::get('error')}}
+  </div>
   @endif
   <div class="container product-index-container">
     <div id="columns_inner">
       <div id="left-column" class="col-xs-12" style="width:24.4%">
         <div class="block-categories block">
           <h4 class="block_title hidden-md-down"> <a href="" {{ route('product.index') }}>Sản phẩm</a> </h4>
-          <div id="block_categories_toggle" class="block_content collapse">
+          <div id="block_categories_toggle" class="block_content">
             <ul class="category-top-menu">
               <li>
                 <ul class="category-sub-menu">
                   <li data-depth="0"><a href="{{ route('product.index') }}">Lan Hồ Điệp</a>
-                    <div class="navbar-toggler collapse-icons" data-toggle="collapse" data-target="#exCollapsingNavbar4"><span class="add"></span><span class="remove"></span></div>
+                    <div class="navbar-toggler collapse-icons" data-bs-toggle="collapse" data-bs-target="#exCollapsingNavbar4"><span class="add"></span><span class="remove"></span></div>
                     <div class="collapse" id="exCollapsingNavbar4">
                       <ul class="category-sub-menu">
                         <li data-depth="1"><a class="category-sub-link" href="">Hoa sự kiện</a></li>
@@ -50,7 +48,7 @@
                     </div>
                   </li>
                   <li data-depth="0"><a href="{{ route('product.index') }}">Hoa sự kiện</a>
-                    <div class="navbar-toggler collapse-icons" data-toggle="collapse" data-target="#exCollapsingNavbar4"><span class="add"></span><span class="remove"></span></div>
+                    <div class="navbar-toggler collapse-icons" data-bs-toggle="collapse" data-bs-target="#exCollapsingNavbar4"><span class="add"></span><span class="remove"></span></div>
                     <div class="collapse" id="exCollapsingNavbar4">
                       <ul class="category-sub-menu">
                         <li data-depth="1"><a class="category-sub-link" href="">Hoa sự kiện</a></li>
@@ -61,7 +59,7 @@
                     </div>
                   </li>
                   <li data-depth="0"><a href="{{ route('product.index') }}">Bó hoa</a>
-                    <div class="navbar-toggler collapse-icons" data-toggle="collapse" data-target="#exCollapsingNavbar4"><span class="add"></span><span class="remove"></span></div>
+                    <div class="navbar-toggler collapse-icons" data-bs-toggle="collapse" data-bs0target="#exCollapsingNavbar4"><span class="add"></span><span class="remove"></span></div>
                     <div class="collapse" id="exCollapsingNavbar4">
                       <ul class="category-sub-menu">
                         <li data-depth="1"><a class="category-sub-link" href="">Hoa sự kiện</a></li>
@@ -72,7 +70,7 @@
                     </div>
                   </li>
                   <li data-depth="0"><a href="{{ route('product.index') }}">Hoa tết</a>
-                    <div class="navbar-toggler collapse-icons" data-toggle="collapse" data-target="#exCollapsingNavbar4"><span class="add"></span><span class="remove"></span></div>
+                    <div class="navbar-toggler collapse-icons" data-bs-toggle="collapse" data-bs-target="#exCollapsingNavbar4"><span class="add"></span><span class="remove"></span></div>
                     <div class="collapse" id="exCollapsingNavbar4">
                       <ul class="category-sub-menu">
                         <li data-depth="1"><a class="category-sub-link" href="">Hoa sự kiện</a></li>
@@ -127,7 +125,7 @@
         </div>
         <div id="newproduct_block" class="block products-block">
           <h4 class="block_title hidden-md-down"> Sản phẩm mới </h4>
-          <div id="newproduct_block_toggle" class="block_content collapse">
+          <div id="newproduct_block_toggle" class="block_content">
             <ul class="products">
               @foreach($newProduct as $n)
               <li class="product_item">
@@ -135,7 +133,11 @@
                   <div class="product_thumbnail"> <a href="{{ route('product.view',['slug'=> $n->slug]) }}" class="thumbnail product-image"> <img src="{{ asset('assets/product/' . $n->image) }}" alt="Lan Hồ Điệp"> </a> </div>
                   <div class="product-info">
                     <h1 class="h3 product-title" itemprop="name"><a href="{{ route('product.view',['slug'=> $n->slug]) }}">{{ $n->name }}</a></h1>
-                    <div class="product-price-and-shipping"> <span itemprop="price" class="price">{{ number_format($n->price, 0, ',', '.') }} đ</span> </div>
+                    <div class="product-price-and-shipping"> @if($n->sale_price > 0)
+                              <span itemprop="price" class="price">{{ number_format($n->sale_price, 0, ',', '.') }}đ</span> <s class="price text-muted">{{ number_format($n->price, 0, ',', '.') }}đ</s>
+                              @else 
+                              <span itemprop="price" class="price">{{ number_format($n->price, 0, ',', '.') }}đ</span>
+                              @endif </div>
                   </div>
                 </div>
               </li>
@@ -158,65 +160,87 @@
             <div id="">
               <div id="js-product-list-top" class="products-selection">
                 <div class="col-md-6 hidden-md-down total-products">
-                  <p>There are 15 products.</p>
                 </div>
                 <div class="col-md-6">
-                  <div class="row sort-by-row"> <span class="col-sm-3 col-md-3 hidden-sm-down sort-by">Sort by:</span>
-                    <div class="col-sm-9 col-xs-8 col-md-9 products-sort-order dropdown"> <a class="select-title" rel="nofollow" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Relevance <i class="material-icons pull-xs-right">&#xE5C5;</i> </a>
-                      <div class="dropdown-menu"> <a rel="nofollow" href="index3fbf.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;order=product.position.asc" class="select-list current js-search-link"> Relevance </a> <a rel="nofollow" href="index4ca7.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;order=product.name.asc" class="select-list js-search-link"> Name, A to Z </a> <a rel="nofollow" href="index09f4.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;order=product.name.desc" class="select-list js-search-link"> Name, Z to A </a> <a rel="nofollow" href="index5fd9.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;order=product.price.asc" class="select-list js-search-link"> Price, low to high </a> <a rel="nofollow" href="index17ae.html?controller=category&amp;id_category=3&amp;id_lang=1&amp;order=product.price.desc" class="select-list js-search-link"> Price, high to low </a> </div>
+                  <div class="row sort-by-row"> <span class="col-sm-3 col-md-3 hidden-sm-down sort-by">Sắp xếp:</span>
+                    <div class="col-sm-9 col-xs-8 col-md-9 products-sort-order dropdown"> <a class="select-title" href="#" role="button" id="dropdownSort" rel="nofollow" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        @if ($sort === 'name')
+                        Tên, A->Z
+                        @elseif ($sort === 'name:desc')
+                        Tên, Z->A
+                        @elseif ($sort === 'price')
+                        Giá tăng dần
+                        @elseif ($sort === 'price:desc')
+                        Giá giảm dần
+                        @else
+                        Mặc định
+                        @endif</a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownSort">
+                        <a rel="nofollow" href="{{ route('product.index', ['sort' => 'name']) }}" class="select-list js-search-link dropdown-item @if($sort == 'name') active @endif""> Tên, A->Z </a>
+                        <a rel=" nofollow" href="{{ route('product.index', ['sort' => 'name:desc']) }}" class="select-list js-search-link dropdown-item @if($sort == 'name:desc') active @endif""> Tên, Z->A </a>
+                        <a rel=" nofollow" href="{{ route('product.index', ['sort' => 'price']) }}" class="select-list js-search-link dropdown-item @if($sort == 'price') active @endif""> Giá tăng dần </a>
+                        <a rel=" nofollow" href="{{ route('product.index', ['sort' => 'price:desc']) }}" class="select-list js-search-link dropdown-item @if($sort == 'price:desc') active @endif""> Giá giảm dần </a>
+                      </div>
                     </div>
-                    <div class="col-sm-3 col-xs-4 hidden-lg-up filter-button"> <button id="search_filter_toggler" class="btn btn-secondary"> Filter </button> </div>
+                    <div class=" col-sm-3 col-xs-4 hidden-lg-up filter-button"> <button id="search_filter_toggler" class="btn btn-secondary"> Lọc </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="col-sm-12 hidden-lg-up showing"> Showing 1-9 of 15 item(s) </div>
               </div>
-            </div>
-            <div id="" class="hidden-sm-down">
-              <section id="js-active-search-filters" class="hide"> </section>
-            </div>
-            <div id="">
-              <div id="js-product-list">
-                <div class="products row">
-                  <ul class="product_list grid gridcount">
-                    @foreach($product as $p)
-                    <li class="product_item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                      <div class="product-miniature js-product-miniature" itemscope itemtype="http://schema.org/Product">
-                        <div class="thumbnail-container"> <a href="{{ route('product.view',['slug'=> $p->slug]) }}" class="thumbnail product-thumbnail"> <img src="{{ asset('assets/product/' . $p->image) }}" alt="Hoa" data-full-size-image-url="{{ asset('assets/product/' . $p->image) }}"> </a>
-                          <div class="outer-functional">
-                            <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal{{$p->id}}"> <i class="material-icons search">&#xE417;</i> Quick View </button>
-                              <div class="product-actions">
-                                <form action="{{ route('cart.add',['id'=>$p->id]) }}" class="add-to-cart-or-refresh">
-                                  @csrf
-                                <input value="1" name="quantity" type="hidden">
-                                <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Thêm vào giỏ hàng </button> </form>
+              <div id="" class="hidden-sm-down">
+                <section id="js-active-search-filters" class="hide"> </section>
+              </div>
+              <div id="">
+                <div id="js-product-list">
+                  <div class="products row">
+                    <ul class="product_list grid gridcount">
+                      @foreach($product as $p)
+                      <li class="product_item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <div class="product-miniature js-product-miniature" itemscope itemtype="http://schema.org/Product">
+                          <div class="thumbnail-container"> <a href="{{ route('product.view',['slug'=> $p->slug]) }}" class="thumbnail product-thumbnail"> <img src="{{ asset('assets/product/' . $p->image) }}" alt="Hoa" data-full-size-image-url="{{ asset('assets/product/' . $p->image) }}"> </a>
+                            <div class="outer-functional">
+                              <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal{{$p->id}}"> <i class="material-icons search">&#xE417;</i> Quick View </button>
+                                <div class="product-actions">
+                                  <form action="{{ route('cart.add',['id'=>$p->id]) }}" class="add-to-cart-or-refresh">
+                                    @csrf
+                                    <input value="1" name="quantity" type="hidden">
+                                    <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Thêm vào giỏ hàng </button>
+                                  </form>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                          <ul class="product-flags">
+                            <!-- <ul class="product-flags">
                             <li class="on-sale">On sale!</li>
                             <li class="new">New</li>
-                          </ul>
-                        </div>
-                        <div class="product-description">
-                          <h3 class="h3 product-title" itemprop="name"><a href="{{ route('product.view',['slug'=> $p->slug]) }}">{{ $p->name }}</a></h3>
-                          <div class="product-price-and-shipping"> <span itemprop="price" class="price">{{ number_format($p->price, 0, ',', '.') }}đ</span> </div>
-                          <div class="product-detail" itemprop="description">
-                            <p>{{ $p->description }}</p>
+                          </ul> -->
+                          </div>
+                          <div class="product-description">
+                            <h3 class="h3 product-title" itemprop="name"><a href="{{ route('product.view',['slug'=> $p->slug]) }}">{{ $p->name }}</a></h3>
+                            <div class="product-price-and-shipping"> 
+                              @if($p->sale_price > 0)
+                              <span itemprop="price" class="price">{{ number_format($p->sale_price, 0, ',', '.') }}đ</span> <s class="price text-muted">{{ number_format($p->price, 0, ',', '.') }}đ</s>
+                              @else 
+                              <span itemprop="price" class="price">{{ number_format($p->price, 0, ',', '.') }}đ</span>
+                              @endif
+                            </div>
+                            <div class="product-detail" itemprop="description">
+                              <p>{{ $p->description }}</p>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </li>
-                    @endforeach
-                  </ul>
+                      </li>
+                      @endforeach
+                    </ul>
+                  </div>
+                  <nav class="pagination">
+                    {{ $product->appends(['sort' => $sort])->links() }}
+                  </nav>
                 </div>
-                <nav class="pagination">
-                {{ $product->links() }}
-                </nav>
               </div>
-            </div>
-            <div id="js-product-list-bottom">
-              <div id="js-product-list-bottom"></div>
-            </div>
+              <div id="js-product-list-bottom">
+                <div id="js-product-list-bottom"></div>
+              </div>
           </section>
           @foreach($product as $p)
           <div class="modal fade" id="product-modal{{$p->id}}">
@@ -244,7 +268,11 @@
                         <div class="product-price h5 " itemprop="offers" itemscope="" itemtype="https://schema.org/Offer">
                           <link itemprop="availability" href="https://schema.org/InStock">
                           <meta itemprop="priceCurrency" content="EUR">
-                          <div class="current-price"> <span itemprop="price">{{ number_format($p->price, 0, ',', '.') }} đ</span> </div>
+                          <div class="current-price"> @if($p->sale_price > 0)
+                              <span itemprop="price" class="price">{{ number_format($p->sale_price, 0, ',', '.') }}đ</span> <s class="price text-muted">{{ number_format($p->price, 0, ',', '.') }}đ</s>
+                              @else 
+                              <span itemprop="price" class="price">{{ number_format($p->price, 0, ',', '.') }}đ</span>
+                              @endif </div>
                         </div>
                         <div class="tax-shipping-delivery-label"> bao gồm VAT </div>
                       </div>

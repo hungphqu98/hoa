@@ -29,23 +29,44 @@ class HomeController extends Controller
         $blog = Blog::where(['status' => 'SHOW'])->limit(4)->get();
 
 
-        return view('home', compact('product','blog'));
+        return view('home', compact('product', 'blog'));
     }
 
-    public function product()
+    public function product(Request $request)
     {
-        $product = Product::where(['status' => 'AVAILABLE'])->paginate(9);
-        $newProduct = Product::where(['status' => 'AVAILABLE'])->orderBy('id','DESC')->limit(3)->get();
 
-        return view('product.index', compact('product','newProduct'));
+        $newProduct = Product::where(['status' => 'AVAILABLE'])->orderBy('id', 'DESC')->limit(3)->get();
+        // Get the sort query parameter from the URL, default to 'default' if not provided
+        $sort = $request->query('sort', 'default');
+
+        // Define your default sorting option
+        $defaultSort = 'default';
+
+        // Query the products based on the sorting option
+        if ($sort === $defaultSort) {
+            $product = Product::where(['status' => 'AVAILABLE'])->sort()->paginate(9);
+        } else {
+            // Handle other sorting criteria here
+            if ($sort === 'name') {
+                $product = Product::where(['status' => 'AVAILABLE'])->orderBy('name', 'ASC')->paginate(9);
+            } elseif ($sort === 'name:desc') {
+                $product = Product::where(['status' => 'AVAILABLE'])->orderBy('name', 'DESC')->paginate(9);
+            } elseif ($sort === 'price'){
+                $product = Product::where(['status' => 'AVAILABLE'])->orderBy('price', 'ASC')->paginate(9);
+            } elseif ($sort === 'price:desc') {
+                $product = Product::where(['status' => 'AVAILABLE'])->orderBy('price', 'DESC')->paginate(9);
+            } 
+        }
+
+        return view('product.index', compact('product', 'sort', 'newProduct'));
     }
 
     public function view($slug)
     {
         $product = Product::where(['slug' => $slug])->get();
-        $bestSeller = Product::where(['status' => 'AVAILABLE'])->orderBy('id','DESC')->limit(4)->get();
+        $bestSeller = Product::where(['status' => 'AVAILABLE'])->orderBy('id', 'DESC')->limit(4)->get();
         $products = Product::where(['status' => 'AVAILABLE'])->get();
-        return view('product.view', compact('product','bestSeller','products'));
+        return view('product.view', compact('product', 'bestSeller', 'products'));
     }
 
     public function about()
@@ -53,7 +74,7 @@ class HomeController extends Controller
         return view('about');
     }
 
-    public function blog() 
+    public function blog()
     {
         $blogs = Blog::orderBy('id', 'DESC')->paginate(10);
         return view('blog.index', compact('blogs'));
@@ -85,4 +106,8 @@ class HomeController extends Controller
         return view('policy.corporation');
     }
 
+    public function error()
+    {
+        return view('error.404');
+    }
 }

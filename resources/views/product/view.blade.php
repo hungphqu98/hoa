@@ -34,7 +34,9 @@
               <section class="page-content" id="content">
                 <div class="product-leftside">
                   <ul class="product-flags">
-                    <li class="product-flag new">Mới</li>
+                    @if($p->sale_price > 0)
+                    <li class="product-flag new">Sale</li>
+                    @endif
                   </ul>
                   <div class="images-container">
                     <div class="product-cover"> <a href="{{ asset('assets/product/' . $p->image) }}"> <img class="js-qv-product-cover" src="{{ asset('assets/product/' . $p->image) }}" alt="" title="" style="width:100%;" itemprop="image"> </a>
@@ -58,7 +60,11 @@
                     <div class="product-prices">
                       <div class="product-price h5 " itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                         <link itemprop="availability" href="https://schema.org/InStock" />
-                        <div class="current-price"> <span itemprop="price">{{ number_format($p->price, 0, ',', '.') }} đ</span> </div>
+                        <div class="current-price">  @if($p->sale_price > 0)
+                              <span itemprop="price" class="price">{{ number_format($p->sale_price, 0, ',', '.') }}đ</span> <s class="price text-muted">{{ number_format($p->price, 0, ',', '.') }}đ</s>
+                              @else 
+                              <span itemprop="price" class="price">{{ number_format($p->price, 0, ',', '.') }}đ</span>
+                              @endif </div>
                       </div>
                       <div class="tax-shipping-delivery-label"> bao gồm VAT </div>
                     </div>
@@ -136,12 +142,16 @@
                             </div>
                           </div>
                         <ul class="product-flags">
-                          <li class="new">Mới</li>
+                          <!-- <li class="new">Mới</li> -->
                         </ul>
                       </div>
                       <div class="product-description">
                         <span class="h3 product-title" itemprop="name"><a href="{{ route('product.view',['slug'=> $seller->slug]) }}">{{ $seller->name }}</a></span>
-                        <div class="product-price-and-shipping"> <span itemprop="price" class="price">{{ $seller->price }}</span> </div>
+                        <div class="product-price-and-shipping">  @if($seller->sale_price > 0)
+                              <span itemprop="price" class="price">{{ number_format($seller->sale_price, 0, ',', '.') }}đ</span> <s class="price text-muted">{{ number_format($seller->price, 0, ',', '.') }}đ</s>
+                              @else 
+                              <span itemprop="price" class="price">{{ number_format($seller->price, 0, ',', '.') }}đ</span>
+                              @endif </div>
                       </div>
                   </li>
                   @endforeach
@@ -173,12 +183,16 @@
                             </div>
                           </div>
                         <ul class="product-flags">
-                          <li class="new">Mới</li>
+                          <!-- <li class="new">Mới</li> -->
                         </ul>
                       </div>
                       <div class="product-description">
                         <span class="h3 product-title" itemprop="name"><a href="{{ route('product.view',['slug'=> $seller->slug]) }}">{{ $seller->name }}</a></span>
-                        <div class="product-price-and-shipping"> <span itemprop="price" class="price">{{ $seller->price }}</span> </div>
+                        <div class="product-price-and-shipping">  @if($seller->sale_price > 0)
+                              <span itemprop="price" class="price">{{ number_format($seller->sale_price, 0, ',', '.') }}đ</span> <s class="price text-muted">{{ number_format($seller->price, 0, ',', '.') }}đ</s>
+                              @else 
+                              <span itemprop="price" class="price">{{ number_format($seller->price, 0, ',', '.') }}đ</span>
+                              @endif </div>
                       </div>
                   </li>
                   @endforeach
@@ -212,7 +226,11 @@
                         <div class="product-price h5 " itemprop="offers" itemscope="" itemtype="https://schema.org/Offer">
                           <link itemprop="availability" href="https://schema.org/InStock">
                           <meta itemprop="priceCurrency" content="EUR">
-                          <div class="current-price"> <span itemprop="price">{{ number_format($p->price, 0, ',', '.') }} đ</span> </div>
+                          <div class="current-price">@if($p->sale_price > 0)
+                              <span itemprop="price" class="price">{{ number_format($p->sale_price, 0, ',', '.') }}đ</span> <s class="price text-muted">{{ number_format($p->price, 0, ',', '.') }}đ</s>
+                              @else 
+                              <span itemprop="price" class="price">{{ number_format($p->price, 0, ',', '.') }}đ</span>
+                              @endif </div>
                         </div>
                         <div class="tax-shipping-delivery-label"> bao gồm VAT </div>
                       </div>

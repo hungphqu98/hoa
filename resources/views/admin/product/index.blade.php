@@ -18,7 +18,7 @@
                 @foreach($product as $p)
                 <tr>
                   <th scope="row">{{ $p->name }}</th>
-                  <td>{{ $p->price }}</td>
+                  <td>{{ number_format($p->price, 0, ',', '.') }}đ</td>
                   <td>
                     <a href="{{ route('admin.product.edit',['id'=> $p->id]) }}"><button type="button" class="btn btn-info mb-2">Sửa</button></a>
                     <a href="{{ route('admin.product.delete',['id'=> $p->id]) }}"><button type="button" class="btn btn-danger mb-2">Xóa</button></a>

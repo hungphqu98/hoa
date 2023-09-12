@@ -5,11 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Searchable;
+use Abbasudo\Purity\Traits\Sortable;
 
 class Product extends Model
 {
     use HasFactory;
     use Searchable;
+    use Sortable;
     
     protected $fillable = ['name', 'slug', 'description', 'details','price','sale_price', 'status'];
     

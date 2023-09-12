@@ -571,6 +571,7 @@ ul.product-flags li.on-sale.discount-percentage {
 ul.product-flags li.new {
   right: 27px;
   top: 10px;
+  color: red;
 }
 
 .block-contact li {
@@ -589,7 +590,8 @@ ul.product-flags li.new {
 }
 
 #left-column .products-block ul li .product_thumbnail img {
-  max-height: 80px;
+  height: 80px;
+  width: 55px;
 }
 
 .slider-under-qview img {
@@ -1150,10 +1152,6 @@ transition: all 500ms ease 0s;
     display: block !important;
   }
   }
-
-.sub-menu-container.collapse:not(.show) {
-  display: none !important; 
-}
 
 .status-badge {
   margin-left: 10px;

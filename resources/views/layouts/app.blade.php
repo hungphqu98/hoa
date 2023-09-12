@@ -73,7 +73,7 @@
         <div class="user-info dropdown js-dropdown">
           <span class="user-info-title expand-more _gray-darker" data-bs-toggle="dropdown"><span class="account_text">My
               Account</span></span>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu" id="account-dropdown">
             @auth
             <p>Xin chào, {{ Auth::user()->name }}!</p>
             <li>
@@ -340,8 +340,8 @@
                         </span>
                         Lan Hồ Điệp 100% Đà Lạt
                       </a>
-                      <div class="collapse" id="top_sub_menu_52970">
-                        <ul class="top-menu  " data-depth="2">
+                      <div class="" id="top_sub_menu_52970">
+                        <ul class="top-menu " data-depth="2">
                           <li class="category" id="category-20">
                             <a class="dropdown-item" href="{{ route('product.index') }}" data-depth="2">
                               Lan Hồ Điệp thiết kế cùng lũa
@@ -378,7 +378,7 @@
                         </span>
                         Hoa tươi thành phẩm
                       </a>
-                      <div class="collapse" id="top_sub_menu_54766">
+                      <div class="" id="top_sub_menu_54766">
                         <ul class="top-menu  " data-depth="2">
                           <li class="category" id="category-23">
                             <a class="dropdown-item" href="{{ route('product.index') }}" data-depth="2">
@@ -509,7 +509,7 @@
             <h3 class="text-uppercase block-contact-title hidden-sm-down"><a href="#">Store information</a></h3>
             <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-controls="collapseExample">
               <div class="title clearfix hidden-md-up">
-                <span class="h3">Store information</span>
+                <span class="h3">Thông tin cửa hàng</span>
                 <span class="pull-xs-right">
                   <span class="navbar-toggler collapse-icons">
                     <i class="fa-solid fa-caret-down add"></i>
@@ -588,17 +588,17 @@
             </div>
             <ul id="footer_sub_menu_49772" class="collapse block_content collapse-footer">
               <li>
-                <a id="link-cms-page-1-2" class="cms-page-link" href="" title="Our terms and conditions of delivery">
+                <a id="link-cms-page-1-2" class="cms-page-link" href="{{ route('policy.corpo') }}" title="Chính sách khách hàng doanh nghiệp">
                   Chính sách khách hàng doanh nghiệp
                 </a>
               </li>
               <li>
-                <a id="link-cms-page-2-2" class="cms-page-link" href="" title="Legal notice">
+                <a id="link-cms-page-2-2" class="cms-page-link" href="{{ route('policy.delivery') }}" title="Chính sách giao hàng">
                   Chính sách giao hàng
                 </a>
               </li>
               <li>
-                <a id="link-cms-page-3-2" class="cms-page-link" href="" title="Our terms and conditions of use">
+                <a id="link-cms-page-3-2" class="cms-page-link" href="{{ route('policy.warranty') }}" title="Chính sách bảo hành, đổi trả">
                   Chính sách bảo hành, đổi trả
                 </a>
               </li>
@@ -648,7 +648,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js" integrity="sha512-3dZ9wIrMMij8rOH7X3kLfXAzwtcHpuYpEgQg1OA4QAob1e81H8ntUQmQm3pBudqIoySO5j0tHN4ENzA6+n2r4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
   <script src={{ asset("js/script.js") }}></script>
   @stack('footer')
