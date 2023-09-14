@@ -1,37 +1,3 @@
-/*
- *  Bootstrap TouchSpin - v3.1.1
- *  A mobile and touch friendly input spinner component for Bootstrap 3.
- *  http://www.virtuosoft.eu/code/bootstrap-touchspin/
- *
- *  Made by István Ujj-Mészáros
- *  Under Apache License v2.0 License
- */
-
- .bootstrap-touchspin .input-group-btn-vertical {
-	position: relative;
-	white-space: nowrap;
-	width: 1%;
-	vertical-align: middle;
-	display: table-cell
-}
-.bootstrap-touchspin .input-group-btn-vertical>.btn {
-	display: block;
-	float: none;
-	width: 100%;
-	max-width: 100%;
-	padding: 8px 10px;
-	margin-left: -1px;
-	position: relative
-}
-.bootstrap-touchspin .input-group-btn-vertical .bootstrap-touchspin-up {
-	border-radius: 0;
-	border-top-right-radius: 4px
-}
-.bootstrap-touchspin .input-group-btn-vertical .bootstrap-touchspin-down {
-	margin-top: -2px;
-	border-radius: 0;
-	border-bottom-right-radius: 4px
-}
 
 /*!
  * Bootstrap v4.0.0-alpha.5 (https://getbootstrap.com)
@@ -51,37 +17,7 @@ html {
 body {
 	margin: 0;
 }
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-menu,
-nav,
-section,
-summary {
-	display: block;
-}
-audio,
-canvas,
-progress,
-video {
-	display: inline-block;
-}
-audio:not([controls]) {
-	display: none;
-	height: 0;
-}
-progress {
-	vertical-align: baseline;
-}
-template,
-[hidden] {
-	display: none;
-}
+
 a {
 	background-color: transparent;
 	-webkit-text-decoration-skip: objects;
@@ -90,22 +26,7 @@ a:active,
 a:hover {
 	outline-width: 0;
 }
-abbr[title] {
-	border-bottom: none;
-	text-decoration: underline;
-	text-decoration: underline dotted;
-}
-b,
-strong {
-	font-weight: inherit;
-}
-b,
-strong {
-	font-weight: bolder;
-}
-dfn {
-	font-style: italic;
-}
+
 h1 {
 	font-size: 2em;
 	margin: 0.67em 0;
@@ -12988,102 +12909,6 @@ body#checkout #gift_message {
   text-align: center;
 }
 
-/* mouse grab icon */
-.grabbing {
-  cursor: url("../img/capricathemes/grabbing.png") 8 8, move;
-}
- 
-
-.customNavigation {
-  position: absolute;
-  width: 100%;
-  top: 35%;
-  direction: ltr !important;
-}
-
-.customNavigation a {
-  font-size: 0px;
-    position: absolute;
-    font-weight: 300;
-    height: 30px;
-    width: 30px;
-    line-height: 26px;
-    padding: 0px;
-    color: #000000;
-    cursor: pointer;
-    overflow: hidden;
-    transition: none;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
-    border-radius: 0;
-    border: 1px solid #888888;
-    background: url(../img/capricathemes/arrow.png) no-repeat 0 0 #ffffff;
-}
-
-.customNavigation a:hover{
-    border-color: #deb5b2;
-    background-color: #deb5b2;
-}
-.customNavigation a:hover:before{ color: #262626; }
-
-.customNavigation a.prev {
-  left: -40px;
-  background-position:0 -6px;
-}
-
-.customNavigation a.next {
-  right: -40px;
-  background-position:-130px -6px;
-}
-
-.customNavigation a.prev:hover{
-  background-position: 0 -71px;
-}
-
-.customNavigation a.next:hover{
-   background-position:-130px -71px;
-}
-.viewed-products .customNavigation a.prev, 
-.crosssell-products .customNavigation a.prev, 
-.productscategory-products .customNavigation a.prev, 
-.product-accessories .customNavigation a.prev {
-    left: -30px;
-}
-.viewed-products .customNavigation a.next, 
-.crosssell-products .customNavigation a.next, 
-.productscategory-products .customNavigation a.next, 
-.product-accessories .customNavigation a.next {
-    right: -30px;
-}
-
-@media (max-width: 1500px) {
-  .customNavigation a.prev,
-  .viewed-products .customNavigation a.prev, 
-  .crosssell-products .customNavigation a.prev, 
-  .productscategory-products .customNavigation a.prev, 
-  .product-accessories .customNavigation a.prev{
-    left: 0px;
-  }
-  .customNavigation a.next,
-  .viewed-products .customNavigation a.next, 
-  .crosssell-products .customNavigation a.next, 
-  .productscategory-products .customNavigation a.next, 
-  .product-accessories .customNavigation a.next{
-    right: 0px;
-  }
-}
-
-@media (max-width: 991px) {
-  .customNavigation a.prev{
-    left: 0px;
-  }
-  .customNavigation a.next {
-    right: 0px;
-  }
-}
-
 #ctleftbanner img,
 #ctrightbanner img{
 	max-width: 100%;
@@ -13124,18 +12949,7 @@ body#checkout #gift_message {
     transition: all 1s ease;
 }
 
-.top_button {
-	  background: url(../img/capricathemes/top-arrow.png) no-repeat scroll 0 0;
-    bottom: 20px;
-    cursor: pointer;
-    height: 70px;
-    padding: 6px 12px;
-    position: fixed;
-    right: 20px;
-    text-align: center;
-    width: 50px;
-    z-index: 99;
-}
+
 
 
 /* Add CSS to hide the mobile menu by default */

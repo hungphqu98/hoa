@@ -142,7 +142,9 @@
                             </div>
                           </div>
                         <ul class="product-flags">
-                          <!-- <li class="new">Mới</li> -->
+                        @if($seller->sale_price > 0)
+                    <li class="product-flag new">Sale</li>
+                    @endif
                         </ul>
                       </div>
                       <div class="product-description">
@@ -183,7 +185,9 @@
                             </div>
                           </div>
                         <ul class="product-flags">
-                          <!-- <li class="new">Mới</li> -->
+                        @if($seller->sale_price > 0)
+                    <li class="product-flag new">Sale</li>
+                    @endif
                         </ul>
                       </div>
                       <div class="product-description">

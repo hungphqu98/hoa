@@ -31,7 +31,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap" rel="stylesheet">
 
   <!-- main css -->
-  <link rel="stylesheet" href={{ asset("css/style.css") }} />
+  <!-- <link rel="stylesheet" href={{ asset("css/style.css") }} /> -->
+  <link rel="stylesheet" href={{ asset("css/style-cleaned.css") }} />
   <link rel="stylesheet" href={{ asset("css/responsive.css") }} />
   <link rel="stylesheet" href={{ asset("css/main.css") }} />
 
@@ -58,7 +59,7 @@
             <div class="header blockcart-header dropdown js-dropdown">
 
               <a class="shopping-cart" rel="nofollow" href="{{ route('cart') }}">
-                <span class="mobile_count"></span>
+                <span class="mobile_count">{{$cart->total_quantity}}</span>
                 <span class="cart-products-count hidden-sm-down">{{$cart->total_quantity}}</span>
                 <!-- <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                 {{$cart->total_quantity}}

@@ -33,7 +33,7 @@
         <div id="contact-rich" class="contact-rich block">
           <h4 class="block_title hidden-md-down">Thông tin cửa hàng</h4>
           <h4 class="block_title hidden-lg-up" data-target="#contact_rich_toggle" data-toggle="collapse"> Thông tin cửa hàng <span class="pull-xs-right"> <span class="navbar-toggler collapse-icons"> <i class="fa-icon add"></i> <i class="fa-icon remove"></i> </span> </span> </h4>
-          <div id="contact_rich_toggle" class="block_content collapse">
+          <div id="contact_rich_toggle" class="block_content ">
             <div class="">
               <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
               <div class="data">97 Nguyễn Khuyến, Phường Quốc Tử Giám, Đống Đa, Hà Nội</div>

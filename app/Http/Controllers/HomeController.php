@@ -44,7 +44,7 @@ class HomeController extends Controller
 
         // Query the products based on the sorting option
         if ($sort === $defaultSort) {
-            $product = Product::where(['status' => 'AVAILABLE'])->sort()->paginate(9);
+            $product = Product::where(['status' => 'AVAILABLE'])->paginate(9);
         } else {
             // Handle other sorting criteria here
             if ($sort === 'name') {

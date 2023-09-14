@@ -90,16 +90,16 @@
           <div id="search_filters">
             <h4 class="block_title">Lọc theo</h4>
             <div class="block_content">
-              <div id="_desktop_search_filters_clear_all" class="hidden-md-down clear-all-wrapper"> <button data-search-url="" class="btn btn-tertiary js-search-filters-clear-all"> <i class="material-icons">&#xE14C;</i> Xóa </button> </div>
+              <div id="_desktop_search_filters_clear_all" class="hidden-md-down clear-all-wrapper"> <button data-search-url="" class="btn btn-tertiary js-search-filters-clear-all"> Xóa </button> </div>
               <section class="facet">
                 <h1 class="h6 facet-title hidden-md-down">Sản phẩm</h1>
                 <div class="title hidden-lg-up" data-target="#facet_86716" data-toggle="collapse">
                   <h1 class="h6 facet-title">Sản phẩm</h1> <span class="pull-xs-right"> <span class="navbar-toggler collapse-icons"> <i class="fa-icon add"></i> <i class="fa-icon remove"></i> </span> </span>
                 </div>
-                <ul id="facet_86716" class="collapse">
-                  <li> <label class="facet-label" for="facet_input_86716_0"> <span class="custom-checkbox"> <input id="facet_input_86716_0" data-search-url="" type="checkbox"> <span class="ps-shown-by-js"><i class="material-icons checkbox-checked">&#xE5CA;</i></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> Lan Hồ Điệp <span class="magnitude">(13)</span> </a> </label> </li>
-                  <li> <label class="facet-label" for="facet_input_86716_1"> <span class="custom-checkbox"> <input id="facet_input_86716_1" data-search-url="" type="checkbox"> <span class="ps-shown-by-js"><i class="material-icons checkbox-checked">&#xE5CA;</i></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> Bó hoa <span class="magnitude">(14)</span> </a> </label> </li>
-                  <li> <label class="facet-label" for="facet_input_86716_2"> <span class="custom-checkbox"> <input id="facet_input_86716_2" data-search-url="" type="checkbox"> <span class="ps-shown-by-js"><i class="material-icons checkbox-checked">&#xE5CA;</i></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> Hộp hoa <span class="magnitude">(14)</span> </a> </label> </li>
+                <ul id="facet_86716" class="">
+                  <li> <label class="facet-label" for="facet_input_86716_0"> <span class="custom-checkbox"> <input id="facet_input_86716_0" data-search-url="" type="checkbox"> <span class="ps-shown-by-js"></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> Lan Hồ Điệp <span class="magnitude">(13)</span> </a> </label> </li>
+                  <li> <label class="facet-label" for="facet_input_86716_1"> <span class="custom-checkbox"> <input id="facet_input_86716_1" data-search-url="" type="checkbox"> <span class="ps-shown-by-js"></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> Bó hoa <span class="magnitude">(14)</span> </a> </label> </li>
+                  <li> <label class="facet-label" for="facet_input_86716_2"> <span class="custom-checkbox"> <input id="facet_input_86716_2" data-search-url="" type="checkbox"> <span class="ps-shown-by-js"></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> Hộp hoa <span class="magnitude">(14)</span> </a> </label> </li>
                 </ul>
               </section>
               <section class="facet">
@@ -107,7 +107,7 @@
                 <div class="title hidden-lg-up" data-target="#facet_93109" data-toggle="collapse">
                   <h1 class="h6 facet-title">Giá</h1> <span class="pull-xs-right"> <span class="navbar-toggler collapse-icons"> <i class="fa-icon add"></i> <i class="fa-icon remove"></i> </span> </span>
                 </div>
-                <ul id="facet_93109" class="collapse">
+                <ul id="facet_93109" class="">
                   <li> <label class="facet-label" for="facet_input_93109_0"> <span class="custom-radio"> <input id="facet_input_93109_0" data-search-url="" type="radio" name="filter Price"> <span class="ps-shown-by-js"></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> $74.00 - $76.00 <span class="magnitude">(1)</span> </a> </label> </li>
                   <li> <label class="facet-label" for="facet_input_93109_1"> <span class="custom-radio"> <input id="facet_input_93109_1" data-search-url="" type="radio" name="filter Price"> <span class="ps-shown-by-js"></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> $77.00 - $79.00 <span class="magnitude">(1)</span> </a> </label> </li>
                   <li> <label class="facet-label" for="facet_input_93109_2"> <span class="custom-radio"> <input id="facet_input_93109_2" data-search-url="" type="radio" name="filter Price"> <span class="ps-shown-by-js"></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> $82.00 - $88.00 <span class="magnitude">(4)</span> </a> </label> </li>
@@ -134,7 +134,7 @@
                   <div class="product-info">
                     <h1 class="h3 product-title" itemprop="name"><a href="{{ route('product.view',['slug'=> $n->slug]) }}">{{ $n->name }}</a></h1>
                     <div class="product-price-and-shipping"> @if($n->sale_price > 0)
-                              <span itemprop="price" class="price">{{ number_format($n->sale_price, 0, ',', '.') }}đ</span> <s class="price text-muted">{{ number_format($n->price, 0, ',', '.') }}đ</s>
+                              <span itemprop="price" class="price">{{ number_format($n->sale_price, 0, ',', '.') }}đ</span><br/> <s class="price text-muted">{{ number_format($n->price, 0, ',', '.') }}đ</s>
                               @else 
                               <span itemprop="price" class="price">{{ number_format($n->price, 0, ',', '.') }}đ</span>
                               @endif </div>
@@ -210,10 +210,11 @@
                                 </div>
                               </div>
                             </div>
-                            <!-- <ul class="product-flags">
-                            <li class="on-sale">On sale!</li>
-                            <li class="new">New</li>
-                          </ul> -->
+                            <ul class="product-flags">
+                            @if($p->sale_price > 0)
+                    <li class="product-flag new">Sale</li>
+                    @endif
+                          </ul>
                           </div>
                           <div class="product-description">
                             <h3 class="h3 product-title" itemprop="name"><a href="{{ route('product.view',['slug'=> $p->slug]) }}">{{ $p->name }}</a></h3>
@@ -223,9 +224,6 @@
                               @else 
                               <span itemprop="price" class="price">{{ number_format($p->price, 0, ',', '.') }}đ</span>
                               @endif
-                            </div>
-                            <div class="product-detail" itemprop="description">
-                              <p>{{ $p->description }}</p>
                             </div>
                           </div>
                         </div>

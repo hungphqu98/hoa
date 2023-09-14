@@ -51,7 +51,7 @@
                                     @csrf
                                   <div class="input-group bootstrap-touchspin">
                                     <input class="js-cart-line-product-quantity form-control" type="number" value="{{ $item['quantity']}}" name="quantity" min="1" style="display: block;">
-                                    <button class="cart-update" type="submit"></button>
+                                    <button class="cart-update" type="submit">&#10004;</button>
                                   </div>
                                   </form>
                                 </div>
@@ -93,7 +93,7 @@
               <div id="block-reassurance">
                 <ul>
                   <li>
-                    <div class="block-reassurance-item"> <i class="fa-solid fa-user-shield"></i> <span class="h6">Chính sách kiểm hàng</span> </div>
+                    <div class="block-reassurance-item"> <i class="fa-solid fa-user-shield"></i> <span class="h6">Chính sách khách hàng doanh nghiệp</span> </div>
                   </li>
                   <li>
                     <div class="block-reassurance-item"> <i class="fa-solid fa-truck"></i> <span class="h6">Chính sách giao hàng</span> </div>
@@ -114,7 +114,7 @@
                 @foreach ($bestSeller as $seller)
                 <li class="product_item col-xs-12 col-sm-6 col-md-4 col-lg-3">
                   <div class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope itemtype="http://schema.org/Product">
-                    <div class="thumbnail-container"> <a href="{{ route('product.view',['slug'=> $seller->slug ]) }}" class="thumbnail product-thumbnail"> <img src="{{ asset('assets/product/' . $seller->image) }}" alt="Consectetur Hampden" data-full-size-image-url="{{ asset('assets/product/' . $seller->image) }}"> <img class="fliper_image img-responsive" src="{{ asset('assets/product/' . $seller->image) }}" data-full-size-image-url="{{ asset('assets/product/' . $seller->image) }}" alt="" /> </a>
+                    <div class="thumbnail-container"> <a href="{{ route('product.view',['slug'=> $seller->slug ]) }}" class="thumbnail product-thumbnail"> <img src="{{ asset('assets/product/' . $seller->image) }}" alt="Consectetur Hampden" data-full-size-image-url="{{ asset('assets/product/' . $seller->image) }}"></a>
                       <div class="outer-functional">
                         <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal{{$seller->id}}"> <i class="material-icons search">&#xE417;</i> Quick view</button>
                           <div class="product-actions">
@@ -123,13 +123,18 @@
                         </div>
                       </div>
                       <ul class="product-flags">
-                        <li class="on-sale">On sale!</li>
-                        <li class="new">New</li>
+                      @if($seller->sale_price > 0)
+                    <li class="product-flag new">Sale</li>
+                    @endif
                       </ul>
                     </div>
                     <div class="product-description">
                       <span class="h3 product-title" itemprop="name"><a href="{{ route('product.index') }}">{{ $seller->name }}</a></span>
-                      <div class="product-price-and-shipping"> <span itemprop="price" class="price">{{ number_format($seller->price, 0, ',', '.') }} đ</span> </div>
+                      <div class="product-price-and-shipping"> @if($seller->sale_price > 0)
+                              <span itemprop="price" class="price">{{ number_format($seller->sale_price, 0, ',', '.') }}đ</span> <s class="price text-muted">{{ number_format($seller->price, 0, ',', '.') }}đ</s>
+                              @else 
+                              <span itemprop="price" class="price">{{ number_format($seller->price, 0, ',', '.') }}đ</span>
+                              @endif  </div>
                     </div>
                   </div>
                 </li>
