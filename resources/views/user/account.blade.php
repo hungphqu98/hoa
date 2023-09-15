@@ -17,16 +17,6 @@
       </ol>
     </div>
   </nav>
-  @if(Session::has('success'))
-    <div class="alert alert-success">
-      {{Session::get('success')}}
-    </div>
-  @endif
-  @if(Session::has('error'))
-    <div class="alert alert-success">
-      {{Session::get('error')}}
-    </div>
-  @endif
   <div class="container space">
     <div class="row justify-content-center">
       <div class="col-md-8">

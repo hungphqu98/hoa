@@ -66,8 +66,16 @@ class HomeController extends Controller
         $product = Product::where(['slug' => $slug])->get();
         $bestSeller = Product::where(['status' => 'AVAILABLE'])->orderBy('id', 'DESC')->limit(4)->get();
         $products = Product::where(['status' => 'AVAILABLE'])->get();
+        
         return view('product.view', compact('product', 'bestSeller', 'products'));
     }
+
+    public function search() {
+		$key = request()->key;
+        $newProduct = Product::where(['status' => 'AVAILABLE'])->orderBy('id', 'DESC')->limit(3)->get();
+		$product = Product::where('name','LIKE','%'.$key.'%')->where(['status' => 'AVAILABLE'])->paginate(9);
+		return view('search',compact('newProduct','product'));
+	}
 
     public function about()
     {

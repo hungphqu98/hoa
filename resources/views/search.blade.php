@@ -75,39 +75,6 @@
             </ul>
           </div>
         </div>
-        <div id="search_filters_wrapper" class="hidden-md-down block"> <!-- hidden-sm-down -->
-          <div id="search_filter_controls" class="hidden-lg-up"> <!-- --> <span id="_mobile_search_filters_clear_all"></span> <button class="btn btn-secondary ok"> <i class="material-icons">&#xE876;</i> OK </button> </div>
-          <div id="search_filters">
-            <h4 class="block_title">Lọc theo</h4>
-            <div class="block_content">
-              <div id="_desktop_search_filters_clear_all" class="hidden-md-down clear-all-wrapper"> <button data-search-url="" class="btn btn-tertiary js-search-filters-clear-all"> Xóa </button> </div>
-              <section class="facet">
-                <h1 class="h6 facet-title hidden-md-down">Sản phẩm</h1>
-                <div class="title hidden-lg-up" data-target="#facet_86716" data-toggle="collapse">
-                  <h1 class="h6 facet-title">Sản phẩm</h1> <span class="pull-xs-right"> <span class="navbar-toggler collapse-icons"> <i class="fa-icon add"></i> <i class="fa-icon remove"></i> </span> </span>
-                </div>
-                <ul id="facet_86716" class="">
-                  <li> <label class="facet-label" for="facet_input_86716_0"> <span class="custom-checkbox"> <input id="facet_input_86716_0" data-search-url="" type="checkbox"> <span class="ps-shown-by-js"></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> Lan Hồ Điệp <span class="magnitude">(13)</span> </a> </label> </li>
-                  <li> <label class="facet-label" for="facet_input_86716_1"> <span class="custom-checkbox"> <input id="facet_input_86716_1" data-search-url="" type="checkbox"> <span class="ps-shown-by-js"></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> Bó hoa <span class="magnitude">(14)</span> </a> </label> </li>
-                  <li> <label class="facet-label" for="facet_input_86716_2"> <span class="custom-checkbox"> <input id="facet_input_86716_2" data-search-url="" type="checkbox"> <span class="ps-shown-by-js"></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> Hộp hoa <span class="magnitude">(14)</span> </a> </label> </li>
-                </ul>
-              </section>
-              <section class="facet">
-                <h1 class="h6 facet-title hidden-md-down">Giá</h1>
-                <div class="title hidden-lg-up" data-target="#facet_93109" data-toggle="collapse">
-                  <h1 class="h6 facet-title">Giá</h1> <span class="pull-xs-right"> <span class="navbar-toggler collapse-icons"> <i class="fa-icon add"></i> <i class="fa-icon remove"></i> </span> </span>
-                </div>
-                <ul id="facet_93109" class="">
-                  <li> <label class="facet-label" for="facet_input_93109_0"> <span class="custom-radio"> <input id="facet_input_93109_0" data-search-url="" type="radio" name="filter Price"> <span class="ps-shown-by-js"></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> $74.00 - $76.00 <span class="magnitude">(1)</span> </a> </label> </li>
-                  <li> <label class="facet-label" for="facet_input_93109_1"> <span class="custom-radio"> <input id="facet_input_93109_1" data-search-url="" type="radio" name="filter Price"> <span class="ps-shown-by-js"></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> $77.00 - $79.00 <span class="magnitude">(1)</span> </a> </label> </li>
-                  <li> <label class="facet-label" for="facet_input_93109_2"> <span class="custom-radio"> <input id="facet_input_93109_2" data-search-url="" type="radio" name="filter Price"> <span class="ps-shown-by-js"></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> $82.00 - $88.00 <span class="magnitude">(4)</span> </a> </label> </li>
-                  <li> <label class="facet-label" for="facet_input_93109_3"> <span class="custom-radio"> <input id="facet_input_93109_3" data-search-url="" type="radio" name="filter Price"> <span class="ps-shown-by-js"></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> $84.00 - $100.00 <span class="magnitude">(6)</span> </a> </label> </li>
-                  <li> <label class="facet-label" for="facet_input_93109_4"> <span class="custom-radio"> <input id="facet_input_93109_4" data-search-url="" type="radio" name="filter Price"> <span class="ps-shown-by-js"></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> $104.00 - $106.00 <span class="magnitude">(1)</span> </a> </label> </li>
-                </ul>
-              </section>
-            </div>
-          </div>
-        </div>
         <div id="ctleftbanner">
           <ul>
             <li class="slide ctleftbanner-container"> <a href="#" title="LeftBanner 1"> <img src="https://capricathemes.com/prestashop/PRS07/PRS070170/modules/ct_leftbanner/views/img/left-banner-1.jpg" alt="LeftBanner 1" title="LeftBanner 1" /> </a> </li>
@@ -124,10 +91,11 @@
                   <div class="product-info">
                     <h1 class="h3 product-title" itemprop="name"><a href="{{ route('product.view',['slug'=> $n->slug]) }}">{{ $n->name }}</a></h1>
                     <div class="product-price-and-shipping"> @if($n->sale_price > 0)
-                              <span itemprop="price" class="price">{{ number_format($n->sale_price, 0, ',', '.') }}đ</span><br/> <s class="price text-muted">{{ number_format($n->price, 0, ',', '.') }}đ</s>
-                              @else 
-                              <span itemprop="price" class="price">{{ number_format($n->price, 0, ',', '.') }}đ</span>
-                              @endif </div>
+                      <span itemprop="price" class="price">{{ number_format($n->sale_price, 0, ',', '.') }}đ</span><br /> <s class="price text-muted">{{ number_format($n->price, 0, ',', '.') }}đ</s>
+                      @else
+                      <span itemprop="price" class="price">{{ number_format($n->price, 0, ',', '.') }}đ</span>
+                      @endif
+                    </div>
                   </div>
                 </div>
               </li>
@@ -140,9 +108,8 @@
       <div id="content-wrapper" class="left-column col-xs-12 col-sm-8 col-md-9" style="width:75.6%">
         <section id="main">
           <div class="block-category card card-block ">
-            <h1 class="h1">Sản phẩm</h1>
+            <h1 class="h1">Kết quả tìm kiếm cho: {{ request()->key }}</h1>
             <div id="category-description">
-              <p>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable that it has a more-or-less normal distribution of letters.</p>
             </div>
           </div>
 
@@ -150,32 +117,9 @@
             <div id="">
               <div id="js-product-list-top" class="products-selection">
                 <div class="col-md-6 hidden-md-down total-products">
+                  <p class="text-black">{{ $product->total() }} kết quả</p>
                 </div>
                 <div class="col-md-6">
-                  <div class="row sort-by-row"> <span class="col-sm-3 col-md-3 hidden-sm-down sort-by">Sắp xếp:</span>
-                    <div class="col-sm-9 col-xs-8 col-md-9 products-sort-order dropdown"> <a class="select-title" href="#" role="button" id="dropdownSort" rel="nofollow" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        @if ($sort === 'name')
-                        Tên, A->Z
-                        @elseif ($sort === 'name:desc')
-                        Tên, Z->A
-                        @elseif ($sort === 'price')
-                        Giá tăng dần
-                        @elseif ($sort === 'price:desc')
-                        Giá giảm dần
-                        @else
-                        Mặc định
-                        @endif</a>
-                      <div class="dropdown-menu" aria-labelledby="dropdownSort">
-                        <a rel="nofollow" href="{{ route('product.index', ['sort' => 'name']) }}" class="select-list js-search-link dropdown-item @if($sort == 'name') active @endif""> Tên, A->Z </a>
-                        <a rel=" nofollow" href="{{ route('product.index', ['sort' => 'name:desc']) }}" class="select-list js-search-link dropdown-item @if($sort == 'name:desc') active @endif""> Tên, Z->A </a>
-                        <a rel=" nofollow" href="{{ route('product.index', ['sort' => 'price']) }}" class="select-list js-search-link dropdown-item @if($sort == 'price') active @endif""> Giá tăng dần </a>
-                        <a rel=" nofollow" href="{{ route('product.index', ['sort' => 'price:desc']) }}" class="select-list js-search-link dropdown-item @if($sort == 'price:desc') active @endif""> Giá giảm dần </a>
-                      </div>
-                    </div>
-                    <div class=" col-sm-3 col-xs-4 hidden-lg-up filter-button"> <button id="search_filter_toggler" class="btn btn-secondary"> Lọc </button>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
               <div id="" class="hidden-sm-down">
@@ -201,17 +145,17 @@
                               </div>
                             </div>
                             <ul class="product-flags">
-                            @if($p->sale_price > 0)
-                    <li class="product-flag new">Sale</li>
-                    @endif
-                          </ul>
+                              @if($p->sale_price > 0)
+                              <li class="product-flag new">Sale</li>
+                              @endif
+                            </ul>
                           </div>
                           <div class="product-description">
                             <h3 class="h3 product-title" itemprop="name"><a href="{{ route('product.view',['slug'=> $p->slug]) }}">{{ $p->name }}</a></h3>
-                            <div class="product-price-and-shipping"> 
+                            <div class="product-price-and-shipping">
                               @if($p->sale_price > 0)
                               <span itemprop="price" class="price">{{ number_format($p->sale_price, 0, ',', '.') }}đ</span> <s class="price text-muted">{{ number_format($p->price, 0, ',', '.') }}đ</s>
-                              @else 
+                              @else
                               <span itemprop="price" class="price">{{ number_format($p->price, 0, ',', '.') }}đ</span>
                               @endif
                             </div>
@@ -222,7 +166,7 @@
                     </ul>
                   </div>
                   <nav class="pagination">
-                    {{ $product->appends(['sort' => $sort])->links() }}
+                    {{ $product->links() }}
                   </nav>
                 </div>
               </div>
@@ -257,10 +201,11 @@
                           <link itemprop="availability" href="https://schema.org/InStock">
                           <meta itemprop="priceCurrency" content="EUR">
                           <div class="current-price"> @if($p->sale_price > 0)
-                              <span itemprop="price" class="price">{{ number_format($p->sale_price, 0, ',', '.') }}đ</span> <s class="price text-muted">{{ number_format($p->price, 0, ',', '.') }}đ</s>
-                              @else 
-                              <span itemprop="price" class="price">{{ number_format($p->price, 0, ',', '.') }}đ</span>
-                              @endif </div>
+                            <span itemprop="price" class="price">{{ number_format($p->sale_price, 0, ',', '.') }}đ</span> <s class="price text-muted">{{ number_format($p->price, 0, ',', '.') }}đ</s>
+                            @else
+                            <span itemprop="price" class="price">{{ number_format($p->price, 0, ',', '.') }}đ</span>
+                            @endif
+                          </div>
                         </div>
                         <div class="tax-shipping-delivery-label"> bao gồm VAT </div>
                       </div>

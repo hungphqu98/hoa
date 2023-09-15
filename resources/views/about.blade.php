@@ -17,16 +17,6 @@
       </ol>
     </div>
   </nav>
-  @if(Session::has('success'))
-    <div class="alert alert-success">
-      {{Session::get('success')}}
-    </div>
-  @endif
-  @if(Session::has('error'))
-    <div class="alert alert-success">
-      {{Session::get('error')}}
-    </div>
-  @endif
   <div class="about-main" style="background-image: url('{{ asset('assets/back.png')}}')">
   <div class="container " >
       <h3>Giới thiệu</h3>

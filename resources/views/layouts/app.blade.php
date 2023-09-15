@@ -126,9 +126,10 @@
         <div id="search_widget" class="col-lg-4 col-md-5 col-sm-12 search-widget" data-search-controller-url="">
           <span class="search_button"></span>
           <div class="search_toggle">
-            <form method="get" action="">
+            <form action="{{ route('search') }}" role="search" method="GET">
+              @csrf
               <input type="hidden" name="controller" value="search">
-              <input type="text" name="s" value="" placeholder="Search">
+              <input type="text" name="key" value="" placeholder="Search">
               <button type="submit">
               </button>
             </form>
@@ -485,7 +486,18 @@
         </div>
       </div>
     </div>
-
+    @if(Session::has('success'))
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      {{Session::get('success')}}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  @endif
+  @if(Session::has('error'))
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      {{Session::get('error')}}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  @endif
 
   </header>
   <!--================Header Menu Area =================-->

@@ -40,6 +40,7 @@ Route::get('/error', [HomeController::class, 'error'])->name('error');
 Route::get('/product', [HomeController::class, 'product'])->name('product.index');
 Route::get('/product', [HomeController::class, 'product'])->name('product.index');
 Route::get('/product/{slug}', [HomeController::class, 'view'])->name('product.view');
+Route::get('/search', [HomeController::class, 'search'])->name('search');
 Route::get('/blog', [HomeController::class, 'blog'])->name('blog.index');
 Route::get('/blog/{slug}', [HomeController::class, 'blogView'])->name('blog.view');
 
