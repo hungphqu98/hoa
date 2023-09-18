@@ -25,11 +25,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $product = Product::where(['status' => 'AVAILABLE'])->limit(4)->get();
+        $bestProduct = Product::where(['status' => 'AVAILABLE'])->limit(10)->get();
+        $newProduct = Product::where(['status' => 'AVAILABLE'])->orderBy('id', 'DESC')->limit(10)->get();
+        $featuredProduct = Product::where(['status' => 'AVAILABLE'])->orderBy('id', 'DESC')->limit(10)->get();
+        $combined = $bestProduct->concat($newProduct)->concat($featuredProduct);
         $blog = Blog::where(['status' => 'SHOW'])->limit(4)->get();
 
 
-        return view('home', compact('product', 'blog'));
+        return view('home', compact('bestProduct', 'newProduct', 'featuredProduct', 'blog','combined'));
     }
 
     public function product(Request $request)
@@ -51,11 +54,11 @@ class HomeController extends Controller
                 $product = Product::where(['status' => 'AVAILABLE'])->orderBy('name', 'ASC')->paginate(9);
             } elseif ($sort === 'name:desc') {
                 $product = Product::where(['status' => 'AVAILABLE'])->orderBy('name', 'DESC')->paginate(9);
-            } elseif ($sort === 'price'){
+            } elseif ($sort === 'price') {
                 $product = Product::where(['status' => 'AVAILABLE'])->orderBy('price', 'ASC')->paginate(9);
             } elseif ($sort === 'price:desc') {
                 $product = Product::where(['status' => 'AVAILABLE'])->orderBy('price', 'DESC')->paginate(9);
-            } 
+            }
         }
 
         return view('product.index', compact('product', 'sort', 'newProduct'));
@@ -66,16 +69,17 @@ class HomeController extends Controller
         $product = Product::where(['slug' => $slug])->get();
         $bestSeller = Product::where(['status' => 'AVAILABLE'])->orderBy('id', 'DESC')->limit(4)->get();
         $products = Product::where(['status' => 'AVAILABLE'])->get();
-        
+
         return view('product.view', compact('product', 'bestSeller', 'products'));
     }
 
-    public function search() {
-		$key = request()->key;
+    public function search()
+    {
+        $key = request()->key;
         $newProduct = Product::where(['status' => 'AVAILABLE'])->orderBy('id', 'DESC')->limit(3)->get();
-		$product = Product::where('name','LIKE','%'.$key.'%')->where(['status' => 'AVAILABLE'])->paginate(9);
-		return view('search',compact('newProduct','product'));
-	}
+        $product = Product::where('name', 'LIKE', '%' . $key . '%')->where(['status' => 'AVAILABLE'])->paginate(9);
+        return view('search', compact('newProduct', 'product'));
+    }
 
     public function about()
     {

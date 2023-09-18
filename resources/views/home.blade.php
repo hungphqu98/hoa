@@ -35,8 +35,8 @@
                                         <div id="featureProduct" class="ct_productinner tab-pane active">
                                             <section class="featured-products clearfix">
                                                 <div class="products"> <!-- Define Number of product for SLIDER -->
-                                                    <ul id="feature-grid" class="featured_grid product_list grid row gridcount">
-                                                        @foreach($product as $p)
+                                                    <ul id="feature-grid" class="featured_grid product_list grid row gridcount slick-featured">
+                                                        @foreach($bestProduct as $p)
                                                         <li class="product_item col-xs-6 col-sm-6 col-md-4 col-lg-3">
                                                             <div class="product-miniature js-product-miniature" itemscope itemtype="http://schema.org/Product">
                                                                 <div class="thumbnail-container"> <a href="{{ route('product.view',['slug'=> $p->slug]) }}" class="thumbnail product-thumbnail">
@@ -87,8 +87,8 @@
                                         <div id="featureProduct" class="ct_productinner tab-pane active">
                                             <section class="featured-products clearfix">
                                                 <div class="products"> <!-- Define Number of product for SLIDER -->
-                                                    <ul id="feature-grid" class="featured_grid product_list grid row gridcount">
-                                                        @foreach ($product as $p)
+                                                    <ul id="feature-grid" class="featured_grid product_list grid row gridcount slick-featured">
+                                                        @foreach ($newProduct as $p)
                                                         <li class="product_item col-xs-6 col-sm-6 col-md-4 col-lg-3">
                                                             <div class="product-miniature js-product-miniature" itemscope itemtype="http://schema.org/Product">
                                                                 <div class="thumbnail-container"> <a href="{{ route('product.view',['slug'=> $p->slug]) }}" class="thumbnail product-thumbnail">
@@ -139,8 +139,8 @@
                                         <div id="featureProduct" class="ct_productinner tab-pane active">
                                             <section class="featured-products clearfix">
                                                 <div class="products"> <!-- Define Number of product for SLIDER -->
-                                                    <ul id="feature-grid" class="featured_grid product_list grid row gridcount">
-                                                        @foreach ($product as $p)
+                                                    <ul id="feature-grid" class="featured_grid product_list grid row gridcount slick-featured">
+                                                        @foreach ($featuredProduct as $p)
                                                         <li class="product_item col-xs-6 col-sm-6 col-md-4 col-lg-3">
                                                             <div class="product-miniature js-product-miniature" itemscope itemtype="http://schema.org/Product">
                                                                 <div class="thumbnail-container"> <a href="{{ route('product.view',['slug'=> $p->slug]) }}" class="thumbnail product-thumbnail">
@@ -265,7 +265,7 @@
                             </div>
                         </div>
                     </section>
-                    @foreach($product as $p)
+                    @foreach($combined as $p)
                     <div class="modal fade" id="product-modal{{$p->id}}">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">

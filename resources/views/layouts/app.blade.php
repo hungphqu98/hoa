@@ -31,7 +31,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap" rel="stylesheet">
 
   <!-- main css -->
-  <!-- <link rel="stylesheet" href={{ asset("css/style.css") }} /> -->
   <link rel="stylesheet" href={{ asset("css/style-cleaned.css") }} />
   <link rel="stylesheet" href={{ asset("css/responsive.css") }} />
   <link rel="stylesheet" href={{ asset("css/main.css") }} />
