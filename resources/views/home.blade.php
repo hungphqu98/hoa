@@ -71,7 +71,7 @@
                                                         </li>
                                                         @endforeach
                                                     </ul>
-                                                    <div class="view_more"> <a class="all-product-link" href="#"> Xem thêm </a> </div>
+                                                    <div class="view_more"> <a class="all-product-link" href="{{ route('product.index') }}"> Xem thêm </a> </div>
                                                 </div>
                                             </section>
                                         </div>
@@ -123,7 +123,7 @@
                                                         </li>
                                                         @endforeach
                                                     </ul>
-                                                    <div class="view_more"> <a class="all-product-link" href="#"> Xem thêm </a> </div>
+                                                    <div class="view_more"> <a class="all-product-link" href="{{ route('product.index') }}"> Xem thêm </a> </div>
                                                 </div>
                                             </section>
                                         </div>
@@ -175,7 +175,7 @@
                                                         </li>
                                                         @endforeach
                                                     </ul>
-                                                    <div class="view_more"> <a class="all-product-link" href="#"> Xem thêm </a> </div>
+                                                    <div class="view_more"> <a class="all-product-link" href="{{ route('product.index') }}"> Xem thêm </a> </div>
                                                 </div>
                                             </section>
                                         </div>
@@ -196,7 +196,7 @@
                                                 <div class="post-entry-alt">
                                                     <a href="{{ route('blog.view',['slug'=> $b->slug]) }}" class="img-link"><img src="{{ asset('assets/blog/' . $b->thumbnail) }}" alt="Image" class="img-fluid"></a>
                                                     <div class="excerpt">
-                                                        <h2><a href="#">{{ $b->title }}</a></h2>
+                                                        <h2><a href="{{ route('blog.view',['slug'=> $b->slug]) }}">{{ $b->title }}</a></h2>
                                                     </div>
                                                 </div>
                                             </div>
