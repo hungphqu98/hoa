@@ -57,7 +57,7 @@
           <div class="blockcart cart-preview inactive">
             <div class="header blockcart-header dropdown js-dropdown">
 
-              <a class="shopping-cart" rel="nofollow" href="{{ route('cart') }}">
+              <a class="shopping-cart" rel="nofollow" href="{{ route('cart') }}" style="background: url({{ asset('assets/nav-icon.png') }}) no-repeat scroll 0 -389px transparent;">
                 <span class="mobile_count">{{$cart->total_quantity}}</span>
                 <span class="cart-products-count hidden-sm-down">{{$cart->total_quantity}}</span>
                 <!-- <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
@@ -71,7 +71,7 @@
           </div>
         </div>
         <div class="user-info dropdown js-dropdown">
-          <span class="user-info-title expand-more _gray-darker" data-bs-toggle="dropdown"><span class="account_text">My
+          <span class="user-info-title expand-more _gray-darker" data-bs-toggle="dropdown" style="background: url({{ asset('assets/nav-icon.png') }}) no-repeat scroll center -46px transparent;"><span class="account_text">My
               Account</span></span>
           <ul class="dropdown-menu" id="account-dropdown">
             @auth
@@ -123,12 +123,12 @@
           </ul>
         </div><!-- Block search module TOP -->
         <div id="search_widget" class="col-lg-4 col-md-5 col-sm-12 search-widget" data-search-controller-url="">
-          <span class="search_button"></span>
+          <span class="search_button" style="background: url({{ asset('assets/nav-icon.png') }}) no-repeat scroll 0 -143px transparent;"></span>
           <div class="search_toggle">
             <form action="{{ route('search') }}" role="search" method="GET">
               @csrf
               <input type="hidden" name="controller" value="search">
-              <input type="text" name="key" value="" placeholder="Search">
+              <input type="text" name="key" value="" placeholder="Tìm kiếm">
               <button type="submit">
               </button>
             </form>
@@ -661,8 +661,12 @@
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-
+  <script>
+    var quickviewUrl = @json(route('quickview'));
+    $('.quick-view').data('quickview-url', quickviewUrl);
+  </script>
   <script src={{ asset("js/script.js") }}></script>
+  
   @stack('footer')
 </body>
 

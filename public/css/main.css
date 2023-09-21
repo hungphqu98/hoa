@@ -598,10 +598,6 @@ ul.product-flags li.on-sale {
   color: #ff0000;
 }
 
-ul.product-flags li.new {
-  color: #000;
-}
-
 ul.product-flags li.on-sale.discount-percentage {
   z-index: 2;
   color: #000000;
@@ -614,7 +610,13 @@ ul.product-flags li.on-sale.discount-percentage {
 ul.product-flags li.new {
   right: 27px;
   top: 10px;
-  color: red;
+  background-color: #FF0000; /* Background color - Red */
+    color: white; /* Text color - White */
+    padding: 2px 6px; /* Adjust padding for a more compact appearance */
+    border-radius: 2px; /* Slight border radius for a subtle rounded look */
+    font-weight: bold; /* Make the text bold for emphasis */
+    font-size: 12px; /* Adjust font size as needed */
+    text-transform: uppercase; 
 }
 
 .block-contact li {
@@ -1360,4 +1362,52 @@ hr {
 
 #ctleftbanner img, #ctrightbanner img {
   max-width: 100%;
+}
+
+.product-tabcontent .tabs .nav-tabs {
+  margin-bottom: 20px;
+}
+.tabs .nav-tabs {
+  margin-bottom: 0px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 0;
+}
+
+.tabs .nav-tabs .nav-item {
+  float: none;
+  display: inline-block;
+  margin: 0px;
+}
+
+.tabs .nav-tabs .nav-link {
+  color: #000000;
+  display: block;
+  text-transform: capitalize;
+  float: left;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  padding: 10px 35px;
+  text-align: center;
+  position: relative;
+  letter-spacing: .6px;
+  border: 0;
+  border-radius: 0;
+
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.tabs .nav-tabs .nav-link:hover, .tabs .nav-tabs .nav-link.active {
+  color: #ffffff;
+  background: #96394C;
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }

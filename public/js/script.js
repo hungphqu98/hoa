@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    
     $('.slick-banner').slick({
         speed: 300,
         slidesToShow: 1,
@@ -102,6 +103,32 @@ $('#account-dropdown').click(function (event) {
 
 $('.search_toggle').click(function (event) {
     event.stopPropagation();
+});
+
+$('.quick-view').click(function (event) {
+    var product_id = $(this).data('id_product');
+    var _token = $('input[name="_token"]').val();
+    var quickviewUrl = $(this).data('quickview-url');
+
+    $.ajax({
+        url: quickviewUrl,
+        method:"POST",
+        dataType:"json",
+        data: {product_id:product_id, _token:_token},
+        success: function (data) {
+            $('#product_quickview_name').html(data.product_quickview_name);
+            $('#product_quickview_price').html(data.product_quickview_price);
+            $('#product_quickview_image').html(data.product_quickview_image);
+            $('#product_quickview_slug').html(data.product_quickview_slug);
+            $('#product_quickview_description').html(data.product_quickview_description);
+            $('#product_quickview_details').html(data.product_quickview_details);
+            $('#product_quickview_cart').html(data.product_quickview_cart);
+            console.log(data.product_quickview_name);
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.error("AJAX Error:", textStatus, errorThrown);
+        }
+    })
 });
 
 

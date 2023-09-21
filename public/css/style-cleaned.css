@@ -245,8 +245,8 @@ ul ul {
 }
 
 ul {
-  list-style: none;
-  padding-left: 0;
+	list-style: none;
+	padding-left: 0;
 }
 
 blockquote {
@@ -4228,11 +4228,14 @@ small.value {
 }
 
 .products .product_list li .quick-view {
-	background: #fff url(https://capricathemes.com/prestashop/PRS07/PRS070170/themes/Daffodils/assets/img/capricathemes/action.png) no-repeat scroll center -35px;
 	height: 35px;
 	width: 35px;
 	padding: 4px;
 	position: relative;
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-position: center -35px;
+	background-attachment: scroll;
 	border: 0;
 	transition: none;
 	display: block;
@@ -4259,23 +4262,9 @@ small.value {
 
 .products .product_list li .quick-view:hover {
 	background-position: center 12px;
-	background-color: #deb5b2
-}
-
-.products .product_list li .product-flags .new {
-	opacity: 0;
-	-webkit-transition: all .5s ease 0s;
-	-moz-transition: all .5s ease 0s;
-	-o-transition: all .5s ease 0s;
-	transition: all .5s ease 0s
-}
-
-.products .product_list li .on-sale {
-	opacity: 1;
-	-webkit-transition: all .1s ease 0s;
-	-moz-transition: all .1s ease 0s;
-	-o-transition: all .1s ease 0s;
-	transition: all .1s ease 0s
+	background-color: #deb5b2;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
 }
 
 .products .product_list li .product-title a:hover {
@@ -4294,22 +4283,7 @@ small.value {
 	transform: scale(1, 1)
 }
 
-.products .product_list li:hover .product-flags .new {
-	opacity: 1;
-	-webkit-transition: all .5s ease 0s;
-	-moz-transition: all .5s ease 0s;
-	-o-transition: all .5s ease 0s;
-	transition: all .5s ease 0s
-}
 
-.products .product_list li:hover .on-sale {
-	opacity: 0;
-	-webkit-transition: all .1s ease 0s;
-	-moz-transition: all .1s ease 0s;
-	-o-transition: all .1s ease 0s;
-	transition: all .1s ease 0s;
-	display: none
-}
 
 .products .product_list.list li .product-actions {
 	position: static;
@@ -5332,7 +5306,6 @@ small.value {
 	font-size: 0;
 	padding: 0;
 	display: block;
-	background: url(https://capricathemes.com/prestashop/PRS07/PRS070170/themes/Daffodils/assets/img/capricathemes/nav-icon.png) no-repeat scroll center -46px transparent;
 	transition: none;
 	width: 25px;
 	height: 25px
@@ -5369,7 +5342,6 @@ small.value {
 	display: block;
 	text-align: left;
 	line-height: 24px;
-	background: url(https://capricathemes.com/prestashop/PRS07/PRS070170/themes/Daffodils/assets/img/capricathemes/nav-icon.png) no-repeat scroll 0 -389px transparent;
 	transition: none
 }
 
@@ -5488,7 +5460,6 @@ small.value {
 	text-align: center;
 	cursor: pointer;
 	z-index: 9;
-	background: url(https://capricathemes.com/prestashop/PRS07/PRS070170/themes/Daffodils/assets/img/capricathemes/nav-icon.png) no-repeat scroll 0 -143px transparent;
 	height: 25px;
 	width: 25px;
 	transition: none
@@ -5850,6 +5821,7 @@ small.value {
 .card-block {
 	padding: 1.25rem;
 }
+
 .card-block::after {
 	content: "";
 	display: table;
@@ -5880,9 +5852,11 @@ small.value {
 #search_filters .facet {
 	padding-top: 0.625rem;
 }
+
 #search_filters .facet .collapse {
 	display: block;
 }
+
 #search_filters .facet .facet-title {
 	color: #000000;
 	font-weight: 600;
@@ -5891,11 +5865,13 @@ small.value {
 	text-transform: capitalize;
 	line-height: 20px;
 }
+
 #search_filters .facet .facet-label {
 	margin-bottom: 0;
 	font-weight: normal;
 	text-align: left;
 }
+
 #search_filters .facet .facet-label a {
 	margin-top: 5px;
 	display: inline-block;

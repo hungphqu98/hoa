@@ -30,8 +30,7 @@
                   </ul>
                   <div class="images-container">
                     <div class="product-cover"> <a href="{{ asset('assets/product/' . $p->image) }}"> <img class="js-qv-product-cover" src="{{ asset('assets/product/' . $p->image) }}" alt="" title="" style="width:100%;" itemprop="image"> </a>
-                      <div class="layer hidden-sm-down" data-toggle="modal" data-target="#product-modal"> <i class="fa fa-arrows-alt zoom-in"></i> </div>
-                    </div> <!-- Define Number of product for SLIDER -->
+                    </div>
                   </div>
                 </div>
               </section>
@@ -113,7 +112,7 @@
             <h2 class="h1 products-section-title text-uppercase"> <span>Sản phẩm cùng loại</span> </h2>
             <div class="product-accessories-wrapper">
               <div class="products">
-                <ul id="accessories-carousel" class="slick-product-view-list product_list">
+                <ul id="accessories-carousel" class="slick-featured product_list">
                 @foreach($bestSeller as $seller)
                   <li class="item">
                     <div class="product-miniature js-product-miniature" itemscope itemtype="http://schema.org/Product">
@@ -122,12 +121,12 @@
                           <img src="{{ asset('assets/product/' . $seller->image) }}" alt="Accusantium doloremque" data-full-size-image-url="{{ asset('assets/product/' . $seller->image) }}">
                         </a>
                         <div class="outer-functional">
-                            <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal{{$seller->id}}"> <i class="material-icons search">&#xE417;</i> Quick View </button>
+                        <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#quickview" data-id_product="{{ $seller->id }}" style="background-image: url({{ asset('assets/action.png') }})" title="Quick View"><i class="material-icons search">&#xE417;</i> Quick View </button>
                               <div class="product-actions">
                                 <form action="{{ route('cart.add',['id'=>$seller->id]) }}" class="add-to-cart-or-refresh">
                                   @csrf
                                 <input value="1" name="quantity" type="hidden">
-                                <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Thêm vào giỏ hàng </button> </form>
+                                <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit" title="Thêm vào giỏ hàng"> Thêm vào giỏ hàng </button> </form>
                               </div>
                             </div>
                           </div>
@@ -156,7 +155,7 @@
             <h2 class="h1 products-section-title text-uppercase"> Sản phẩm bán chạy </h2>
             <div class="productscategory-wrapper">
               <div class="products">
-                <ul id="productscategory-carousel" class="slick-product-view-list product_list">
+                <ul id="productscategory-carousel" class="slick-featured product_list">
                   @foreach($bestSeller as $seller)
                   <li class="item">
                     <div class="product-miniature js-product-miniature" itemscope itemtype="http://schema.org/Product">
@@ -165,7 +164,7 @@
                           <img src="{{ asset('assets/product/' . $seller->image) }}" alt="Accusantium doloremque" data-full-size-image-url="{{ asset('assets/product/' . $seller->image) }}">
                         </a>
                         <div class="outer-functional">
-                            <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal{{$seller->id}}"> <i class="material-icons search">&#xE417;</i> Quick View </button>
+                        <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#quickview" data-id_product="{{ $seller->id }}" style="background-image: url({{ asset('assets/action.png') }})"><i class="material-icons search">&#xE417;</i> Quick View </button>
                               <div class="product-actions">
                                 <form action="{{ route('cart.add',['id'=>$seller->id]) }}" class="add-to-cart-or-refresh">
                                   @csrf
@@ -194,8 +193,7 @@
                 <div class="customNavigation"> <a class="btn prev productscategory_prev">&nbsp;</a> <a class="btn next productscategory_next">&nbsp;</a> </div>
               </div>
             </div>
-            @foreach($products as $p)
-          <div class="modal fade" id="product-modal{{$p->id}}">
+            <div class="modal fade" id="quickview">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -206,50 +204,33 @@
                     <div class="col-md-6 col-lg-6 col-sm-6 hidden-xs-down">
                       <div class="product-slider-container">
                         <div class="row">
-                          <div class="product-cover slider-main-qview">
-                            <a href="{{ route('product.view',['slug'=> $p->slug]) }}">
-                              <img class="js-qv-product-cover-qview" src="{{ asset('assets/product/' . $p->image) }}" alt="" title="" itemprop="image">
-                            </a>
+                          <div class="product-cover slider-main-qview" id="product_quickview_image">
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="col-md-6 col-sm-6">
-                      <h1 class="h1">{{ $p->name }}</h1>
+                      <h1 class="h1" id="product_quickview_name"></h1>
                       <div class="product-prices">
                         <div class="product-price h5 " itemprop="offers" itemscope="" itemtype="https://schema.org/Offer">
                           <link itemprop="availability" href="https://schema.org/InStock">
                           <meta itemprop="priceCurrency" content="EUR">
-                          <div class="current-price">@if($p->sale_price > 0)
-                              <span itemprop="price" class="price">{{ number_format($p->sale_price, 0, ',', '.') }}đ</span> <s class="price text-muted">{{ number_format($p->price, 0, ',', '.') }}đ</s>
-                              @else 
-                              <span itemprop="price" class="price">{{ number_format($p->price, 0, ',', '.') }}đ</span>
-                              @endif </div>
+                          <div class="current-price" id="product_quickview_price"> 
+                            </div>
                         </div>
                         <div class="tax-shipping-delivery-label"> bao gồm VAT </div>
                       </div>
                       <div id="product-description-short" itemprop="description">
-                        <p>{{ $p->description }}</p>
+                        <p id="product_quickview_description"></p>
                       </div>
-                      <div class="product-actions">
-                        <form action="{{ route('cart.add',['id'=>$p->id]) }}" class="add-to-cart-or-refresh"> <input value="1" type="hidden">
-                          <div class="product-add-to-cart">
-                            <div class="product-quantity">
-                              <div class="add"> <a href=""><button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Thêm vào giỏ hàng </button></a> </div>
-                            </div>
-                            <div class="clearfix"></div>
-                            <p class="product-minimal-quantity"> </p>
-                          </div>
-                        </form>
+                      <div class="product-actions" id="product_quickview_cart">
                       </div>
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
-          @endforeach
           </section>
       </div>
     </div>

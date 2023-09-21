@@ -38,7 +38,7 @@ Route::get('/policy/warranty', [HomeController::class, 'warranty'])->name('polic
 Route::get('/policy/corporation', [HomeController::class, 'corpo'])->name('policy.corpo');
 Route::get('/error', [HomeController::class, 'error'])->name('error');
 Route::get('/product', [HomeController::class, 'product'])->name('product.index');
-Route::get('/product', [HomeController::class, 'product'])->name('product.index');
+Route::post('/quickview', [HomeController::class, 'quickview'])->name('quickview');
 Route::get('/product/{slug}', [HomeController::class, 'view'])->name('product.view');
 Route::get('/search', [HomeController::class, 'search'])->name('search');
 Route::get('/blog', [HomeController::class, 'blog'])->name('blog.index');

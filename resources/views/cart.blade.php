@@ -100,13 +100,13 @@
           <h1 class="h1 products-section-title text-uppercase "> Sản phẩm bán chạy </h1>
           <div class="featured-products-wrapper">
             <div class="products">
-              <ul class="featured_grid product_list grid row gridcount">
+              <ul class="featured_grid product_list grid row gridcount slick-featured">
                 @foreach ($bestSeller as $seller)
                 <li class="product_item col-xs-12 col-sm-6 col-md-4 col-lg-3">
                   <div class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope itemtype="http://schema.org/Product">
                     <div class="thumbnail-container"> <a href="{{ route('product.view',['slug'=> $seller->slug ]) }}" class="thumbnail product-thumbnail"> <img src="{{ asset('assets/product/' . $seller->image) }}" alt="Consectetur Hampden" data-full-size-image-url="{{ asset('assets/product/' . $seller->image) }}"></a>
                       <div class="outer-functional">
-                        <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#product-modal{{$seller->id}}"> <i class="material-icons search">&#xE417;</i> Quick view</button>
+                      <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#quickview" data-id_product="{{ $seller->id }}" style="background-image: url({{ asset('assets/action.png') }})"><i class="material-icons search">&#xE417;</i> Quick View </button>
                           <div class="product-actions">
                             <form action="" method="post" class="add-to-cart-or-refresh"> <input type="hidden" name="token" value=""> <input type="hidden" name="id_product" value="1" class="product_page_product_id"> <input type="hidden" name="id_customization" value="0" class="product_customization_id"> <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Add to cart </button> </form>
                           </div>
@@ -133,8 +133,7 @@
               <div class="view_more"> <a class="all-product-link" href=""> Tất cả sản phẩm </a> </div>
             </div>
           </div>
-          @foreach($bestSeller as $p)
-          <div class="modal fade" id="product-modal{{$p->id}}">
+          <div class="modal fade" id="quickview">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -145,46 +144,33 @@
                     <div class="col-md-6 col-lg-6 col-sm-6 hidden-xs-down">
                       <div class="product-slider-container">
                         <div class="row">
-                          <div class="product-cover slider-main-qview">
-                            <a href="{{ route('product.view',['slug'=> $p->slug]) }}">
-                              <img class="js-qv-product-cover-qview" src="{{ asset('assets/product/' . $p->image) }}" alt="" title="" itemprop="image">
-                            </a>
+                          <div class="product-cover slider-main-qview" id="product_quickview_image">
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="col-md-6 col-sm-6">
-                      <h1 class="h1">{{ $p->name }}</h1>
+                      <h1 class="h1" id="product_quickview_name"></h1>
                       <div class="product-prices">
                         <div class="product-price h5 " itemprop="offers" itemscope="" itemtype="https://schema.org/Offer">
                           <link itemprop="availability" href="https://schema.org/InStock">
                           <meta itemprop="priceCurrency" content="EUR">
-                          <div class="current-price"> <span itemprop="price">{{ number_format($p->price, 0, ',', '.') }} đ</span> </div>
+                          <div class="current-price" id="product_quickview_price"> 
+                            </div>
                         </div>
                         <div class="tax-shipping-delivery-label"> bao gồm VAT </div>
                       </div>
                       <div id="product-description-short" itemprop="description">
-                        <p>{{ $p->description }}</p>
+                        <p id="product_quickview_description"></p>
                       </div>
-                      <div class="product-actions">
-                        <form action="{{ route('cart.add',['id'=>$p->id]) }}" class="add-to-cart-or-refresh"> <input value="1" type="hidden">
-                          <div class="product-add-to-cart">
-                            <div class="product-quantity">
-                              <div class="add"> <a href=""><button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Thêm vào giỏ hàng </button></a> </div>
-                            </div>
-                            <div class="clearfix"></div>
-                            <p class="product-minimal-quantity"> </p>
-                          </div>
-                        </form>
+                      <div class="product-actions" id="product_quickview_cart">
                       </div>
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
-          @endforeach
         </section>
       </div>
     </div>

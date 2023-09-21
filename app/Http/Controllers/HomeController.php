@@ -32,7 +32,7 @@ class HomeController extends Controller
         $blog = Blog::where(['status' => 'SHOW'])->limit(4)->get();
 
 
-        return view('home', compact('bestProduct', 'newProduct', 'featuredProduct', 'blog','combined'));
+        return view('home', compact('bestProduct', 'newProduct', 'featuredProduct', 'blog', 'combined'));
     }
 
     public function product(Request $request)
@@ -80,6 +80,36 @@ class HomeController extends Controller
         $product = Product::where('name', 'LIKE', '%' . $key . '%')->where(['status' => 'AVAILABLE'])->paginate(9);
         return view('search', compact('newProduct', 'product'));
     }
+
+    public function quickview(Request $request)
+    {
+        $product_id = $request->product_id;
+        $product = Product::find($product_id);
+        $output['product_quickview_name'] = $product->name;
+        if ($product->sale_price > 0) {
+            $output['product_quickview_price'] = '<span itemprop="price" class="price">' . number_format($product->sale_price, 0, ',', '.') . 'đ</span> <s class="price text-muted">' . number_format($product->price, 0, ',', '.') . 'đ</s>';
+        } else {
+            $output['product_quickview_price'] = '<span itemprop="price" class="price">' . number_format($product->price, 0, ',', '.') . 'đ</span>';
+        }
+        $output['product_quickview_slug'] = $product->slug;
+        $output['product_quickview_image'] = '<a href="' . route('product.view', ['slug' => $product->slug]) . '" >
+    <img class="js-qv-product-cover-qview" src="' . asset('assets/product/' . $product->image) . '" alt="" title="" itemprop="image">
+</a>';
+        $output['product_quickview_description'] = $product->description;
+        $output['product_quickview_details'] = $product->details;
+        $output['product_quickview_cart'] = '<form action="' . route('cart.add', ['id' => $product->id]) . '" class="add-to-cart-or-refresh"> <input value="1" type="hidden">
+        <div class="product-add-to-cart">
+          <div class="product-quantity">
+            <div class="add"> <a href=""><button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Thêm vào giỏ hàng </button></a> </div>
+          </div>
+          <div class="clearfix"></div>
+          <p class="product-minimal-quantity"> </p>
+        </div>
+      </form>';
+
+        echo json_encode($output);
+    }
+
 
     public function about()
     {
