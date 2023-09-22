@@ -35,6 +35,8 @@
   <link rel="stylesheet" href={{ asset("css/responsive.css") }} />
   <link rel="stylesheet" href={{ asset("css/main.css") }} />
 
+  @stack('header')
+
 </head>
 
 <body>
@@ -490,13 +492,27 @@
       {{Session::get('success')}}
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
-  @endif
-  @if(Session::has('error'))
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-      {{Session::get('error')}}
+    @endif
+    @if ($errors->any())
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @foreach ($errors->all() as $error)
+        {{ $error }}
+        @endforeach
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
-  @endif
+    @endif
+    @if ($errors->has('g-recaptcha-response'))
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      {{ $errors->first('g-recaptcha-response') }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    @endif
+    <!-- @if ($errors->has('phone'))
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      Số điện thoại không hợp lệ!
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    @endif -->
 
   </header>
   <!--================Header Menu Area =================-->
@@ -666,7 +682,7 @@
     $('.quick-view').data('quickview-url', quickviewUrl);
   </script>
   <script src={{ asset("js/script.js") }}></script>
-  
+
   @stack('footer')
 </body>
 

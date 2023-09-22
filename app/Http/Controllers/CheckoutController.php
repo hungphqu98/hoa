@@ -31,7 +31,8 @@ class CheckoutController extends Controller
                 'name' => 'required|string|max:255',
                 'email' => 'required|string|max:255',
                 'delivery_address' => 'required',
-                'phone' => 'required|string',
+                'phone' => 'required|string|regex:/^[0-9]*$/',
+                'g-recaptcha-response' => 'required|captcha',
             ]);
             $order = Order::create([
                 'name' => $request->name,
@@ -40,21 +41,21 @@ class CheckoutController extends Controller
                 'email' => $request->email,
                 'note' => $request->note,
                 'total_amount' => $cart->total_price,
-            ]); 
-                $order_id = $order->id;
-                foreach ($cart->items as $product_id => $item) {
-                    $quantity = $item['quantity'];
-                    $item_price = $item['price'];
-                    OrderItem::create([
-                        'order_id' => $order_id,
-                        'product_id' => $product_id,
-                        'item_price' => $item_price,
-                        'quantity' => $quantity,
-                    ]);
-                }
-
-                session(['cart' => '']);
-				return redirect()->route('checkout.success')->with('success', 'Tạo đơn hàng thành công');
+            ]);
+            $order_id = $order->id;
+            foreach ($cart->items as $product_id => $item) {
+                $quantity = $item['quantity'];
+                $item_price = $item['price'];
+                OrderItem::create([
+                    'order_id' => $order_id,
+                    'product_id' => $product_id,
+                    'item_price' => $item_price,
+                    'quantity' => $quantity,
+                ]);
+            }
+            
+            session(['cart' => '']);
+            return redirect()->route('checkout.success')->with('success', 'Tạo đơn hàng thành công');
         } else {
             return redirect()->back()->with('error', 'Giỏ hàng trống');
         }

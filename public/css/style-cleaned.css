@@ -4841,7 +4841,10 @@ small.value {
 	display: inline-block;
 	position: relative;
 	transition: none;
-	background: #fff url(https://capricathemes.com/prestashop/PRS07/PRS070170/themes/Daffodils/assets/img/capricathemes/action.png) no-repeat scroll center -129px;
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-position: center -129px;
+	background-attachment: scroll;
 	transform: none
 }
 
@@ -5492,7 +5495,11 @@ small.value {
 
 #header .search-widget form button[type=submit] {
 	padding: 0;
-	background: url(https://capricathemes.com/prestashop/PRS07/PRS070170/themes/Daffodils/assets/img/capricathemes/nav-icon.png) no-repeat scroll 0 -438px transparent;
+	/* background: url(https://capricathemes.com/prestashop/PRS07/PRS070170/themes/Daffodils/assets/img/capricathemes/nav-icon.png) no-repeat scroll 0 -438px transparent; */
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-position: center -129px;
+	background-attachment: scroll;
 	top: 0;
 	height: 45px;
 	width: 35px
@@ -5795,19 +5802,6 @@ small.value {
 	-moz-transform: translate3d(0, 0, 0);
 	-ms-transform: translate3d(0, 0, 0);
 	text-align: center
-}
-
-.top_button {
-	background: url(https://giaflowers.vn/img/capricathemes/top-arrow.png) no-repeat scroll 0 0;
-	bottom: 20px;
-	cursor: pointer;
-	height: 70px;
-	padding: 6px 12px;
-	position: fixed;
-	right: 20px;
-	text-align: center;
-	width: 50px;
-	z-index: 99
 }
 
 .mobile-menu-inner {

@@ -139,7 +139,7 @@
                                   <form action="{{ route('cart.add',['id'=>$p->id]) }}" class="add-to-cart-or-refresh">
                                     @csrf
                                     <input value="1" name="quantity" type="hidden">
-                                    <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Thêm vào giỏ hàng </button>
+                                    <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit" style="background-image: url({{ asset('assets/action.png') }})" title="Thêm vào giỏ hàng"> Thêm vào giỏ hàng </button>
                                   </form>
                                 </div>
                               </div>

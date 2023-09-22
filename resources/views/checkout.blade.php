@@ -1,4 +1,7 @@
 <x-app-layout>
+  @push('header')
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  @endpush
   <nav data-depth="1" class="breadcrumb">
     <div class="container">
       <ol itemscope itemtype="http://schema.org/BreadcrumbList">
@@ -16,26 +19,26 @@
             <div class="cart-grid-body col-xs-12 col-lg-8">
               <div class="card cart-container">
                 <div class="card-block">
-                  <h1 class="h1">Thông tin cá nhân</h1>
+                  <h1 class="h1">Thông tin thanh toán</h1>
                 </div>
                 <hr class="separator">
                 <form action="#" method="post">
                   @csrf
                   <div class="cart-overview js-cart" data-refresh-url="">
                     <div class="form-group row "> <label class="col-md-4 form-control-label required"> Họ & tên </label>
-                      <div class="col-md-6"> <input class="form-control" name="name" type="text" value="{{ isset($user) ? $user->name : '' }}" required=""> </div>
+                      <div class="col-md-6"> <input class="form-control" name="name" type="text" value="{{ isset($user) ? $user->name : '' }}" required oninvalid="setCustomValidity('Bắt buộc')"> </div>
                       <div class="col-md-2 form-control-comment"> </div>
                     </div>
                     <div class="form-group row "> <label class="col-md-4 form-control-label required"> Email </label>
-                      <div class="col-md-6"> <input class="form-control" name="email" type="text" value="{{ isset($user) ? $user->email : '' }}" required=""> </div>
+                      <div class="col-md-6"> <input class="form-control" name="email" type="text" value="{{ isset($user) ? $user->email : '' }}" required oninvalid="setCustomValidity('Bắt buộc')"> </div>
                       <div class="col-md-2 form-control-comment"> </div>
                     </div>
                     <div class="form-group row "> <label class="col-md-4 form-control-label required"> Địa chỉ nhận hàng </label>
-                      <div class="col-md-6"> <input class="form-control" name="delivery_address" type="text" value="{{ isset($user) ? $user->address : '' }}" required=""> </div>
+                      <div class="col-md-6"> <input class="form-control" name="delivery_address" type="text" value="{{ isset($user) ? $user->address : '' }}" required oninvalid="setCustomValidity('Bắt buộc')"> </div>
                       <div class="col-md-2 form-control-comment"> </div>
                     </div>
                     <div class="form-group row "> <label class="col-md-4 form-control-label required"> Số điện thoại liên hệ </label>
-                      <div class="col-md-6"> <input class="form-control" name="phone" type="text" value="{{ isset($user) ? $user->phone : '' }}" maxlength="32"> </div>
+                      <div class="col-md-6"> <input class="form-control" name="phone" type="tel" value="{{ isset($user) ? $user->phone : '' }}" maxlength="32" required oninvalid="setCustomValidity('Bắt buộc')"> </div>
                       <div class="col-md-2 form-control-comment"> </div>
                     </div>
                     <div class="form-group row "> <label class="col-md-4 form-control-label required"> Ghi chú </label>
@@ -51,9 +54,11 @@
                       </div>
                       <div class="col-md-2 form-control-comment"> </div>
                     </div>
+                    
 
                   </div>
-                  <button type="submit" class="continue btn btn-primary float-xs-right" name="">
+                  {!! NoCaptcha::display() !!}
+                  <button type="submit" class="continue btn btn-primary float-end" name="" onsubmit="return confirm('Bạn có chắc chắn xác nhận đơn hàng không?');">
                     Đặt hàng
                   </button>
                 </form>

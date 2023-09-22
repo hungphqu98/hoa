@@ -124,10 +124,11 @@
                   <div class="product-info">
                     <h1 class="h3 product-title" itemprop="name"><a href="{{ route('product.view',['slug'=> $n->slug]) }}">{{ $n->name }}</a></h1>
                     <div class="product-price-and-shipping"> @if($n->sale_price > 0)
-                              <span itemprop="price" class="price">{{ number_format($n->sale_price, 0, ',', '.') }}đ</span><br/> <s class="price text-muted">{{ number_format($n->price, 0, ',', '.') }}đ</s>
-                              @else 
-                              <span itemprop="price" class="price">{{ number_format($n->price, 0, ',', '.') }}đ</span>
-                              @endif </div>
+                      <span itemprop="price" class="price">{{ number_format($n->sale_price, 0, ',', '.') }}đ</span><br /> <s class="price text-muted">{{ number_format($n->price, 0, ',', '.') }}đ</s>
+                      @else
+                      <span itemprop="price" class="price">{{ number_format($n->price, 0, ',', '.') }}đ</span>
+                      @endif
+                    </div>
                   </div>
                 </div>
               </li>
@@ -195,23 +196,23 @@
                                   <form action="{{ route('cart.add',['id'=>$p->id]) }}" class="add-to-cart-or-refresh">
                                     @csrf
                                     <input value="1" name="quantity" type="hidden">
-                                    <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Thêm vào giỏ hàng </button>
+                                    <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit" style="background-image: url({{ asset('assets/action.png') }})" title="Thêm vào giỏ hàng"> Thêm vào giỏ hàng </button>
                                   </form>
                                 </div>
                               </div>
                             </div>
                             <ul class="product-flags">
-                            @if($p->sale_price > 0)
-                    <li class="product-flag new">Sale</li>
-                    @endif
-                          </ul>
+                              @if($p->sale_price > 0)
+                              <li class="product-flag new">Sale</li>
+                              @endif
+                            </ul>
                           </div>
                           <div class="product-description">
                             <h3 class="h3 product-title" itemprop="name"><a href="{{ route('product.view',['slug'=> $p->slug]) }}">{{ $p->name }}</a></h3>
-                            <div class="product-price-and-shipping"> 
+                            <div class="product-price-and-shipping">
                               @if($p->sale_price > 0)
                               <span itemprop="price" class="price">{{ number_format($p->sale_price, 0, ',', '.') }}đ</span> <s class="price text-muted">{{ number_format($p->price, 0, ',', '.') }}đ</s>
-                              @else 
+                              @else
                               <span itemprop="price" class="price">{{ number_format($p->price, 0, ',', '.') }}đ</span>
                               @endif
                             </div>
@@ -252,8 +253,8 @@
                         <div class="product-price h5 " itemprop="offers" itemscope="" itemtype="https://schema.org/Offer">
                           <link itemprop="availability" href="https://schema.org/InStock">
                           <meta itemprop="priceCurrency" content="EUR">
-                          <div class="current-price" id="product_quickview_price"> 
-                            </div>
+                          <div class="current-price" id="product_quickview_price">
+                          </div>
                         </div>
                         <div class="tax-shipping-delivery-label"> bao gồm VAT </div>
                       </div>

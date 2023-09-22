@@ -11,11 +11,14 @@
   <div class="container">
     <div class="col-12">
       <div class="text-center">
-      <div class="badge badge-success">&#10004</div>
-          <h2>Đơn hàng đã được tạo thành công</h2>
-          <p></p>
-          <a href="{{ route('home') }}">Quay về trang chủ</a>
+        <div class="checkout-success">
+          <div class="success-badge">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <h2 class="success-title">Đơn hàng đã được tạo thành công!</h2>
+          <p class="success-info">Cửa hàng sẽ liên lạc lại với bạn trong thời gian sớm nhất để xác nhận thông tin.</p>
+          <a href="{{ route('home') }}" class="back-link"><i class="fas fa-chevron-left"></i> Quay về trang chủ</a>
+        </div>
       </div>
-      </div>
-  </div>
+    </div>
 </x-app-layout>

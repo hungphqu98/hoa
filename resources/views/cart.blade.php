@@ -106,9 +106,13 @@
                   <div class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope itemtype="http://schema.org/Product">
                     <div class="thumbnail-container"> <a href="{{ route('product.view',['slug'=> $seller->slug ]) }}" class="thumbnail product-thumbnail"> <img src="{{ asset('assets/product/' . $seller->image) }}" alt="Consectetur Hampden" data-full-size-image-url="{{ asset('assets/product/' . $seller->image) }}"></a>
                       <div class="outer-functional">
-                      <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#quickview" data-id_product="{{ $seller->id }}" style="background-image: url({{ asset('assets/action.png') }})"><i class="material-icons search">&#xE417;</i> Quick View </button>
+                      <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#quickview" data-id_product="{{ $seller->id }}" style="background-image: url({{ asset('assets/action.png') }})" title="Quick View"><i class="material-icons search">&#xE417;</i> Quick View </button>
                           <div class="product-actions">
-                            <form action="" method="post" class="add-to-cart-or-refresh"> <input type="hidden" name="token" value=""> <input type="hidden" name="id_product" value="1" class="product_page_product_id"> <input type="hidden" name="id_customization" value="0" class="product_customization_id"> <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"> Add to cart </button> </form>
+                          <form action="{{ route('cart.add',['id'=>$seller->id]) }}" class="add-to-cart-or-refresh">
+                                                                                    @csrf
+                                                                                    <input value="1" name="quantity" type="hidden">
+                                                                                    <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit" style="background-image: url({{ asset('assets/action.png') }})" title="Thêm vào giỏ hàng"> Thêm vào giỏ hàng </button>
+                                                                                </form>
                           </div>
                         </div>
                       </div>
