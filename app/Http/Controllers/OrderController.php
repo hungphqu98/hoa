@@ -36,4 +36,10 @@ class OrderController extends Controller
 
         return redirect()->route('admin.order.index')->with('success', 'Cập nhật thành công');
     }
+
+    public function destroy($id)
+    {
+        Order::destroy($id);
+        return redirect()->route('admin.order.index')->with('success', 'Xóa thành công');
+    }
 }

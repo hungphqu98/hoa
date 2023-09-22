@@ -26,6 +26,8 @@
                   <td>{{ $o->status }}</td>
                   <td>
                     <a href="{{ route('admin.order.edit',['id'=> $o->id]) }}"><button type="button" class="btn btn-info mb-2">Sửa</button></a>
+                    <a href="{{ route('admin.order.delete',['id'=> $o->id]) }}"><button type="button" class="btn btn-danger mb-2">Xóa</button></a>
+
                   </td>
                 </tr>
                 @endforeach

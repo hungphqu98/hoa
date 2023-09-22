@@ -110,6 +110,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:admin']], function() {
     Route::get('/', [OrderController::class, 'index'])->name('admin.order.index');
     Route::get('/edit/{id}', [OrderController::class, 'edit'])->name('admin.order.edit');
     Route::post('/edit/{id}', [OrderController::class, 'update'])->name('admin.order.update');
+    Route::get('/delete/{id}', [OrderController::class, 'destroy'])->name('admin.order.delete');
   });
   Route::prefix('user')->group(function () {
     Route::get('/', [UserController::class, 'index'])->name('admin.user.index');

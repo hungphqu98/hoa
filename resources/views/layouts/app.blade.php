@@ -19,6 +19,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <link rel="icon" href="img/favicon.png" type="image/png" />
   <title>Gia Flowers</title>
+  <meta name="description" content="Gia Flowers là địa chỉ đáng tin cậy chuyên cung cấp lan hồ điệp Đà Lạt và hoa tươi sỉ lẻ. Với kinh nghiệm từ năm 2019 đến nay, chúng tôi đặt sự tận tâm và chất lượng phục vụ lên hàng đầu.">
+  <meta name="keywords" content="hoa, lan hồ điệp, hoa lan, chậu hoa, bán hoa, lan hồ điệp Đà Lạt, hoa tươi" />
+
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.css" integrity="sha512-lp6wLpq/o3UVdgb9txVgXUTsvs0Fj1YfelAbza2Kl/aQHbNnfTYPMLiQRvy3i+3IigMby34mtcvcrh31U50nRw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css" integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -151,6 +154,11 @@
                 </div>
                 <div class="js-top-menu mobile" id="_mobile_top_menu">
                   <ul class="top-menu container" id="top-menu" data-depth="0">
+                  <li class="category" id="category-15">
+                      <a class="dropdown-item" href="{{ route('home') }}" data-depth="0">
+                        Trang chủ
+                      </a>
+                    </li>
                     <li class="category" id="category-3">
                       <a data-bs-toggle="collapse" href="#top_sub_menu_1" data-depth="0" aria-expanded="false">
                         <span class="pull-xs-right hidden-lg-up">
