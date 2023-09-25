@@ -29,7 +29,7 @@ class CheckoutController extends Controller
         if ($check > 0) {
             $request->validate([
                 'name' => 'required|string|max:255',
-                'email' => 'required|string|max:255',
+                'email' => 'required|email|max:255',
                 'delivery_address' => 'required',
                 'phone' => 'required|string|regex:/^[0-9]*$/',
                 'g-recaptcha-response' => 'required|captcha',

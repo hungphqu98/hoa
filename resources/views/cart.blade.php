@@ -81,15 +81,15 @@
                 <div class="checkout text-sm-center card-block"> <a href="{{ route('checkout') }}"><button type="button" class="btn btn-primary">Đặt hàng</button></a> </div>
               </div>
               <div id="block-reassurance">
-                <ul>
+              <ul>
                   <li>
-                    <div class="block-reassurance-item"> <i class="fa-solid fa-user-shield"></i> <span class="h6">Chính sách khách hàng doanh nghiệp</span> </div>
+                    <div class="block-reassurance-item"> <a href="{{ route('policy.corpo') }}"><i class="fa-solid fa-user-shield"></i> <span class="h6">Chính sách khách hàng doanh nghiệp</span></a> </div>
                   </li>
                   <li>
-                    <div class="block-reassurance-item"> <i class="fa-solid fa-truck"></i> <span class="h6">Chính sách giao hàng</span> </div>
+                    <div class="block-reassurance-item"> <a href="{{ route('policy.delivery') }}"><i class="fa-solid fa-truck"></i> <span class="h6">Chính sách giao hàng</span></a> </div>
                   </li>
                   <li>
-                    <div class="block-reassurance-item"> <i class="fa-solid fa-right-left"></i> <span class="h6">Chính sách đổi trả</span> </div>
+                    <div class="block-reassurance-item"> <a href="{{ route('policy.warranty') }}"><i class="fa-solid fa-right-left"></i> <span class="h6">Chính sách đổi trả</span></a>  </div>
                   </li>
                 </ul>
               </div>

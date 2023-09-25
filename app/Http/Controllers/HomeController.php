@@ -36,33 +36,69 @@ class HomeController extends Controller
     }
 
     public function product(Request $request)
-    {
+{
+    // Get the filter and sort query parameters from the URL
+    $filters = $request->query('filters', []);
+    $sort = $request->query('sort', 'default');
 
-        $newProduct = Product::where(['status' => 'AVAILABLE'])->orderBy('id', 'DESC')->limit(3)->get();
-        // Get the sort query parameter from the URL, default to 'default' if not provided
-        $sort = $request->query('sort', 'default');
+    // Define your default sorting and filtering options
+    $defaultSort = 'default';
 
-        // Define your default sorting option
-        $defaultSort = 'default';
+    // Query the products based on the sorting option
+    $query = Product::where('status', 'AVAILABLE');
 
-        // Query the products based on the sorting option
-        if ($sort === $defaultSort) {
-            $product = Product::where(['status' => 'AVAILABLE'])->paginate(9);
-        } else {
-            // Handle other sorting criteria here
-            if ($sort === 'name') {
-                $product = Product::where(['status' => 'AVAILABLE'])->orderBy('name', 'ASC')->paginate(9);
-            } elseif ($sort === 'name:desc') {
-                $product = Product::where(['status' => 'AVAILABLE'])->orderBy('name', 'DESC')->paginate(9);
-            } elseif ($sort === 'price') {
-                $product = Product::where(['status' => 'AVAILABLE'])->orderBy('price', 'ASC')->paginate(9);
-            } elseif ($sort === 'price:desc') {
-                $product = Product::where(['status' => 'AVAILABLE'])->orderBy('price', 'DESC')->paginate(9);
-            }
-        }
-
-        return view('product.index', compact('product', 'sort', 'newProduct'));
+    if (in_array('on_sale', $filters)) {
+        $query->where('sale_price', '>', 0);
     }
+
+    // Get the selected price range from the request
+    $priceFilter = $request->input('price_filter');
+
+    // Define price range values based on user input
+    $minPrice = null;
+    $maxPrice = null;
+
+    // Set the price range values based on the selected filter option
+    if ($priceFilter == '1') {
+        $minPrice = 0;
+        $maxPrice = 500000;
+    } elseif ($priceFilter == '2') {
+        $minPrice = 500000;
+        $maxPrice = 1000000;
+    } elseif ($priceFilter == '3') {
+        $minPrice = 1000000;
+        $maxPrice = 2000000;
+    } elseif ($priceFilter == '4') {
+        $minPrice = 2000000;
+        $maxPrice = 99999999;
+    }
+
+    if ($minPrice !== null && $maxPrice !== null) {
+        $query->whereBetween('price', [$minPrice, $maxPrice]);
+    }
+
+    // Apply sorting based on the sort option
+    if ($sort !== $defaultSort) {
+        // Handle sorting criteria here
+        if ($sort === 'name') {
+            $query->orderBy('name', 'ASC');
+        } elseif ($sort === 'name:desc') {
+            $query->orderBy('name', 'DESC');
+        } elseif ($sort === 'price') {
+            $query->orderBy('price', 'ASC');
+        } elseif ($sort === 'price:desc') {
+            $query->orderBy('price', 'DESC');
+        }
+    }
+
+    // Paginate the results
+    $product = $query->paginate(9);
+
+    // Load your newProduct data
+    $newProduct = Product::where(['status' => 'AVAILABLE'])->orderBy('id', 'DESC')->limit(3)->get();
+
+    return view('product.index', compact('product', 'sort', 'filters', 'newProduct'));
+}
 
     public function view($slug)
     {

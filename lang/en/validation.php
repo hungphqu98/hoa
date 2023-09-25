@@ -169,7 +169,7 @@ return [
         'date'                  => 'Ngày',
         'day'                   => 'Ngày',
         'description'           => 'Mô tả',
-        'email'                 => 'email',
+        'email'                 => 'Email',
         'excerpt'               => 'trích dẫn',
         'first_name'            => 'tên',
         'gender'                => 'giới tính',
@@ -191,6 +191,8 @@ return [
         'title'                 => 'tiêu đề',
         'username'              => 'tên đăng nhập',
         'year'                  => 'năm',
+        'delivery_address' => 'Địa chỉ nhận hàng',
+
     ],
 
 ];

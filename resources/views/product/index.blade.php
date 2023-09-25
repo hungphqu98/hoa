@@ -78,32 +78,60 @@
         <div id="search_filters_wrapper" class="hidden-md-down block"> <!-- hidden-sm-down -->
           <div id="search_filter_controls" class="hidden-lg-up"> <!-- --> <span id="_mobile_search_filters_clear_all"></span> <button class="btn btn-secondary ok"> <i class="material-icons">&#xE876;</i> OK </button> </div>
           <div id="search_filters">
-            <h4 class="block_title">Lọc theo</h4>
+            <h4 class="block_title">Lọc</h4>
             <div class="block_content">
-              <div id="_desktop_search_filters_clear_all" class="hidden-md-down clear-all-wrapper"> <button data-search-url="" class="btn btn-tertiary js-search-filters-clear-all"> Xóa </button> </div>
+              <!-- <div id="_desktop_search_filters_clear_all" class="hidden-md-down clear-all-wrapper"> <button data-search-url="" class="btn btn-tertiary js-search-filters-clear-all"> Xóa </button> </div> -->
               <section class="facet">
-                <h1 class="h6 facet-title hidden-md-down">Sản phẩm</h1>
+                <!-- <h1 class="h6 facet-title hidden-md-down">Sản phẩm</h1>
                 <div class="title hidden-lg-up" data-target="#facet_86716" data-toggle="collapse">
                   <h1 class="h6 facet-title">Sản phẩm</h1> <span class="pull-xs-right"> <span class="navbar-toggler collapse-icons"> <i class="fa-icon add"></i> <i class="fa-icon remove"></i> </span> </span>
-                </div>
-                <ul id="facet_86716" class="">
-                  <li> <label class="facet-label" for="facet_input_86716_0"> <span class="custom-checkbox"> <input id="facet_input_86716_0" data-search-url="" type="checkbox"> <span class="ps-shown-by-js"></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> Lan Hồ Điệp <span class="magnitude">(13)</span> </a> </label> </li>
-                  <li> <label class="facet-label" for="facet_input_86716_1"> <span class="custom-checkbox"> <input id="facet_input_86716_1" data-search-url="" type="checkbox"> <span class="ps-shown-by-js"></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> Bó hoa <span class="magnitude">(14)</span> </a> </label> </li>
-                  <li> <label class="facet-label" for="facet_input_86716_2"> <span class="custom-checkbox"> <input id="facet_input_86716_2" data-search-url="" type="checkbox"> <span class="ps-shown-by-js"></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> Hộp hoa <span class="magnitude">(14)</span> </a> </label> </li>
-                </ul>
+                </div> -->
+                <form action="{{ route('product.index') }}" method="get">
+                  <ul id="facet_86716" class="">
+                    <li>
+                      <input class="" type="checkbox" name="filters[]" id="on_sale_filter" value="on_sale" @if(in_array('on_sale', $filters)) checked @endif>
+                      <label class="facet-label form-check-label" for="on_sale_filter">
+                        Giảm giá
+                      </label>
+                    </li>
+                    <button type="submit" id="filterFormSubmit" style="display: none;">Apply Filters</button>
+                  </ul>
+                </form>
+
               </section>
               <section class="facet">
                 <h1 class="h6 facet-title hidden-md-down">Giá</h1>
                 <div class="title hidden-lg-up" data-target="#facet_93109" data-toggle="collapse">
                   <h1 class="h6 facet-title">Giá</h1> <span class="pull-xs-right"> <span class="navbar-toggler collapse-icons"> <i class="fa-icon add"></i> <i class="fa-icon remove"></i> </span> </span>
                 </div>
+                <form action="{{ route('product.index') }}" method="get" id="filterForm">
                 <ul id="facet_93109" class="">
-                  <li> <label class="facet-label" for="facet_input_93109_0"> <span class="custom-radio"> <input id="facet_input_93109_0" data-search-url="" type="radio" name="filter Price"> <span class="ps-shown-by-js"></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> $74.00 - $76.00 <span class="magnitude">(1)</span> </a> </label> </li>
-                  <li> <label class="facet-label" for="facet_input_93109_1"> <span class="custom-radio"> <input id="facet_input_93109_1" data-search-url="" type="radio" name="filter Price"> <span class="ps-shown-by-js"></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> $77.00 - $79.00 <span class="magnitude">(1)</span> </a> </label> </li>
-                  <li> <label class="facet-label" for="facet_input_93109_2"> <span class="custom-radio"> <input id="facet_input_93109_2" data-search-url="" type="radio" name="filter Price"> <span class="ps-shown-by-js"></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> $82.00 - $88.00 <span class="magnitude">(4)</span> </a> </label> </li>
-                  <li> <label class="facet-label" for="facet_input_93109_3"> <span class="custom-radio"> <input id="facet_input_93109_3" data-search-url="" type="radio" name="filter Price"> <span class="ps-shown-by-js"></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> $84.00 - $100.00 <span class="magnitude">(6)</span> </a> </label> </li>
-                  <li> <label class="facet-label" for="facet_input_93109_4"> <span class="custom-radio"> <input id="facet_input_93109_4" data-search-url="" type="radio" name="filter Price"> <span class="ps-shown-by-js"></span> </span> <a href="" class="_gray-darker search-link js-search-link" rel="nofollow"> $104.00 - $106.00 <span class="magnitude">(1)</span> </a> </label> </li>
+                  <li class="">
+                    <input class="" type="radio" name="price_filter" id="priceFilter1" value="1" @if(request()->input('price_filter') == '1') checked @endif>
+                    <label class="facet-label form-check-label" for="priceFilter1">
+                      Dưới 500.000 đ
+                    </label>
+                  </li>
+                  <li class="">
+                    <input class="" type="radio" name="price_filter" id="priceFilter2" value="2" @if(request()->input('price_filter') == '2') checked @endif>
+                    <label class="facet-label form-check-label" for="priceFilter2">
+                      Từ 500.000 - 1.000.000 đ
+                    </label>
+                  </li>
+                  <li class="">
+                    <input class="" type="radio" name="price_filter" id="priceFilter3" value="3" @if(request()->input('price_filter') == '3') checked @endif>
+                    <label class="facet-label form-check-label" for="priceFilter3">
+                      Từ 1.000.000 - 2.000.000 đ
+                    </label>
+                  </li>
+                  <li class="">
+                    <input class="" type="radio" name="price_filter" id="priceFilter4" value="4" @if(request()->input('price_filter') == '4') checked @endif>
+                    <label class=" facet-label form-check-label" for="priceFilter4">
+                      Trên 2.000.000 đ
+                    </label>
+                  </li>
                 </ul>
+                </form>
               </section>
             </div>
           </div>
@@ -223,7 +251,7 @@
                     </ul>
                   </div>
                   <nav class="pagination">
-                    {{ $product->appends(['sort' => $sort])->links() }}
+                    {{ $product->appends(['filters' => $filters, 'sort' => $sort])->links() }}
                   </nav>
                 </div>
               </div>
@@ -273,4 +301,20 @@
       </div>
     </div>
   </div>
+  @push('footer')
+  <script>
+    document.getElementById('on_sale_filter').addEventListener('change', function() {
+      document.getElementById('filterFormSubmit').click();
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+        var radioButtons = document.querySelectorAll("input[type='radio']");
+        
+        radioButtons.forEach(function (radio) {
+            radio.addEventListener("click", function () {
+                document.getElementById("filterForm").submit();
+            });
+        });
+    });
+  </script>
+  @endpush
 </x-app-layout>

@@ -5862,13 +5862,9 @@ small.value {
 
 #search_filters .facet .facet-label {
 	margin-bottom: 0;
+	margin-top: 5px;
 	font-weight: normal;
 	text-align: left;
-}
-
-#search_filters .facet .facet-label a {
-	margin-top: 5px;
-	display: inline-block;
 }
 
 #mobile_top_menu_wrapper.slide .mobile-menu-inner {
