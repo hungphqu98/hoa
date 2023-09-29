@@ -65,6 +65,7 @@ Route::group(['prefix' => 'user', 'middleware' => ['auth:web']], function() {
   Route::get('',[CustomerController::class, 'index'])->name('user.account');
   Route::get('orders',[CustomerController::class, 'order'])->name('user.order');
   Route::put('',[CustomerController::class, 'update'])->name('user.update');
+  Route::post('',[CustomerController::class, 'password'])->name('user.password');
 });
 
 Route::group(['prefix' => 'admin'], function() {

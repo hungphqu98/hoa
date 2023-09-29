@@ -99,28 +99,30 @@
 
           <div class="card-body">
 
-            <form method="POST" action="{{ route('register') }}">
+            <form method="POST" action="{{ route('user.password') }}">
               @csrf
 
               <div class="row mb-3">
-                <label for="password" class="col-md-4 col-form-label text-md-end">Mật khẩu</label>
+                <label for="current_password" class="col-md-4 col-form-label text-md-end">Mật khẩu hiện tại</label>
 
                 <div class="col-md-6">
-                  <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                  @error('password')
-                  <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                  </span>
-                  @enderror
+                  <input id="current_password" type="password" class="form-control @error('current_password') is-invalid @enderror" name="current_password" required >
                 </div>
               </div>
 
               <div class="row mb-3">
-                <label for="password-confirm" class="col-md-4 col-form-label text-md-end">Xác nhận mật khẩu</label>
+                <label for="new_password" class="col-md-4 col-form-label text-md-end">Mật khẩu mới</label>
 
                 <div class="col-md-6">
-                  <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                  <input id="new_password" type="password" class="form-control @error('new_password') is-invalid @enderror" name="new_password" required>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <label for="password_confirmation" class="col-md-4 col-form-label text-md-end">Xác nhận mật khẩu</label>
+
+                <div class="col-md-6">
+                  <input id="password_confirmation" type="password" class="form-control" name="password_confirmation" required >
                 </div>
               </div>
 
