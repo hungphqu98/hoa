@@ -49,7 +49,7 @@
                     </div>
                   </li>
                   <li data-depth="0"><a href="{{ route('product.index') }}">Bó hoa</a>
-                    <div class="navbar-toggler collapse-icons" data-bs-toggle="collapse" data-bs0target="#exCollapsingNavbar4"><span class="add"></span><span class="remove"></span></div>
+                    <div class="navbar-toggler collapse-icons" data-bs-toggle="collapse" data-bs-target="#exCollapsingNavbar4"><span class="add"></span><span class="remove"></span></div>
                     <div class="collapse" id="exCollapsingNavbar4">
                       <ul class="category-sub-menu">
                         <li data-depth="1"><a class="category-sub-link" href="">Hoa sự kiện</a></li>
@@ -80,12 +80,7 @@
           <div id="search_filters">
             <h4 class="block_title">Lọc</h4>
             <div class="block_content">
-              <!-- <div id="_desktop_search_filters_clear_all" class="hidden-md-down clear-all-wrapper"> <button data-search-url="" class="btn btn-tertiary js-search-filters-clear-all"> Xóa </button> </div> -->
               <section class="facet">
-                <!-- <h1 class="h6 facet-title hidden-md-down">Sản phẩm</h1>
-                <div class="title hidden-lg-up" data-target="#facet_86716" data-toggle="collapse">
-                  <h1 class="h6 facet-title">Sản phẩm</h1> <span class="pull-xs-right"> <span class="navbar-toggler collapse-icons"> <i class="fa-icon add"></i> <i class="fa-icon remove"></i> </span> </span>
-                </div> -->
                 <form action="{{ route('product.index') }}" method="get">
                   <ul id="facet_86716" class="">
                     <li>
@@ -105,32 +100,38 @@
                   <h1 class="h6 facet-title">Giá</h1> <span class="pull-xs-right"> <span class="navbar-toggler collapse-icons"> <i class="fa-icon add"></i> <i class="fa-icon remove"></i> </span> </span>
                 </div>
                 <form action="{{ route('product.index') }}" method="get" id="filterForm">
-                <ul id="facet_93109" class="">
-                  <li class="">
-                    <input class="" type="radio" name="price_filter" id="priceFilter1" value="1" @if(request()->input('price_filter') == '1') checked @endif>
-                    <label class="facet-label form-check-label" for="priceFilter1">
-                      Dưới 500.000 đ
-                    </label>
-                  </li>
-                  <li class="">
-                    <input class="" type="radio" name="price_filter" id="priceFilter2" value="2" @if(request()->input('price_filter') == '2') checked @endif>
-                    <label class="facet-label form-check-label" for="priceFilter2">
-                      Từ 500.000 - 1.000.000 đ
-                    </label>
-                  </li>
-                  <li class="">
-                    <input class="" type="radio" name="price_filter" id="priceFilter3" value="3" @if(request()->input('price_filter') == '3') checked @endif>
-                    <label class="facet-label form-check-label" for="priceFilter3">
-                      Từ 1.000.000 - 2.000.000 đ
-                    </label>
-                  </li>
-                  <li class="">
-                    <input class="" type="radio" name="price_filter" id="priceFilter4" value="4" @if(request()->input('price_filter') == '4') checked @endif>
-                    <label class=" facet-label form-check-label" for="priceFilter4">
-                      Trên 2.000.000 đ
-                    </label>
-                  </li>
-                </ul>
+                  <ul id="facet_93109" class="">
+                    <li class="">
+                      <input class="" type="radio" name="price_filter" id="priceFilterDefault" value="0" @if(request()->input('price_filter', '0') == '0') checked @endif>
+                      <label class="facet-label form-check-label" for="priceFilterDefault">
+                        Tất cả
+                      </label>
+                    </li>
+                    <li class="">
+                      <input class="" type="radio" name="price_filter" id="priceFilter1" value="1" @if(request()->input('price_filter') == '1') checked @endif>
+                      <label class="facet-label form-check-label" for="priceFilter1">
+                        Dưới 500.000 đ
+                      </label>
+                    </li>
+                    <li class="">
+                      <input class="" type="radio" name="price_filter" id="priceFilter2" value="2" @if(request()->input('price_filter') == '2') checked @endif>
+                      <label class="facet-label form-check-label" for="priceFilter2">
+                        Từ 500.000 - 1.000.000 đ
+                      </label>
+                    </li>
+                    <li class="">
+                      <input class="" type="radio" name="price_filter" id="priceFilter3" value="3" @if(request()->input('price_filter') == '3') checked @endif>
+                      <label class="facet-label form-check-label" for="priceFilter3">
+                        Từ 1.000.000 - 2.000.000 đ
+                      </label>
+                    </li>
+                    <li class="">
+                      <input class="" type="radio" name="price_filter" id="priceFilter4" value="4" @if(request()->input('price_filter') == '4') checked @endif>
+                      <label class=" facet-label form-check-label" for="priceFilter4">
+                        Trên 2.000.000 đ
+                      </label>
+                    </li>
+                  </ul>
                 </form>
               </section>
             </div>
@@ -217,7 +218,7 @@
                       @foreach($product as $p)
                       <li class="product_item col-xs-12 col-sm-6 col-md-6 col-lg-4">
                         <div class="product-miniature js-product-miniature" itemscope itemtype="http://schema.org/Product">
-                          <div class="thumbnail-container"> <a href="{{ route('product.view',['slug'=> $p->slug]) }}" class="thumbnail product-thumbnail"> <img src="{{ asset('assets/product/' . $p->image) }}" alt="Hoa" data-full-size-image-url="{{ asset('assets/product/' . $p->image) }}"> </a>
+                          <div class="thumbnail-container"> <a href="{{ route('product.view',['slug'=> $p->slug]) }}" class="thumbnail product-thumbnail"> <img src="{{ asset('assets/product/' . $p->image) }}" alt="Hoa"> </a>
                             <div class="outer-functional">
                               <div class="functional-buttons"> <button type="button" class="quick-view" data-bs-toggle="modal" data-bs-target="#quickview" data-id_product="{{ $p->id }}" style="background-image: url({{ asset('assets/action.png') }})"><i class="material-icons search">&#xE417;</i> Quick View </button>
                                 <div class="product-actions">
@@ -306,14 +307,14 @@
     document.getElementById('on_sale_filter').addEventListener('change', function() {
       document.getElementById('filterFormSubmit').click();
     });
-    document.addEventListener("DOMContentLoaded", function () {
-        var radioButtons = document.querySelectorAll("input[type='radio']");
-        
-        radioButtons.forEach(function (radio) {
-            radio.addEventListener("click", function () {
-                document.getElementById("filterForm").submit();
-            });
+    document.addEventListener("DOMContentLoaded", function() {
+      var radioButtons = document.querySelectorAll("input[type='radio']");
+
+      radioButtons.forEach(function(radio) {
+        radio.addEventListener("click", function() {
+          document.getElementById("filterForm").submit();
         });
+      });
     });
   </script>
   @endpush

@@ -18,7 +18,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <link rel="icon" href="img/favicon.png" type="image/png" />
-  <title>Gia Flowers</title>
+  <title>{{ $title ?? 'Gia Flowers' }}</title>
   <meta name="description" content="Gia Flowers là địa chỉ đáng tin cậy chuyên cung cấp lan hồ điệp Đà Lạt và hoa tươi sỉ lẻ. Với kinh nghiệm từ năm 2019 đến nay, chúng tôi đặt sự tận tâm và chất lượng phục vụ lên hàng đầu.">
   <meta name="keywords" content="hoa, lan hồ điệp, hoa lan, chậu hoa, bán hoa, lan hồ điệp Đà Lạt, hoa tươi" />
 

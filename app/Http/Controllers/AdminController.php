@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Admin;
 use App\Models\Order;
 use App\Models\User;
+use Spatie\Analytics\Facades\Analytics;
+use Spatie\Analytics\Period;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -20,7 +22,8 @@ class AdminController extends Controller
         $order_count = Order::where('created_at', '>=', $last30Days)->get();
         $cus_count = User::where('created_at', '>=', $last30Days)->get();
         $revenue_count = Order::where('updated_at', '>=', $last30Days)->where('status','DELIVERED')->sum('total_amount');
-        return view('admin.dashboard', compact('order_count','cus_count','revenue_count'));
+        $analyticsData = Analytics::fetchVisitorsAndPageViews(Period::months(1));
+        return view('admin.dashboard', compact('order_count','cus_count','revenue_count', 'analyticsData'));
     }
 
     public function login()

@@ -68,15 +68,15 @@
                                         </div>
                                         <div class="col-sm-8">
                                             <div class="detail">
-                                                <p class="detail-subtitle">Page views</p>
-                                                <span class="number">28,210</span>
+                                                <p class="detail-subtitle">Lượt truy cập</p>
+                                                <span class="number">{{ $analyticsData[0]['screenPageViews'] }}</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="footer">
                                         <hr />
                                         <div class="stats">
-                                            <i class="fas fa-stopwatch"></i> For this Month
+                                            <i class="fas fa-stopwatch"></i> trong 30 ngày qua
                                         </div>
                                     </div>
                                 </div>
