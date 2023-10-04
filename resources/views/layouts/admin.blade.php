@@ -52,6 +52,9 @@
                     <a href="{{ route('admin.contact.index') }}"><i class="fas fa-comment"></i> Liên hệ</a>
                 </li>
                 <li>
+                    <a href="{{ route('admin.banner.index') }}"><i class="fas fa-image"></i> Banner</a>
+                </li>
+                <li>
                     <a href="{{ route('admin.testimonial.index') }}"><i class="fas fa-globe"></i> Khách hàng tiêu biểu</a>
                 </li>
                 <li>

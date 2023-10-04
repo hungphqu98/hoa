@@ -21,6 +21,6 @@ class UserController extends Controller
     public function view($id)
     {
         $user = User::where('id', $id)->get();
-        return view('admin.user.edit', compact('user'));
+        return view('admin.user.view', compact('user'));
     }
 }

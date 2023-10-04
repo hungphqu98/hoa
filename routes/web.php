@@ -9,6 +9,7 @@ use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BannerController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\UserController;
@@ -106,6 +107,14 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:admin']], function() {
     Route::get('/edit/{id}', [BlogController::class, 'edit'])->name('admin.blog.edit');
     Route::post('/edit/{id}', [BlogController::class, 'update'])->name('admin.blog.update');
     Route::get('/delete/{id}', [BlogController::class, 'destroy'])->name('admin.blog.delete');
+  });
+  Route::prefix('banner')->group(function () {
+    Route::get('/', [BannerController::class, 'index'])->name('admin.banner.index');
+    Route::get('/create', [BannerController::class, 'create'])->name('admin.banner.create');
+    Route::post('/create', [BannerController::class, 'store'])->name('admin.banner.store');
+    Route::get('/edit/{id}', [BannerController::class, 'edit'])->name('admin.banner.edit');
+    Route::post('/edit/{id}', [BannerController::class, 'update'])->name('admin.banner.update');
+    Route::get('/delete/{id}', [BannerController::class, 'destroy'])->name('admin.banner.delete');
   });
   Route::prefix('order')->group(function () {
     Route::get('/', [OrderController::class, 'index'])->name('admin.order.index');

@@ -139,7 +139,11 @@
         </div>
         <div id="ctleftbanner">
           <ul>
-            <li class="slide ctleftbanner-container"> <a href="#" title="LeftBanner 1"> <img src="https://capricathemes.com/prestashop/PRS07/PRS070170/modules/ct_leftbanner/views/img/left-banner-1.jpg" alt="LeftBanner 1" title="LeftBanner 1" /> </a> </li>
+            <li class="slide ctleftbanner-container"> <a href="#" title="LeftBanner 1">
+                                                        @foreach($banner as $b)
+                                                        <img src="{{ asset('assets/banner/' . $b->images)}}" alt="LeftBanner 1" title="LeftBanner 1" />
+                                                        @endforeach
+             </a> </li>
           </ul>
         </div>
         <div id="newproduct_block" class="block products-block">
@@ -172,7 +176,7 @@
           <div class="block-category card card-block ">
             <h1 class="h1">Sản phẩm</h1>
             <div id="category-description">
-              <p>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable that it has a more-or-less normal distribution of letters.</p>
+              <p></p>
             </div>
           </div>
 
@@ -285,7 +289,6 @@
                           <div class="current-price" id="product_quickview_price">
                           </div>
                         </div>
-                        <div class="tax-shipping-delivery-label"> bao gồm VAT </div>
                       </div>
                       <div id="product-description-short" itemprop="description">
                         <p id="product_quickview_description"></p>

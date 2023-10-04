@@ -13,7 +13,7 @@
               @csrf
               <div class="mb-3">
                 <label for="name" class="form-label">Tên</label>
-                <input type="text" name="name" class="form-control" value="{{ $o->name }}"  readonly required>
+                <input type="text" name="name" class="form-control" value="{{ $o->name }}" readonly required>
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
@@ -37,13 +37,24 @@
               </div>
               <div class="mb-3">
                 <label for="date" class="form-label">Chi tiết đơn hàng</label>
-                  @foreach($detail as $det)
-                  <p>{{$det->name}}: {{(number_format($det->item_price, 0, ',', '.'))}}x{{$det->quantity}}</p>
-                  @endforeach
+                @foreach($detail as $det)
+                <div class="order-detail-div" >
+                  <img class="order-small-image" src="{{ asset('assets/product/' . $det->image) }}" />
+                  <div class="order-text-div">
+                    <span>{{$det->name}}</span><br />
+                    <span>Đơn giá: <b>{{(number_format($det->item_price, 0, ',', '.'))}}đ</b></span><br />
+                    <span>Số lượng: <b>{{$det->quantity}}</b></span>
+                  </div>
+                </div>
+                @endforeach
               </div>
               <div class="mb-3">
                 <label for="payment" class="form-label">Phương thức thanh toán</label>
                 <input type="text" name="payment" class="form-control" value="{{ $o->payment }}" readonly required>
+              </div>
+              <div class="mb-3">
+                <label for="payment" class="form-label">Ghi chú</label>
+                <input type="text" name="payment" class="form-control" value="{{ $o->note }}" readonly required>
               </div>
               <div class="mb-3">
                 <label for="payment" class="form-label">Trạng thái</label>
@@ -63,7 +74,7 @@
               <div class="form-check">
                 <label class="form-check-label">
                   <input class="form-check-input" type="radio" name="status" id="input" value="PAID" {{ $o->status === 'PAID' ? 'checked' : '' }}>
-                  Đã thanh toán 
+                  Đã thanh toán
                 </label>
               </div>
               <div class="form-check">

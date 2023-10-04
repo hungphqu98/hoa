@@ -1,4 +1,9 @@
 <x-app-layout>
+  <x-slot:title>
+    @foreach($article as $data)
+    {{ $data->title }}
+    @endforeach
+    </x-slot>
   <nav data-depth="3" class="breadcrumb">
     <div class="container">
       <ol itemscope itemtype="http://schema.org/BreadcrumbList">
@@ -55,7 +60,6 @@
                               <span itemprop="price" class="price">{{ number_format($p->price, 0, ',', '.') }}đ</span>
                               @endif </div>
                       </div>
-                      <div class="tax-shipping-delivery-label"> bao gồm VAT </div>
                     </div>
                     <div class="product-add-to-cart"> <!-- <span class="control-label">Ilość</span>-->
                       <div class="product-quantity">
@@ -218,7 +222,6 @@
                           <div class="current-price" id="product_quickview_price"> 
                             </div>
                         </div>
-                        <div class="tax-shipping-delivery-label"> bao gồm VAT </div>
                       </div>
                       <div id="product-description-short" itemprop="description">
                         <p id="product_quickview_description"></p>

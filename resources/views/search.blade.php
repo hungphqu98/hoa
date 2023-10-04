@@ -199,7 +199,6 @@
                           <div class="current-price" id="product_quickview_price"> 
                             </div>
                         </div>
-                        <div class="tax-shipping-delivery-label"> bao gồm VAT </div>
                       </div>
                       <div id="product-description-short" itemprop="description">
                         <p id="product_quickview_description"></p>

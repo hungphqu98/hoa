@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Blog;
+use App\Models\Banner;
 
 class HomeController extends Controller
 {
@@ -30,9 +31,10 @@ class HomeController extends Controller
         $featuredProduct = Product::where(['status' => 'AVAILABLE'])->orderBy('id', 'DESC')->limit(10)->get();
         $combined = $bestProduct->concat($newProduct)->concat($featuredProduct);
         $blog = Blog::where(['status' => 'SHOW'])->limit(4)->get();
+        $banner = Banner::get();
 
 
-        return view('home', compact('bestProduct', 'newProduct', 'featuredProduct', 'blog', 'combined'));
+        return view('home', compact('bestProduct', 'newProduct', 'featuredProduct', 'blog', 'combined','banner'));
     }
 
     public function product(Request $request)
@@ -97,7 +99,9 @@ class HomeController extends Controller
     // Load your newProduct data
     $newProduct = Product::where(['status' => 'AVAILABLE'])->orderBy('id', 'DESC')->limit(3)->get();
 
-    return view('product.index', compact('product', 'sort', 'filters', 'newProduct'));
+    $banner = Banner::where(['position' => '4'])->get();
+
+    return view('product.index', compact('product', 'sort', 'filters', 'newProduct','banner'));
 }
 
     public function view($slug)
