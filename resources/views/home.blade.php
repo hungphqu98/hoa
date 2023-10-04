@@ -32,12 +32,12 @@
                                         </div>
                                         <div class="one-half aboutcms2">
                                             <div class="about-banner aboutcms-image2"><a href="{{ route('about') }}" class="banner-anchor">
-                                                        @foreach($banner as $b)
-                                                        @if ($b->position === '3')
-                                                        <img src="{{ asset('assets/banner/' . $b->images)}}" alt="about-store" title="about-store" />
-                                                        @endif
-                                                        @endforeach
-                                            </a></div>
+                                                    @foreach($banner as $b)
+                                                    @if ($b->position === '3')
+                                                    <img src="{{ asset('assets/banner/' . $b->images)}}" alt="about-store" title="about-store" />
+                                                    @endif
+                                                    @endforeach
+                                                </a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -234,95 +234,97 @@
                                 <div class="homeblog-wrapper">
                                     <div class="homeblog-inner">
                                         <div class="slick-brands">
-                                            <div class="brands-wrapper"><img src="{{ asset('assets/Asset 3.png') }}" alt="sample-1" title="Sample 1" /></div>
-                                            <div class="brands-wrapper"><img src="{{ asset('assets/Asset 2.png') }}" alt="sample-2" title="Sample 2" /></div>
-                                            <div class="brands-wrapper"><img src="{{ asset('assets/Asset 4.png') }}" alt="sample-3" title="Sample 3" /></div>
-                                            <div class="brands-wrapper"><img src="{{ asset('assets/Asset 5.png') }}" alt="sample-4" title="Sample 4" />
+                                            @foreach ($testimonial as $t)
+                                            <div class="brands-wrapper">
+                                                <div class="center-image">
+                                                <img src="{{ asset('assets/' . $t->images)}}" }}" alt="{{$t->name}}" title="{{$t->name}}" />
+                                                </div>
                                             </div>
-
+                                            @endforeach
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="service block ">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 mb-4">
-                                        <div class="service-entry">
-                                            <img src="{{ asset('assets/Asset1.png') }}" alt="Image" class="img-fluid">
-                                            <div class="service-note">
-                                                <h2>Giao hàng hỏa tốc</h2>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 mb-4">
-                                        <div class="service-entry">
-                                            <img src="{{ asset('assets/Asset2.png') }}" alt="Image" class="img-fluid">
-                                            <div class="service-note">
-                                                <h2>Thanh toán tiện lợi</h2>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 mb-4">
-                                        <div class="service-entry">
-                                            <img src="{{ asset('assets/Asset3.png') }}" alt="Image" class="img-fluid">
-                                            <div class="service-note">
-                                                <h2>Hoa luôn bền đẹp</h2>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 mb-4">
-                                        <div class="service-entry">
-                                            <img src="{{ asset('assets/Asset4.png') }}" alt="Image" class="img-fluid">
-                                            <div class="service-note">
-                                                <h2>Tư vấn chuyên nghiệp</h2>
-                                            </div>
-                                        </div>
-                                    </div>
+            </div>
+            <div class="service block ">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 mb-4">
+                            <div class="service-entry">
+                                <img src="{{ asset('assets/Asset1.png') }}" alt="Image" class="img-fluid">
+                                <div class="service-note">
+                                    <h2>Giao hàng hỏa tốc</h2>
                                 </div>
                             </div>
                         </div>
-                    </section>
-                    <div class="modal fade" id="quickview">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 mb-4">
+                            <div class="service-entry">
+                                <img src="{{ asset('assets/Asset2.png') }}" alt="Image" class="img-fluid">
+                                <div class="service-note">
+                                    <h2>Thanh toán tiện lợi</h2>
                                 </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="col-md-6 col-lg-6 col-sm-6 hidden-xs-down">
-                                            <div class="product-slider-container">
-                                                <div class="row">
-                                                    <div class="product-cover slider-main-qview" id="product_quickview_image">
-                                                    </div>
-                                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 mb-4">
+                            <div class="service-entry">
+                                <img src="{{ asset('assets/Asset3.png') }}" alt="Image" class="img-fluid">
+                                <div class="service-note">
+                                    <h2>Hoa luôn bền đẹp</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 mb-4">
+                            <div class="service-entry">
+                                <img src="{{ asset('assets/Asset4.png') }}" alt="Image" class="img-fluid">
+                                <div class="service-note">
+                                    <h2>Tư vấn chuyên nghiệp</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </section>
+            <div class="modal fade" id="quickview">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-sm-6 hidden-xs-down">
+                                    <div class="product-slider-container">
+                                        <div class="row">
+                                            <div class="product-cover slider-main-qview" id="product_quickview_image">
                                             </div>
                                         </div>
-                                        <div class="col-md-6 col-sm-6">
-                                            <h1 class="h1" id="product_quickview_name"></h1>
-                                            <div class="product-prices">
-                                                <div class="product-price h5 " itemprop="offers" itemscope="" itemtype="https://schema.org/Offer">
-                                                    <link itemprop="availability" href="https://schema.org/InStock">
-                                                    <meta itemprop="priceCurrency" content="EUR">
-                                                    <div class="current-price" id="product_quickview_price">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div id="product-description-short" itemprop="description">
-                                                <p id="product_quickview_description"></p>
-                                            </div>
-                                            <div class="product-actions" id="product_quickview_cart">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <h1 class="h1" id="product_quickview_name"></h1>
+                                    <div class="product-prices">
+                                        <div class="product-price h5 " itemprop="offers" itemscope="" itemtype="https://schema.org/Offer">
+                                            <link itemprop="availability" href="https://schema.org/InStock">
+                                            <meta itemprop="priceCurrency" content="EUR">
+                                            <div class="current-price" id="product_quickview_price">
                                             </div>
                                         </div>
+                                    </div>
+                                    <div id="product-description-short" itemprop="description">
+                                        <p id="product_quickview_description"></p>
+                                    </div>
+                                    <div class="product-actions" id="product_quickview_cart">
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
             </div>
+            </section>
         </div>
+    </div>
     </div>
 </x-app-layout>

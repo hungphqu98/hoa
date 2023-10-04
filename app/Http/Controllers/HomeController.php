@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Blog;
 use App\Models\Banner;
+use App\Models\Testimonial;
 
 class HomeController extends Controller
 {
@@ -32,9 +33,9 @@ class HomeController extends Controller
         $combined = $bestProduct->concat($newProduct)->concat($featuredProduct);
         $blog = Blog::where(['status' => 'SHOW'])->limit(4)->get();
         $banner = Banner::get();
+        $testimonial = Testimonial::where(['status' => 'SHOW'])->get();
 
-
-        return view('home', compact('bestProduct', 'newProduct', 'featuredProduct', 'blog', 'combined','banner'));
+        return view('home', compact('bestProduct', 'newProduct', 'featuredProduct', 'blog', 'combined','banner','testimonial'));
     }
 
     public function product(Request $request)

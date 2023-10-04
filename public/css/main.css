@@ -458,24 +458,36 @@
   color: #deb5b2;
 }
 
-.slick-brands {
-  height: 150px;
+/* Set a fixed height for the .brands-wrapper container */
+.brands-wrapper {
+  display: inline-block;
+  width: auto;
+  height: 150px; /* Set the desired fixed height for all .brands-wrapper containers */
+  margin-right: 10px;
+  vertical-align: middle;
+  position: relative; /* Add relative positioning to create a containing block for absolute positioning */
 }
 
-.brands-wrapper {
+/* Set a fixed height for the .center-image container */
+.center-image {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.brands-wrapper img {
-  width: auto;
-  height: auto;
+/* Style the images */
+.center-image img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;
-  margin: auto;
-  line-height: 150px;
+  width: auto;
+  height: auto;
+  position: absolute; /* Position images absolutely within the .brands-wrapper container */
+  top: 0; /* Align images to the top */
+  left: 0; /* Align images to the left */
+  right: 0; /* Align images to the right */
+  bottom: 0; /* Align images to the bottom */
+  margin: auto; /* Center the images within the .brands-wrapper container */
 }
 
 .products-section-title {
@@ -513,9 +525,8 @@
   -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
 }
-
-.testimonial .products-section-title {
-  padding-bottom: 50px;
+.homeblog-wrapper {
+  padding-bottom: 40px;
 }
 
 @media (min-width: 992px) {

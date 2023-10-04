@@ -6,13 +6,13 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="card">
-          <div class="card-header">Sửa sản phẩm</div>
+          <div class="card-header">Sửa khách hàng tiêu biểu</div>
           <div class="card-body">
             @foreach($testimonial as $t)
             <form  action="{{ route('admin.testimonial.update' ,['id' => $t->id]) }}" method="post" enctype="multipart/form-data">
               @csrf
               <div class="mb-3">
-                <label for="name" class="form-label">Tên sản phẩm</label>
+                <label for="name" class="form-label">Tên</label>
                 <input type="text" name="name" class="form-control" value="{{ $t->name }}" required>
               </div>
               <div class="mb-3">

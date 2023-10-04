@@ -8,6 +8,8 @@ $(document).ready(function () {
     $('.slick-brands').slick({
         speed: 300,
         slidesToShow: 4,
+        infinite: true,
+        autoplay: true,
         arrows: false,
     });
     $('.slick-featured').slick({
@@ -121,7 +123,6 @@ $('.quick-view').click(function (event) {
             $('#product_quickview_image').html(data.product_quickview_image);
             $('#product_quickview_slug').html(data.product_quickview_slug);
             $('#product_quickview_description').html(data.product_quickview_description);
-            $('#product_quickview_details').html(data.product_quickview_details);
             $('#product_quickview_cart').html(data.product_quickview_cart);
             console.log(data.product_quickview_name);
         },

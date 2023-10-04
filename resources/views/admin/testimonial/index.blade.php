@@ -10,7 +10,7 @@
               <thead>
                 <tr>
                   <th scope="col">Tên</th>
-                  <th scope="col">Trạng thái</th>
+                  <th scope="col">Logo</th>
                   <th scope="col"></th>
                 </tr>
               </thead>
@@ -18,7 +18,9 @@
                 @foreach($testimonial as $t)
                 <tr>
                   <th scope="row">{{ $t->name }}</th>
-                  <td>{{ $t->status }}</td>
+                  <td>
+                  <img src="{{ asset('assets/' . $t->images) }}" style="height: 70px;">
+                  </td>
                   <td>
                     <a href="{{ route('admin.testimonial.edit',['id'=> $t->id]) }}"><button type="button" class="btn btn-info mb-2">Sửa</button></a>
                     <a href="{{ route('admin.testimonial.delete',['id'=> $t->id]) }}"><button type="button" class="btn btn-danger mb-2">Xóa</button></a>
